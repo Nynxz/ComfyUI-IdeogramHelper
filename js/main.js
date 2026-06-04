@@ -1,4 +1,4 @@
-(function(){var s=document.createElement('style');s.setAttribute('data-extension','comfyui-ideogramhelper');s.textContent=".canvas-wrap[data-v-237a165f]{display:flex;flex-direction:column;gap:6px}.toolbar[data-v-237a165f]{display:flex;flex-wrap:wrap;gap:6px;align-items:center}.lbl[data-v-237a165f]{font-size:11px;color:#999}.seg[data-v-237a165f]{display:flex;gap:2px}.seg button[data-v-237a165f],.ghost[data-v-237a165f]{background:#2a2a30;color:#ddd;border:1px solid #3a3a44;border-radius:5px;padding:3px 8px;font-size:11px;cursor:pointer}.seg button.on[data-v-237a165f]{background:#3b82f6;border-color:#3b82f6;color:#fff}.seg button.on.text[data-v-237a165f],.seg button.text.on[data-v-237a165f]{background:#f59e0b;border-color:#f59e0b;color:#1a1a1a}.ghost.on[data-v-237a165f]{background:#3b82f6;border-color:#3b82f6;color:#fff}.dims[data-v-237a165f]{font-size:11px;color:#888;font-family:monospace}.stage[data-v-237a165f]{position:relative;width:100%;background:#15151a;border:1px solid #3a3a44;border-radius:6px;overflow:hidden;background-image:linear-gradient(45deg,#1d1d22 25%,transparent 25%),linear-gradient(-45deg,#1d1d22 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#1d1d22 75%),linear-gradient(-45deg,transparent 75%,#1d1d22 75%);background-size:18px 18px;background-position:0 0,0 9px,9px -9px,-9px 0;touch-action:none;user-select:none;cursor:crosshair}.stage.dragging[data-v-237a165f]{cursor:grabbing}.grid[data-v-237a165f]{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(to right,rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,.06) 1px,transparent 1px);background-size:10% 10%}.box[data-v-237a165f]{position:absolute;border:2px solid;box-sizing:border-box;cursor:move;background:transparent;transition:background .1s}.box[data-v-237a165f]:hover{background:var(--fill)}.box.sel[data-v-237a165f]{background:var(--fill);box-shadow:0 0 0 1px #fff,0 0 10px #0009;z-index:5}.box.muted[data-v-237a165f]{opacity:.32;border-style:dashed;background:transparent!important}.box.muted .tag[data-v-237a165f]{opacity:.6}.box.draft[data-v-237a165f]{border-style:dashed;opacity:.8;pointer-events:none;background:#9ca3af1f}.tag[data-v-237a165f]{position:absolute;top:0;left:0;transform:translateY(-100%);font-size:10px;line-height:1.4;padding:1px 5px;white-space:nowrap;max-width:220px;overflow:hidden;text-overflow:ellipsis;border-radius:3px 3px 0 0;pointer-events:none}.h[data-v-237a165f]{position:absolute;width:11px;height:11px;background:#fff;border:1px solid #333;border-radius:2px}.h-nw[data-v-237a165f]{top:-6px;left:-6px;cursor:nwse-resize}.h-n[data-v-237a165f]{top:-6px;left:50%;margin-left:-5px;cursor:ns-resize}.h-ne[data-v-237a165f]{top:-6px;right:-6px;cursor:nesw-resize}.h-e[data-v-237a165f]{top:50%;right:-6px;margin-top:-5px;cursor:ew-resize}.h-se[data-v-237a165f]{bottom:-6px;right:-6px;cursor:nwse-resize}.h-s[data-v-237a165f]{bottom:-6px;left:50%;margin-left:-5px;cursor:ns-resize}.h-sw[data-v-237a165f]{bottom:-6px;left:-6px;cursor:nesw-resize}.h-w[data-v-237a165f]{top:50%;left:-6px;margin-top:-5px;cursor:ew-resize}.coordhint[data-v-237a165f]{font-size:10px;color:#ffffff73;font-family:monospace}.palette[data-v-3d11bea8]{display:flex;flex-direction:column;gap:4px}.swatches[data-v-3d11bea8]{display:flex;flex-wrap:wrap;gap:6px;align-items:center}.swatch-wrap[data-v-3d11bea8]{position:relative}.swatch[data-v-3d11bea8]{display:block;width:26px;height:26px;border-radius:5px;border:1px solid rgba(255,255,255,.25);cursor:pointer;overflow:hidden}.swatch input[data-v-3d11bea8]{opacity:0;width:100%;height:100%;cursor:pointer}.x[data-v-3d11bea8]{position:absolute;top:-6px;right:-6px;width:15px;height:15px;border-radius:50%;border:none;background:#b23;color:#fff;font-size:11px;line-height:11px;cursor:pointer;padding:0}.add[data-v-3d11bea8]{width:26px;height:26px;border-radius:5px;cursor:pointer;border:1px dashed rgba(255,255,255,.35);background:transparent;color:#ffffffb3;font-size:16px;line-height:1}.hint[data-v-3d11bea8]{font-size:10px;color:#ffffff73}.style[data-v-41f81c5e]{display:flex;flex-direction:column;gap:7px}.head[data-v-41f81c5e]{display:flex;justify-content:space-between;align-items:center}.en[data-v-41f81c5e]{font-size:12px;color:#ccc;display:flex;gap:5px;align-items:center;font-weight:600}.seg[data-v-41f81c5e]{display:flex;gap:2px}.seg button[data-v-41f81c5e]{background:#2a2a30;color:#ccc;border:1px solid #3a3a44;border-radius:4px;padding:2px 9px;font-size:11px;cursor:pointer}.seg button.on[data-v-41f81c5e]{background:#8b5cf6;border-color:#8b5cf6;color:#fff}.field[data-v-41f81c5e]{display:flex;flex-direction:column;gap:3px;font-size:11px;color:#aaa}.field input[data-v-41f81c5e]{background:#15151a;border:1px solid #3a3a44;color:#eee;border-radius:5px;padding:6px;font-size:12px}.ellist[data-v-e924e066]{display:flex;flex-direction:column;gap:6px}.head[data-v-e924e066]{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#ccc}.adds[data-v-e924e066]{display:flex;gap:4px}.adds button[data-v-e924e066]{border:none;border-radius:4px;padding:3px 8px;font-size:11px;cursor:pointer;color:#fff}.adds .obj[data-v-e924e066]{background:#3b82f6}.adds .text[data-v-e924e066]{background:#f59e0b;color:#1a1a1a}ul[data-v-e924e066]{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:3px;max-height:180px;overflow-y:auto}li[data-v-e924e066]{display:flex;align-items:center;gap:6px;padding:4px 6px;border-radius:5px;background:#232329;border:1px solid transparent;cursor:pointer;font-size:12px;color:#ddd}li[data-v-e924e066]:hover{background:#2b2b33}li.sel[data-v-e924e066]{border-color:#fff;background:#2e2e38}li.muted .snip[data-v-e924e066]{opacity:.45;text-decoration:line-through}.eye[data-v-e924e066]{background:none;border:none;cursor:pointer;padding:0;font-size:11px;flex:none;line-height:1;filter:grayscale(.3)}.dot[data-v-e924e066]{width:9px;height:9px;border-radius:2px;flex:none}.idx[data-v-e924e066]{color:#888;width:14px;flex:none}.link[data-v-e924e066]{flex:none;font-size:10px}.snip[data-v-e924e066]{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.bb[data-v-e924e066]{color:#777;flex:none}.ops[data-v-e924e066]{display:flex;gap:1px;opacity:0;transition:opacity .12s}li:hover .ops[data-v-e924e066],li.sel .ops[data-v-e924e066]{opacity:1}.ops button[data-v-e924e066]{background:#34343c;border:none;color:#bbb;border-radius:3px;width:18px;height:18px;font-size:11px;cursor:pointer;padding:0}.ops button[data-v-e924e066]:hover{background:#44444e;color:#fff}.empty[data-v-e924e066]{font-size:11px;color:#777;margin:2px 0}.editor[data-v-ca5140c7]{display:flex;flex-direction:column;gap:8px;padding:8px;background:#202026;border-radius:6px;border:1px solid #32323c}.editor.empty[data-v-ca5140c7]{color:#777;font-size:12px;align-items:center}.row[data-v-ca5140c7]{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.color[data-v-ca5140c7]{position:relative;width:22px;height:22px;cursor:pointer}.color .chip[data-v-ca5140c7]{display:block;width:22px;height:22px;border-radius:5px;border:1px solid rgba(255,255,255,.3)}.color input[data-v-ca5140c7]{position:absolute;inset:0;opacity:0;cursor:pointer}.lbl[data-v-ca5140c7]{font-size:12px;color:#ccc;font-weight:600}.seg[data-v-ca5140c7]{display:flex;gap:2px}.seg button[data-v-ca5140c7]{background:#2a2a30;color:#ccc;border:1px solid #3a3a44;border-radius:4px;padding:2px 8px;font-size:11px;cursor:pointer}.seg button.on[data-v-ca5140c7]{background:#3b82f6;border-color:#3b82f6;color:#fff}.mute[data-v-ca5140c7]{margin-left:auto;background:#2a2a30;color:#9ae6b4;border:1px solid #3a3a44;border-radius:4px;padding:2px 8px;font-size:11px;cursor:pointer}.mute.off[data-v-ca5140c7]{color:#f87171}.bbtoggle[data-v-ca5140c7]{font-size:11px;color:#aaa;display:flex;gap:4px;align-items:center}.link-row[data-v-ca5140c7]{font-size:11px}.linkbadge[data-v-ca5140c7]{border:1px solid;border-radius:4px;padding:1px 6px;color:#ddd}.unlinked[data-v-ca5140c7]{color:#666}.mini[data-v-ca5140c7]{background:#2a2a30;color:#ccc;border:1px solid #3a3a44;border-radius:4px;padding:2px 8px;font-size:11px;cursor:pointer}.mini[data-v-ca5140c7]:hover{background:#34343c;color:#fff}.hint[data-v-ca5140c7]{color:#777}.bbox-row[data-v-ca5140c7]{gap:6px}.bbox-row label[data-v-ca5140c7]{display:flex;flex-direction:column;font-size:10px;color:#999;gap:2px}.bbox-row input[data-v-ca5140c7]{width:52px;background:#15151a;border:1px solid #3a3a44;color:#eee;border-radius:4px;padding:3px;font-size:11px}.field[data-v-ca5140c7]{display:flex;flex-direction:column;gap:3px;font-size:11px;color:#aaa}.field input[type=text][data-v-ca5140c7],.field textarea[data-v-ca5140c7]{background:#15151a;border:1px solid #3a3a44;color:#eee;border-radius:5px;padding:6px;font-size:12px;resize:vertical;font-family:inherit}.preview[data-v-d02f898f]{display:flex;flex-direction:column;gap:5px}.head[data-v-d02f898f]{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#ccc}.actions[data-v-d02f898f]{display:flex;gap:6px;align-items:center}.actions button[data-v-d02f898f]{background:#2a2a30;color:#ccc;border:1px solid #3a3a44;border-radius:4px;padding:2px 8px;font-size:11px;cursor:pointer}.warns[data-v-d02f898f]{font-size:11px;color:#f59e0b;cursor:help}.warns.ok[data-v-d02f898f]{color:#34d399}.json[data-v-d02f898f]{margin:0;background:#121216;border:1px solid #2c2c34;border-radius:6px;padding:8px;font-size:11px;line-height:1.4;max-height:200px;overflow:auto;color:#cdd6f4;white-space:pre;font-family:ui-monospace,monospace}.warnlist[data-v-d02f898f]{margin:0;padding-left:16px;font-size:10px;color:#f59e0b;max-height:90px;overflow:auto}.studio[data-v-10629887]{display:flex;flex-direction:column;gap:9px;padding:10px;font-family:-apple-system,system-ui,sans-serif;color:#e5e5ea;background:#1a1a1f;border-radius:8px;box-sizing:border-box;width:100%}.topbar[data-v-10629887]{display:flex;justify-content:space-between;align-items:center;gap:8px}.title[data-v-10629887]{font-size:14px;font-weight:700;letter-spacing:.3px;white-space:nowrap}.tools[data-v-10629887]{display:flex;gap:5px;align-items:center}.ic[data-v-10629887]{background:#2a2a30;color:#ccc;border:1px solid #3a3a44;border-radius:5px;padding:3px 8px;font-size:12px;cursor:pointer}.ic[data-v-10629887]:disabled{opacity:.35;cursor:default}.ic.on[data-v-10629887]{background:#3b82f6;border-color:#3b82f6;color:#fff}.fmt[data-v-10629887]{background:#2a2a30;color:#ddd;border:1px solid #3a3a44;border-radius:5px;font-size:11px;padding:3px;max-width:150px}.reset[data-v-10629887]{background:#2a2a30;color:#bbb;border:1px solid #3a3a44;border-radius:5px;padding:3px 10px;font-size:11px;cursor:pointer}.advanced[data-v-10629887]{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:7px 8px;background:#202026;border:1px solid #32323c;border-radius:6px;font-size:11px;color:#aaa}.advanced label[data-v-10629887]{display:flex;align-items:center;gap:4px}.advanced input[type=number][data-v-10629887]{width:56px;background:#15151a;border:1px solid #3a3a44;color:#eee;border-radius:4px;padding:3px;font-size:11px}.advanced input[type=range][data-v-10629887]{width:70px}.advanced .ck[data-v-10629887]{gap:3px}.hld[data-v-10629887],.bg[data-v-10629887]{display:flex;flex-direction:column;gap:3px;font-size:11px;color:#aaa}.hld textarea[data-v-10629887],.bg textarea[data-v-10629887]{background:#15151a;border:1px solid #3a3a44;color:#eee;border-radius:6px;padding:7px;font-size:12px;resize:vertical;font-family:inherit;line-height:1.4}.main[data-v-10629887]{display:grid;grid-template-columns:minmax(280px,1.4fr) minmax(220px,1fr);gap:12px;align-items:start}.left[data-v-10629887],.right[data-v-10629887]{display:flex;flex-direction:column;gap:8px;min-width:0}hr[data-v-10629887]{border:none;border-top:1px solid #2e2e36;width:100%;margin:2px 0}@media (max-width: 520px){.main[data-v-10629887]{grid-template-columns:1fr}}\n";document.head.appendChild(s);})();import { app as Zs } from "../../../scripts/app.js";
+(function(){var s=document.createElement('style');s.setAttribute('data-extension','comfyui-ideogramhelper');s.textContent="\n.canvas-wrap[data-v-237a165f] { display: flex; flex-direction: column; gap: 6px;\n}\n.toolbar[data-v-237a165f] { display: flex; flex-wrap: wrap; gap: 6px; align-items: center;\n}\n.lbl[data-v-237a165f] { font-size: 11px; color: #999;\n}\n.seg[data-v-237a165f] { display: flex; gap: 2px;\n}\n.seg button[data-v-237a165f], .ghost[data-v-237a165f] {\n  background: #2a2a30; color: #ddd; border: 1px solid #3a3a44; border-radius: 5px;\n  padding: 3px 8px; font-size: 11px; cursor: pointer;\n}\n.seg button.on[data-v-237a165f] { background: #3b82f6; border-color: #3b82f6; color: #fff;\n}\n.seg button.on.text[data-v-237a165f], .seg button.text.on[data-v-237a165f] { background: #f59e0b; border-color: #f59e0b; color: #1a1a1a;\n}\n.ghost.on[data-v-237a165f] { background: #3b82f6; border-color: #3b82f6; color: #fff;\n}\n.dims[data-v-237a165f] { font-size: 11px; color: #888; font-family: monospace;\n}\n.stage[data-v-237a165f] {\n  position: relative; width: 100%; background: #15151a;\n  border: 1px solid #3a3a44; border-radius: 6px; overflow: hidden;\n  background-image: linear-gradient(45deg, #1d1d22 25%, transparent 25%),\n    linear-gradient(-45deg, #1d1d22 25%, transparent 25%),\n    linear-gradient(45deg, transparent 75%, #1d1d22 75%),\n    linear-gradient(-45deg, transparent 75%, #1d1d22 75%);\n  background-size: 18px 18px;\n  background-position: 0 0, 0 9px, 9px -9px, -9px 0;\n  touch-action: none; user-select: none; cursor: crosshair;\n}\n.stage.dragging[data-v-237a165f] { cursor: grabbing;\n}\n.grid[data-v-237a165f] {\n  position: absolute; inset: 0; pointer-events: none;\n  background-image: linear-gradient(to right, rgba(255,255,255,.06) 1px, transparent 1px),\n    linear-gradient(to bottom, rgba(255,255,255,.06) 1px, transparent 1px);\n  background-size: 10% 10%;\n}\n.box[data-v-237a165f] { position: absolute; border: 2px solid; box-sizing: border-box; cursor: move; background: transparent; transition: background .1s;\n}\n.box[data-v-237a165f]:hover { background: var(--fill);\n}\n.box.sel[data-v-237a165f] { background: var(--fill); box-shadow: 0 0 0 1px #fff, 0 0 10px rgba(0,0,0,.6); z-index: 5;\n}\n.box.muted[data-v-237a165f] { opacity: 0.32; border-style: dashed; background: transparent !important;\n}\n.box.muted .tag[data-v-237a165f] { opacity: 0.6;\n}\n.box.draft[data-v-237a165f] { border-style: dashed; opacity: 0.8; pointer-events: none; background: rgba(156,163,175,.12);\n}\n.tag[data-v-237a165f] {\n  position: absolute; top: 0; left: 0; transform: translateY(-100%);\n  font-size: 10px; line-height: 1.4; padding: 1px 5px; white-space: nowrap;\n  max-width: 220px; overflow: hidden; text-overflow: ellipsis;\n  border-radius: 3px 3px 0 0; pointer-events: none;\n}\n.h[data-v-237a165f] { position: absolute; width: 11px; height: 11px; background: #fff; border: 1px solid #333; border-radius: 2px;\n}\n.h-nw[data-v-237a165f] { top: -6px; left: -6px; cursor: nwse-resize;\n}\n.h-n[data-v-237a165f]  { top: -6px; left: 50%; margin-left: -5px; cursor: ns-resize;\n}\n.h-ne[data-v-237a165f] { top: -6px; right: -6px; cursor: nesw-resize;\n}\n.h-e[data-v-237a165f]  { top: 50%; right: -6px; margin-top: -5px; cursor: ew-resize;\n}\n.h-se[data-v-237a165f] { bottom: -6px; right: -6px; cursor: nwse-resize;\n}\n.h-s[data-v-237a165f]  { bottom: -6px; left: 50%; margin-left: -5px; cursor: ns-resize;\n}\n.h-sw[data-v-237a165f] { bottom: -6px; left: -6px; cursor: nesw-resize;\n}\n.h-w[data-v-237a165f]  { top: 50%; left: -6px; margin-top: -5px; cursor: ew-resize;\n}\n.coordhint[data-v-237a165f] { font-size: 10px; color: rgba(255,255,255,.45); font-family: monospace;\n}\n\n.palette[data-v-3d11bea8] { display: flex; flex-direction: column; gap: 4px;\n}\n.swatches[data-v-3d11bea8] { display: flex; flex-wrap: wrap; gap: 6px; align-items: center;\n}\n.swatch-wrap[data-v-3d11bea8] { position: relative;\n}\n.swatch[data-v-3d11bea8] {\n  display: block; width: 26px; height: 26px; border-radius: 5px;\n  border: 1px solid rgba(255, 255, 255, 0.25); cursor: pointer; overflow: hidden;\n}\n.swatch input[data-v-3d11bea8] { opacity: 0; width: 100%; height: 100%; cursor: pointer;\n}\n.x[data-v-3d11bea8] {\n  position: absolute; top: -6px; right: -6px; width: 15px; height: 15px;\n  border-radius: 50%; border: none; background: #b23; color: #fff;\n  font-size: 11px; line-height: 11px; cursor: pointer; padding: 0;\n}\n.add[data-v-3d11bea8] {\n  width: 26px; height: 26px; border-radius: 5px; cursor: pointer;\n  border: 1px dashed rgba(255, 255, 255, 0.35); background: transparent;\n  color: rgba(255, 255, 255, 0.7); font-size: 16px; line-height: 1;\n}\n.hint[data-v-3d11bea8] { font-size: 10px; color: rgba(255, 255, 255, 0.45);\n}\n\n.style[data-v-41f81c5e] { display: flex; flex-direction: column; gap: 7px;\n}\n.head[data-v-41f81c5e] { display: flex; justify-content: space-between; align-items: center;\n}\n.en[data-v-41f81c5e] { font-size: 12px; color: #ccc; display: flex; gap: 5px; align-items: center; font-weight: 600;\n}\n.seg[data-v-41f81c5e] { display: flex; gap: 2px;\n}\n.seg button[data-v-41f81c5e] { background: #2a2a30; color: #ccc; border: 1px solid #3a3a44; border-radius: 4px; padding: 2px 9px; font-size: 11px; cursor: pointer;\n}\n.seg button.on[data-v-41f81c5e] { background: #8b5cf6; border-color: #8b5cf6; color: #fff;\n}\n.field[data-v-41f81c5e] { display: flex; flex-direction: column; gap: 3px; font-size: 11px; color: #aaa;\n}\n.field input[data-v-41f81c5e] { background: #15151a; border: 1px solid #3a3a44; color: #eee; border-radius: 5px; padding: 6px; font-size: 12px;\n}\n\n.ellist[data-v-e924e066] { display: flex; flex-direction: column; gap: 6px;\n}\n.head[data-v-e924e066] { display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: #ccc;\n}\n.adds[data-v-e924e066] { display: flex; gap: 4px;\n}\n.adds button[data-v-e924e066] { border: none; border-radius: 4px; padding: 3px 8px; font-size: 11px; cursor: pointer; color: #fff;\n}\n.adds .obj[data-v-e924e066] { background: #3b82f6;\n}\n.adds .text[data-v-e924e066] { background: #f59e0b; color: #1a1a1a;\n}\nul[data-v-e924e066] { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 3px; max-height: 180px; overflow-y: auto;\n}\nli[data-v-e924e066] {\n  display: flex; align-items: center; gap: 6px; padding: 4px 6px; border-radius: 5px;\n  background: #232329; border: 1px solid transparent; cursor: pointer; font-size: 12px; color: #ddd;\n}\nli[data-v-e924e066]:hover { background: #2b2b33;\n}\nli.sel[data-v-e924e066] { border-color: #fff; background: #2e2e38;\n}\nli.muted .snip[data-v-e924e066] { opacity: .45; text-decoration: line-through;\n}\n.eye[data-v-e924e066] { background: none; border: none; cursor: pointer; padding: 0; font-size: 11px; flex: none; line-height: 1; filter: grayscale(.3);\n}\n.dot[data-v-e924e066] { width: 9px; height: 9px; border-radius: 2px; flex: none;\n}\n.idx[data-v-e924e066] { color: #888; width: 14px; flex: none;\n}\n.link[data-v-e924e066] { flex: none; font-size: 10px;\n}\n.snip[data-v-e924e066] { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\n}\n.bb[data-v-e924e066] { color: #777; flex: none;\n}\n.ops[data-v-e924e066] { display: flex; gap: 1px; opacity: 0; transition: opacity .12s;\n}\nli:hover .ops[data-v-e924e066], li.sel .ops[data-v-e924e066] { opacity: 1;\n}\n.ops button[data-v-e924e066] { background: #34343c; border: none; color: #bbb; border-radius: 3px; width: 18px; height: 18px; font-size: 11px; cursor: pointer; padding: 0;\n}\n.ops button[data-v-e924e066]:hover { background: #44444e; color: #fff;\n}\n.empty[data-v-e924e066] { font-size: 11px; color: #777; margin: 2px 0;\n}\n\n.editor[data-v-ca5140c7] { display: flex; flex-direction: column; gap: 8px; padding: 8px; background: #202026; border-radius: 6px; border: 1px solid #32323c;\n}\n.editor.empty[data-v-ca5140c7] { color: #777; font-size: 12px; align-items: center;\n}\n.row[data-v-ca5140c7] { display: flex; align-items: center; gap: 8px; flex-wrap: wrap;\n}\n.color[data-v-ca5140c7] { position: relative; width: 22px; height: 22px; cursor: pointer;\n}\n.color .chip[data-v-ca5140c7] { display: block; width: 22px; height: 22px; border-radius: 5px; border: 1px solid rgba(255,255,255,.3);\n}\n.color input[data-v-ca5140c7] { position: absolute; inset: 0; opacity: 0; cursor: pointer;\n}\n.lbl[data-v-ca5140c7] { font-size: 12px; color: #ccc; font-weight: 600;\n}\n.seg[data-v-ca5140c7] { display: flex; gap: 2px;\n}\n.seg button[data-v-ca5140c7] { background: #2a2a30; color: #ccc; border: 1px solid #3a3a44; border-radius: 4px; padding: 2px 8px; font-size: 11px; cursor: pointer;\n}\n.seg button.on[data-v-ca5140c7] { background: #3b82f6; border-color: #3b82f6; color: #fff;\n}\n.mute[data-v-ca5140c7] { margin-left: auto; background: #2a2a30; color: #9ae6b4; border: 1px solid #3a3a44; border-radius: 4px; padding: 2px 8px; font-size: 11px; cursor: pointer;\n}\n.mute.off[data-v-ca5140c7] { color: #f87171;\n}\n.bbtoggle[data-v-ca5140c7] { font-size: 11px; color: #aaa; display: flex; gap: 4px; align-items: center;\n}\n.link-row[data-v-ca5140c7] { font-size: 11px;\n}\n.linkbadge[data-v-ca5140c7] { border: 1px solid; border-radius: 4px; padding: 1px 6px; color: #ddd;\n}\n.unlinked[data-v-ca5140c7] { color: #666;\n}\n.mini[data-v-ca5140c7] { background: #2a2a30; color: #ccc; border: 1px solid #3a3a44; border-radius: 4px; padding: 2px 8px; font-size: 11px; cursor: pointer;\n}\n.mini[data-v-ca5140c7]:hover { background: #34343c; color: #fff;\n}\n.hint[data-v-ca5140c7] { color: #777;\n}\n.bbox-row[data-v-ca5140c7] { gap: 6px;\n}\n.bbox-row label[data-v-ca5140c7] { display: flex; flex-direction: column; font-size: 10px; color: #999; gap: 2px;\n}\n.bbox-row input[data-v-ca5140c7] { width: 52px; background: #15151a; border: 1px solid #3a3a44; color: #eee; border-radius: 4px; padding: 3px; font-size: 11px;\n}\n.field[data-v-ca5140c7] { display: flex; flex-direction: column; gap: 3px; font-size: 11px; color: #aaa;\n}\n.field input[type='text'][data-v-ca5140c7], .field textarea[data-v-ca5140c7] {\n  background: #15151a; border: 1px solid #3a3a44; color: #eee; border-radius: 5px; padding: 6px; font-size: 12px; resize: vertical; font-family: inherit;\n}\n\n.preview[data-v-d02f898f] { display: flex; flex-direction: column; gap: 5px;\n}\n.head[data-v-d02f898f] { display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: #ccc;\n}\n.actions[data-v-d02f898f] { display: flex; gap: 6px; align-items: center;\n}\n.actions button[data-v-d02f898f] { background: #2a2a30; color: #ccc; border: 1px solid #3a3a44; border-radius: 4px; padding: 2px 8px; font-size: 11px; cursor: pointer;\n}\n.warns[data-v-d02f898f] { font-size: 11px; color: #f59e0b; cursor: help;\n}\n.warns.ok[data-v-d02f898f] { color: #34d399;\n}\n.json[data-v-d02f898f] {\n  margin: 0; background: #121216; border: 1px solid #2c2c34; border-radius: 6px; padding: 8px;\n  font-size: 11px; line-height: 1.4; max-height: 200px; overflow: auto; color: #cdd6f4;\n  white-space: pre; font-family: ui-monospace, monospace;\n}\n.warnlist[data-v-d02f898f] { margin: 0; padding-left: 16px; font-size: 10px; color: #f59e0b; max-height: 90px; overflow: auto;\n}\n\n.studio[data-v-10629887] {\n  display: flex; flex-direction: column; gap: 9px; padding: 10px;\n  font-family: -apple-system, system-ui, sans-serif; color: #e5e5ea;\n  background: #1a1a1f; border-radius: 8px; box-sizing: border-box; width: 100%;\n}\n.topbar[data-v-10629887] { display: flex; justify-content: space-between; align-items: center; gap: 8px;\n}\n.title[data-v-10629887] { font-size: 14px; font-weight: 700; letter-spacing: .3px; white-space: nowrap;\n}\n.tools[data-v-10629887] { display: flex; gap: 5px; align-items: center;\n}\n.ic[data-v-10629887] { background: #2a2a30; color: #ccc; border: 1px solid #3a3a44; border-radius: 5px; padding: 3px 8px; font-size: 12px; cursor: pointer;\n}\n.ic[data-v-10629887]:disabled { opacity: .35; cursor: default;\n}\n.ic.on[data-v-10629887] { background: #3b82f6; border-color: #3b82f6; color: #fff;\n}\n.fmt[data-v-10629887] { background: #2a2a30; color: #ddd; border: 1px solid #3a3a44; border-radius: 5px; font-size: 11px; padding: 3px; max-width: 150px;\n}\n.reset[data-v-10629887] { background: #2a2a30; color: #bbb; border: 1px solid #3a3a44; border-radius: 5px; padding: 3px 10px; font-size: 11px; cursor: pointer;\n}\n.advanced[data-v-10629887] {\n  display: flex; flex-wrap: wrap; gap: 8px; align-items: center; padding: 7px 8px;\n  background: #202026; border: 1px solid #32323c; border-radius: 6px; font-size: 11px; color: #aaa;\n}\n.advanced label[data-v-10629887] { display: flex; align-items: center; gap: 4px;\n}\n.advanced input[type='number'][data-v-10629887] { width: 56px; background: #15151a; border: 1px solid #3a3a44; color: #eee; border-radius: 4px; padding: 3px; font-size: 11px;\n}\n.advanced input[type='range'][data-v-10629887] { width: 70px;\n}\n.advanced .ck[data-v-10629887] { gap: 3px;\n}\n.hld[data-v-10629887], .bg[data-v-10629887] { display: flex; flex-direction: column; gap: 3px; font-size: 11px; color: #aaa;\n}\n.hld textarea[data-v-10629887], .bg textarea[data-v-10629887] {\n  background: #15151a; border: 1px solid #3a3a44; color: #eee; border-radius: 6px;\n  padding: 7px; font-size: 12px; resize: vertical; font-family: inherit; line-height: 1.4;\n}\n.main[data-v-10629887] { display: grid; grid-template-columns: minmax(280px, 1.4fr) minmax(220px, 1fr); gap: 12px; align-items: start;\n}\n.left[data-v-10629887] { display: flex; flex-direction: column; gap: 8px; min-width: 0;\n}\n.right[data-v-10629887] { display: flex; flex-direction: column; gap: 8px; min-width: 0;\n}\nhr[data-v-10629887] { border: none; border-top: 1px solid #2e2e36; width: 100%; margin: 2px 0;\n}\n@media (max-width: 520px) {\n.main[data-v-10629887] { grid-template-columns: 1fr;\n}\n}\n";document.head.appendChild(s);})();import { app } from "../../../scripts/app.js";
 /**
 * @vue/shared v3.5.13
 * (c) 2018-present Yuxi (Evan) You and Vue contributors
@@ -6,131 +6,238 @@
 **/
 /*! #__NO_SIDE_EFFECTS__ */
 // @__NO_SIDE_EFFECTS__
-function Qs(e) {
-  const t = /* @__PURE__ */ Object.create(null);
-  for (const s of e.split(",")) t[s] = 1;
-  return (s) => s in t;
+function makeMap(str) {
+  const map = /* @__PURE__ */ Object.create(null);
+  for (const key of str.split(",")) map[key] = 1;
+  return (val) => val in map;
 }
-const q = {}, _t = [], je = () => {
-}, gi = () => !1, as = (e) => e.charCodeAt(0) === 111 && e.charCodeAt(1) === 110 && // uppercase letter
-(e.charCodeAt(2) > 122 || e.charCodeAt(2) < 97), en = (e) => e.startsWith("onUpdate:"), fe = Object.assign, tn = (e, t) => {
-  const s = e.indexOf(t);
-  s > -1 && e.splice(s, 1);
-}, mi = Object.prototype.hasOwnProperty, U = (e, t) => mi.call(e, t), A = Array.isArray, vt = (e) => Bt(e) === "[object Map]", fs = (e) => Bt(e) === "[object Set]", yn = (e) => Bt(e) === "[object Date]", R = (e) => typeof e == "function", se = (e) => typeof e == "string", De = (e) => typeof e == "symbol", ee = (e) => e !== null && typeof e == "object", Qn = (e) => (ee(e) || R(e)) && R(e.then) && R(e.catch), eo = Object.prototype.toString, Bt = (e) => eo.call(e), bi = (e) => Bt(e).slice(8, -1), to = (e) => Bt(e) === "[object Object]", sn = (e) => se(e) && e !== "NaN" && e[0] !== "-" && "" + parseInt(e, 10) === e, kt = /* @__PURE__ */ Qs(
+const EMPTY_OBJ = {};
+const EMPTY_ARR = [];
+const NOOP = () => {
+};
+const NO = () => false;
+const isOn = (key) => key.charCodeAt(0) === 111 && key.charCodeAt(1) === 110 && // uppercase letter
+(key.charCodeAt(2) > 122 || key.charCodeAt(2) < 97);
+const isModelListener = (key) => key.startsWith("onUpdate:");
+const extend = Object.assign;
+const remove = (arr, el) => {
+  const i = arr.indexOf(el);
+  if (i > -1) {
+    arr.splice(i, 1);
+  }
+};
+const hasOwnProperty$1 = Object.prototype.hasOwnProperty;
+const hasOwn = (val, key) => hasOwnProperty$1.call(val, key);
+const isArray = Array.isArray;
+const isMap = (val) => toTypeString(val) === "[object Map]";
+const isSet = (val) => toTypeString(val) === "[object Set]";
+const isDate = (val) => toTypeString(val) === "[object Date]";
+const isFunction = (val) => typeof val === "function";
+const isString = (val) => typeof val === "string";
+const isSymbol = (val) => typeof val === "symbol";
+const isObject = (val) => val !== null && typeof val === "object";
+const isPromise = (val) => {
+  return (isObject(val) || isFunction(val)) && isFunction(val.then) && isFunction(val.catch);
+};
+const objectToString = Object.prototype.toString;
+const toTypeString = (value) => objectToString.call(value);
+const toRawType = (value) => {
+  return toTypeString(value).slice(8, -1);
+};
+const isPlainObject = (val) => toTypeString(val) === "[object Object]";
+const isIntegerKey = (key) => isString(key) && key !== "NaN" && key[0] !== "-" && "" + parseInt(key, 10) === key;
+const isReservedProp = /* @__PURE__ */ makeMap(
   // the leading comma is intentional so empty string "" is also included
   ",key,ref,ref_for,ref_key,onVnodeBeforeMount,onVnodeMounted,onVnodeBeforeUpdate,onVnodeUpdated,onVnodeBeforeUnmount,onVnodeUnmounted"
-), ds = (e) => {
-  const t = /* @__PURE__ */ Object.create(null);
-  return (s) => t[s] || (t[s] = e(s));
-}, _i = /-(\w)/g, Ze = ds(
-  (e) => e.replace(_i, (t, s) => s ? s.toUpperCase() : "")
-), vi = /\B([A-Z])/g, pt = ds(
-  (e) => e.replace(vi, "-$1").toLowerCase()
-), so = ds((e) => e.charAt(0).toUpperCase() + e.slice(1)), Cs = ds(
-  (e) => e ? `on${so(e)}` : ""
-), Xe = (e, t) => !Object.is(e, t), Zt = (e, ...t) => {
-  for (let s = 0; s < e.length; s++)
-    e[s](...t);
-}, no = (e, t, s, n = !1) => {
-  Object.defineProperty(e, t, {
-    configurable: !0,
-    enumerable: !1,
-    writable: n,
-    value: s
-  });
-}, Ds = (e) => {
-  const t = parseFloat(e);
-  return isNaN(t) ? e : t;
+);
+const cacheStringFunction = (fn) => {
+  const cache = /* @__PURE__ */ Object.create(null);
+  return (str) => {
+    const hit = cache[str];
+    return hit || (cache[str] = fn(str));
+  };
 };
-let xn;
-const ps = () => xn || (xn = typeof globalThis < "u" ? globalThis : typeof self < "u" ? self : typeof window < "u" ? window : typeof global < "u" ? global : {});
-function Te(e) {
-  if (A(e)) {
-    const t = {};
-    for (let s = 0; s < e.length; s++) {
-      const n = e[s], o = se(n) ? Si(n) : Te(n);
-      if (o)
-        for (const i in o)
-          t[i] = o[i];
+const camelizeRE = /-(\w)/g;
+const camelize = cacheStringFunction(
+  (str) => {
+    return str.replace(camelizeRE, (_, c) => c ? c.toUpperCase() : "");
+  }
+);
+const hyphenateRE = /\B([A-Z])/g;
+const hyphenate = cacheStringFunction(
+  (str) => str.replace(hyphenateRE, "-$1").toLowerCase()
+);
+const capitalize = cacheStringFunction((str) => {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+});
+const toHandlerKey = cacheStringFunction(
+  (str) => {
+    const s = str ? `on${capitalize(str)}` : ``;
+    return s;
+  }
+);
+const hasChanged = (value, oldValue) => !Object.is(value, oldValue);
+const invokeArrayFns = (fns, ...arg) => {
+  for (let i = 0; i < fns.length; i++) {
+    fns[i](...arg);
+  }
+};
+const def = (obj, key, value, writable = false) => {
+  Object.defineProperty(obj, key, {
+    configurable: true,
+    enumerable: false,
+    writable,
+    value
+  });
+};
+const looseToNumber = (val) => {
+  const n = parseFloat(val);
+  return isNaN(n) ? val : n;
+};
+let _globalThis;
+const getGlobalThis = () => {
+  return _globalThis || (_globalThis = typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : typeof global !== "undefined" ? global : {});
+};
+function normalizeStyle(value) {
+  if (isArray(value)) {
+    const res = {};
+    for (let i = 0; i < value.length; i++) {
+      const item = value[i];
+      const normalized = isString(item) ? parseStringStyle(item) : normalizeStyle(item);
+      if (normalized) {
+        for (const key in normalized) {
+          res[key] = normalized[key];
+        }
+      }
     }
-    return t;
-  } else if (se(e) || ee(e))
-    return e;
+    return res;
+  } else if (isString(value) || isObject(value)) {
+    return value;
+  }
 }
-const yi = /;(?![^(]*\))/g, xi = /:([^]+)/, wi = /\/\*[^]*?\*\//g;
-function Si(e) {
-  const t = {};
-  return e.replace(wi, "").split(yi).forEach((s) => {
-    if (s) {
-      const n = s.split(xi);
-      n.length > 1 && (t[n[0].trim()] = n[1].trim());
+const listDelimiterRE = /;(?![^(]*\))/g;
+const propertyDelimiterRE = /:([^]+)/;
+const styleCommentRE = /\/\*[^]*?\*\//g;
+function parseStringStyle(cssText) {
+  const ret = {};
+  cssText.replace(styleCommentRE, "").split(listDelimiterRE).forEach((item) => {
+    if (item) {
+      const tmp = item.split(propertyDelimiterRE);
+      tmp.length > 1 && (ret[tmp[0].trim()] = tmp[1].trim());
     }
-  }), t;
+  });
+  return ret;
 }
-function ie(e) {
-  let t = "";
-  if (se(e))
-    t = e;
-  else if (A(e))
-    for (let s = 0; s < e.length; s++) {
-      const n = ie(e[s]);
-      n && (t += n + " ");
+function normalizeClass(value) {
+  let res = "";
+  if (isString(value)) {
+    res = value;
+  } else if (isArray(value)) {
+    for (let i = 0; i < value.length; i++) {
+      const normalized = normalizeClass(value[i]);
+      if (normalized) {
+        res += normalized + " ";
+      }
     }
-  else if (ee(e))
-    for (const s in e)
-      e[s] && (t += s + " ");
-  return t.trim();
-}
-const Ci = "itemscope,allowfullscreen,formnovalidate,ismap,nomodule,novalidate,readonly", Ei = /* @__PURE__ */ Qs(Ci);
-function oo(e) {
-  return !!e || e === "";
-}
-function $i(e, t) {
-  if (e.length !== t.length) return !1;
-  let s = !0;
-  for (let n = 0; s && n < e.length; n++)
-    s = hs(e[n], t[n]);
-  return s;
-}
-function hs(e, t) {
-  if (e === t) return !0;
-  let s = yn(e), n = yn(t);
-  if (s || n)
-    return s && n ? e.getTime() === t.getTime() : !1;
-  if (s = De(e), n = De(t), s || n)
-    return e === t;
-  if (s = A(e), n = A(t), s || n)
-    return s && n ? $i(e, t) : !1;
-  if (s = ee(e), n = ee(t), s || n) {
-    if (!s || !n)
-      return !1;
-    const o = Object.keys(e).length, i = Object.keys(t).length;
-    if (o !== i)
-      return !1;
-    for (const l in e) {
-      const r = e.hasOwnProperty(l), c = t.hasOwnProperty(l);
-      if (r && !c || !r && c || !hs(e[l], t[l]))
-        return !1;
+  } else if (isObject(value)) {
+    for (const name in value) {
+      if (value[name]) {
+        res += name + " ";
+      }
     }
   }
-  return String(e) === String(t);
+  return res.trim();
 }
-function io(e, t) {
-  return e.findIndex((s) => hs(s, t));
+const specialBooleanAttrs = `itemscope,allowfullscreen,formnovalidate,ismap,nomodule,novalidate,readonly`;
+const isSpecialBooleanAttr = /* @__PURE__ */ makeMap(specialBooleanAttrs);
+function includeBooleanAttr(value) {
+  return !!value || value === "";
 }
-const lo = (e) => !!(e && e.__v_isRef === !0), z = (e) => se(e) ? e : e == null ? "" : A(e) || ee(e) && (e.toString === eo || !R(e.toString)) ? lo(e) ? z(e.value) : JSON.stringify(e, ro, 2) : String(e), ro = (e, t) => lo(t) ? ro(e, t.value) : vt(t) ? {
-  [`Map(${t.size})`]: [...t.entries()].reduce(
-    (s, [n, o], i) => (s[Es(n, i) + " =>"] = o, s),
-    {}
-  )
-} : fs(t) ? {
-  [`Set(${t.size})`]: [...t.values()].map((s) => Es(s))
-} : De(t) ? Es(t) : ee(t) && !A(t) && !to(t) ? String(t) : t, Es = (e, t = "") => {
-  var s;
+function looseCompareArrays(a, b) {
+  if (a.length !== b.length) return false;
+  let equal = true;
+  for (let i = 0; equal && i < a.length; i++) {
+    equal = looseEqual(a[i], b[i]);
+  }
+  return equal;
+}
+function looseEqual(a, b) {
+  if (a === b) return true;
+  let aValidType = isDate(a);
+  let bValidType = isDate(b);
+  if (aValidType || bValidType) {
+    return aValidType && bValidType ? a.getTime() === b.getTime() : false;
+  }
+  aValidType = isSymbol(a);
+  bValidType = isSymbol(b);
+  if (aValidType || bValidType) {
+    return a === b;
+  }
+  aValidType = isArray(a);
+  bValidType = isArray(b);
+  if (aValidType || bValidType) {
+    return aValidType && bValidType ? looseCompareArrays(a, b) : false;
+  }
+  aValidType = isObject(a);
+  bValidType = isObject(b);
+  if (aValidType || bValidType) {
+    if (!aValidType || !bValidType) {
+      return false;
+    }
+    const aKeysCount = Object.keys(a).length;
+    const bKeysCount = Object.keys(b).length;
+    if (aKeysCount !== bKeysCount) {
+      return false;
+    }
+    for (const key in a) {
+      const aHasKey = a.hasOwnProperty(key);
+      const bHasKey = b.hasOwnProperty(key);
+      if (aHasKey && !bHasKey || !aHasKey && bHasKey || !looseEqual(a[key], b[key])) {
+        return false;
+      }
+    }
+  }
+  return String(a) === String(b);
+}
+function looseIndexOf(arr, val) {
+  return arr.findIndex((item) => looseEqual(item, val));
+}
+const isRef$1 = (val) => {
+  return !!(val && val["__v_isRef"] === true);
+};
+const toDisplayString = (val) => {
+  return isString(val) ? val : val == null ? "" : isArray(val) || isObject(val) && (val.toString === objectToString || !isFunction(val.toString)) ? isRef$1(val) ? toDisplayString(val.value) : JSON.stringify(val, replacer, 2) : String(val);
+};
+const replacer = (_key, val) => {
+  if (isRef$1(val)) {
+    return replacer(_key, val.value);
+  } else if (isMap(val)) {
+    return {
+      [`Map(${val.size})`]: [...val.entries()].reduce(
+        (entries, [key, val2], i) => {
+          entries[stringifySymbol(key, i) + " =>"] = val2;
+          return entries;
+        },
+        {}
+      )
+    };
+  } else if (isSet(val)) {
+    return {
+      [`Set(${val.size})`]: [...val.values()].map((v) => stringifySymbol(v))
+    };
+  } else if (isSymbol(val)) {
+    return stringifySymbol(val);
+  } else if (isObject(val) && !isArray(val) && !isPlainObject(val)) {
+    return String(val);
+  }
+  return val;
+};
+const stringifySymbol = (v, i = "") => {
+  var _a;
   return (
     // Symbol.description in es2019+ so we need to cast here to pass
     // the lib: es2016 check
-    De(e) ? `Symbol(${(s = e.description) != null ? s : t})` : e
+    isSymbol(v) ? `Symbol(${(_a = v.description) != null ? _a : i})` : v
   );
 };
 /**
@@ -138,48 +245,65 @@ const lo = (e) => !!(e && e.__v_isRef === !0), z = (e) => se(e) ? e : e == null 
 * (c) 2018-present Yuxi (Evan) You and Vue contributors
 * @license MIT
 **/
-let xe;
-class Ti {
-  constructor(t = !1) {
-    this.detached = t, this._active = !0, this.effects = [], this.cleanups = [], this._isPaused = !1, this.parent = xe, !t && xe && (this.index = (xe.scopes || (xe.scopes = [])).push(
-      this
-    ) - 1);
+let activeEffectScope;
+class EffectScope {
+  constructor(detached = false) {
+    this.detached = detached;
+    this._active = true;
+    this.effects = [];
+    this.cleanups = [];
+    this._isPaused = false;
+    this.parent = activeEffectScope;
+    if (!detached && activeEffectScope) {
+      this.index = (activeEffectScope.scopes || (activeEffectScope.scopes = [])).push(
+        this
+      ) - 1;
+    }
   }
   get active() {
     return this._active;
   }
   pause() {
     if (this._active) {
-      this._isPaused = !0;
-      let t, s;
-      if (this.scopes)
-        for (t = 0, s = this.scopes.length; t < s; t++)
-          this.scopes[t].pause();
-      for (t = 0, s = this.effects.length; t < s; t++)
-        this.effects[t].pause();
+      this._isPaused = true;
+      let i, l;
+      if (this.scopes) {
+        for (i = 0, l = this.scopes.length; i < l; i++) {
+          this.scopes[i].pause();
+        }
+      }
+      for (i = 0, l = this.effects.length; i < l; i++) {
+        this.effects[i].pause();
+      }
     }
   }
   /**
    * Resumes the effect scope, including all child scopes and effects.
    */
   resume() {
-    if (this._active && this._isPaused) {
-      this._isPaused = !1;
-      let t, s;
-      if (this.scopes)
-        for (t = 0, s = this.scopes.length; t < s; t++)
-          this.scopes[t].resume();
-      for (t = 0, s = this.effects.length; t < s; t++)
-        this.effects[t].resume();
+    if (this._active) {
+      if (this._isPaused) {
+        this._isPaused = false;
+        let i, l;
+        if (this.scopes) {
+          for (i = 0, l = this.scopes.length; i < l; i++) {
+            this.scopes[i].resume();
+          }
+        }
+        for (i = 0, l = this.effects.length; i < l; i++) {
+          this.effects[i].resume();
+        }
+      }
     }
   }
-  run(t) {
+  run(fn) {
     if (this._active) {
-      const s = xe;
+      const currentEffectScope = activeEffectScope;
       try {
-        return xe = this, t();
+        activeEffectScope = this;
+        return fn();
       } finally {
-        xe = s;
+        activeEffectScope = currentEffectScope;
       }
     }
   }
@@ -188,541 +312,842 @@ class Ti {
    * @internal
    */
   on() {
-    xe = this;
+    activeEffectScope = this;
   }
   /**
    * This should only be called on non-detached scopes
    * @internal
    */
   off() {
-    xe = this.parent;
+    activeEffectScope = this.parent;
   }
-  stop(t) {
+  stop(fromParent) {
     if (this._active) {
-      this._active = !1;
-      let s, n;
-      for (s = 0, n = this.effects.length; s < n; s++)
-        this.effects[s].stop();
-      for (this.effects.length = 0, s = 0, n = this.cleanups.length; s < n; s++)
-        this.cleanups[s]();
-      if (this.cleanups.length = 0, this.scopes) {
-        for (s = 0, n = this.scopes.length; s < n; s++)
-          this.scopes[s].stop(!0);
+      this._active = false;
+      let i, l;
+      for (i = 0, l = this.effects.length; i < l; i++) {
+        this.effects[i].stop();
+      }
+      this.effects.length = 0;
+      for (i = 0, l = this.cleanups.length; i < l; i++) {
+        this.cleanups[i]();
+      }
+      this.cleanups.length = 0;
+      if (this.scopes) {
+        for (i = 0, l = this.scopes.length; i < l; i++) {
+          this.scopes[i].stop(true);
+        }
         this.scopes.length = 0;
       }
-      if (!this.detached && this.parent && !t) {
-        const o = this.parent.scopes.pop();
-        o && o !== this && (this.parent.scopes[this.index] = o, o.index = this.index);
+      if (!this.detached && this.parent && !fromParent) {
+        const last = this.parent.scopes.pop();
+        if (last && last !== this) {
+          this.parent.scopes[this.index] = last;
+          last.index = this.index;
+        }
       }
       this.parent = void 0;
     }
   }
 }
-function Ii() {
-  return xe;
+function getCurrentScope() {
+  return activeEffectScope;
 }
-let Q;
-const $s = /* @__PURE__ */ new WeakSet();
-class co {
-  constructor(t) {
-    this.fn = t, this.deps = void 0, this.depsTail = void 0, this.flags = 5, this.next = void 0, this.cleanup = void 0, this.scheduler = void 0, xe && xe.active && xe.effects.push(this);
+let activeSub;
+const pausedQueueEffects = /* @__PURE__ */ new WeakSet();
+class ReactiveEffect {
+  constructor(fn) {
+    this.fn = fn;
+    this.deps = void 0;
+    this.depsTail = void 0;
+    this.flags = 1 | 4;
+    this.next = void 0;
+    this.cleanup = void 0;
+    this.scheduler = void 0;
+    if (activeEffectScope && activeEffectScope.active) {
+      activeEffectScope.effects.push(this);
+    }
   }
   pause() {
     this.flags |= 64;
   }
   resume() {
-    this.flags & 64 && (this.flags &= -65, $s.has(this) && ($s.delete(this), this.trigger()));
+    if (this.flags & 64) {
+      this.flags &= -65;
+      if (pausedQueueEffects.has(this)) {
+        pausedQueueEffects.delete(this);
+        this.trigger();
+      }
+    }
   }
   /**
    * @internal
    */
   notify() {
-    this.flags & 2 && !(this.flags & 32) || this.flags & 8 || ao(this);
+    if (this.flags & 2 && !(this.flags & 32)) {
+      return;
+    }
+    if (!(this.flags & 8)) {
+      batch(this);
+    }
   }
   run() {
-    if (!(this.flags & 1))
+    if (!(this.flags & 1)) {
       return this.fn();
-    this.flags |= 2, wn(this), fo(this);
-    const t = Q, s = Oe;
-    Q = this, Oe = !0;
+    }
+    this.flags |= 2;
+    cleanupEffect(this);
+    prepareDeps(this);
+    const prevEffect = activeSub;
+    const prevShouldTrack = shouldTrack;
+    activeSub = this;
+    shouldTrack = true;
     try {
       return this.fn();
     } finally {
-      po(this), Q = t, Oe = s, this.flags &= -3;
+      cleanupDeps(this);
+      activeSub = prevEffect;
+      shouldTrack = prevShouldTrack;
+      this.flags &= -3;
     }
   }
   stop() {
     if (this.flags & 1) {
-      for (let t = this.deps; t; t = t.nextDep)
-        ln(t);
-      this.deps = this.depsTail = void 0, wn(this), this.onStop && this.onStop(), this.flags &= -2;
+      for (let link = this.deps; link; link = link.nextDep) {
+        removeSub(link);
+      }
+      this.deps = this.depsTail = void 0;
+      cleanupEffect(this);
+      this.onStop && this.onStop();
+      this.flags &= -2;
     }
   }
   trigger() {
-    this.flags & 64 ? $s.add(this) : this.scheduler ? this.scheduler() : this.runIfDirty();
+    if (this.flags & 64) {
+      pausedQueueEffects.add(this);
+    } else if (this.scheduler) {
+      this.scheduler();
+    } else {
+      this.runIfDirty();
+    }
   }
   /**
    * @internal
    */
   runIfDirty() {
-    Hs(this) && this.run();
+    if (isDirty(this)) {
+      this.run();
+    }
   }
   get dirty() {
-    return Hs(this);
+    return isDirty(this);
   }
 }
-let uo = 0, At, Pt;
-function ao(e, t = !1) {
-  if (e.flags |= 8, t) {
-    e.next = Pt, Pt = e;
+let batchDepth = 0;
+let batchedSub;
+let batchedComputed;
+function batch(sub, isComputed = false) {
+  sub.flags |= 8;
+  if (isComputed) {
+    sub.next = batchedComputed;
+    batchedComputed = sub;
     return;
   }
-  e.next = At, At = e;
+  sub.next = batchedSub;
+  batchedSub = sub;
 }
-function nn() {
-  uo++;
+function startBatch() {
+  batchDepth++;
 }
-function on() {
-  if (--uo > 0)
+function endBatch() {
+  if (--batchDepth > 0) {
     return;
-  if (Pt) {
-    let t = Pt;
-    for (Pt = void 0; t; ) {
-      const s = t.next;
-      t.next = void 0, t.flags &= -9, t = s;
+  }
+  if (batchedComputed) {
+    let e = batchedComputed;
+    batchedComputed = void 0;
+    while (e) {
+      const next = e.next;
+      e.next = void 0;
+      e.flags &= -9;
+      e = next;
     }
   }
-  let e;
-  for (; At; ) {
-    let t = At;
-    for (At = void 0; t; ) {
-      const s = t.next;
-      if (t.next = void 0, t.flags &= -9, t.flags & 1)
+  let error;
+  while (batchedSub) {
+    let e = batchedSub;
+    batchedSub = void 0;
+    while (e) {
+      const next = e.next;
+      e.next = void 0;
+      e.flags &= -9;
+      if (e.flags & 1) {
         try {
-          t.trigger();
-        } catch (n) {
-          e || (e = n);
+          ;
+          e.trigger();
+        } catch (err) {
+          if (!error) error = err;
         }
-      t = s;
+      }
+      e = next;
     }
   }
-  if (e) throw e;
+  if (error) throw error;
 }
-function fo(e) {
-  for (let t = e.deps; t; t = t.nextDep)
-    t.version = -1, t.prevActiveLink = t.dep.activeLink, t.dep.activeLink = t;
-}
-function po(e) {
-  let t, s = e.depsTail, n = s;
-  for (; n; ) {
-    const o = n.prevDep;
-    n.version === -1 ? (n === s && (s = o), ln(n), Oi(n)) : t = n, n.dep.activeLink = n.prevActiveLink, n.prevActiveLink = void 0, n = o;
+function prepareDeps(sub) {
+  for (let link = sub.deps; link; link = link.nextDep) {
+    link.version = -1;
+    link.prevActiveLink = link.dep.activeLink;
+    link.dep.activeLink = link;
   }
-  e.deps = t, e.depsTail = s;
 }
-function Hs(e) {
-  for (let t = e.deps; t; t = t.nextDep)
-    if (t.dep.version !== t.version || t.dep.computed && (ho(t.dep.computed) || t.dep.version !== t.version))
-      return !0;
-  return !!e._dirty;
+function cleanupDeps(sub) {
+  let head;
+  let tail = sub.depsTail;
+  let link = tail;
+  while (link) {
+    const prev = link.prevDep;
+    if (link.version === -1) {
+      if (link === tail) tail = prev;
+      removeSub(link);
+      removeDep(link);
+    } else {
+      head = link;
+    }
+    link.dep.activeLink = link.prevActiveLink;
+    link.prevActiveLink = void 0;
+    link = prev;
+  }
+  sub.deps = head;
+  sub.depsTail = tail;
 }
-function ho(e) {
-  if (e.flags & 4 && !(e.flags & 16) || (e.flags &= -17, e.globalVersion === Dt))
-    return;
-  e.globalVersion = Dt;
-  const t = e.dep;
-  if (e.flags |= 2, t.version > 0 && !e.isSSR && e.deps && !Hs(e)) {
-    e.flags &= -3;
+function isDirty(sub) {
+  for (let link = sub.deps; link; link = link.nextDep) {
+    if (link.dep.version !== link.version || link.dep.computed && (refreshComputed(link.dep.computed) || link.dep.version !== link.version)) {
+      return true;
+    }
+  }
+  if (sub._dirty) {
+    return true;
+  }
+  return false;
+}
+function refreshComputed(computed2) {
+  if (computed2.flags & 4 && !(computed2.flags & 16)) {
     return;
   }
-  const s = Q, n = Oe;
-  Q = e, Oe = !0;
+  computed2.flags &= -17;
+  if (computed2.globalVersion === globalVersion) {
+    return;
+  }
+  computed2.globalVersion = globalVersion;
+  const dep = computed2.dep;
+  computed2.flags |= 2;
+  if (dep.version > 0 && !computed2.isSSR && computed2.deps && !isDirty(computed2)) {
+    computed2.flags &= -3;
+    return;
+  }
+  const prevSub = activeSub;
+  const prevShouldTrack = shouldTrack;
+  activeSub = computed2;
+  shouldTrack = true;
   try {
-    fo(e);
-    const o = e.fn(e._value);
-    (t.version === 0 || Xe(o, e._value)) && (e._value = o, t.version++);
-  } catch (o) {
-    throw t.version++, o;
+    prepareDeps(computed2);
+    const value = computed2.fn(computed2._value);
+    if (dep.version === 0 || hasChanged(value, computed2._value)) {
+      computed2._value = value;
+      dep.version++;
+    }
+  } catch (err) {
+    dep.version++;
+    throw err;
   } finally {
-    Q = s, Oe = n, po(e), e.flags &= -3;
+    activeSub = prevSub;
+    shouldTrack = prevShouldTrack;
+    cleanupDeps(computed2);
+    computed2.flags &= -3;
   }
 }
-function ln(e, t = !1) {
-  const { dep: s, prevSub: n, nextSub: o } = e;
-  if (n && (n.nextSub = o, e.prevSub = void 0), o && (o.prevSub = n, e.nextSub = void 0), s.subs === e && (s.subs = n, !n && s.computed)) {
-    s.computed.flags &= -5;
-    for (let i = s.computed.deps; i; i = i.nextDep)
-      ln(i, !0);
+function removeSub(link, soft = false) {
+  const { dep, prevSub, nextSub } = link;
+  if (prevSub) {
+    prevSub.nextSub = nextSub;
+    link.prevSub = void 0;
   }
-  !t && !--s.sc && s.map && s.map.delete(s.key);
+  if (nextSub) {
+    nextSub.prevSub = prevSub;
+    link.nextSub = void 0;
+  }
+  if (dep.subs === link) {
+    dep.subs = prevSub;
+    if (!prevSub && dep.computed) {
+      dep.computed.flags &= -5;
+      for (let l = dep.computed.deps; l; l = l.nextDep) {
+        removeSub(l, true);
+      }
+    }
+  }
+  if (!soft && !--dep.sc && dep.map) {
+    dep.map.delete(dep.key);
+  }
 }
-function Oi(e) {
-  const { prevDep: t, nextDep: s } = e;
-  t && (t.nextDep = s, e.prevDep = void 0), s && (s.prevDep = t, e.nextDep = void 0);
+function removeDep(link) {
+  const { prevDep, nextDep } = link;
+  if (prevDep) {
+    prevDep.nextDep = nextDep;
+    link.prevDep = void 0;
+  }
+  if (nextDep) {
+    nextDep.prevDep = prevDep;
+    link.nextDep = void 0;
+  }
 }
-let Oe = !0;
-const go = [];
-function Qe() {
-  go.push(Oe), Oe = !1;
+let shouldTrack = true;
+const trackStack = [];
+function pauseTracking() {
+  trackStack.push(shouldTrack);
+  shouldTrack = false;
 }
-function et() {
-  const e = go.pop();
-  Oe = e === void 0 ? !0 : e;
+function resetTracking() {
+  const last = trackStack.pop();
+  shouldTrack = last === void 0 ? true : last;
 }
-function wn(e) {
-  const { cleanup: t } = e;
-  if (e.cleanup = void 0, t) {
-    const s = Q;
-    Q = void 0;
+function cleanupEffect(e) {
+  const { cleanup } = e;
+  e.cleanup = void 0;
+  if (cleanup) {
+    const prevSub = activeSub;
+    activeSub = void 0;
     try {
-      t();
+      cleanup();
     } finally {
-      Q = s;
+      activeSub = prevSub;
     }
   }
 }
-let Dt = 0;
-class Mi {
-  constructor(t, s) {
-    this.sub = t, this.dep = s, this.version = s.version, this.nextDep = this.prevDep = this.nextSub = this.prevSub = this.prevActiveLink = void 0;
+let globalVersion = 0;
+class Link {
+  constructor(sub, dep) {
+    this.sub = sub;
+    this.dep = dep;
+    this.version = dep.version;
+    this.nextDep = this.prevDep = this.nextSub = this.prevSub = this.prevActiveLink = void 0;
   }
 }
-class rn {
-  constructor(t) {
-    this.computed = t, this.version = 0, this.activeLink = void 0, this.subs = void 0, this.map = void 0, this.key = void 0, this.sc = 0;
+class Dep {
+  constructor(computed2) {
+    this.computed = computed2;
+    this.version = 0;
+    this.activeLink = void 0;
+    this.subs = void 0;
+    this.map = void 0;
+    this.key = void 0;
+    this.sc = 0;
   }
-  track(t) {
-    if (!Q || !Oe || Q === this.computed)
+  track(debugInfo) {
+    if (!activeSub || !shouldTrack || activeSub === this.computed) {
       return;
-    let s = this.activeLink;
-    if (s === void 0 || s.sub !== Q)
-      s = this.activeLink = new Mi(Q, this), Q.deps ? (s.prevDep = Q.depsTail, Q.depsTail.nextDep = s, Q.depsTail = s) : Q.deps = Q.depsTail = s, mo(s);
-    else if (s.version === -1 && (s.version = this.version, s.nextDep)) {
-      const n = s.nextDep;
-      n.prevDep = s.prevDep, s.prevDep && (s.prevDep.nextDep = n), s.prevDep = Q.depsTail, s.nextDep = void 0, Q.depsTail.nextDep = s, Q.depsTail = s, Q.deps === s && (Q.deps = n);
     }
-    return s;
+    let link = this.activeLink;
+    if (link === void 0 || link.sub !== activeSub) {
+      link = this.activeLink = new Link(activeSub, this);
+      if (!activeSub.deps) {
+        activeSub.deps = activeSub.depsTail = link;
+      } else {
+        link.prevDep = activeSub.depsTail;
+        activeSub.depsTail.nextDep = link;
+        activeSub.depsTail = link;
+      }
+      addSub(link);
+    } else if (link.version === -1) {
+      link.version = this.version;
+      if (link.nextDep) {
+        const next = link.nextDep;
+        next.prevDep = link.prevDep;
+        if (link.prevDep) {
+          link.prevDep.nextDep = next;
+        }
+        link.prevDep = activeSub.depsTail;
+        link.nextDep = void 0;
+        activeSub.depsTail.nextDep = link;
+        activeSub.depsTail = link;
+        if (activeSub.deps === link) {
+          activeSub.deps = next;
+        }
+      }
+    }
+    return link;
   }
-  trigger(t) {
-    this.version++, Dt++, this.notify(t);
+  trigger(debugInfo) {
+    this.version++;
+    globalVersion++;
+    this.notify(debugInfo);
   }
-  notify(t) {
-    nn();
+  notify(debugInfo) {
+    startBatch();
     try {
-      for (let s = this.subs; s; s = s.prevSub)
-        s.sub.notify() && s.sub.dep.notify();
+      if (false) ;
+      for (let link = this.subs; link; link = link.prevSub) {
+        if (link.sub.notify()) {
+          ;
+          link.sub.dep.notify();
+        }
+      }
     } finally {
-      on();
+      endBatch();
     }
   }
 }
-function mo(e) {
-  if (e.dep.sc++, e.sub.flags & 4) {
-    const t = e.dep.computed;
-    if (t && !e.dep.subs) {
-      t.flags |= 20;
-      for (let n = t.deps; n; n = n.nextDep)
-        mo(n);
+function addSub(link) {
+  link.dep.sc++;
+  if (link.sub.flags & 4) {
+    const computed2 = link.dep.computed;
+    if (computed2 && !link.dep.subs) {
+      computed2.flags |= 4 | 16;
+      for (let l = computed2.deps; l; l = l.nextDep) {
+        addSub(l);
+      }
     }
-    const s = e.dep.subs;
-    s !== e && (e.prevSub = s, s && (s.nextSub = e)), e.dep.subs = e;
+    const currentTail = link.dep.subs;
+    if (currentTail !== link) {
+      link.prevSub = currentTail;
+      if (currentTail) currentTail.nextSub = link;
+    }
+    link.dep.subs = link;
   }
 }
-const Ns = /* @__PURE__ */ new WeakMap(), ut = Symbol(
-  ""
-), Ls = Symbol(
-  ""
-), Ht = Symbol(
+const targetMap = /* @__PURE__ */ new WeakMap();
+const ITERATE_KEY = Symbol(
   ""
 );
-function re(e, t, s) {
-  if (Oe && Q) {
-    let n = Ns.get(e);
-    n || Ns.set(e, n = /* @__PURE__ */ new Map());
-    let o = n.get(s);
-    o || (n.set(s, o = new rn()), o.map = n, o.key = s), o.track();
+const MAP_KEY_ITERATE_KEY = Symbol(
+  ""
+);
+const ARRAY_ITERATE_KEY = Symbol(
+  ""
+);
+function track(target, type, key) {
+  if (shouldTrack && activeSub) {
+    let depsMap = targetMap.get(target);
+    if (!depsMap) {
+      targetMap.set(target, depsMap = /* @__PURE__ */ new Map());
+    }
+    let dep = depsMap.get(key);
+    if (!dep) {
+      depsMap.set(key, dep = new Dep());
+      dep.map = depsMap;
+      dep.key = key;
+    }
+    {
+      dep.track();
+    }
   }
 }
-function Be(e, t, s, n, o, i) {
-  const l = Ns.get(e);
-  if (!l) {
-    Dt++;
+function trigger(target, type, key, newValue, oldValue, oldTarget) {
+  const depsMap = targetMap.get(target);
+  if (!depsMap) {
+    globalVersion++;
     return;
   }
-  const r = (c) => {
-    c && c.trigger();
+  const run = (dep) => {
+    if (dep) {
+      {
+        dep.trigger();
+      }
+    }
   };
-  if (nn(), t === "clear")
-    l.forEach(r);
-  else {
-    const c = A(e), p = c && sn(s);
-    if (c && s === "length") {
-      const a = Number(n);
-      l.forEach((d, m) => {
-        (m === "length" || m === Ht || !De(m) && m >= a) && r(d);
+  startBatch();
+  if (type === "clear") {
+    depsMap.forEach(run);
+  } else {
+    const targetIsArray = isArray(target);
+    const isArrayIndex = targetIsArray && isIntegerKey(key);
+    if (targetIsArray && key === "length") {
+      const newLength = Number(newValue);
+      depsMap.forEach((dep, key2) => {
+        if (key2 === "length" || key2 === ARRAY_ITERATE_KEY || !isSymbol(key2) && key2 >= newLength) {
+          run(dep);
+        }
       });
-    } else
-      switch ((s !== void 0 || l.has(void 0)) && r(l.get(s)), p && r(l.get(Ht)), t) {
+    } else {
+      if (key !== void 0 || depsMap.has(void 0)) {
+        run(depsMap.get(key));
+      }
+      if (isArrayIndex) {
+        run(depsMap.get(ARRAY_ITERATE_KEY));
+      }
+      switch (type) {
         case "add":
-          c ? p && r(l.get("length")) : (r(l.get(ut)), vt(e) && r(l.get(Ls)));
+          if (!targetIsArray) {
+            run(depsMap.get(ITERATE_KEY));
+            if (isMap(target)) {
+              run(depsMap.get(MAP_KEY_ITERATE_KEY));
+            }
+          } else if (isArrayIndex) {
+            run(depsMap.get("length"));
+          }
           break;
         case "delete":
-          c || (r(l.get(ut)), vt(e) && r(l.get(Ls)));
+          if (!targetIsArray) {
+            run(depsMap.get(ITERATE_KEY));
+            if (isMap(target)) {
+              run(depsMap.get(MAP_KEY_ITERATE_KEY));
+            }
+          }
           break;
         case "set":
-          vt(e) && r(l.get(ut));
+          if (isMap(target)) {
+            run(depsMap.get(ITERATE_KEY));
+          }
           break;
       }
+    }
   }
-  on();
+  endBatch();
 }
-function mt(e) {
-  const t = L(e);
-  return t === e ? t : (re(t, "iterate", Ht), Ee(e) ? t : t.map(ce));
+function reactiveReadArray(array) {
+  const raw = toRaw(array);
+  if (raw === array) return raw;
+  track(raw, "iterate", ARRAY_ITERATE_KEY);
+  return isShallow(array) ? raw : raw.map(toReactive);
 }
-function gs(e) {
-  return re(e = L(e), "iterate", Ht), e;
+function shallowReadArray(arr) {
+  track(arr = toRaw(arr), "iterate", ARRAY_ITERATE_KEY);
+  return arr;
 }
-const ki = {
+const arrayInstrumentations = {
   __proto__: null,
   [Symbol.iterator]() {
-    return Ts(this, Symbol.iterator, ce);
+    return iterator(this, Symbol.iterator, toReactive);
   },
-  concat(...e) {
-    return mt(this).concat(
-      ...e.map((t) => A(t) ? mt(t) : t)
+  concat(...args) {
+    return reactiveReadArray(this).concat(
+      ...args.map((x) => isArray(x) ? reactiveReadArray(x) : x)
     );
   },
   entries() {
-    return Ts(this, "entries", (e) => (e[1] = ce(e[1]), e));
+    return iterator(this, "entries", (value) => {
+      value[1] = toReactive(value[1]);
+      return value;
+    });
   },
-  every(e, t) {
-    return Le(this, "every", e, t, void 0, arguments);
+  every(fn, thisArg) {
+    return apply(this, "every", fn, thisArg, void 0, arguments);
   },
-  filter(e, t) {
-    return Le(this, "filter", e, t, (s) => s.map(ce), arguments);
+  filter(fn, thisArg) {
+    return apply(this, "filter", fn, thisArg, (v) => v.map(toReactive), arguments);
   },
-  find(e, t) {
-    return Le(this, "find", e, t, ce, arguments);
+  find(fn, thisArg) {
+    return apply(this, "find", fn, thisArg, toReactive, arguments);
   },
-  findIndex(e, t) {
-    return Le(this, "findIndex", e, t, void 0, arguments);
+  findIndex(fn, thisArg) {
+    return apply(this, "findIndex", fn, thisArg, void 0, arguments);
   },
-  findLast(e, t) {
-    return Le(this, "findLast", e, t, ce, arguments);
+  findLast(fn, thisArg) {
+    return apply(this, "findLast", fn, thisArg, toReactive, arguments);
   },
-  findLastIndex(e, t) {
-    return Le(this, "findLastIndex", e, t, void 0, arguments);
+  findLastIndex(fn, thisArg) {
+    return apply(this, "findLastIndex", fn, thisArg, void 0, arguments);
   },
   // flat, flatMap could benefit from ARRAY_ITERATE but are not straight-forward to implement
-  forEach(e, t) {
-    return Le(this, "forEach", e, t, void 0, arguments);
+  forEach(fn, thisArg) {
+    return apply(this, "forEach", fn, thisArg, void 0, arguments);
   },
-  includes(...e) {
-    return Is(this, "includes", e);
+  includes(...args) {
+    return searchProxy(this, "includes", args);
   },
-  indexOf(...e) {
-    return Is(this, "indexOf", e);
+  indexOf(...args) {
+    return searchProxy(this, "indexOf", args);
   },
-  join(e) {
-    return mt(this).join(e);
+  join(separator) {
+    return reactiveReadArray(this).join(separator);
   },
   // keys() iterator only reads `length`, no optimisation required
-  lastIndexOf(...e) {
-    return Is(this, "lastIndexOf", e);
+  lastIndexOf(...args) {
+    return searchProxy(this, "lastIndexOf", args);
   },
-  map(e, t) {
-    return Le(this, "map", e, t, void 0, arguments);
+  map(fn, thisArg) {
+    return apply(this, "map", fn, thisArg, void 0, arguments);
   },
   pop() {
-    return It(this, "pop");
+    return noTracking(this, "pop");
   },
-  push(...e) {
-    return It(this, "push", e);
+  push(...args) {
+    return noTracking(this, "push", args);
   },
-  reduce(e, ...t) {
-    return Sn(this, "reduce", e, t);
+  reduce(fn, ...args) {
+    return reduce(this, "reduce", fn, args);
   },
-  reduceRight(e, ...t) {
-    return Sn(this, "reduceRight", e, t);
+  reduceRight(fn, ...args) {
+    return reduce(this, "reduceRight", fn, args);
   },
   shift() {
-    return It(this, "shift");
+    return noTracking(this, "shift");
   },
   // slice could use ARRAY_ITERATE but also seems to beg for range tracking
-  some(e, t) {
-    return Le(this, "some", e, t, void 0, arguments);
+  some(fn, thisArg) {
+    return apply(this, "some", fn, thisArg, void 0, arguments);
   },
-  splice(...e) {
-    return It(this, "splice", e);
+  splice(...args) {
+    return noTracking(this, "splice", args);
   },
   toReversed() {
-    return mt(this).toReversed();
+    return reactiveReadArray(this).toReversed();
   },
-  toSorted(e) {
-    return mt(this).toSorted(e);
+  toSorted(comparer) {
+    return reactiveReadArray(this).toSorted(comparer);
   },
-  toSpliced(...e) {
-    return mt(this).toSpliced(...e);
+  toSpliced(...args) {
+    return reactiveReadArray(this).toSpliced(...args);
   },
-  unshift(...e) {
-    return It(this, "unshift", e);
+  unshift(...args) {
+    return noTracking(this, "unshift", args);
   },
   values() {
-    return Ts(this, "values", ce);
+    return iterator(this, "values", toReactive);
   }
 };
-function Ts(e, t, s) {
-  const n = gs(e), o = n[t]();
-  return n !== e && !Ee(e) && (o._next = o.next, o.next = () => {
-    const i = o._next();
-    return i.value && (i.value = s(i.value)), i;
-  }), o;
-}
-const Ai = Array.prototype;
-function Le(e, t, s, n, o, i) {
-  const l = gs(e), r = l !== e && !Ee(e), c = l[t];
-  if (c !== Ai[t]) {
-    const d = c.apply(e, i);
-    return r ? ce(d) : d;
+function iterator(self2, method, wrapValue) {
+  const arr = shallowReadArray(self2);
+  const iter = arr[method]();
+  if (arr !== self2 && !isShallow(self2)) {
+    iter._next = iter.next;
+    iter.next = () => {
+      const result = iter._next();
+      if (result.value) {
+        result.value = wrapValue(result.value);
+      }
+      return result;
+    };
   }
-  let p = s;
-  l !== e && (r ? p = function(d, m) {
-    return s.call(this, ce(d), m, e);
-  } : s.length > 2 && (p = function(d, m) {
-    return s.call(this, d, m, e);
-  }));
-  const a = c.call(l, p, n);
-  return r && o ? o(a) : a;
+  return iter;
 }
-function Sn(e, t, s, n) {
-  const o = gs(e);
-  let i = s;
-  return o !== e && (Ee(e) ? s.length > 3 && (i = function(l, r, c) {
-    return s.call(this, l, r, c, e);
-  }) : i = function(l, r, c) {
-    return s.call(this, l, ce(r), c, e);
-  }), o[t](i, ...n);
-}
-function Is(e, t, s) {
-  const n = L(e);
-  re(n, "iterate", Ht);
-  const o = n[t](...s);
-  return (o === -1 || o === !1) && an(s[0]) ? (s[0] = L(s[0]), n[t](...s)) : o;
-}
-function It(e, t, s = []) {
-  Qe(), nn();
-  const n = L(e)[t].apply(e, s);
-  return on(), et(), n;
-}
-const Pi = /* @__PURE__ */ Qs("__proto__,__v_isRef,__isVue"), bo = new Set(
-  /* @__PURE__ */ Object.getOwnPropertyNames(Symbol).filter((e) => e !== "arguments" && e !== "caller").map((e) => Symbol[e]).filter(De)
-);
-function Ri(e) {
-  De(e) || (e = String(e));
-  const t = L(this);
-  return re(t, "has", e), t.hasOwnProperty(e);
-}
-class _o {
-  constructor(t = !1, s = !1) {
-    this._isReadonly = t, this._isShallow = s;
+const arrayProto = Array.prototype;
+function apply(self2, method, fn, thisArg, wrappedRetFn, args) {
+  const arr = shallowReadArray(self2);
+  const needsWrap = arr !== self2 && !isShallow(self2);
+  const methodFn = arr[method];
+  if (methodFn !== arrayProto[method]) {
+    const result2 = methodFn.apply(self2, args);
+    return needsWrap ? toReactive(result2) : result2;
   }
-  get(t, s, n) {
-    if (s === "__v_skip") return t.__v_skip;
-    const o = this._isReadonly, i = this._isShallow;
-    if (s === "__v_isReactive")
-      return !o;
-    if (s === "__v_isReadonly")
-      return o;
-    if (s === "__v_isShallow")
-      return i;
-    if (s === "__v_raw")
-      return n === (o ? i ? Ki : wo : i ? xo : yo).get(t) || // receiver is not the reactive proxy, but has the same prototype
-      // this means the receiver is a user proxy of the reactive proxy
-      Object.getPrototypeOf(t) === Object.getPrototypeOf(n) ? t : void 0;
-    const l = A(t);
-    if (!o) {
-      let c;
-      if (l && (c = ki[s]))
-        return c;
-      if (s === "hasOwnProperty")
-        return Ri;
+  let wrappedFn = fn;
+  if (arr !== self2) {
+    if (needsWrap) {
+      wrappedFn = function(item, index) {
+        return fn.call(this, toReactive(item), index, self2);
+      };
+    } else if (fn.length > 2) {
+      wrappedFn = function(item, index) {
+        return fn.call(this, item, index, self2);
+      };
     }
-    const r = Reflect.get(
-      t,
-      s,
+  }
+  const result = methodFn.call(arr, wrappedFn, thisArg);
+  return needsWrap && wrappedRetFn ? wrappedRetFn(result) : result;
+}
+function reduce(self2, method, fn, args) {
+  const arr = shallowReadArray(self2);
+  let wrappedFn = fn;
+  if (arr !== self2) {
+    if (!isShallow(self2)) {
+      wrappedFn = function(acc, item, index) {
+        return fn.call(this, acc, toReactive(item), index, self2);
+      };
+    } else if (fn.length > 3) {
+      wrappedFn = function(acc, item, index) {
+        return fn.call(this, acc, item, index, self2);
+      };
+    }
+  }
+  return arr[method](wrappedFn, ...args);
+}
+function searchProxy(self2, method, args) {
+  const arr = toRaw(self2);
+  track(arr, "iterate", ARRAY_ITERATE_KEY);
+  const res = arr[method](...args);
+  if ((res === -1 || res === false) && isProxy(args[0])) {
+    args[0] = toRaw(args[0]);
+    return arr[method](...args);
+  }
+  return res;
+}
+function noTracking(self2, method, args = []) {
+  pauseTracking();
+  startBatch();
+  const res = toRaw(self2)[method].apply(self2, args);
+  endBatch();
+  resetTracking();
+  return res;
+}
+const isNonTrackableKeys = /* @__PURE__ */ makeMap(`__proto__,__v_isRef,__isVue`);
+const builtInSymbols = new Set(
+  /* @__PURE__ */ Object.getOwnPropertyNames(Symbol).filter((key) => key !== "arguments" && key !== "caller").map((key) => Symbol[key]).filter(isSymbol)
+);
+function hasOwnProperty(key) {
+  if (!isSymbol(key)) key = String(key);
+  const obj = toRaw(this);
+  track(obj, "has", key);
+  return obj.hasOwnProperty(key);
+}
+class BaseReactiveHandler {
+  constructor(_isReadonly = false, _isShallow = false) {
+    this._isReadonly = _isReadonly;
+    this._isShallow = _isShallow;
+  }
+  get(target, key, receiver) {
+    if (key === "__v_skip") return target["__v_skip"];
+    const isReadonly2 = this._isReadonly, isShallow2 = this._isShallow;
+    if (key === "__v_isReactive") {
+      return !isReadonly2;
+    } else if (key === "__v_isReadonly") {
+      return isReadonly2;
+    } else if (key === "__v_isShallow") {
+      return isShallow2;
+    } else if (key === "__v_raw") {
+      if (receiver === (isReadonly2 ? isShallow2 ? shallowReadonlyMap : readonlyMap : isShallow2 ? shallowReactiveMap : reactiveMap).get(target) || // receiver is not the reactive proxy, but has the same prototype
+      // this means the receiver is a user proxy of the reactive proxy
+      Object.getPrototypeOf(target) === Object.getPrototypeOf(receiver)) {
+        return target;
+      }
+      return;
+    }
+    const targetIsArray = isArray(target);
+    if (!isReadonly2) {
+      let fn;
+      if (targetIsArray && (fn = arrayInstrumentations[key])) {
+        return fn;
+      }
+      if (key === "hasOwnProperty") {
+        return hasOwnProperty;
+      }
+    }
+    const res = Reflect.get(
+      target,
+      key,
       // if this is a proxy wrapping a ref, return methods using the raw ref
       // as receiver so that we don't have to call `toRaw` on the ref in all
       // its class methods
-      ae(t) ? t : n
+      isRef(target) ? target : receiver
     );
-    return (De(s) ? bo.has(s) : Pi(s)) || (o || re(t, "get", s), i) ? r : ae(r) ? l && sn(s) ? r : r.value : ee(r) ? o ? So(r) : ms(r) : r;
-  }
-}
-class vo extends _o {
-  constructor(t = !1) {
-    super(!1, t);
-  }
-  set(t, s, n, o) {
-    let i = t[s];
-    if (!this._isShallow) {
-      const c = at(i);
-      if (!Ee(n) && !at(n) && (i = L(i), n = L(n)), !A(t) && ae(i) && !ae(n))
-        return c ? !1 : (i.value = n, !0);
+    if (isSymbol(key) ? builtInSymbols.has(key) : isNonTrackableKeys(key)) {
+      return res;
     }
-    const l = A(t) && sn(s) ? Number(s) < t.length : U(t, s), r = Reflect.set(
-      t,
-      s,
-      n,
-      ae(t) ? t : o
+    if (!isReadonly2) {
+      track(target, "get", key);
+    }
+    if (isShallow2) {
+      return res;
+    }
+    if (isRef(res)) {
+      return targetIsArray && isIntegerKey(key) ? res : res.value;
+    }
+    if (isObject(res)) {
+      return isReadonly2 ? readonly(res) : reactive(res);
+    }
+    return res;
+  }
+}
+class MutableReactiveHandler extends BaseReactiveHandler {
+  constructor(isShallow2 = false) {
+    super(false, isShallow2);
+  }
+  set(target, key, value, receiver) {
+    let oldValue = target[key];
+    if (!this._isShallow) {
+      const isOldValueReadonly = isReadonly(oldValue);
+      if (!isShallow(value) && !isReadonly(value)) {
+        oldValue = toRaw(oldValue);
+        value = toRaw(value);
+      }
+      if (!isArray(target) && isRef(oldValue) && !isRef(value)) {
+        if (isOldValueReadonly) {
+          return false;
+        } else {
+          oldValue.value = value;
+          return true;
+        }
+      }
+    }
+    const hadKey = isArray(target) && isIntegerKey(key) ? Number(key) < target.length : hasOwn(target, key);
+    const result = Reflect.set(
+      target,
+      key,
+      value,
+      isRef(target) ? target : receiver
     );
-    return t === L(o) && (l ? Xe(n, i) && Be(t, "set", s, n) : Be(t, "add", s, n)), r;
+    if (target === toRaw(receiver)) {
+      if (!hadKey) {
+        trigger(target, "add", key, value);
+      } else if (hasChanged(value, oldValue)) {
+        trigger(target, "set", key, value);
+      }
+    }
+    return result;
   }
-  deleteProperty(t, s) {
-    const n = U(t, s);
-    t[s];
-    const o = Reflect.deleteProperty(t, s);
-    return o && n && Be(t, "delete", s, void 0), o;
+  deleteProperty(target, key) {
+    const hadKey = hasOwn(target, key);
+    target[key];
+    const result = Reflect.deleteProperty(target, key);
+    if (result && hadKey) {
+      trigger(target, "delete", key, void 0);
+    }
+    return result;
   }
-  has(t, s) {
-    const n = Reflect.has(t, s);
-    return (!De(s) || !bo.has(s)) && re(t, "has", s), n;
+  has(target, key) {
+    const result = Reflect.has(target, key);
+    if (!isSymbol(key) || !builtInSymbols.has(key)) {
+      track(target, "has", key);
+    }
+    return result;
   }
-  ownKeys(t) {
-    return re(
-      t,
+  ownKeys(target) {
+    track(
+      target,
       "iterate",
-      A(t) ? "length" : ut
-    ), Reflect.ownKeys(t);
+      isArray(target) ? "length" : ITERATE_KEY
+    );
+    return Reflect.ownKeys(target);
   }
 }
-class Fi extends _o {
-  constructor(t = !1) {
-    super(!0, t);
+class ReadonlyReactiveHandler extends BaseReactiveHandler {
+  constructor(isShallow2 = false) {
+    super(true, isShallow2);
   }
-  set(t, s) {
-    return !0;
+  set(target, key) {
+    return true;
   }
-  deleteProperty(t, s) {
-    return !0;
+  deleteProperty(target, key) {
+    return true;
   }
 }
-const Vi = /* @__PURE__ */ new vo(), ji = /* @__PURE__ */ new Fi(), Di = /* @__PURE__ */ new vo(!0);
-const Us = (e) => e, Gt = (e) => Reflect.getPrototypeOf(e);
-function Hi(e, t, s) {
-  return function(...n) {
-    const o = this.__v_raw, i = L(o), l = vt(i), r = e === "entries" || e === Symbol.iterator && l, c = e === "keys" && l, p = o[e](...n), a = s ? Us : t ? Bs : ce;
-    return !t && re(
-      i,
+const mutableHandlers = /* @__PURE__ */ new MutableReactiveHandler();
+const readonlyHandlers = /* @__PURE__ */ new ReadonlyReactiveHandler();
+const shallowReactiveHandlers = /* @__PURE__ */ new MutableReactiveHandler(true);
+const shallowReadonlyHandlers = /* @__PURE__ */ new ReadonlyReactiveHandler(true);
+const toShallow = (value) => value;
+const getProto = (v) => Reflect.getPrototypeOf(v);
+function createIterableMethod(method, isReadonly2, isShallow2) {
+  return function(...args) {
+    const target = this["__v_raw"];
+    const rawTarget = toRaw(target);
+    const targetIsMap = isMap(rawTarget);
+    const isPair = method === "entries" || method === Symbol.iterator && targetIsMap;
+    const isKeyOnly = method === "keys" && targetIsMap;
+    const innerIterator = target[method](...args);
+    const wrap = isShallow2 ? toShallow : isReadonly2 ? toReadonly : toReactive;
+    !isReadonly2 && track(
+      rawTarget,
       "iterate",
-      c ? Ls : ut
-    ), {
+      isKeyOnly ? MAP_KEY_ITERATE_KEY : ITERATE_KEY
+    );
+    return {
       // iterator protocol
       next() {
-        const { value: d, done: m } = p.next();
-        return m ? { value: d, done: m } : {
-          value: r ? [a(d[0]), a(d[1])] : a(d),
-          done: m
+        const { value, done } = innerIterator.next();
+        return done ? { value, done } : {
+          value: isPair ? [wrap(value[0]), wrap(value[1])] : wrap(value),
+          done
         };
       },
       // iterable protocol
@@ -732,101 +1157,179 @@ function Hi(e, t, s) {
     };
   };
 }
-function Yt(e) {
-  return function(...t) {
-    return e === "delete" ? !1 : e === "clear" ? void 0 : this;
+function createReadonlyMethod(type) {
+  return function(...args) {
+    return type === "delete" ? false : type === "clear" ? void 0 : this;
   };
 }
-function Ni(e, t) {
-  const s = {
-    get(o) {
-      const i = this.__v_raw, l = L(i), r = L(o);
-      e || (Xe(o, r) && re(l, "get", o), re(l, "get", r));
-      const { has: c } = Gt(l), p = t ? Us : e ? Bs : ce;
-      if (c.call(l, o))
-        return p(i.get(o));
-      if (c.call(l, r))
-        return p(i.get(r));
-      i !== l && i.get(o);
+function createInstrumentations(readonly2, shallow) {
+  const instrumentations = {
+    get(key) {
+      const target = this["__v_raw"];
+      const rawTarget = toRaw(target);
+      const rawKey = toRaw(key);
+      if (!readonly2) {
+        if (hasChanged(key, rawKey)) {
+          track(rawTarget, "get", key);
+        }
+        track(rawTarget, "get", rawKey);
+      }
+      const { has } = getProto(rawTarget);
+      const wrap = shallow ? toShallow : readonly2 ? toReadonly : toReactive;
+      if (has.call(rawTarget, key)) {
+        return wrap(target.get(key));
+      } else if (has.call(rawTarget, rawKey)) {
+        return wrap(target.get(rawKey));
+      } else if (target !== rawTarget) {
+        target.get(key);
+      }
     },
     get size() {
-      const o = this.__v_raw;
-      return !e && re(L(o), "iterate", ut), Reflect.get(o, "size", o);
+      const target = this["__v_raw"];
+      !readonly2 && track(toRaw(target), "iterate", ITERATE_KEY);
+      return Reflect.get(target, "size", target);
     },
-    has(o) {
-      const i = this.__v_raw, l = L(i), r = L(o);
-      return e || (Xe(o, r) && re(l, "has", o), re(l, "has", r)), o === r ? i.has(o) : i.has(o) || i.has(r);
+    has(key) {
+      const target = this["__v_raw"];
+      const rawTarget = toRaw(target);
+      const rawKey = toRaw(key);
+      if (!readonly2) {
+        if (hasChanged(key, rawKey)) {
+          track(rawTarget, "has", key);
+        }
+        track(rawTarget, "has", rawKey);
+      }
+      return key === rawKey ? target.has(key) : target.has(key) || target.has(rawKey);
     },
-    forEach(o, i) {
-      const l = this, r = l.__v_raw, c = L(r), p = t ? Us : e ? Bs : ce;
-      return !e && re(c, "iterate", ut), r.forEach((a, d) => o.call(i, p(a), p(d), l));
+    forEach(callback, thisArg) {
+      const observed = this;
+      const target = observed["__v_raw"];
+      const rawTarget = toRaw(target);
+      const wrap = shallow ? toShallow : readonly2 ? toReadonly : toReactive;
+      !readonly2 && track(rawTarget, "iterate", ITERATE_KEY);
+      return target.forEach((value, key) => {
+        return callback.call(thisArg, wrap(value), wrap(key), observed);
+      });
     }
   };
-  return fe(
-    s,
-    e ? {
-      add: Yt("add"),
-      set: Yt("set"),
-      delete: Yt("delete"),
-      clear: Yt("clear")
+  extend(
+    instrumentations,
+    readonly2 ? {
+      add: createReadonlyMethod("add"),
+      set: createReadonlyMethod("set"),
+      delete: createReadonlyMethod("delete"),
+      clear: createReadonlyMethod("clear")
     } : {
-      add(o) {
-        !t && !Ee(o) && !at(o) && (o = L(o));
-        const i = L(this);
-        return Gt(i).has.call(i, o) || (i.add(o), Be(i, "add", o, o)), this;
+      add(value) {
+        if (!shallow && !isShallow(value) && !isReadonly(value)) {
+          value = toRaw(value);
+        }
+        const target = toRaw(this);
+        const proto = getProto(target);
+        const hadKey = proto.has.call(target, value);
+        if (!hadKey) {
+          target.add(value);
+          trigger(target, "add", value, value);
+        }
+        return this;
       },
-      set(o, i) {
-        !t && !Ee(i) && !at(i) && (i = L(i));
-        const l = L(this), { has: r, get: c } = Gt(l);
-        let p = r.call(l, o);
-        p || (o = L(o), p = r.call(l, o));
-        const a = c.call(l, o);
-        return l.set(o, i), p ? Xe(i, a) && Be(l, "set", o, i) : Be(l, "add", o, i), this;
+      set(key, value) {
+        if (!shallow && !isShallow(value) && !isReadonly(value)) {
+          value = toRaw(value);
+        }
+        const target = toRaw(this);
+        const { has, get } = getProto(target);
+        let hadKey = has.call(target, key);
+        if (!hadKey) {
+          key = toRaw(key);
+          hadKey = has.call(target, key);
+        }
+        const oldValue = get.call(target, key);
+        target.set(key, value);
+        if (!hadKey) {
+          trigger(target, "add", key, value);
+        } else if (hasChanged(value, oldValue)) {
+          trigger(target, "set", key, value);
+        }
+        return this;
       },
-      delete(o) {
-        const i = L(this), { has: l, get: r } = Gt(i);
-        let c = l.call(i, o);
-        c || (o = L(o), c = l.call(i, o)), r && r.call(i, o);
-        const p = i.delete(o);
-        return c && Be(i, "delete", o, void 0), p;
+      delete(key) {
+        const target = toRaw(this);
+        const { has, get } = getProto(target);
+        let hadKey = has.call(target, key);
+        if (!hadKey) {
+          key = toRaw(key);
+          hadKey = has.call(target, key);
+        }
+        get ? get.call(target, key) : void 0;
+        const result = target.delete(key);
+        if (hadKey) {
+          trigger(target, "delete", key, void 0);
+        }
+        return result;
       },
       clear() {
-        const o = L(this), i = o.size !== 0, l = o.clear();
-        return i && Be(
-          o,
-          "clear",
-          void 0,
-          void 0
-        ), l;
+        const target = toRaw(this);
+        const hadItems = target.size !== 0;
+        const result = target.clear();
+        if (hadItems) {
+          trigger(
+            target,
+            "clear",
+            void 0,
+            void 0
+          );
+        }
+        return result;
       }
     }
-  ), [
+  );
+  const iteratorMethods = [
     "keys",
     "values",
     "entries",
     Symbol.iterator
-  ].forEach((o) => {
-    s[o] = Hi(o, e, t);
-  }), s;
+  ];
+  iteratorMethods.forEach((method) => {
+    instrumentations[method] = createIterableMethod(method, readonly2, shallow);
+  });
+  return instrumentations;
 }
-function cn(e, t) {
-  const s = Ni(e, t);
-  return (n, o, i) => o === "__v_isReactive" ? !e : o === "__v_isReadonly" ? e : o === "__v_raw" ? n : Reflect.get(
-    U(s, o) && o in n ? s : n,
-    o,
-    i
-  );
+function createInstrumentationGetter(isReadonly2, shallow) {
+  const instrumentations = createInstrumentations(isReadonly2, shallow);
+  return (target, key, receiver) => {
+    if (key === "__v_isReactive") {
+      return !isReadonly2;
+    } else if (key === "__v_isReadonly") {
+      return isReadonly2;
+    } else if (key === "__v_raw") {
+      return target;
+    }
+    return Reflect.get(
+      hasOwn(instrumentations, key) && key in target ? instrumentations : target,
+      key,
+      receiver
+    );
+  };
 }
-const Li = {
-  get: /* @__PURE__ */ cn(!1, !1)
-}, Ui = {
-  get: /* @__PURE__ */ cn(!1, !0)
-}, Bi = {
-  get: /* @__PURE__ */ cn(!0, !1)
+const mutableCollectionHandlers = {
+  get: /* @__PURE__ */ createInstrumentationGetter(false, false)
 };
-const yo = /* @__PURE__ */ new WeakMap(), xo = /* @__PURE__ */ new WeakMap(), wo = /* @__PURE__ */ new WeakMap(), Ki = /* @__PURE__ */ new WeakMap();
-function Wi(e) {
-  switch (e) {
+const shallowCollectionHandlers = {
+  get: /* @__PURE__ */ createInstrumentationGetter(false, true)
+};
+const readonlyCollectionHandlers = {
+  get: /* @__PURE__ */ createInstrumentationGetter(true, false)
+};
+const shallowReadonlyCollectionHandlers = {
+  get: /* @__PURE__ */ createInstrumentationGetter(true, true)
+};
+const reactiveMap = /* @__PURE__ */ new WeakMap();
+const shallowReactiveMap = /* @__PURE__ */ new WeakMap();
+const readonlyMap = /* @__PURE__ */ new WeakMap();
+const shallowReadonlyMap = /* @__PURE__ */ new WeakMap();
+function targetTypeMap(rawType) {
+  switch (rawType) {
     case "Object":
     case "Array":
       return 1;
@@ -839,884 +1342,1505 @@ function Wi(e) {
       return 0;
   }
 }
-function zi(e) {
-  return e.__v_skip || !Object.isExtensible(e) ? 0 : Wi(bi(e));
+function getTargetType(value) {
+  return value["__v_skip"] || !Object.isExtensible(value) ? 0 : targetTypeMap(toRawType(value));
 }
-function ms(e) {
-  return at(e) ? e : un(
-    e,
-    !1,
-    Vi,
-    Li,
-    yo
+function reactive(target) {
+  if (isReadonly(target)) {
+    return target;
+  }
+  return createReactiveObject(
+    target,
+    false,
+    mutableHandlers,
+    mutableCollectionHandlers,
+    reactiveMap
   );
 }
-function qi(e) {
-  return un(
-    e,
-    !1,
-    Di,
-    Ui,
-    xo
+function shallowReactive(target) {
+  return createReactiveObject(
+    target,
+    false,
+    shallowReactiveHandlers,
+    shallowCollectionHandlers,
+    shallowReactiveMap
   );
 }
-function So(e) {
-  return un(
-    e,
-    !0,
-    ji,
-    Bi,
-    wo
+function readonly(target) {
+  return createReactiveObject(
+    target,
+    true,
+    readonlyHandlers,
+    readonlyCollectionHandlers,
+    readonlyMap
   );
 }
-function un(e, t, s, n, o) {
-  if (!ee(e) || e.__v_raw && !(t && e.__v_isReactive))
-    return e;
-  const i = o.get(e);
-  if (i)
-    return i;
-  const l = zi(e);
-  if (l === 0)
-    return e;
-  const r = new Proxy(
-    e,
-    l === 2 ? n : s
+function shallowReadonly(target) {
+  return createReactiveObject(
+    target,
+    true,
+    shallowReadonlyHandlers,
+    shallowReadonlyCollectionHandlers,
+    shallowReadonlyMap
   );
-  return o.set(e, r), r;
 }
-function yt(e) {
-  return at(e) ? yt(e.__v_raw) : !!(e && e.__v_isReactive);
+function createReactiveObject(target, isReadonly2, baseHandlers, collectionHandlers, proxyMap) {
+  if (!isObject(target)) {
+    return target;
+  }
+  if (target["__v_raw"] && !(isReadonly2 && target["__v_isReactive"])) {
+    return target;
+  }
+  const existingProxy = proxyMap.get(target);
+  if (existingProxy) {
+    return existingProxy;
+  }
+  const targetType = getTargetType(target);
+  if (targetType === 0) {
+    return target;
+  }
+  const proxy = new Proxy(
+    target,
+    targetType === 2 ? collectionHandlers : baseHandlers
+  );
+  proxyMap.set(target, proxy);
+  return proxy;
 }
-function at(e) {
-  return !!(e && e.__v_isReadonly);
+function isReactive(value) {
+  if (isReadonly(value)) {
+    return isReactive(value["__v_raw"]);
+  }
+  return !!(value && value["__v_isReactive"]);
 }
-function Ee(e) {
-  return !!(e && e.__v_isShallow);
+function isReadonly(value) {
+  return !!(value && value["__v_isReadonly"]);
 }
-function an(e) {
-  return e ? !!e.__v_raw : !1;
+function isShallow(value) {
+  return !!(value && value["__v_isShallow"]);
 }
-function L(e) {
-  const t = e && e.__v_raw;
-  return t ? L(t) : e;
+function isProxy(value) {
+  return value ? !!value["__v_raw"] : false;
 }
-function Ji(e) {
-  return !U(e, "__v_skip") && Object.isExtensible(e) && no(e, "__v_skip", !0), e;
+function toRaw(observed) {
+  const raw = observed && observed["__v_raw"];
+  return raw ? toRaw(raw) : observed;
 }
-const ce = (e) => ee(e) ? ms(e) : e, Bs = (e) => ee(e) ? So(e) : e;
-function ae(e) {
-  return e ? e.__v_isRef === !0 : !1;
+function markRaw(value) {
+  if (!hasOwn(value, "__v_skip") && Object.isExtensible(value)) {
+    def(value, "__v_skip", true);
+  }
+  return value;
 }
-function Ye(e) {
-  return Gi(e, !1);
+const toReactive = (value) => isObject(value) ? reactive(value) : value;
+const toReadonly = (value) => isObject(value) ? readonly(value) : value;
+function isRef(r) {
+  return r ? r["__v_isRef"] === true : false;
 }
-function Gi(e, t) {
-  return ae(e) ? e : new Yi(e, t);
+function ref(value) {
+  return createRef(value, false);
 }
-class Yi {
-  constructor(t, s) {
-    this.dep = new rn(), this.__v_isRef = !0, this.__v_isShallow = !1, this._rawValue = s ? t : L(t), this._value = s ? t : ce(t), this.__v_isShallow = s;
+function createRef(rawValue, shallow) {
+  if (isRef(rawValue)) {
+    return rawValue;
+  }
+  return new RefImpl(rawValue, shallow);
+}
+class RefImpl {
+  constructor(value, isShallow2) {
+    this.dep = new Dep();
+    this["__v_isRef"] = true;
+    this["__v_isShallow"] = false;
+    this._rawValue = isShallow2 ? value : toRaw(value);
+    this._value = isShallow2 ? value : toReactive(value);
+    this["__v_isShallow"] = isShallow2;
   }
   get value() {
-    return this.dep.track(), this._value;
+    {
+      this.dep.track();
+    }
+    return this._value;
   }
-  set value(t) {
-    const s = this._rawValue, n = this.__v_isShallow || Ee(t) || at(t);
-    t = n ? t : L(t), Xe(t, s) && (this._rawValue = t, this._value = n ? t : ce(t), this.dep.trigger());
+  set value(newValue) {
+    const oldValue = this._rawValue;
+    const useDirectValue = this["__v_isShallow"] || isShallow(newValue) || isReadonly(newValue);
+    newValue = useDirectValue ? newValue : toRaw(newValue);
+    if (hasChanged(newValue, oldValue)) {
+      this._rawValue = newValue;
+      this._value = useDirectValue ? newValue : toReactive(newValue);
+      {
+        this.dep.trigger();
+      }
+    }
   }
 }
-function $(e) {
-  return ae(e) ? e.value : e;
+function unref(ref2) {
+  return isRef(ref2) ? ref2.value : ref2;
 }
-const Xi = {
-  get: (e, t, s) => t === "__v_raw" ? e : $(Reflect.get(e, t, s)),
-  set: (e, t, s, n) => {
-    const o = e[t];
-    return ae(o) && !ae(s) ? (o.value = s, !0) : Reflect.set(e, t, s, n);
+const shallowUnwrapHandlers = {
+  get: (target, key, receiver) => key === "__v_raw" ? target : unref(Reflect.get(target, key, receiver)),
+  set: (target, key, value, receiver) => {
+    const oldValue = target[key];
+    if (isRef(oldValue) && !isRef(value)) {
+      oldValue.value = value;
+      return true;
+    } else {
+      return Reflect.set(target, key, value, receiver);
+    }
   }
 };
-function Co(e) {
-  return yt(e) ? e : new Proxy(e, Xi);
+function proxyRefs(objectWithRefs) {
+  return isReactive(objectWithRefs) ? objectWithRefs : new Proxy(objectWithRefs, shallowUnwrapHandlers);
 }
-class Zi {
-  constructor(t, s, n) {
-    this.fn = t, this.setter = s, this._value = void 0, this.dep = new rn(this), this.__v_isRef = !0, this.deps = void 0, this.depsTail = void 0, this.flags = 16, this.globalVersion = Dt - 1, this.next = void 0, this.effect = this, this.__v_isReadonly = !s, this.isSSR = n;
+class ComputedRefImpl {
+  constructor(fn, setter, isSSR) {
+    this.fn = fn;
+    this.setter = setter;
+    this._value = void 0;
+    this.dep = new Dep(this);
+    this.__v_isRef = true;
+    this.deps = void 0;
+    this.depsTail = void 0;
+    this.flags = 16;
+    this.globalVersion = globalVersion - 1;
+    this.next = void 0;
+    this.effect = this;
+    this["__v_isReadonly"] = !setter;
+    this.isSSR = isSSR;
   }
   /**
    * @internal
    */
   notify() {
-    if (this.flags |= 16, !(this.flags & 8) && // avoid infinite self recursion
-    Q !== this)
-      return ao(this, !0), !0;
+    this.flags |= 16;
+    if (!(this.flags & 8) && // avoid infinite self recursion
+    activeSub !== this) {
+      batch(this, true);
+      return true;
+    }
   }
   get value() {
-    const t = this.dep.track();
-    return ho(this), t && (t.version = this.dep.version), this._value;
-  }
-  set value(t) {
-    this.setter && this.setter(t);
-  }
-}
-function Qi(e, t, s = !1) {
-  let n, o;
-  return R(e) ? n = e : (n = e.get, o = e.set), new Zi(n, o, s);
-}
-const Xt = {}, ns = /* @__PURE__ */ new WeakMap();
-let lt;
-function el(e, t = !1, s = lt) {
-  if (s) {
-    let n = ns.get(s);
-    n || ns.set(s, n = []), n.push(e);
-  }
-}
-function tl(e, t, s = q) {
-  const { immediate: n, deep: o, once: i, scheduler: l, augmentJob: r, call: c } = s, p = (x) => o ? x : Ee(x) || o === !1 || o === 0 ? Ke(x, 1) : Ke(x);
-  let a, d, m, C, H = !1, T = !1;
-  if (ae(e) ? (d = () => e.value, H = Ee(e)) : yt(e) ? (d = () => p(e), H = !0) : A(e) ? (T = !0, H = e.some((x) => yt(x) || Ee(x)), d = () => e.map((x) => {
-    if (ae(x))
-      return x.value;
-    if (yt(x))
-      return p(x);
-    if (R(x))
-      return c ? c(x, 2) : x();
-  })) : R(e) ? t ? d = c ? () => c(e, 2) : e : d = () => {
-    if (m) {
-      Qe();
-      try {
-        m();
-      } finally {
-        et();
-      }
+    const link = this.dep.track();
+    refreshComputed(this);
+    if (link) {
+      link.version = this.dep.version;
     }
-    const x = lt;
-    lt = a;
-    try {
-      return c ? c(e, 3, [C]) : e(C);
-    } finally {
-      lt = x;
-    }
-  } : d = je, t && o) {
-    const x = d, O = o === !0 ? 1 / 0 : o;
-    d = () => Ke(x(), O);
+    return this._value;
   }
-  const ne = Ii(), B = () => {
-    a.stop(), ne && ne.active && tn(ne.effects, a);
+  set value(newValue) {
+    if (this.setter) {
+      this.setter(newValue);
+    }
+  }
+}
+function computed$1(getterOrOptions, debugOptions, isSSR = false) {
+  let getter;
+  let setter;
+  if (isFunction(getterOrOptions)) {
+    getter = getterOrOptions;
+  } else {
+    getter = getterOrOptions.get;
+    setter = getterOrOptions.set;
+  }
+  const cRef = new ComputedRefImpl(getter, setter, isSSR);
+  return cRef;
+}
+const INITIAL_WATCHER_VALUE = {};
+const cleanupMap = /* @__PURE__ */ new WeakMap();
+let activeWatcher = void 0;
+function onWatcherCleanup(cleanupFn, failSilently = false, owner = activeWatcher) {
+  if (owner) {
+    let cleanups = cleanupMap.get(owner);
+    if (!cleanups) cleanupMap.set(owner, cleanups = []);
+    cleanups.push(cleanupFn);
+  }
+}
+function watch$1(source, cb, options = EMPTY_OBJ) {
+  const { immediate, deep, once, scheduler, augmentJob, call } = options;
+  const reactiveGetter = (source2) => {
+    if (deep) return source2;
+    if (isShallow(source2) || deep === false || deep === 0)
+      return traverse(source2, 1);
+    return traverse(source2);
   };
-  if (i && t) {
-    const x = t;
-    t = (...O) => {
-      x(...O), B();
-    };
-  }
-  let J = T ? new Array(e.length).fill(Xt) : Xt;
-  const G = (x) => {
-    if (!(!(a.flags & 1) || !a.dirty && !x))
-      if (t) {
-        const O = a.run();
-        if (o || H || (T ? O.some((F, Y) => Xe(F, J[Y])) : Xe(O, J))) {
-          m && m();
-          const F = lt;
-          lt = a;
+  let effect2;
+  let getter;
+  let cleanup;
+  let boundCleanup;
+  let forceTrigger = false;
+  let isMultiSource = false;
+  if (isRef(source)) {
+    getter = () => source.value;
+    forceTrigger = isShallow(source);
+  } else if (isReactive(source)) {
+    getter = () => reactiveGetter(source);
+    forceTrigger = true;
+  } else if (isArray(source)) {
+    isMultiSource = true;
+    forceTrigger = source.some((s) => isReactive(s) || isShallow(s));
+    getter = () => source.map((s) => {
+      if (isRef(s)) {
+        return s.value;
+      } else if (isReactive(s)) {
+        return reactiveGetter(s);
+      } else if (isFunction(s)) {
+        return call ? call(s, 2) : s();
+      } else ;
+    });
+  } else if (isFunction(source)) {
+    if (cb) {
+      getter = call ? () => call(source, 2) : source;
+    } else {
+      getter = () => {
+        if (cleanup) {
+          pauseTracking();
           try {
-            const Y = [
-              O,
-              // pass undefined as the old value when it's changed for the first time
-              J === Xt ? void 0 : T && J[0] === Xt ? [] : J,
-              C
-            ];
-            c ? c(t, 3, Y) : (
-              // @ts-expect-error
-              t(...Y)
-            ), J = O;
+            cleanup();
           } finally {
-            lt = F;
+            resetTracking();
           }
         }
-      } else
-        a.run();
-  };
-  return r && r(G), a = new co(d), a.scheduler = l ? () => l(G, !1) : G, C = (x) => el(x, !1, a), m = a.onStop = () => {
-    const x = ns.get(a);
-    if (x) {
-      if (c)
-        c(x, 4);
-      else
-        for (const O of x) O();
-      ns.delete(a);
+        const currentEffect = activeWatcher;
+        activeWatcher = effect2;
+        try {
+          return call ? call(source, 3, [boundCleanup]) : source(boundCleanup);
+        } finally {
+          activeWatcher = currentEffect;
+        }
+      };
     }
-  }, t ? n ? G(!0) : J = a.run() : l ? l(G.bind(null, !0), !0) : a.run(), B.pause = a.pause.bind(a), B.resume = a.resume.bind(a), B.stop = B, B;
-}
-function Ke(e, t = 1 / 0, s) {
-  if (t <= 0 || !ee(e) || e.__v_skip || (s = s || /* @__PURE__ */ new Set(), s.has(e)))
-    return e;
-  if (s.add(e), t--, ae(e))
-    Ke(e.value, t, s);
-  else if (A(e))
-    for (let n = 0; n < e.length; n++)
-      Ke(e[n], t, s);
-  else if (fs(e) || vt(e))
-    e.forEach((n) => {
-      Ke(n, t, s);
-    });
-  else if (to(e)) {
-    for (const n in e)
-      Ke(e[n], t, s);
-    for (const n of Object.getOwnPropertySymbols(e))
-      Object.prototype.propertyIsEnumerable.call(e, n) && Ke(e[n], t, s);
+  } else {
+    getter = NOOP;
   }
-  return e;
+  if (cb && deep) {
+    const baseGetter = getter;
+    const depth = deep === true ? Infinity : deep;
+    getter = () => traverse(baseGetter(), depth);
+  }
+  const scope = getCurrentScope();
+  const watchHandle = () => {
+    effect2.stop();
+    if (scope && scope.active) {
+      remove(scope.effects, effect2);
+    }
+  };
+  if (once && cb) {
+    const _cb = cb;
+    cb = (...args) => {
+      _cb(...args);
+      watchHandle();
+    };
+  }
+  let oldValue = isMultiSource ? new Array(source.length).fill(INITIAL_WATCHER_VALUE) : INITIAL_WATCHER_VALUE;
+  const job = (immediateFirstRun) => {
+    if (!(effect2.flags & 1) || !effect2.dirty && !immediateFirstRun) {
+      return;
+    }
+    if (cb) {
+      const newValue = effect2.run();
+      if (deep || forceTrigger || (isMultiSource ? newValue.some((v, i) => hasChanged(v, oldValue[i])) : hasChanged(newValue, oldValue))) {
+        if (cleanup) {
+          cleanup();
+        }
+        const currentWatcher = activeWatcher;
+        activeWatcher = effect2;
+        try {
+          const args = [
+            newValue,
+            // pass undefined as the old value when it's changed for the first time
+            oldValue === INITIAL_WATCHER_VALUE ? void 0 : isMultiSource && oldValue[0] === INITIAL_WATCHER_VALUE ? [] : oldValue,
+            boundCleanup
+          ];
+          call ? call(cb, 3, args) : (
+            // @ts-expect-error
+            cb(...args)
+          );
+          oldValue = newValue;
+        } finally {
+          activeWatcher = currentWatcher;
+        }
+      }
+    } else {
+      effect2.run();
+    }
+  };
+  if (augmentJob) {
+    augmentJob(job);
+  }
+  effect2 = new ReactiveEffect(getter);
+  effect2.scheduler = scheduler ? () => scheduler(job, false) : job;
+  boundCleanup = (fn) => onWatcherCleanup(fn, false, effect2);
+  cleanup = effect2.onStop = () => {
+    const cleanups = cleanupMap.get(effect2);
+    if (cleanups) {
+      if (call) {
+        call(cleanups, 4);
+      } else {
+        for (const cleanup2 of cleanups) cleanup2();
+      }
+      cleanupMap.delete(effect2);
+    }
+  };
+  if (cb) {
+    if (immediate) {
+      job(true);
+    } else {
+      oldValue = effect2.run();
+    }
+  } else if (scheduler) {
+    scheduler(job.bind(null, true), true);
+  } else {
+    effect2.run();
+  }
+  watchHandle.pause = effect2.pause.bind(effect2);
+  watchHandle.resume = effect2.resume.bind(effect2);
+  watchHandle.stop = watchHandle;
+  return watchHandle;
+}
+function traverse(value, depth = Infinity, seen) {
+  if (depth <= 0 || !isObject(value) || value["__v_skip"]) {
+    return value;
+  }
+  seen = seen || /* @__PURE__ */ new Set();
+  if (seen.has(value)) {
+    return value;
+  }
+  seen.add(value);
+  depth--;
+  if (isRef(value)) {
+    traverse(value.value, depth, seen);
+  } else if (isArray(value)) {
+    for (let i = 0; i < value.length; i++) {
+      traverse(value[i], depth, seen);
+    }
+  } else if (isSet(value) || isMap(value)) {
+    value.forEach((v) => {
+      traverse(v, depth, seen);
+    });
+  } else if (isPlainObject(value)) {
+    for (const key in value) {
+      traverse(value[key], depth, seen);
+    }
+    for (const key of Object.getOwnPropertySymbols(value)) {
+      if (Object.prototype.propertyIsEnumerable.call(value, key)) {
+        traverse(value[key], depth, seen);
+      }
+    }
+  }
+  return value;
 }
 /**
 * @vue/runtime-core v3.5.13
 * (c) 2018-present Yuxi (Evan) You and Vue contributors
 * @license MIT
 **/
-function Kt(e, t, s, n) {
-  try {
-    return n ? e(...n) : e();
-  } catch (o) {
-    bs(o, t, s);
-  }
-}
-function He(e, t, s, n) {
-  if (R(e)) {
-    const o = Kt(e, t, s, n);
-    return o && Qn(o) && o.catch((i) => {
-      bs(i, t, s);
-    }), o;
-  }
-  if (A(e)) {
-    const o = [];
-    for (let i = 0; i < e.length; i++)
-      o.push(He(e[i], t, s, n));
-    return o;
-  }
-}
-function bs(e, t, s, n = !0) {
-  const o = t ? t.vnode : null, { errorHandler: i, throwUnhandledErrorInProduction: l } = t && t.appContext.config || q;
-  if (t) {
-    let r = t.parent;
-    const c = t.proxy, p = `https://vuejs.org/error-reference/#runtime-${s}`;
-    for (; r; ) {
-      const a = r.ec;
-      if (a) {
-        for (let d = 0; d < a.length; d++)
-          if (a[d](e, c, p) === !1)
-            return;
-      }
-      r = r.parent;
-    }
-    if (i) {
-      Qe(), Kt(i, null, 10, [
-        e,
-        c,
-        p
-      ]), et();
-      return;
-    }
-  }
-  sl(e, s, o, n, l);
-}
-function sl(e, t, s, n = !0, o = !1) {
-  if (o)
-    throw e;
-  console.error(e);
-}
-const ge = [];
-let Fe = -1;
-const xt = [];
-let Je = null, bt = 0;
-const Eo = /* @__PURE__ */ Promise.resolve();
-let os = null;
-function nl(e) {
-  const t = os || Eo;
-  return e ? t.then(this ? e.bind(this) : e) : t;
-}
-function ol(e) {
-  let t = Fe + 1, s = ge.length;
-  for (; t < s; ) {
-    const n = t + s >>> 1, o = ge[n], i = Nt(o);
-    i < e || i === e && o.flags & 2 ? t = n + 1 : s = n;
-  }
-  return t;
-}
-function fn(e) {
-  if (!(e.flags & 1)) {
-    const t = Nt(e), s = ge[ge.length - 1];
-    !s || // fast path when the job id is larger than the tail
-    !(e.flags & 2) && t >= Nt(s) ? ge.push(e) : ge.splice(ol(t), 0, e), e.flags |= 1, $o();
-  }
-}
-function $o() {
-  os || (os = Eo.then(Io));
-}
-function il(e) {
-  A(e) ? xt.push(...e) : Je && e.id === -1 ? Je.splice(bt + 1, 0, e) : e.flags & 1 || (xt.push(e), e.flags |= 1), $o();
-}
-function Cn(e, t, s = Fe + 1) {
-  for (; s < ge.length; s++) {
-    const n = ge[s];
-    if (n && n.flags & 2) {
-      if (e && n.id !== e.uid)
-        continue;
-      ge.splice(s, 1), s--, n.flags & 4 && (n.flags &= -2), n(), n.flags & 4 || (n.flags &= -2);
-    }
-  }
-}
-function To(e) {
-  if (xt.length) {
-    const t = [...new Set(xt)].sort(
-      (s, n) => Nt(s) - Nt(n)
+const stack = [];
+let isWarning = false;
+function warn$1(msg, ...args) {
+  if (isWarning) return;
+  isWarning = true;
+  pauseTracking();
+  const instance = stack.length ? stack[stack.length - 1].component : null;
+  const appWarnHandler = instance && instance.appContext.config.warnHandler;
+  const trace = getComponentTrace();
+  if (appWarnHandler) {
+    callWithErrorHandling(
+      appWarnHandler,
+      instance,
+      11,
+      [
+        // eslint-disable-next-line no-restricted-syntax
+        msg + args.map((a) => {
+          var _a, _b;
+          return (_b = (_a = a.toString) == null ? void 0 : _a.call(a)) != null ? _b : JSON.stringify(a);
+        }).join(""),
+        instance && instance.proxy,
+        trace.map(
+          ({ vnode }) => `at <${formatComponentName(instance, vnode.type)}>`
+        ).join("\n"),
+        trace
+      ]
     );
-    if (xt.length = 0, Je) {
-      Je.push(...t);
-      return;
+  } else {
+    const warnArgs = [`[Vue warn]: ${msg}`, ...args];
+    if (trace.length && // avoid spamming console during tests
+    true) {
+      warnArgs.push(`
+`, ...formatTrace(trace));
     }
-    for (Je = t, bt = 0; bt < Je.length; bt++) {
-      const s = Je[bt];
-      s.flags & 4 && (s.flags &= -2), s.flags & 8 || s(), s.flags &= -2;
+    console.warn(...warnArgs);
+  }
+  resetTracking();
+  isWarning = false;
+}
+function getComponentTrace() {
+  let currentVNode = stack[stack.length - 1];
+  if (!currentVNode) {
+    return [];
+  }
+  const normalizedStack = [];
+  while (currentVNode) {
+    const last = normalizedStack[0];
+    if (last && last.vnode === currentVNode) {
+      last.recurseCount++;
+    } else {
+      normalizedStack.push({
+        vnode: currentVNode,
+        recurseCount: 0
+      });
     }
-    Je = null, bt = 0;
+    const parentInstance = currentVNode.component && currentVNode.component.parent;
+    currentVNode = parentInstance && parentInstance.vnode;
+  }
+  return normalizedStack;
+}
+function formatTrace(trace) {
+  const logs = [];
+  trace.forEach((entry, i) => {
+    logs.push(...i === 0 ? [] : [`
+`], ...formatTraceEntry(entry));
+  });
+  return logs;
+}
+function formatTraceEntry({ vnode, recurseCount }) {
+  const postfix = recurseCount > 0 ? `... (${recurseCount} recursive calls)` : ``;
+  const isRoot = vnode.component ? vnode.component.parent == null : false;
+  const open = ` at <${formatComponentName(
+    vnode.component,
+    vnode.type,
+    isRoot
+  )}`;
+  const close = `>` + postfix;
+  return vnode.props ? [open, ...formatProps(vnode.props), close] : [open + close];
+}
+function formatProps(props) {
+  const res = [];
+  const keys = Object.keys(props);
+  keys.slice(0, 3).forEach((key) => {
+    res.push(...formatProp(key, props[key]));
+  });
+  if (keys.length > 3) {
+    res.push(` ...`);
+  }
+  return res;
+}
+function formatProp(key, value, raw) {
+  if (isString(value)) {
+    value = JSON.stringify(value);
+    return raw ? value : [`${key}=${value}`];
+  } else if (typeof value === "number" || typeof value === "boolean" || value == null) {
+    return raw ? value : [`${key}=${value}`];
+  } else if (isRef(value)) {
+    value = formatProp(key, toRaw(value.value), true);
+    return raw ? value : [`${key}=Ref<`, value, `>`];
+  } else if (isFunction(value)) {
+    return [`${key}=fn${value.name ? `<${value.name}>` : ``}`];
+  } else {
+    value = toRaw(value);
+    return raw ? value : [`${key}=`, value];
   }
 }
-const Nt = (e) => e.id == null ? e.flags & 2 ? -1 : 1 / 0 : e.id;
-function Io(e) {
+function callWithErrorHandling(fn, instance, type, args) {
   try {
-    for (Fe = 0; Fe < ge.length; Fe++) {
-      const t = ge[Fe];
-      t && !(t.flags & 8) && (t.flags & 4 && (t.flags &= -2), Kt(
-        t,
-        t.i,
-        t.i ? 15 : 14
-      ), t.flags & 4 || (t.flags &= -2));
+    return args ? fn(...args) : fn();
+  } catch (err) {
+    handleError(err, instance, type);
+  }
+}
+function callWithAsyncErrorHandling(fn, instance, type, args) {
+  if (isFunction(fn)) {
+    const res = callWithErrorHandling(fn, instance, type, args);
+    if (res && isPromise(res)) {
+      res.catch((err) => {
+        handleError(err, instance, type);
+      });
+    }
+    return res;
+  }
+  if (isArray(fn)) {
+    const values = [];
+    for (let i = 0; i < fn.length; i++) {
+      values.push(callWithAsyncErrorHandling(fn[i], instance, type, args));
+    }
+    return values;
+  }
+}
+function handleError(err, instance, type, throwInDev = true) {
+  const contextVNode = instance ? instance.vnode : null;
+  const { errorHandler, throwUnhandledErrorInProduction } = instance && instance.appContext.config || EMPTY_OBJ;
+  if (instance) {
+    let cur = instance.parent;
+    const exposedInstance = instance.proxy;
+    const errorInfo = `https://vuejs.org/error-reference/#runtime-${type}`;
+    while (cur) {
+      const errorCapturedHooks = cur.ec;
+      if (errorCapturedHooks) {
+        for (let i = 0; i < errorCapturedHooks.length; i++) {
+          if (errorCapturedHooks[i](err, exposedInstance, errorInfo) === false) {
+            return;
+          }
+        }
+      }
+      cur = cur.parent;
+    }
+    if (errorHandler) {
+      pauseTracking();
+      callWithErrorHandling(errorHandler, null, 10, [
+        err,
+        exposedInstance,
+        errorInfo
+      ]);
+      resetTracking();
+      return;
+    }
+  }
+  logError(err, type, contextVNode, throwInDev, throwUnhandledErrorInProduction);
+}
+function logError(err, type, contextVNode, throwInDev = true, throwInProd = false) {
+  if (throwInProd) {
+    throw err;
+  } else {
+    console.error(err);
+  }
+}
+const queue = [];
+let flushIndex = -1;
+const pendingPostFlushCbs = [];
+let activePostFlushCbs = null;
+let postFlushIndex = 0;
+const resolvedPromise = /* @__PURE__ */ Promise.resolve();
+let currentFlushPromise = null;
+function nextTick(fn) {
+  const p2 = currentFlushPromise || resolvedPromise;
+  return fn ? p2.then(this ? fn.bind(this) : fn) : p2;
+}
+function findInsertionIndex(id) {
+  let start = flushIndex + 1;
+  let end = queue.length;
+  while (start < end) {
+    const middle = start + end >>> 1;
+    const middleJob = queue[middle];
+    const middleJobId = getId(middleJob);
+    if (middleJobId < id || middleJobId === id && middleJob.flags & 2) {
+      start = middle + 1;
+    } else {
+      end = middle;
+    }
+  }
+  return start;
+}
+function queueJob(job) {
+  if (!(job.flags & 1)) {
+    const jobId = getId(job);
+    const lastJob = queue[queue.length - 1];
+    if (!lastJob || // fast path when the job id is larger than the tail
+    !(job.flags & 2) && jobId >= getId(lastJob)) {
+      queue.push(job);
+    } else {
+      queue.splice(findInsertionIndex(jobId), 0, job);
+    }
+    job.flags |= 1;
+    queueFlush();
+  }
+}
+function queueFlush() {
+  if (!currentFlushPromise) {
+    currentFlushPromise = resolvedPromise.then(flushJobs);
+  }
+}
+function queuePostFlushCb(cb) {
+  if (!isArray(cb)) {
+    if (activePostFlushCbs && cb.id === -1) {
+      activePostFlushCbs.splice(postFlushIndex + 1, 0, cb);
+    } else if (!(cb.flags & 1)) {
+      pendingPostFlushCbs.push(cb);
+      cb.flags |= 1;
+    }
+  } else {
+    pendingPostFlushCbs.push(...cb);
+  }
+  queueFlush();
+}
+function flushPreFlushCbs(instance, seen, i = flushIndex + 1) {
+  for (; i < queue.length; i++) {
+    const cb = queue[i];
+    if (cb && cb.flags & 2) {
+      if (instance && cb.id !== instance.uid) {
+        continue;
+      }
+      queue.splice(i, 1);
+      i--;
+      if (cb.flags & 4) {
+        cb.flags &= -2;
+      }
+      cb();
+      if (!(cb.flags & 4)) {
+        cb.flags &= -2;
+      }
+    }
+  }
+}
+function flushPostFlushCbs(seen) {
+  if (pendingPostFlushCbs.length) {
+    const deduped = [...new Set(pendingPostFlushCbs)].sort(
+      (a, b) => getId(a) - getId(b)
+    );
+    pendingPostFlushCbs.length = 0;
+    if (activePostFlushCbs) {
+      activePostFlushCbs.push(...deduped);
+      return;
+    }
+    activePostFlushCbs = deduped;
+    for (postFlushIndex = 0; postFlushIndex < activePostFlushCbs.length; postFlushIndex++) {
+      const cb = activePostFlushCbs[postFlushIndex];
+      if (cb.flags & 4) {
+        cb.flags &= -2;
+      }
+      if (!(cb.flags & 8)) cb();
+      cb.flags &= -2;
+    }
+    activePostFlushCbs = null;
+    postFlushIndex = 0;
+  }
+}
+const getId = (job) => job.id == null ? job.flags & 2 ? -1 : Infinity : job.id;
+function flushJobs(seen) {
+  try {
+    for (flushIndex = 0; flushIndex < queue.length; flushIndex++) {
+      const job = queue[flushIndex];
+      if (job && !(job.flags & 8)) {
+        if (false) ;
+        if (job.flags & 4) {
+          job.flags &= ~1;
+        }
+        callWithErrorHandling(
+          job,
+          job.i,
+          job.i ? 15 : 14
+        );
+        if (!(job.flags & 4)) {
+          job.flags &= ~1;
+        }
+      }
     }
   } finally {
-    for (; Fe < ge.length; Fe++) {
-      const t = ge[Fe];
-      t && (t.flags &= -2);
+    for (; flushIndex < queue.length; flushIndex++) {
+      const job = queue[flushIndex];
+      if (job) {
+        job.flags &= -2;
+      }
     }
-    Fe = -1, ge.length = 0, To(), os = null, (ge.length || xt.length) && Io();
+    flushIndex = -1;
+    queue.length = 0;
+    flushPostFlushCbs();
+    currentFlushPromise = null;
+    if (queue.length || pendingPostFlushCbs.length) {
+      flushJobs();
+    }
   }
 }
-let Ce = null, Oo = null;
-function is(e) {
-  const t = Ce;
-  return Ce = e, Oo = e && e.type.__scopeId || null, t;
+let currentRenderingInstance = null;
+let currentScopeId = null;
+function setCurrentRenderingInstance(instance) {
+  const prev = currentRenderingInstance;
+  currentRenderingInstance = instance;
+  currentScopeId = instance && instance.type.__scopeId || null;
+  return prev;
 }
-function ll(e, t = Ce, s) {
-  if (!t || e._n)
-    return e;
-  const n = (...o) => {
-    n._d && Pn(-1);
-    const i = is(t);
-    let l;
+function withCtx(fn, ctx = currentRenderingInstance, isNonScopedSlot) {
+  if (!ctx) return fn;
+  if (fn._n) {
+    return fn;
+  }
+  const renderFnWithContext = (...args) => {
+    if (renderFnWithContext._d) {
+      setBlockTracking(-1);
+    }
+    const prevInstance = setCurrentRenderingInstance(ctx);
+    let res;
     try {
-      l = e(...o);
+      res = fn(...args);
     } finally {
-      is(i), n._d && Pn(1);
+      setCurrentRenderingInstance(prevInstance);
+      if (renderFnWithContext._d) {
+        setBlockTracking(1);
+      }
     }
-    return l;
+    return res;
   };
-  return n._n = !0, n._c = !0, n._d = !0, n;
+  renderFnWithContext._n = true;
+  renderFnWithContext._c = true;
+  renderFnWithContext._d = true;
+  return renderFnWithContext;
 }
-function he(e, t) {
-  if (Ce === null)
-    return e;
-  const s = xs(Ce), n = e.dirs || (e.dirs = []);
-  for (let o = 0; o < t.length; o++) {
-    let [i, l, r, c = q] = t[o];
-    i && (R(i) && (i = {
-      mounted: i,
-      updated: i
-    }), i.deep && Ke(l), n.push({
-      dir: i,
-      instance: s,
-      value: l,
-      oldValue: void 0,
-      arg: r,
-      modifiers: c
-    }));
+function withDirectives(vnode, directives) {
+  if (currentRenderingInstance === null) {
+    return vnode;
   }
-  return e;
+  const instance = getComponentPublicInstance(currentRenderingInstance);
+  const bindings = vnode.dirs || (vnode.dirs = []);
+  for (let i = 0; i < directives.length; i++) {
+    let [dir, value, arg, modifiers = EMPTY_OBJ] = directives[i];
+    if (dir) {
+      if (isFunction(dir)) {
+        dir = {
+          mounted: dir,
+          updated: dir
+        };
+      }
+      if (dir.deep) {
+        traverse(value);
+      }
+      bindings.push({
+        dir,
+        instance,
+        value,
+        oldValue: void 0,
+        arg,
+        modifiers
+      });
+    }
+  }
+  return vnode;
 }
-function ot(e, t, s, n) {
-  const o = e.dirs, i = t && t.dirs;
-  for (let l = 0; l < o.length; l++) {
-    const r = o[l];
-    i && (r.oldValue = i[l].value);
-    let c = r.dir[n];
-    c && (Qe(), He(c, s, 8, [
-      e.el,
-      r,
-      e,
-      t
-    ]), et());
+function invokeDirectiveHook(vnode, prevVNode, instance, name) {
+  const bindings = vnode.dirs;
+  const oldBindings = prevVNode && prevVNode.dirs;
+  for (let i = 0; i < bindings.length; i++) {
+    const binding = bindings[i];
+    if (oldBindings) {
+      binding.oldValue = oldBindings[i].value;
+    }
+    let hook = binding.dir[name];
+    if (hook) {
+      pauseTracking();
+      callWithAsyncErrorHandling(hook, instance, 8, [
+        vnode.el,
+        binding,
+        vnode,
+        prevVNode
+      ]);
+      resetTracking();
+    }
   }
 }
-const rl = Symbol("_vte"), cl = (e) => e.__isTeleport;
-function dn(e, t) {
-  e.shapeFlag & 6 && e.component ? (e.transition = t, dn(e.component.subTree, t)) : e.shapeFlag & 128 ? (e.ssContent.transition = t.clone(e.ssContent), e.ssFallback.transition = t.clone(e.ssFallback)) : e.transition = t;
+const TeleportEndKey = Symbol("_vte");
+const isTeleport = (type) => type.__isTeleport;
+function setTransitionHooks(vnode, hooks) {
+  if (vnode.shapeFlag & 6 && vnode.component) {
+    vnode.transition = hooks;
+    setTransitionHooks(vnode.component.subTree, hooks);
+  } else if (vnode.shapeFlag & 128) {
+    vnode.ssContent.transition = hooks.clone(vnode.ssContent);
+    vnode.ssFallback.transition = hooks.clone(vnode.ssFallback);
+  } else {
+    vnode.transition = hooks;
+  }
 }
 /*! #__NO_SIDE_EFFECTS__ */
 // @__NO_SIDE_EFFECTS__
-function ht(e, t) {
-  return R(e) ? (
+function defineComponent(options, extraOptions) {
+  return isFunction(options) ? (
     // #8236: extend call and options.name access are considered side-effects
     // by Rollup, so we have to wrap it in a pure-annotated IIFE.
-    fe({ name: e.name }, t, { setup: e })
-  ) : e;
+    /* @__PURE__ */ (() => extend({ name: options.name }, extraOptions, { setup: options }))()
+  ) : options;
 }
-function Mo(e) {
-  e.ids = [e.ids[0] + e.ids[2]++ + "-", 0, 0];
+function markAsyncBoundary(instance) {
+  instance.ids = [instance.ids[0] + instance.ids[2]++ + "-", 0, 0];
 }
-function ls(e, t, s, n, o = !1) {
-  if (A(e)) {
-    e.forEach(
-      (H, T) => ls(
-        H,
-        t && (A(t) ? t[T] : t),
-        s,
-        n,
-        o
+function setRef(rawRef, oldRawRef, parentSuspense, vnode, isUnmount = false) {
+  if (isArray(rawRef)) {
+    rawRef.forEach(
+      (r, i) => setRef(
+        r,
+        oldRawRef && (isArray(oldRawRef) ? oldRawRef[i] : oldRawRef),
+        parentSuspense,
+        vnode,
+        isUnmount
       )
     );
     return;
   }
-  if (Rt(n) && !o) {
-    n.shapeFlag & 512 && n.type.__asyncResolved && n.component.subTree.component && ls(e, t, s, n.component.subTree);
+  if (isAsyncWrapper(vnode) && !isUnmount) {
+    if (vnode.shapeFlag & 512 && vnode.type.__asyncResolved && vnode.component.subTree.component) {
+      setRef(rawRef, oldRawRef, parentSuspense, vnode.component.subTree);
+    }
     return;
   }
-  const i = n.shapeFlag & 4 ? xs(n.component) : n.el, l = o ? null : i, { i: r, r: c } = e, p = t && t.r, a = r.refs === q ? r.refs = {} : r.refs, d = r.setupState, m = L(d), C = d === q ? () => !1 : (H) => U(m, H);
-  if (p != null && p !== c && (se(p) ? (a[p] = null, C(p) && (d[p] = null)) : ae(p) && (p.value = null)), R(c))
-    Kt(c, r, 12, [l, a]);
-  else {
-    const H = se(c), T = ae(c);
-    if (H || T) {
-      const ne = () => {
-        if (e.f) {
-          const B = H ? C(c) ? d[c] : a[c] : c.value;
-          o ? A(B) && tn(B, i) : A(B) ? B.includes(i) || B.push(i) : H ? (a[c] = [i], C(c) && (d[c] = a[c])) : (c.value = [i], e.k && (a[e.k] = c.value));
-        } else H ? (a[c] = l, C(c) && (d[c] = l)) : T && (c.value = l, e.k && (a[e.k] = l));
+  const refValue = vnode.shapeFlag & 4 ? getComponentPublicInstance(vnode.component) : vnode.el;
+  const value = isUnmount ? null : refValue;
+  const { i: owner, r: ref3 } = rawRef;
+  const oldRef = oldRawRef && oldRawRef.r;
+  const refs = owner.refs === EMPTY_OBJ ? owner.refs = {} : owner.refs;
+  const setupState = owner.setupState;
+  const rawSetupState = toRaw(setupState);
+  const canSetSetupRef = setupState === EMPTY_OBJ ? () => false : (key) => {
+    return hasOwn(rawSetupState, key);
+  };
+  if (oldRef != null && oldRef !== ref3) {
+    if (isString(oldRef)) {
+      refs[oldRef] = null;
+      if (canSetSetupRef(oldRef)) {
+        setupState[oldRef] = null;
+      }
+    } else if (isRef(oldRef)) {
+      oldRef.value = null;
+    }
+  }
+  if (isFunction(ref3)) {
+    callWithErrorHandling(ref3, owner, 12, [value, refs]);
+  } else {
+    const _isString = isString(ref3);
+    const _isRef = isRef(ref3);
+    if (_isString || _isRef) {
+      const doSet = () => {
+        if (rawRef.f) {
+          const existing = _isString ? canSetSetupRef(ref3) ? setupState[ref3] : refs[ref3] : ref3.value;
+          if (isUnmount) {
+            isArray(existing) && remove(existing, refValue);
+          } else {
+            if (!isArray(existing)) {
+              if (_isString) {
+                refs[ref3] = [refValue];
+                if (canSetSetupRef(ref3)) {
+                  setupState[ref3] = refs[ref3];
+                }
+              } else {
+                ref3.value = [refValue];
+                if (rawRef.k) refs[rawRef.k] = ref3.value;
+              }
+            } else if (!existing.includes(refValue)) {
+              existing.push(refValue);
+            }
+          }
+        } else if (_isString) {
+          refs[ref3] = value;
+          if (canSetSetupRef(ref3)) {
+            setupState[ref3] = value;
+          }
+        } else if (_isRef) {
+          ref3.value = value;
+          if (rawRef.k) refs[rawRef.k] = value;
+        } else ;
       };
-      l ? (ne.id = -1, ye(ne, s)) : ne();
+      if (value) {
+        doSet.id = -1;
+        queuePostRenderEffect(doSet, parentSuspense);
+      } else {
+        doSet();
+      }
     }
   }
 }
-ps().requestIdleCallback;
-ps().cancelIdleCallback;
-const Rt = (e) => !!e.type.__asyncLoader, ko = (e) => e.type.__isKeepAlive;
-function ul(e, t) {
-  Ao(e, "a", t);
+getGlobalThis().requestIdleCallback || ((cb) => setTimeout(cb, 1));
+getGlobalThis().cancelIdleCallback || ((id) => clearTimeout(id));
+const isAsyncWrapper = (i) => !!i.type.__asyncLoader;
+const isKeepAlive = (vnode) => vnode.type.__isKeepAlive;
+function onActivated(hook, target) {
+  registerKeepAliveHook(hook, "a", target);
 }
-function al(e, t) {
-  Ao(e, "da", t);
+function onDeactivated(hook, target) {
+  registerKeepAliveHook(hook, "da", target);
 }
-function Ao(e, t, s = me) {
-  const n = e.__wdc || (e.__wdc = () => {
-    let o = s;
-    for (; o; ) {
-      if (o.isDeactivated)
+function registerKeepAliveHook(hook, type, target = currentInstance) {
+  const wrappedHook = hook.__wdc || (hook.__wdc = () => {
+    let current = target;
+    while (current) {
+      if (current.isDeactivated) {
         return;
-      o = o.parent;
+      }
+      current = current.parent;
     }
-    return e();
+    return hook();
   });
-  if (_s(t, n, s), s) {
-    let o = s.parent;
-    for (; o && o.parent; )
-      ko(o.parent.vnode) && fl(n, t, s, o), o = o.parent;
+  injectHook(type, wrappedHook, target);
+  if (target) {
+    let current = target.parent;
+    while (current && current.parent) {
+      if (isKeepAlive(current.parent.vnode)) {
+        injectToKeepAliveRoot(wrappedHook, type, target, current);
+      }
+      current = current.parent;
+    }
   }
 }
-function fl(e, t, s, n) {
-  const o = _s(
-    t,
-    e,
-    n,
-    !0
+function injectToKeepAliveRoot(hook, type, target, keepAliveRoot) {
+  const injected = injectHook(
+    type,
+    hook,
+    keepAliveRoot,
+    true
     /* prepend */
   );
-  Ro(() => {
-    tn(n[t], o);
-  }, s);
+  onUnmounted(() => {
+    remove(keepAliveRoot[type], injected);
+  }, target);
 }
-function _s(e, t, s = me, n = !1) {
-  if (s) {
-    const o = s[e] || (s[e] = []), i = t.__weh || (t.__weh = (...l) => {
-      Qe();
-      const r = Wt(s), c = He(t, s, e, l);
-      return r(), et(), c;
+function injectHook(type, hook, target = currentInstance, prepend = false) {
+  if (target) {
+    const hooks = target[type] || (target[type] = []);
+    const wrappedHook = hook.__weh || (hook.__weh = (...args) => {
+      pauseTracking();
+      const reset = setCurrentInstance(target);
+      const res = callWithAsyncErrorHandling(hook, target, type, args);
+      reset();
+      resetTracking();
+      return res;
     });
-    return n ? o.unshift(i) : o.push(i), i;
+    if (prepend) {
+      hooks.unshift(wrappedHook);
+    } else {
+      hooks.push(wrappedHook);
+    }
+    return wrappedHook;
   }
 }
-const We = (e) => (t, s = me) => {
-  (!Ut || e === "sp") && _s(e, (...n) => t(...n), s);
-}, dl = We("bm"), Po = We("m"), pl = We(
+const createHook = (lifecycle) => (hook, target = currentInstance) => {
+  if (!isInSSRComponentSetup || lifecycle === "sp") {
+    injectHook(lifecycle, (...args) => hook(...args), target);
+  }
+};
+const onBeforeMount = createHook("bm");
+const onMounted = createHook("m");
+const onBeforeUpdate = createHook(
   "bu"
-), hl = We("u"), gl = We(
+);
+const onUpdated = createHook("u");
+const onBeforeUnmount = createHook(
   "bum"
-), Ro = We("um"), ml = We(
+);
+const onUnmounted = createHook("um");
+const onServerPrefetch = createHook(
   "sp"
-), bl = We("rtg"), _l = We("rtc");
-function vl(e, t = me) {
-  _s("ec", e, t);
+);
+const onRenderTriggered = createHook("rtg");
+const onRenderTracked = createHook("rtc");
+function onErrorCaptured(hook, target = currentInstance) {
+  injectHook("ec", hook, target);
 }
-const yl = Symbol.for("v-ndc");
-function ft(e, t, s, n) {
-  let o;
-  const i = s, l = A(e);
-  if (l || se(e)) {
-    const r = l && yt(e);
-    let c = !1;
-    r && (c = !Ee(e), e = gs(e)), o = new Array(e.length);
-    for (let p = 0, a = e.length; p < a; p++)
-      o[p] = t(
-        c ? ce(e[p]) : e[p],
-        p,
+const NULL_DYNAMIC_COMPONENT = Symbol.for("v-ndc");
+function renderList(source, renderItem, cache, index) {
+  let ret;
+  const cached = cache;
+  const sourceIsArray = isArray(source);
+  if (sourceIsArray || isString(source)) {
+    const sourceIsReactiveArray = sourceIsArray && isReactive(source);
+    let needsWrap = false;
+    if (sourceIsReactiveArray) {
+      needsWrap = !isShallow(source);
+      source = shallowReadArray(source);
+    }
+    ret = new Array(source.length);
+    for (let i = 0, l = source.length; i < l; i++) {
+      ret[i] = renderItem(
+        needsWrap ? toReactive(source[i]) : source[i],
+        i,
         void 0,
-        i
+        cached
       );
-  } else if (typeof e == "number") {
-    o = new Array(e);
-    for (let r = 0; r < e; r++)
-      o[r] = t(r + 1, r, void 0, i);
-  } else if (ee(e))
-    if (e[Symbol.iterator])
-      o = Array.from(
-        e,
-        (r, c) => t(r, c, void 0, i)
+    }
+  } else if (typeof source === "number") {
+    ret = new Array(source);
+    for (let i = 0; i < source; i++) {
+      ret[i] = renderItem(i + 1, i, void 0, cached);
+    }
+  } else if (isObject(source)) {
+    if (source[Symbol.iterator]) {
+      ret = Array.from(
+        source,
+        (item, i) => renderItem(item, i, void 0, cached)
       );
-    else {
-      const r = Object.keys(e);
-      o = new Array(r.length);
-      for (let c = 0, p = r.length; c < p; c++) {
-        const a = r[c];
-        o[c] = t(e[a], a, c, i);
+    } else {
+      const keys = Object.keys(source);
+      ret = new Array(keys.length);
+      for (let i = 0, l = keys.length; i < l; i++) {
+        const key = keys[i];
+        ret[i] = renderItem(source[key], key, i, cached);
       }
     }
-  else
-    o = [];
-  return o;
+  } else {
+    ret = [];
+  }
+  return ret;
 }
-const Ks = (e) => e ? ni(e) ? xs(e) : Ks(e.parent) : null, Ft = (
+const getPublicInstance = (i) => {
+  if (!i) return null;
+  if (isStatefulComponent(i)) return getComponentPublicInstance(i);
+  return getPublicInstance(i.parent);
+};
+const publicPropertiesMap = (
   // Move PURE marker to new line to workaround compiler discarding it
   // due to type annotation
-  /* @__PURE__ */ fe(/* @__PURE__ */ Object.create(null), {
-    $: (e) => e,
-    $el: (e) => e.vnode.el,
-    $data: (e) => e.data,
-    $props: (e) => e.props,
-    $attrs: (e) => e.attrs,
-    $slots: (e) => e.slots,
-    $refs: (e) => e.refs,
-    $parent: (e) => Ks(e.parent),
-    $root: (e) => Ks(e.root),
-    $host: (e) => e.ce,
-    $emit: (e) => e.emit,
-    $options: (e) => Vo(e),
-    $forceUpdate: (e) => e.f || (e.f = () => {
-      fn(e.update);
+  /* @__PURE__ */ extend(/* @__PURE__ */ Object.create(null), {
+    $: (i) => i,
+    $el: (i) => i.vnode.el,
+    $data: (i) => i.data,
+    $props: (i) => i.props,
+    $attrs: (i) => i.attrs,
+    $slots: (i) => i.slots,
+    $refs: (i) => i.refs,
+    $parent: (i) => getPublicInstance(i.parent),
+    $root: (i) => getPublicInstance(i.root),
+    $host: (i) => i.ce,
+    $emit: (i) => i.emit,
+    $options: (i) => resolveMergedOptions(i),
+    $forceUpdate: (i) => i.f || (i.f = () => {
+      queueJob(i.update);
     }),
-    $nextTick: (e) => e.n || (e.n = nl.bind(e.proxy)),
-    $watch: (e) => Ll.bind(e)
+    $nextTick: (i) => i.n || (i.n = nextTick.bind(i.proxy)),
+    $watch: (i) => instanceWatch.bind(i)
   })
-), Os = (e, t) => e !== q && !e.__isScriptSetup && U(e, t), xl = {
-  get({ _: e }, t) {
-    if (t === "__v_skip")
-      return !0;
-    const { ctx: s, setupState: n, data: o, props: i, accessCache: l, type: r, appContext: c } = e;
-    let p;
-    if (t[0] !== "$") {
-      const C = l[t];
-      if (C !== void 0)
-        switch (C) {
+);
+const hasSetupBinding = (state, key) => state !== EMPTY_OBJ && !state.__isScriptSetup && hasOwn(state, key);
+const PublicInstanceProxyHandlers = {
+  get({ _: instance }, key) {
+    if (key === "__v_skip") {
+      return true;
+    }
+    const { ctx, setupState, data, props, accessCache, type, appContext } = instance;
+    let normalizedProps;
+    if (key[0] !== "$") {
+      const n = accessCache[key];
+      if (n !== void 0) {
+        switch (n) {
           case 1:
-            return n[t];
+            return setupState[key];
           case 2:
-            return o[t];
+            return data[key];
           case 4:
-            return s[t];
+            return ctx[key];
           case 3:
-            return i[t];
+            return props[key];
         }
-      else {
-        if (Os(n, t))
-          return l[t] = 1, n[t];
-        if (o !== q && U(o, t))
-          return l[t] = 2, o[t];
-        if (
-          // only cache other properties when instance has declared (thus stable)
-          // props
-          (p = e.propsOptions[0]) && U(p, t)
-        )
-          return l[t] = 3, i[t];
-        if (s !== q && U(s, t))
-          return l[t] = 4, s[t];
-        Ws && (l[t] = 0);
+      } else if (hasSetupBinding(setupState, key)) {
+        accessCache[key] = 1;
+        return setupState[key];
+      } else if (data !== EMPTY_OBJ && hasOwn(data, key)) {
+        accessCache[key] = 2;
+        return data[key];
+      } else if (
+        // only cache other properties when instance has declared (thus stable)
+        // props
+        (normalizedProps = instance.propsOptions[0]) && hasOwn(normalizedProps, key)
+      ) {
+        accessCache[key] = 3;
+        return props[key];
+      } else if (ctx !== EMPTY_OBJ && hasOwn(ctx, key)) {
+        accessCache[key] = 4;
+        return ctx[key];
+      } else if (shouldCacheAccess) {
+        accessCache[key] = 0;
       }
     }
-    const a = Ft[t];
-    let d, m;
-    if (a)
-      return t === "$attrs" && re(e.attrs, "get", ""), a(e);
-    if (
+    const publicGetter = publicPropertiesMap[key];
+    let cssModule, globalProperties;
+    if (publicGetter) {
+      if (key === "$attrs") {
+        track(instance.attrs, "get", "");
+      }
+      return publicGetter(instance);
+    } else if (
       // css module (injected by vue-loader)
-      (d = r.__cssModules) && (d = d[t])
-    )
-      return d;
-    if (s !== q && U(s, t))
-      return l[t] = 4, s[t];
-    if (
+      (cssModule = type.__cssModules) && (cssModule = cssModule[key])
+    ) {
+      return cssModule;
+    } else if (ctx !== EMPTY_OBJ && hasOwn(ctx, key)) {
+      accessCache[key] = 4;
+      return ctx[key];
+    } else if (
       // global properties
-      m = c.config.globalProperties, U(m, t)
-    )
-      return m[t];
+      globalProperties = appContext.config.globalProperties, hasOwn(globalProperties, key)
+    ) {
+      {
+        return globalProperties[key];
+      }
+    } else ;
   },
-  set({ _: e }, t, s) {
-    const { data: n, setupState: o, ctx: i } = e;
-    return Os(o, t) ? (o[t] = s, !0) : n !== q && U(n, t) ? (n[t] = s, !0) : U(e.props, t) || t[0] === "$" && t.slice(1) in e ? !1 : (i[t] = s, !0);
+  set({ _: instance }, key, value) {
+    const { data, setupState, ctx } = instance;
+    if (hasSetupBinding(setupState, key)) {
+      setupState[key] = value;
+      return true;
+    } else if (data !== EMPTY_OBJ && hasOwn(data, key)) {
+      data[key] = value;
+      return true;
+    } else if (hasOwn(instance.props, key)) {
+      return false;
+    }
+    if (key[0] === "$" && key.slice(1) in instance) {
+      return false;
+    } else {
+      {
+        ctx[key] = value;
+      }
+    }
+    return true;
   },
   has({
-    _: { data: e, setupState: t, accessCache: s, ctx: n, appContext: o, propsOptions: i }
-  }, l) {
-    let r;
-    return !!s[l] || e !== q && U(e, l) || Os(t, l) || (r = i[0]) && U(r, l) || U(n, l) || U(Ft, l) || U(o.config.globalProperties, l);
+    _: { data, setupState, accessCache, ctx, appContext, propsOptions }
+  }, key) {
+    let normalizedProps;
+    return !!accessCache[key] || data !== EMPTY_OBJ && hasOwn(data, key) || hasSetupBinding(setupState, key) || (normalizedProps = propsOptions[0]) && hasOwn(normalizedProps, key) || hasOwn(ctx, key) || hasOwn(publicPropertiesMap, key) || hasOwn(appContext.config.globalProperties, key);
   },
-  defineProperty(e, t, s) {
-    return s.get != null ? e._.accessCache[t] = 0 : U(s, "value") && this.set(e, t, s.value, null), Reflect.defineProperty(e, t, s);
+  defineProperty(target, key, descriptor) {
+    if (descriptor.get != null) {
+      target._.accessCache[key] = 0;
+    } else if (hasOwn(descriptor, "value")) {
+      this.set(target, key, descriptor.value, null);
+    }
+    return Reflect.defineProperty(target, key, descriptor);
   }
 };
-function En(e) {
-  return A(e) ? e.reduce(
-    (t, s) => (t[s] = null, t),
+function normalizePropsOrEmits(props) {
+  return isArray(props) ? props.reduce(
+    (normalized, p2) => (normalized[p2] = null, normalized),
     {}
-  ) : e;
+  ) : props;
 }
-let Ws = !0;
-function wl(e) {
-  const t = Vo(e), s = e.proxy, n = e.ctx;
-  Ws = !1, t.beforeCreate && $n(t.beforeCreate, e, "bc");
+let shouldCacheAccess = true;
+function applyOptions(instance) {
+  const options = resolveMergedOptions(instance);
+  const publicThis = instance.proxy;
+  const ctx = instance.ctx;
+  shouldCacheAccess = false;
+  if (options.beforeCreate) {
+    callHook(options.beforeCreate, instance, "bc");
+  }
   const {
     // state
-    data: o,
-    computed: i,
-    methods: l,
-    watch: r,
-    provide: c,
-    inject: p,
+    data: dataOptions,
+    computed: computedOptions,
+    methods,
+    watch: watchOptions,
+    provide: provideOptions,
+    inject: injectOptions,
     // lifecycle
-    created: a,
-    beforeMount: d,
-    mounted: m,
-    beforeUpdate: C,
-    updated: H,
-    activated: T,
-    deactivated: ne,
-    beforeDestroy: B,
-    beforeUnmount: J,
-    destroyed: G,
-    unmounted: x,
-    render: O,
-    renderTracked: F,
-    renderTriggered: Y,
-    errorCaptured: D,
-    serverPrefetch: K,
+    created,
+    beforeMount,
+    mounted,
+    beforeUpdate,
+    updated,
+    activated,
+    deactivated,
+    beforeDestroy,
+    beforeUnmount,
+    destroyed,
+    unmounted,
+    render,
+    renderTracked,
+    renderTriggered,
+    errorCaptured,
+    serverPrefetch,
     // public API
-    expose: Ne,
-    inheritAttrs: tt,
+    expose,
+    inheritAttrs,
     // assets
-    components: ze,
-    directives: qe,
-    filters: ws
-  } = t;
-  if (p && Sl(p, n, null), l)
-    for (const te in l) {
-      const X = l[te];
-      R(X) && (n[te] = X.bind(s));
-    }
-  if (o) {
-    const te = o.call(s, s);
-    ee(te) && (e.data = ms(te));
+    components,
+    directives,
+    filters
+  } = options;
+  const checkDuplicateProperties = null;
+  if (injectOptions) {
+    resolveInjections(injectOptions, ctx, checkDuplicateProperties);
   }
-  if (Ws = !0, i)
-    for (const te in i) {
-      const X = i[te], st = R(X) ? X.bind(s, s) : R(X.get) ? X.get.bind(s, s) : je, qt = !R(X) && R(X.set) ? X.set.bind(s) : je, nt = Ie({
-        get: st,
-        set: qt
+  if (methods) {
+    for (const key in methods) {
+      const methodHandler = methods[key];
+      if (isFunction(methodHandler)) {
+        {
+          ctx[key] = methodHandler.bind(publicThis);
+        }
+      }
+    }
+  }
+  if (dataOptions) {
+    const data = dataOptions.call(publicThis, publicThis);
+    if (!isObject(data)) ;
+    else {
+      instance.data = reactive(data);
+    }
+  }
+  shouldCacheAccess = true;
+  if (computedOptions) {
+    for (const key in computedOptions) {
+      const opt = computedOptions[key];
+      const get = isFunction(opt) ? opt.bind(publicThis, publicThis) : isFunction(opt.get) ? opt.get.bind(publicThis, publicThis) : NOOP;
+      const set = !isFunction(opt) && isFunction(opt.set) ? opt.set.bind(publicThis) : NOOP;
+      const c = computed({
+        get,
+        set
       });
-      Object.defineProperty(n, te, {
-        enumerable: !0,
-        configurable: !0,
-        get: () => nt.value,
-        set: (Me) => nt.value = Me
+      Object.defineProperty(ctx, key, {
+        enumerable: true,
+        configurable: true,
+        get: () => c.value,
+        set: (v) => c.value = v
       });
     }
-  if (r)
-    for (const te in r)
-      Fo(r[te], n, s, te);
-  if (c) {
-    const te = R(c) ? c.call(s) : c;
-    Reflect.ownKeys(te).forEach((X) => {
-      Do(X, te[X]);
+  }
+  if (watchOptions) {
+    for (const key in watchOptions) {
+      createWatcher(watchOptions[key], ctx, publicThis, key);
+    }
+  }
+  if (provideOptions) {
+    const provides = isFunction(provideOptions) ? provideOptions.call(publicThis) : provideOptions;
+    Reflect.ownKeys(provides).forEach((key) => {
+      provide(key, provides[key]);
     });
   }
-  a && $n(a, e, "c");
-  function de(te, X) {
-    A(X) ? X.forEach((st) => te(st.bind(s))) : X && te(X.bind(s));
+  if (created) {
+    callHook(created, instance, "c");
   }
-  if (de(dl, d), de(Po, m), de(pl, C), de(hl, H), de(ul, T), de(al, ne), de(vl, D), de(_l, F), de(bl, Y), de(gl, J), de(Ro, x), de(ml, K), A(Ne))
-    if (Ne.length) {
-      const te = e.exposed || (e.exposed = {});
-      Ne.forEach((X) => {
-        Object.defineProperty(te, X, {
-          get: () => s[X],
-          set: (st) => s[X] = st
+  function registerLifecycleHook(register, hook) {
+    if (isArray(hook)) {
+      hook.forEach((_hook) => register(_hook.bind(publicThis)));
+    } else if (hook) {
+      register(hook.bind(publicThis));
+    }
+  }
+  registerLifecycleHook(onBeforeMount, beforeMount);
+  registerLifecycleHook(onMounted, mounted);
+  registerLifecycleHook(onBeforeUpdate, beforeUpdate);
+  registerLifecycleHook(onUpdated, updated);
+  registerLifecycleHook(onActivated, activated);
+  registerLifecycleHook(onDeactivated, deactivated);
+  registerLifecycleHook(onErrorCaptured, errorCaptured);
+  registerLifecycleHook(onRenderTracked, renderTracked);
+  registerLifecycleHook(onRenderTriggered, renderTriggered);
+  registerLifecycleHook(onBeforeUnmount, beforeUnmount);
+  registerLifecycleHook(onUnmounted, unmounted);
+  registerLifecycleHook(onServerPrefetch, serverPrefetch);
+  if (isArray(expose)) {
+    if (expose.length) {
+      const exposed = instance.exposed || (instance.exposed = {});
+      expose.forEach((key) => {
+        Object.defineProperty(exposed, key, {
+          get: () => publicThis[key],
+          set: (val) => publicThis[key] = val
         });
       });
-    } else e.exposed || (e.exposed = {});
-  O && e.render === je && (e.render = O), tt != null && (e.inheritAttrs = tt), ze && (e.components = ze), qe && (e.directives = qe), K && Mo(e);
-}
-function Sl(e, t, s = je) {
-  A(e) && (e = zs(e));
-  for (const n in e) {
-    const o = e[n];
-    let i;
-    ee(o) ? "default" in o ? i = Vt(
-      o.from || n,
-      o.default,
-      !0
-    ) : i = Vt(o.from || n) : i = Vt(o), ae(i) ? Object.defineProperty(t, n, {
-      enumerable: !0,
-      configurable: !0,
-      get: () => i.value,
-      set: (l) => i.value = l
-    }) : t[n] = i;
+    } else if (!instance.exposed) {
+      instance.exposed = {};
+    }
+  }
+  if (render && instance.render === NOOP) {
+    instance.render = render;
+  }
+  if (inheritAttrs != null) {
+    instance.inheritAttrs = inheritAttrs;
+  }
+  if (components) instance.components = components;
+  if (directives) instance.directives = directives;
+  if (serverPrefetch) {
+    markAsyncBoundary(instance);
   }
 }
-function $n(e, t, s) {
-  He(
-    A(e) ? e.map((n) => n.bind(t.proxy)) : e.bind(t.proxy),
-    t,
-    s
+function resolveInjections(injectOptions, ctx, checkDuplicateProperties = NOOP) {
+  if (isArray(injectOptions)) {
+    injectOptions = normalizeInject(injectOptions);
+  }
+  for (const key in injectOptions) {
+    const opt = injectOptions[key];
+    let injected;
+    if (isObject(opt)) {
+      if ("default" in opt) {
+        injected = inject(
+          opt.from || key,
+          opt.default,
+          true
+        );
+      } else {
+        injected = inject(opt.from || key);
+      }
+    } else {
+      injected = inject(opt);
+    }
+    if (isRef(injected)) {
+      Object.defineProperty(ctx, key, {
+        enumerable: true,
+        configurable: true,
+        get: () => injected.value,
+        set: (v) => injected.value = v
+      });
+    } else {
+      ctx[key] = injected;
+    }
+  }
+}
+function callHook(hook, instance, type) {
+  callWithAsyncErrorHandling(
+    isArray(hook) ? hook.map((h2) => h2.bind(instance.proxy)) : hook.bind(instance.proxy),
+    instance,
+    type
   );
 }
-function Fo(e, t, s, n) {
-  let o = n.includes(".") ? Xo(s, n) : () => s[n];
-  if (se(e)) {
-    const i = t[e];
-    R(i) && Qt(o, i);
-  } else if (R(e))
-    Qt(o, e.bind(s));
-  else if (ee(e))
-    if (A(e))
-      e.forEach((i) => Fo(i, t, s, n));
-    else {
-      const i = R(e.handler) ? e.handler.bind(s) : t[e.handler];
-      R(i) && Qt(o, i, e);
+function createWatcher(raw, ctx, publicThis, key) {
+  let getter = key.includes(".") ? createPathGetter(publicThis, key) : () => publicThis[key];
+  if (isString(raw)) {
+    const handler = ctx[raw];
+    if (isFunction(handler)) {
+      {
+        watch(getter, handler);
+      }
     }
-}
-function Vo(e) {
-  const t = e.type, { mixins: s, extends: n } = t, {
-    mixins: o,
-    optionsCache: i,
-    config: { optionMergeStrategies: l }
-  } = e.appContext, r = i.get(t);
-  let c;
-  return r ? c = r : !o.length && !s && !n ? c = t : (c = {}, o.length && o.forEach(
-    (p) => rs(c, p, l, !0)
-  ), rs(c, t, l)), ee(t) && i.set(t, c), c;
-}
-function rs(e, t, s, n = !1) {
-  const { mixins: o, extends: i } = t;
-  i && rs(e, i, s, !0), o && o.forEach(
-    (l) => rs(e, l, s, !0)
-  );
-  for (const l in t)
-    if (!(n && l === "expose")) {
-      const r = Cl[l] || s && s[l];
-      e[l] = r ? r(e[l], t[l]) : t[l];
+  } else if (isFunction(raw)) {
+    {
+      watch(getter, raw.bind(publicThis));
     }
-  return e;
+  } else if (isObject(raw)) {
+    if (isArray(raw)) {
+      raw.forEach((r) => createWatcher(r, ctx, publicThis, key));
+    } else {
+      const handler = isFunction(raw.handler) ? raw.handler.bind(publicThis) : ctx[raw.handler];
+      if (isFunction(handler)) {
+        watch(getter, handler, raw);
+      }
+    }
+  } else ;
 }
-const Cl = {
-  data: Tn,
-  props: In,
-  emits: In,
-  // objects
-  methods: Mt,
-  computed: Mt,
-  // lifecycle
-  beforeCreate: pe,
-  created: pe,
-  beforeMount: pe,
-  mounted: pe,
-  beforeUpdate: pe,
-  updated: pe,
-  beforeDestroy: pe,
-  beforeUnmount: pe,
-  destroyed: pe,
-  unmounted: pe,
-  activated: pe,
-  deactivated: pe,
-  errorCaptured: pe,
-  serverPrefetch: pe,
-  // assets
-  components: Mt,
-  directives: Mt,
-  // watch
-  watch: $l,
-  // provide / inject
-  provide: Tn,
-  inject: El
-};
-function Tn(e, t) {
-  return t ? e ? function() {
-    return fe(
-      R(e) ? e.call(this, this) : e,
-      R(t) ? t.call(this, this) : t
+function resolveMergedOptions(instance) {
+  const base = instance.type;
+  const { mixins, extends: extendsOptions } = base;
+  const {
+    mixins: globalMixins,
+    optionsCache: cache,
+    config: { optionMergeStrategies }
+  } = instance.appContext;
+  const cached = cache.get(base);
+  let resolved;
+  if (cached) {
+    resolved = cached;
+  } else if (!globalMixins.length && !mixins && !extendsOptions) {
+    {
+      resolved = base;
+    }
+  } else {
+    resolved = {};
+    if (globalMixins.length) {
+      globalMixins.forEach(
+        (m) => mergeOptions(resolved, m, optionMergeStrategies, true)
+      );
+    }
+    mergeOptions(resolved, base, optionMergeStrategies);
+  }
+  if (isObject(base)) {
+    cache.set(base, resolved);
+  }
+  return resolved;
+}
+function mergeOptions(to, from, strats, asMixin = false) {
+  const { mixins, extends: extendsOptions } = from;
+  if (extendsOptions) {
+    mergeOptions(to, extendsOptions, strats, true);
+  }
+  if (mixins) {
+    mixins.forEach(
+      (m) => mergeOptions(to, m, strats, true)
     );
-  } : t : e;
-}
-function El(e, t) {
-  return Mt(zs(e), zs(t));
-}
-function zs(e) {
-  if (A(e)) {
-    const t = {};
-    for (let s = 0; s < e.length; s++)
-      t[e[s]] = e[s];
-    return t;
   }
-  return e;
+  for (const key in from) {
+    if (asMixin && key === "expose") ;
+    else {
+      const strat = internalOptionMergeStrats[key] || strats && strats[key];
+      to[key] = strat ? strat(to[key], from[key]) : from[key];
+    }
+  }
+  return to;
 }
-function pe(e, t) {
-  return e ? [...new Set([].concat(e, t))] : t;
+const internalOptionMergeStrats = {
+  data: mergeDataFn,
+  props: mergeEmitsOrPropsOptions,
+  emits: mergeEmitsOrPropsOptions,
+  // objects
+  methods: mergeObjectOptions,
+  computed: mergeObjectOptions,
+  // lifecycle
+  beforeCreate: mergeAsArray,
+  created: mergeAsArray,
+  beforeMount: mergeAsArray,
+  mounted: mergeAsArray,
+  beforeUpdate: mergeAsArray,
+  updated: mergeAsArray,
+  beforeDestroy: mergeAsArray,
+  beforeUnmount: mergeAsArray,
+  destroyed: mergeAsArray,
+  unmounted: mergeAsArray,
+  activated: mergeAsArray,
+  deactivated: mergeAsArray,
+  errorCaptured: mergeAsArray,
+  serverPrefetch: mergeAsArray,
+  // assets
+  components: mergeObjectOptions,
+  directives: mergeObjectOptions,
+  // watch
+  watch: mergeWatchOptions,
+  // provide / inject
+  provide: mergeDataFn,
+  inject: mergeInject
+};
+function mergeDataFn(to, from) {
+  if (!from) {
+    return to;
+  }
+  if (!to) {
+    return from;
+  }
+  return function mergedDataFn() {
+    return extend(
+      isFunction(to) ? to.call(this, this) : to,
+      isFunction(from) ? from.call(this, this) : from
+    );
+  };
 }
-function Mt(e, t) {
-  return e ? fe(/* @__PURE__ */ Object.create(null), e, t) : t;
+function mergeInject(to, from) {
+  return mergeObjectOptions(normalizeInject(to), normalizeInject(from));
 }
-function In(e, t) {
-  return e ? A(e) && A(t) ? [.../* @__PURE__ */ new Set([...e, ...t])] : fe(
-    /* @__PURE__ */ Object.create(null),
-    En(e),
-    En(t ?? {})
-  ) : t;
+function normalizeInject(raw) {
+  if (isArray(raw)) {
+    const res = {};
+    for (let i = 0; i < raw.length; i++) {
+      res[raw[i]] = raw[i];
+    }
+    return res;
+  }
+  return raw;
 }
-function $l(e, t) {
-  if (!e) return t;
-  if (!t) return e;
-  const s = fe(/* @__PURE__ */ Object.create(null), e);
-  for (const n in t)
-    s[n] = pe(e[n], t[n]);
-  return s;
+function mergeAsArray(to, from) {
+  return to ? [...new Set([].concat(to, from))] : from;
 }
-function jo() {
+function mergeObjectOptions(to, from) {
+  return to ? extend(/* @__PURE__ */ Object.create(null), to, from) : from;
+}
+function mergeEmitsOrPropsOptions(to, from) {
+  if (to) {
+    if (isArray(to) && isArray(from)) {
+      return [.../* @__PURE__ */ new Set([...to, ...from])];
+    }
+    return extend(
+      /* @__PURE__ */ Object.create(null),
+      normalizePropsOrEmits(to),
+      normalizePropsOrEmits(from != null ? from : {})
+    );
+  } else {
+    return from;
+  }
+}
+function mergeWatchOptions(to, from) {
+  if (!to) return from;
+  if (!from) return to;
+  const merged = extend(/* @__PURE__ */ Object.create(null), to);
+  for (const key in from) {
+    merged[key] = mergeAsArray(to[key], from[key]);
+  }
+  return merged;
+}
+function createAppContext() {
   return {
     app: null,
     config: {
-      isNativeTag: gi,
-      performance: !1,
+      isNativeTag: NO,
+      performance: false,
       globalProperties: {},
       optionMergeStrategies: {},
       errorHandler: void 0,
@@ -1732,1419 +2856,2301 @@ function jo() {
     emitsCache: /* @__PURE__ */ new WeakMap()
   };
 }
-let Tl = 0;
-function Il(e, t) {
-  return function(n, o = null) {
-    R(n) || (n = fe({}, n)), o != null && !ee(o) && (o = null);
-    const i = jo(), l = /* @__PURE__ */ new WeakSet(), r = [];
-    let c = !1;
-    const p = i.app = {
-      _uid: Tl++,
-      _component: n,
-      _props: o,
+let uid$1 = 0;
+function createAppAPI(render, hydrate) {
+  return function createApp2(rootComponent, rootProps = null) {
+    if (!isFunction(rootComponent)) {
+      rootComponent = extend({}, rootComponent);
+    }
+    if (rootProps != null && !isObject(rootProps)) {
+      rootProps = null;
+    }
+    const context = createAppContext();
+    const installedPlugins = /* @__PURE__ */ new WeakSet();
+    const pluginCleanupFns = [];
+    let isMounted = false;
+    const app2 = context.app = {
+      _uid: uid$1++,
+      _component: rootComponent,
+      _props: rootProps,
       _container: null,
-      _context: i,
+      _context: context,
       _instance: null,
-      version: cr,
+      version,
       get config() {
-        return i.config;
+        return context.config;
       },
-      set config(a) {
+      set config(v) {
       },
-      use(a, ...d) {
-        return l.has(a) || (a && R(a.install) ? (l.add(a), a.install(p, ...d)) : R(a) && (l.add(a), a(p, ...d))), p;
+      use(plugin, ...options) {
+        if (installedPlugins.has(plugin)) ;
+        else if (plugin && isFunction(plugin.install)) {
+          installedPlugins.add(plugin);
+          plugin.install(app2, ...options);
+        } else if (isFunction(plugin)) {
+          installedPlugins.add(plugin);
+          plugin(app2, ...options);
+        } else ;
+        return app2;
       },
-      mixin(a) {
-        return i.mixins.includes(a) || i.mixins.push(a), p;
+      mixin(mixin) {
+        {
+          if (!context.mixins.includes(mixin)) {
+            context.mixins.push(mixin);
+          }
+        }
+        return app2;
       },
-      component(a, d) {
-        return d ? (i.components[a] = d, p) : i.components[a];
+      component(name, component) {
+        if (!component) {
+          return context.components[name];
+        }
+        context.components[name] = component;
+        return app2;
       },
-      directive(a, d) {
-        return d ? (i.directives[a] = d, p) : i.directives[a];
+      directive(name, directive) {
+        if (!directive) {
+          return context.directives[name];
+        }
+        context.directives[name] = directive;
+        return app2;
       },
-      mount(a, d, m) {
-        if (!c) {
-          const C = p._ceVNode || ue(n, o);
-          return C.appContext = i, m === !0 ? m = "svg" : m === !1 && (m = void 0), e(C, a, m), c = !0, p._container = a, a.__vue_app__ = p, xs(C.component);
+      mount(rootContainer, isHydrate, namespace) {
+        if (!isMounted) {
+          const vnode = app2._ceVNode || createVNode(rootComponent, rootProps);
+          vnode.appContext = context;
+          if (namespace === true) {
+            namespace = "svg";
+          } else if (namespace === false) {
+            namespace = void 0;
+          }
+          {
+            render(vnode, rootContainer, namespace);
+          }
+          isMounted = true;
+          app2._container = rootContainer;
+          rootContainer.__vue_app__ = app2;
+          return getComponentPublicInstance(vnode.component);
         }
       },
-      onUnmount(a) {
-        r.push(a);
+      onUnmount(cleanupFn) {
+        pluginCleanupFns.push(cleanupFn);
       },
       unmount() {
-        c && (He(
-          r,
-          p._instance,
-          16
-        ), e(null, p._container), delete p._container.__vue_app__);
+        if (isMounted) {
+          callWithAsyncErrorHandling(
+            pluginCleanupFns,
+            app2._instance,
+            16
+          );
+          render(null, app2._container);
+          delete app2._container.__vue_app__;
+        }
       },
-      provide(a, d) {
-        return i.provides[a] = d, p;
+      provide(key, value) {
+        context.provides[key] = value;
+        return app2;
       },
-      runWithContext(a) {
-        const d = wt;
-        wt = p;
+      runWithContext(fn) {
+        const lastApp = currentApp;
+        currentApp = app2;
         try {
-          return a();
+          return fn();
         } finally {
-          wt = d;
+          currentApp = lastApp;
         }
       }
     };
-    return p;
+    return app2;
   };
 }
-let wt = null;
-function Do(e, t) {
-  if (me) {
-    let s = me.provides;
-    const n = me.parent && me.parent.provides;
-    n === s && (s = me.provides = Object.create(n)), s[e] = t;
+let currentApp = null;
+function provide(key, value) {
+  if (!currentInstance) ;
+  else {
+    let provides = currentInstance.provides;
+    const parentProvides = currentInstance.parent && currentInstance.parent.provides;
+    if (parentProvides === provides) {
+      provides = currentInstance.provides = Object.create(parentProvides);
+    }
+    provides[key] = value;
   }
 }
-function Vt(e, t, s = !1) {
-  const n = me || Ce;
-  if (n || wt) {
-    const o = wt ? wt._context.provides : n ? n.parent == null ? n.vnode.appContext && n.vnode.appContext.provides : n.parent.provides : void 0;
-    if (o && e in o)
-      return o[e];
-    if (arguments.length > 1)
-      return s && R(t) ? t.call(n && n.proxy) : t;
+function inject(key, defaultValue, treatDefaultAsFactory = false) {
+  const instance = currentInstance || currentRenderingInstance;
+  if (instance || currentApp) {
+    const provides = currentApp ? currentApp._context.provides : instance ? instance.parent == null ? instance.vnode.appContext && instance.vnode.appContext.provides : instance.parent.provides : void 0;
+    if (provides && key in provides) {
+      return provides[key];
+    } else if (arguments.length > 1) {
+      return treatDefaultAsFactory && isFunction(defaultValue) ? defaultValue.call(instance && instance.proxy) : defaultValue;
+    } else ;
   }
 }
-const Ho = {}, No = () => Object.create(Ho), Lo = (e) => Object.getPrototypeOf(e) === Ho;
-function Ol(e, t, s, n = !1) {
-  const o = {}, i = No();
-  e.propsDefaults = /* @__PURE__ */ Object.create(null), Uo(e, t, o, i);
-  for (const l in e.propsOptions[0])
-    l in o || (o[l] = void 0);
-  s ? e.props = n ? o : qi(o) : e.type.props ? e.props = o : e.props = i, e.attrs = i;
+const internalObjectProto = {};
+const createInternalObject = () => Object.create(internalObjectProto);
+const isInternalObject = (obj) => Object.getPrototypeOf(obj) === internalObjectProto;
+function initProps(instance, rawProps, isStateful, isSSR = false) {
+  const props = {};
+  const attrs = createInternalObject();
+  instance.propsDefaults = /* @__PURE__ */ Object.create(null);
+  setFullProps(instance, rawProps, props, attrs);
+  for (const key in instance.propsOptions[0]) {
+    if (!(key in props)) {
+      props[key] = void 0;
+    }
+  }
+  if (isStateful) {
+    instance.props = isSSR ? props : shallowReactive(props);
+  } else {
+    if (!instance.type.props) {
+      instance.props = attrs;
+    } else {
+      instance.props = props;
+    }
+  }
+  instance.attrs = attrs;
 }
-function Ml(e, t, s, n) {
+function updateProps(instance, rawProps, rawPrevProps, optimized) {
   const {
-    props: o,
-    attrs: i,
-    vnode: { patchFlag: l }
-  } = e, r = L(o), [c] = e.propsOptions;
-  let p = !1;
+    props,
+    attrs,
+    vnode: { patchFlag }
+  } = instance;
+  const rawCurrentProps = toRaw(props);
+  const [options] = instance.propsOptions;
+  let hasAttrsChanged = false;
   if (
     // always force full diff in dev
     // - #1942 if hmr is enabled with sfc component
     // - vite#872 non-sfc component used by sfc component
-    (n || l > 0) && !(l & 16)
+    (optimized || patchFlag > 0) && !(patchFlag & 16)
   ) {
-    if (l & 8) {
-      const a = e.vnode.dynamicProps;
-      for (let d = 0; d < a.length; d++) {
-        let m = a[d];
-        if (vs(e.emitsOptions, m))
+    if (patchFlag & 8) {
+      const propsToUpdate = instance.vnode.dynamicProps;
+      for (let i = 0; i < propsToUpdate.length; i++) {
+        let key = propsToUpdate[i];
+        if (isEmitListener(instance.emitsOptions, key)) {
           continue;
-        const C = t[m];
-        if (c)
-          if (U(i, m))
-            C !== i[m] && (i[m] = C, p = !0);
-          else {
-            const H = Ze(m);
-            o[H] = qs(
-              c,
-              r,
-              H,
-              C,
-              e,
-              !1
+        }
+        const value = rawProps[key];
+        if (options) {
+          if (hasOwn(attrs, key)) {
+            if (value !== attrs[key]) {
+              attrs[key] = value;
+              hasAttrsChanged = true;
+            }
+          } else {
+            const camelizedKey = camelize(key);
+            props[camelizedKey] = resolvePropValue(
+              options,
+              rawCurrentProps,
+              camelizedKey,
+              value,
+              instance,
+              false
             );
           }
-        else
-          C !== i[m] && (i[m] = C, p = !0);
+        } else {
+          if (value !== attrs[key]) {
+            attrs[key] = value;
+            hasAttrsChanged = true;
+          }
+        }
       }
     }
   } else {
-    Uo(e, t, o, i) && (p = !0);
-    let a;
-    for (const d in r)
-      (!t || // for camelCase
-      !U(t, d) && // it's possible the original props was passed in as kebab-case
-      // and converted to camelCase (#955)
-      ((a = pt(d)) === d || !U(t, a))) && (c ? s && // for camelCase
-      (s[d] !== void 0 || // for kebab-case
-      s[a] !== void 0) && (o[d] = qs(
-        c,
-        r,
-        d,
-        void 0,
-        e,
-        !0
-      )) : delete o[d]);
-    if (i !== r)
-      for (const d in i)
-        (!t || !U(t, d)) && (delete i[d], p = !0);
-  }
-  p && Be(e.attrs, "set", "");
-}
-function Uo(e, t, s, n) {
-  const [o, i] = e.propsOptions;
-  let l = !1, r;
-  if (t)
-    for (let c in t) {
-      if (kt(c))
-        continue;
-      const p = t[c];
-      let a;
-      o && U(o, a = Ze(c)) ? !i || !i.includes(a) ? s[a] = p : (r || (r = {}))[a] = p : vs(e.emitsOptions, c) || (!(c in n) || p !== n[c]) && (n[c] = p, l = !0);
+    if (setFullProps(instance, rawProps, props, attrs)) {
+      hasAttrsChanged = true;
     }
-  if (i) {
-    const c = L(s), p = r || q;
-    for (let a = 0; a < i.length; a++) {
-      const d = i[a];
-      s[d] = qs(
-        o,
-        c,
-        d,
-        p[d],
-        e,
-        !U(p, d)
+    let kebabKey;
+    for (const key in rawCurrentProps) {
+      if (!rawProps || // for camelCase
+      !hasOwn(rawProps, key) && // it's possible the original props was passed in as kebab-case
+      // and converted to camelCase (#955)
+      ((kebabKey = hyphenate(key)) === key || !hasOwn(rawProps, kebabKey))) {
+        if (options) {
+          if (rawPrevProps && // for camelCase
+          (rawPrevProps[key] !== void 0 || // for kebab-case
+          rawPrevProps[kebabKey] !== void 0)) {
+            props[key] = resolvePropValue(
+              options,
+              rawCurrentProps,
+              key,
+              void 0,
+              instance,
+              true
+            );
+          }
+        } else {
+          delete props[key];
+        }
+      }
+    }
+    if (attrs !== rawCurrentProps) {
+      for (const key in attrs) {
+        if (!rawProps || !hasOwn(rawProps, key) && true) {
+          delete attrs[key];
+          hasAttrsChanged = true;
+        }
+      }
+    }
+  }
+  if (hasAttrsChanged) {
+    trigger(instance.attrs, "set", "");
+  }
+}
+function setFullProps(instance, rawProps, props, attrs) {
+  const [options, needCastKeys] = instance.propsOptions;
+  let hasAttrsChanged = false;
+  let rawCastValues;
+  if (rawProps) {
+    for (let key in rawProps) {
+      if (isReservedProp(key)) {
+        continue;
+      }
+      const value = rawProps[key];
+      let camelKey;
+      if (options && hasOwn(options, camelKey = camelize(key))) {
+        if (!needCastKeys || !needCastKeys.includes(camelKey)) {
+          props[camelKey] = value;
+        } else {
+          (rawCastValues || (rawCastValues = {}))[camelKey] = value;
+        }
+      } else if (!isEmitListener(instance.emitsOptions, key)) {
+        if (!(key in attrs) || value !== attrs[key]) {
+          attrs[key] = value;
+          hasAttrsChanged = true;
+        }
+      }
+    }
+  }
+  if (needCastKeys) {
+    const rawCurrentProps = toRaw(props);
+    const castValues = rawCastValues || EMPTY_OBJ;
+    for (let i = 0; i < needCastKeys.length; i++) {
+      const key = needCastKeys[i];
+      props[key] = resolvePropValue(
+        options,
+        rawCurrentProps,
+        key,
+        castValues[key],
+        instance,
+        !hasOwn(castValues, key)
       );
     }
   }
-  return l;
+  return hasAttrsChanged;
 }
-function qs(e, t, s, n, o, i) {
-  const l = e[s];
-  if (l != null) {
-    const r = U(l, "default");
-    if (r && n === void 0) {
-      const c = l.default;
-      if (l.type !== Function && !l.skipFactory && R(c)) {
-        const { propsDefaults: p } = o;
-        if (s in p)
-          n = p[s];
-        else {
-          const a = Wt(o);
-          n = p[s] = c.call(
+function resolvePropValue(options, props, key, value, instance, isAbsent) {
+  const opt = options[key];
+  if (opt != null) {
+    const hasDefault = hasOwn(opt, "default");
+    if (hasDefault && value === void 0) {
+      const defaultValue = opt.default;
+      if (opt.type !== Function && !opt.skipFactory && isFunction(defaultValue)) {
+        const { propsDefaults } = instance;
+        if (key in propsDefaults) {
+          value = propsDefaults[key];
+        } else {
+          const reset = setCurrentInstance(instance);
+          value = propsDefaults[key] = defaultValue.call(
             null,
-            t
-          ), a();
+            props
+          );
+          reset();
         }
-      } else
-        n = c;
-      o.ce && o.ce._setProp(s, n);
-    }
-    l[
-      0
-      /* shouldCast */
-    ] && (i && !r ? n = !1 : l[
-      1
-      /* shouldCastTrue */
-    ] && (n === "" || n === pt(s)) && (n = !0));
-  }
-  return n;
-}
-const kl = /* @__PURE__ */ new WeakMap();
-function Bo(e, t, s = !1) {
-  const n = s ? kl : t.propsCache, o = n.get(e);
-  if (o)
-    return o;
-  const i = e.props, l = {}, r = [];
-  let c = !1;
-  if (!R(e)) {
-    const a = (d) => {
-      c = !0;
-      const [m, C] = Bo(d, t, !0);
-      fe(l, m), C && r.push(...C);
-    };
-    !s && t.mixins.length && t.mixins.forEach(a), e.extends && a(e.extends), e.mixins && e.mixins.forEach(a);
-  }
-  if (!i && !c)
-    return ee(e) && n.set(e, _t), _t;
-  if (A(i))
-    for (let a = 0; a < i.length; a++) {
-      const d = Ze(i[a]);
-      On(d) && (l[d] = q);
-    }
-  else if (i)
-    for (const a in i) {
-      const d = Ze(a);
-      if (On(d)) {
-        const m = i[a], C = l[d] = A(m) || R(m) ? { type: m } : fe({}, m), H = C.type;
-        let T = !1, ne = !0;
-        if (A(H))
-          for (let B = 0; B < H.length; ++B) {
-            const J = H[B], G = R(J) && J.name;
-            if (G === "Boolean") {
-              T = !0;
-              break;
-            } else G === "String" && (ne = !1);
-          }
-        else
-          T = R(H) && H.name === "Boolean";
-        C[
-          0
-          /* shouldCast */
-        ] = T, C[
-          1
-          /* shouldCastTrue */
-        ] = ne, (T || U(C, "default")) && r.push(d);
+      } else {
+        value = defaultValue;
+      }
+      if (instance.ce) {
+        instance.ce._setProp(key, value);
       }
     }
-  const p = [l, r];
-  return ee(e) && n.set(e, p), p;
-}
-function On(e) {
-  return e[0] !== "$" && !kt(e);
-}
-const Ko = (e) => e[0] === "_" || e === "$stable", pn = (e) => A(e) ? e.map(Ve) : [Ve(e)], Al = (e, t, s) => {
-  if (t._n)
-    return t;
-  const n = ll((...o) => pn(t(...o)), s);
-  return n._c = !1, n;
-}, Wo = (e, t, s) => {
-  const n = e._ctx;
-  for (const o in e) {
-    if (Ko(o)) continue;
-    const i = e[o];
-    if (R(i))
-      t[o] = Al(o, i, n);
-    else if (i != null) {
-      const l = pn(i);
-      t[o] = () => l;
+    if (opt[
+      0
+      /* shouldCast */
+    ]) {
+      if (isAbsent && !hasDefault) {
+        value = false;
+      } else if (opt[
+        1
+        /* shouldCastTrue */
+      ] && (value === "" || value === hyphenate(key))) {
+        value = true;
+      }
     }
   }
-}, zo = (e, t) => {
-  const s = pn(t);
-  e.slots.default = () => s;
-}, qo = (e, t, s) => {
-  for (const n in t)
-    (s || n !== "_") && (e[n] = t[n]);
-}, Pl = (e, t, s) => {
-  const n = e.slots = No();
-  if (e.vnode.shapeFlag & 32) {
-    const o = t._;
-    o ? (qo(n, t, s), s && no(n, "_", o, !0)) : Wo(t, n);
-  } else t && zo(e, t);
-}, Rl = (e, t, s) => {
-  const { vnode: n, slots: o } = e;
-  let i = !0, l = q;
-  if (n.shapeFlag & 32) {
-    const r = t._;
-    r ? s && r === 1 ? i = !1 : qo(o, t, s) : (i = !t.$stable, Wo(t, o)), l = t;
-  } else t && (zo(e, t), l = { default: 1 });
-  if (i)
-    for (const r in o)
-      !Ko(r) && l[r] == null && delete o[r];
-}, ye = Jl;
-function Fl(e) {
-  return Vl(e);
+  return value;
 }
-function Vl(e, t) {
-  const s = ps();
-  s.__VUE__ = !0;
+const mixinPropsCache = /* @__PURE__ */ new WeakMap();
+function normalizePropsOptions(comp, appContext, asMixin = false) {
+  const cache = asMixin ? mixinPropsCache : appContext.propsCache;
+  const cached = cache.get(comp);
+  if (cached) {
+    return cached;
+  }
+  const raw = comp.props;
+  const normalized = {};
+  const needCastKeys = [];
+  let hasExtends = false;
+  if (!isFunction(comp)) {
+    const extendProps = (raw2) => {
+      hasExtends = true;
+      const [props, keys] = normalizePropsOptions(raw2, appContext, true);
+      extend(normalized, props);
+      if (keys) needCastKeys.push(...keys);
+    };
+    if (!asMixin && appContext.mixins.length) {
+      appContext.mixins.forEach(extendProps);
+    }
+    if (comp.extends) {
+      extendProps(comp.extends);
+    }
+    if (comp.mixins) {
+      comp.mixins.forEach(extendProps);
+    }
+  }
+  if (!raw && !hasExtends) {
+    if (isObject(comp)) {
+      cache.set(comp, EMPTY_ARR);
+    }
+    return EMPTY_ARR;
+  }
+  if (isArray(raw)) {
+    for (let i = 0; i < raw.length; i++) {
+      const normalizedKey = camelize(raw[i]);
+      if (validatePropName(normalizedKey)) {
+        normalized[normalizedKey] = EMPTY_OBJ;
+      }
+    }
+  } else if (raw) {
+    for (const key in raw) {
+      const normalizedKey = camelize(key);
+      if (validatePropName(normalizedKey)) {
+        const opt = raw[key];
+        const prop = normalized[normalizedKey] = isArray(opt) || isFunction(opt) ? { type: opt } : extend({}, opt);
+        const propType = prop.type;
+        let shouldCast = false;
+        let shouldCastTrue = true;
+        if (isArray(propType)) {
+          for (let index = 0; index < propType.length; ++index) {
+            const type = propType[index];
+            const typeName = isFunction(type) && type.name;
+            if (typeName === "Boolean") {
+              shouldCast = true;
+              break;
+            } else if (typeName === "String") {
+              shouldCastTrue = false;
+            }
+          }
+        } else {
+          shouldCast = isFunction(propType) && propType.name === "Boolean";
+        }
+        prop[
+          0
+          /* shouldCast */
+        ] = shouldCast;
+        prop[
+          1
+          /* shouldCastTrue */
+        ] = shouldCastTrue;
+        if (shouldCast || hasOwn(prop, "default")) {
+          needCastKeys.push(normalizedKey);
+        }
+      }
+    }
+  }
+  const res = [normalized, needCastKeys];
+  if (isObject(comp)) {
+    cache.set(comp, res);
+  }
+  return res;
+}
+function validatePropName(key) {
+  if (key[0] !== "$" && !isReservedProp(key)) {
+    return true;
+  }
+  return false;
+}
+const isInternalKey = (key) => key[0] === "_" || key === "$stable";
+const normalizeSlotValue = (value) => isArray(value) ? value.map(normalizeVNode) : [normalizeVNode(value)];
+const normalizeSlot = (key, rawSlot, ctx) => {
+  if (rawSlot._n) {
+    return rawSlot;
+  }
+  const normalized = withCtx((...args) => {
+    if (false) ;
+    return normalizeSlotValue(rawSlot(...args));
+  }, ctx);
+  normalized._c = false;
+  return normalized;
+};
+const normalizeObjectSlots = (rawSlots, slots, instance) => {
+  const ctx = rawSlots._ctx;
+  for (const key in rawSlots) {
+    if (isInternalKey(key)) continue;
+    const value = rawSlots[key];
+    if (isFunction(value)) {
+      slots[key] = normalizeSlot(key, value, ctx);
+    } else if (value != null) {
+      const normalized = normalizeSlotValue(value);
+      slots[key] = () => normalized;
+    }
+  }
+};
+const normalizeVNodeSlots = (instance, children) => {
+  const normalized = normalizeSlotValue(children);
+  instance.slots.default = () => normalized;
+};
+const assignSlots = (slots, children, optimized) => {
+  for (const key in children) {
+    if (optimized || key !== "_") {
+      slots[key] = children[key];
+    }
+  }
+};
+const initSlots = (instance, children, optimized) => {
+  const slots = instance.slots = createInternalObject();
+  if (instance.vnode.shapeFlag & 32) {
+    const type = children._;
+    if (type) {
+      assignSlots(slots, children, optimized);
+      if (optimized) {
+        def(slots, "_", type, true);
+      }
+    } else {
+      normalizeObjectSlots(children, slots);
+    }
+  } else if (children) {
+    normalizeVNodeSlots(instance, children);
+  }
+};
+const updateSlots = (instance, children, optimized) => {
+  const { vnode, slots } = instance;
+  let needDeletionCheck = true;
+  let deletionComparisonTarget = EMPTY_OBJ;
+  if (vnode.shapeFlag & 32) {
+    const type = children._;
+    if (type) {
+      if (optimized && type === 1) {
+        needDeletionCheck = false;
+      } else {
+        assignSlots(slots, children, optimized);
+      }
+    } else {
+      needDeletionCheck = !children.$stable;
+      normalizeObjectSlots(children, slots);
+    }
+    deletionComparisonTarget = children;
+  } else if (children) {
+    normalizeVNodeSlots(instance, children);
+    deletionComparisonTarget = { default: 1 };
+  }
+  if (needDeletionCheck) {
+    for (const key in slots) {
+      if (!isInternalKey(key) && deletionComparisonTarget[key] == null) {
+        delete slots[key];
+      }
+    }
+  }
+};
+const queuePostRenderEffect = queueEffectWithSuspense;
+function createRenderer(options) {
+  return baseCreateRenderer(options);
+}
+function baseCreateRenderer(options, createHydrationFns) {
+  const target = getGlobalThis();
+  target.__VUE__ = true;
   const {
-    insert: n,
-    remove: o,
-    patchProp: i,
-    createElement: l,
-    createText: r,
-    createComment: c,
-    setText: p,
-    setElementText: a,
-    parentNode: d,
-    nextSibling: m,
-    setScopeId: C = je,
-    insertStaticContent: H
-  } = e, T = (u, f, h, v = null, b = null, _ = null, E = void 0, S = null, w = !!f.dynamicChildren) => {
-    if (u === f)
+    insert: hostInsert,
+    remove: hostRemove,
+    patchProp: hostPatchProp,
+    createElement: hostCreateElement,
+    createText: hostCreateText,
+    createComment: hostCreateComment,
+    setText: hostSetText,
+    setElementText: hostSetElementText,
+    parentNode: hostParentNode,
+    nextSibling: hostNextSibling,
+    setScopeId: hostSetScopeId = NOOP,
+    insertStaticContent: hostInsertStaticContent
+  } = options;
+  const patch = (n1, n2, container, anchor = null, parentComponent = null, parentSuspense = null, namespace = void 0, slotScopeIds = null, optimized = !!n2.dynamicChildren) => {
+    if (n1 === n2) {
       return;
-    u && !Ot(u, f) && (v = Jt(u), Me(u, b, _, !0), u = null), f.patchFlag === -2 && (w = !1, f.dynamicChildren = null);
-    const { type: y, ref: k, shapeFlag: I } = f;
-    switch (y) {
-      case ys:
-        ne(u, f, h, v);
+    }
+    if (n1 && !isSameVNodeType(n1, n2)) {
+      anchor = getNextHostNode(n1);
+      unmount(n1, parentComponent, parentSuspense, true);
+      n1 = null;
+    }
+    if (n2.patchFlag === -2) {
+      optimized = false;
+      n2.dynamicChildren = null;
+    }
+    const { type, ref: ref3, shapeFlag } = n2;
+    switch (type) {
+      case Text:
+        processText(n1, n2, container, anchor);
         break;
-      case dt:
-        B(u, f, h, v);
+      case Comment:
+        processCommentNode(n1, n2, container, anchor);
         break;
-      case ks:
-        u == null && J(f, h, v, E);
+      case Static:
+        if (n1 == null) {
+          mountStaticNode(n2, container, anchor, namespace);
+        }
         break;
-      case le:
-        ze(
-          u,
-          f,
-          h,
-          v,
-          b,
-          _,
-          E,
-          S,
-          w
+      case Fragment:
+        processFragment(
+          n1,
+          n2,
+          container,
+          anchor,
+          parentComponent,
+          parentSuspense,
+          namespace,
+          slotScopeIds,
+          optimized
         );
         break;
       default:
-        I & 1 ? O(
-          u,
-          f,
-          h,
-          v,
-          b,
-          _,
-          E,
-          S,
-          w
-        ) : I & 6 ? qe(
-          u,
-          f,
-          h,
-          v,
-          b,
-          _,
-          E,
-          S,
-          w
-        ) : (I & 64 || I & 128) && y.process(
-          u,
-          f,
-          h,
-          v,
-          b,
-          _,
-          E,
-          S,
-          w,
-          $t
-        );
+        if (shapeFlag & 1) {
+          processElement(
+            n1,
+            n2,
+            container,
+            anchor,
+            parentComponent,
+            parentSuspense,
+            namespace,
+            slotScopeIds,
+            optimized
+          );
+        } else if (shapeFlag & 6) {
+          processComponent(
+            n1,
+            n2,
+            container,
+            anchor,
+            parentComponent,
+            parentSuspense,
+            namespace,
+            slotScopeIds,
+            optimized
+          );
+        } else if (shapeFlag & 64) {
+          type.process(
+            n1,
+            n2,
+            container,
+            anchor,
+            parentComponent,
+            parentSuspense,
+            namespace,
+            slotScopeIds,
+            optimized,
+            internals
+          );
+        } else if (shapeFlag & 128) {
+          type.process(
+            n1,
+            n2,
+            container,
+            anchor,
+            parentComponent,
+            parentSuspense,
+            namespace,
+            slotScopeIds,
+            optimized,
+            internals
+          );
+        } else ;
     }
-    k != null && b && ls(k, u && u.ref, _, f || u, !f);
-  }, ne = (u, f, h, v) => {
-    if (u == null)
-      n(
-        f.el = r(f.children),
-        h,
-        v
+    if (ref3 != null && parentComponent) {
+      setRef(ref3, n1 && n1.ref, parentSuspense, n2 || n1, !n2);
+    }
+  };
+  const processText = (n1, n2, container, anchor) => {
+    if (n1 == null) {
+      hostInsert(
+        n2.el = hostCreateText(n2.children),
+        container,
+        anchor
       );
-    else {
-      const b = f.el = u.el;
-      f.children !== u.children && p(b, f.children);
-    }
-  }, B = (u, f, h, v) => {
-    u == null ? n(
-      f.el = c(f.children || ""),
-      h,
-      v
-    ) : f.el = u.el;
-  }, J = (u, f, h, v) => {
-    [u.el, u.anchor] = H(
-      u.children,
-      f,
-      h,
-      v,
-      u.el,
-      u.anchor
-    );
-  }, G = ({ el: u, anchor: f }, h, v) => {
-    let b;
-    for (; u && u !== f; )
-      b = m(u), n(u, h, v), u = b;
-    n(f, h, v);
-  }, x = ({ el: u, anchor: f }) => {
-    let h;
-    for (; u && u !== f; )
-      h = m(u), o(u), u = h;
-    o(f);
-  }, O = (u, f, h, v, b, _, E, S, w) => {
-    f.type === "svg" ? E = "svg" : f.type === "math" && (E = "mathml"), u == null ? F(
-      f,
-      h,
-      v,
-      b,
-      _,
-      E,
-      S,
-      w
-    ) : K(
-      u,
-      f,
-      b,
-      _,
-      E,
-      S,
-      w
-    );
-  }, F = (u, f, h, v, b, _, E, S) => {
-    let w, y;
-    const { props: k, shapeFlag: I, transition: M, dirs: P } = u;
-    if (w = u.el = l(
-      u.type,
-      _,
-      k && k.is,
-      k
-    ), I & 8 ? a(w, u.children) : I & 16 && D(
-      u.children,
-      w,
-      null,
-      v,
-      b,
-      Ms(u, _),
-      E,
-      S
-    ), P && ot(u, null, v, "created"), Y(w, u, u.scopeId, E, v), k) {
-      for (const Z in k)
-        Z !== "value" && !kt(Z) && i(w, Z, null, k[Z], _, v);
-      "value" in k && i(w, "value", null, k.value, _), (y = k.onVnodeBeforeMount) && Re(y, v, u);
-    }
-    P && ot(u, null, v, "beforeMount");
-    const N = jl(b, M);
-    N && M.beforeEnter(w), n(w, f, h), ((y = k && k.onVnodeMounted) || N || P) && ye(() => {
-      y && Re(y, v, u), N && M.enter(w), P && ot(u, null, v, "mounted");
-    }, b);
-  }, Y = (u, f, h, v, b) => {
-    if (h && C(u, h), v)
-      for (let _ = 0; _ < v.length; _++)
-        C(u, v[_]);
-    if (b) {
-      let _ = b.subTree;
-      if (f === _ || Qo(_.type) && (_.ssContent === f || _.ssFallback === f)) {
-        const E = b.vnode;
-        Y(
-          u,
-          E,
-          E.scopeId,
-          E.slotScopeIds,
-          b.parent
-        );
+    } else {
+      const el = n2.el = n1.el;
+      if (n2.children !== n1.children) {
+        hostSetText(el, n2.children);
       }
     }
-  }, D = (u, f, h, v, b, _, E, S, w = 0) => {
-    for (let y = w; y < u.length; y++) {
-      const k = u[y] = S ? Ge(u[y]) : Ve(u[y]);
-      T(
-        null,
-        k,
-        f,
-        h,
-        v,
-        b,
-        _,
-        E,
-        S
+  };
+  const processCommentNode = (n1, n2, container, anchor) => {
+    if (n1 == null) {
+      hostInsert(
+        n2.el = hostCreateComment(n2.children || ""),
+        container,
+        anchor
+      );
+    } else {
+      n2.el = n1.el;
+    }
+  };
+  const mountStaticNode = (n2, container, anchor, namespace) => {
+    [n2.el, n2.anchor] = hostInsertStaticContent(
+      n2.children,
+      container,
+      anchor,
+      namespace,
+      n2.el,
+      n2.anchor
+    );
+  };
+  const moveStaticNode = ({ el, anchor }, container, nextSibling) => {
+    let next;
+    while (el && el !== anchor) {
+      next = hostNextSibling(el);
+      hostInsert(el, container, nextSibling);
+      el = next;
+    }
+    hostInsert(anchor, container, nextSibling);
+  };
+  const removeStaticNode = ({ el, anchor }) => {
+    let next;
+    while (el && el !== anchor) {
+      next = hostNextSibling(el);
+      hostRemove(el);
+      el = next;
+    }
+    hostRemove(anchor);
+  };
+  const processElement = (n1, n2, container, anchor, parentComponent, parentSuspense, namespace, slotScopeIds, optimized) => {
+    if (n2.type === "svg") {
+      namespace = "svg";
+    } else if (n2.type === "math") {
+      namespace = "mathml";
+    }
+    if (n1 == null) {
+      mountElement(
+        n2,
+        container,
+        anchor,
+        parentComponent,
+        parentSuspense,
+        namespace,
+        slotScopeIds,
+        optimized
+      );
+    } else {
+      patchElement(
+        n1,
+        n2,
+        parentComponent,
+        parentSuspense,
+        namespace,
+        slotScopeIds,
+        optimized
       );
     }
-  }, K = (u, f, h, v, b, _, E) => {
-    const S = f.el = u.el;
-    let { patchFlag: w, dynamicChildren: y, dirs: k } = f;
-    w |= u.patchFlag & 16;
-    const I = u.props || q, M = f.props || q;
-    let P;
-    if (h && it(h, !1), (P = M.onVnodeBeforeUpdate) && Re(P, h, f, u), k && ot(f, u, h, "beforeUpdate"), h && it(h, !0), (I.innerHTML && M.innerHTML == null || I.textContent && M.textContent == null) && a(S, ""), y ? Ne(
-      u.dynamicChildren,
-      y,
-      S,
-      h,
-      v,
-      Ms(f, b),
-      _
-    ) : E || X(
-      u,
-      f,
-      S,
-      null,
-      h,
-      v,
-      Ms(f, b),
-      _,
-      !1
-    ), w > 0) {
-      if (w & 16)
-        tt(S, I, M, h, b);
-      else if (w & 2 && I.class !== M.class && i(S, "class", null, M.class, b), w & 4 && i(S, "style", I.style, M.style, b), w & 8) {
-        const N = f.dynamicProps;
-        for (let Z = 0; Z < N.length; Z++) {
-          const W = N[Z], _e = I[W], be = M[W];
-          (be !== _e || W === "value") && i(S, W, _e, be, b, h);
+  };
+  const mountElement = (vnode, container, anchor, parentComponent, parentSuspense, namespace, slotScopeIds, optimized) => {
+    let el;
+    let vnodeHook;
+    const { props, shapeFlag, transition, dirs } = vnode;
+    el = vnode.el = hostCreateElement(
+      vnode.type,
+      namespace,
+      props && props.is,
+      props
+    );
+    if (shapeFlag & 8) {
+      hostSetElementText(el, vnode.children);
+    } else if (shapeFlag & 16) {
+      mountChildren(
+        vnode.children,
+        el,
+        null,
+        parentComponent,
+        parentSuspense,
+        resolveChildrenNamespace(vnode, namespace),
+        slotScopeIds,
+        optimized
+      );
+    }
+    if (dirs) {
+      invokeDirectiveHook(vnode, null, parentComponent, "created");
+    }
+    setScopeId(el, vnode, vnode.scopeId, slotScopeIds, parentComponent);
+    if (props) {
+      for (const key in props) {
+        if (key !== "value" && !isReservedProp(key)) {
+          hostPatchProp(el, key, null, props[key], namespace, parentComponent);
         }
       }
-      w & 1 && u.children !== f.children && a(S, f.children);
-    } else !E && y == null && tt(S, I, M, h, b);
-    ((P = M.onVnodeUpdated) || k) && ye(() => {
-      P && Re(P, h, f, u), k && ot(f, u, h, "updated");
-    }, v);
-  }, Ne = (u, f, h, v, b, _, E) => {
-    for (let S = 0; S < f.length; S++) {
-      const w = u[S], y = f[S], k = (
+      if ("value" in props) {
+        hostPatchProp(el, "value", null, props.value, namespace);
+      }
+      if (vnodeHook = props.onVnodeBeforeMount) {
+        invokeVNodeHook(vnodeHook, parentComponent, vnode);
+      }
+    }
+    if (dirs) {
+      invokeDirectiveHook(vnode, null, parentComponent, "beforeMount");
+    }
+    const needCallTransitionHooks = needTransition(parentSuspense, transition);
+    if (needCallTransitionHooks) {
+      transition.beforeEnter(el);
+    }
+    hostInsert(el, container, anchor);
+    if ((vnodeHook = props && props.onVnodeMounted) || needCallTransitionHooks || dirs) {
+      queuePostRenderEffect(() => {
+        vnodeHook && invokeVNodeHook(vnodeHook, parentComponent, vnode);
+        needCallTransitionHooks && transition.enter(el);
+        dirs && invokeDirectiveHook(vnode, null, parentComponent, "mounted");
+      }, parentSuspense);
+    }
+  };
+  const setScopeId = (el, vnode, scopeId, slotScopeIds, parentComponent) => {
+    if (scopeId) {
+      hostSetScopeId(el, scopeId);
+    }
+    if (slotScopeIds) {
+      for (let i = 0; i < slotScopeIds.length; i++) {
+        hostSetScopeId(el, slotScopeIds[i]);
+      }
+    }
+    if (parentComponent) {
+      let subTree = parentComponent.subTree;
+      if (vnode === subTree || isSuspense(subTree.type) && (subTree.ssContent === vnode || subTree.ssFallback === vnode)) {
+        const parentVNode = parentComponent.vnode;
+        setScopeId(
+          el,
+          parentVNode,
+          parentVNode.scopeId,
+          parentVNode.slotScopeIds,
+          parentComponent.parent
+        );
+      }
+    }
+  };
+  const mountChildren = (children, container, anchor, parentComponent, parentSuspense, namespace, slotScopeIds, optimized, start = 0) => {
+    for (let i = start; i < children.length; i++) {
+      const child = children[i] = optimized ? cloneIfMounted(children[i]) : normalizeVNode(children[i]);
+      patch(
+        null,
+        child,
+        container,
+        anchor,
+        parentComponent,
+        parentSuspense,
+        namespace,
+        slotScopeIds,
+        optimized
+      );
+    }
+  };
+  const patchElement = (n1, n2, parentComponent, parentSuspense, namespace, slotScopeIds, optimized) => {
+    const el = n2.el = n1.el;
+    let { patchFlag, dynamicChildren, dirs } = n2;
+    patchFlag |= n1.patchFlag & 16;
+    const oldProps = n1.props || EMPTY_OBJ;
+    const newProps = n2.props || EMPTY_OBJ;
+    let vnodeHook;
+    parentComponent && toggleRecurse(parentComponent, false);
+    if (vnodeHook = newProps.onVnodeBeforeUpdate) {
+      invokeVNodeHook(vnodeHook, parentComponent, n2, n1);
+    }
+    if (dirs) {
+      invokeDirectiveHook(n2, n1, parentComponent, "beforeUpdate");
+    }
+    parentComponent && toggleRecurse(parentComponent, true);
+    if (oldProps.innerHTML && newProps.innerHTML == null || oldProps.textContent && newProps.textContent == null) {
+      hostSetElementText(el, "");
+    }
+    if (dynamicChildren) {
+      patchBlockChildren(
+        n1.dynamicChildren,
+        dynamicChildren,
+        el,
+        parentComponent,
+        parentSuspense,
+        resolveChildrenNamespace(n2, namespace),
+        slotScopeIds
+      );
+    } else if (!optimized) {
+      patchChildren(
+        n1,
+        n2,
+        el,
+        null,
+        parentComponent,
+        parentSuspense,
+        resolveChildrenNamespace(n2, namespace),
+        slotScopeIds,
+        false
+      );
+    }
+    if (patchFlag > 0) {
+      if (patchFlag & 16) {
+        patchProps(el, oldProps, newProps, parentComponent, namespace);
+      } else {
+        if (patchFlag & 2) {
+          if (oldProps.class !== newProps.class) {
+            hostPatchProp(el, "class", null, newProps.class, namespace);
+          }
+        }
+        if (patchFlag & 4) {
+          hostPatchProp(el, "style", oldProps.style, newProps.style, namespace);
+        }
+        if (patchFlag & 8) {
+          const propsToUpdate = n2.dynamicProps;
+          for (let i = 0; i < propsToUpdate.length; i++) {
+            const key = propsToUpdate[i];
+            const prev = oldProps[key];
+            const next = newProps[key];
+            if (next !== prev || key === "value") {
+              hostPatchProp(el, key, prev, next, namespace, parentComponent);
+            }
+          }
+        }
+      }
+      if (patchFlag & 1) {
+        if (n1.children !== n2.children) {
+          hostSetElementText(el, n2.children);
+        }
+      }
+    } else if (!optimized && dynamicChildren == null) {
+      patchProps(el, oldProps, newProps, parentComponent, namespace);
+    }
+    if ((vnodeHook = newProps.onVnodeUpdated) || dirs) {
+      queuePostRenderEffect(() => {
+        vnodeHook && invokeVNodeHook(vnodeHook, parentComponent, n2, n1);
+        dirs && invokeDirectiveHook(n2, n1, parentComponent, "updated");
+      }, parentSuspense);
+    }
+  };
+  const patchBlockChildren = (oldChildren, newChildren, fallbackContainer, parentComponent, parentSuspense, namespace, slotScopeIds) => {
+    for (let i = 0; i < newChildren.length; i++) {
+      const oldVNode = oldChildren[i];
+      const newVNode = newChildren[i];
+      const container = (
         // oldVNode may be an errored async setup() component inside Suspense
         // which will not have a mounted element
-        w.el && // - In the case of a Fragment, we need to provide the actual parent
+        oldVNode.el && // - In the case of a Fragment, we need to provide the actual parent
         // of the Fragment itself so it can move its children.
-        (w.type === le || // - In the case of different nodes, there is going to be a replacement
+        (oldVNode.type === Fragment || // - In the case of different nodes, there is going to be a replacement
         // which also requires the correct parent container
-        !Ot(w, y) || // - In the case of a component, it could contain anything.
-        w.shapeFlag & 70) ? d(w.el) : (
+        !isSameVNodeType(oldVNode, newVNode) || // - In the case of a component, it could contain anything.
+        oldVNode.shapeFlag & (6 | 64)) ? hostParentNode(oldVNode.el) : (
           // In other cases, the parent container is not actually used so we
           // just pass the block element here to avoid a DOM parentNode call.
-          h
+          fallbackContainer
         )
       );
-      T(
-        w,
-        y,
-        k,
+      patch(
+        oldVNode,
+        newVNode,
+        container,
         null,
-        v,
-        b,
-        _,
-        E,
-        !0
+        parentComponent,
+        parentSuspense,
+        namespace,
+        slotScopeIds,
+        true
       );
     }
-  }, tt = (u, f, h, v, b) => {
-    if (f !== h) {
-      if (f !== q)
-        for (const _ in f)
-          !kt(_) && !(_ in h) && i(
-            u,
-            _,
-            f[_],
-            null,
-            b,
-            v
+  };
+  const patchProps = (el, oldProps, newProps, parentComponent, namespace) => {
+    if (oldProps !== newProps) {
+      if (oldProps !== EMPTY_OBJ) {
+        for (const key in oldProps) {
+          if (!isReservedProp(key) && !(key in newProps)) {
+            hostPatchProp(
+              el,
+              key,
+              oldProps[key],
+              null,
+              namespace,
+              parentComponent
+            );
+          }
+        }
+      }
+      for (const key in newProps) {
+        if (isReservedProp(key)) continue;
+        const next = newProps[key];
+        const prev = oldProps[key];
+        if (next !== prev && key !== "value") {
+          hostPatchProp(el, key, prev, next, namespace, parentComponent);
+        }
+      }
+      if ("value" in newProps) {
+        hostPatchProp(el, "value", oldProps.value, newProps.value, namespace);
+      }
+    }
+  };
+  const processFragment = (n1, n2, container, anchor, parentComponent, parentSuspense, namespace, slotScopeIds, optimized) => {
+    const fragmentStartAnchor = n2.el = n1 ? n1.el : hostCreateText("");
+    const fragmentEndAnchor = n2.anchor = n1 ? n1.anchor : hostCreateText("");
+    let { patchFlag, dynamicChildren, slotScopeIds: fragmentSlotScopeIds } = n2;
+    if (fragmentSlotScopeIds) {
+      slotScopeIds = slotScopeIds ? slotScopeIds.concat(fragmentSlotScopeIds) : fragmentSlotScopeIds;
+    }
+    if (n1 == null) {
+      hostInsert(fragmentStartAnchor, container, anchor);
+      hostInsert(fragmentEndAnchor, container, anchor);
+      mountChildren(
+        // #10007
+        // such fragment like `<></>` will be compiled into
+        // a fragment which doesn't have a children.
+        // In this case fallback to an empty array
+        n2.children || [],
+        container,
+        fragmentEndAnchor,
+        parentComponent,
+        parentSuspense,
+        namespace,
+        slotScopeIds,
+        optimized
+      );
+    } else {
+      if (patchFlag > 0 && patchFlag & 64 && dynamicChildren && // #2715 the previous fragment could've been a BAILed one as a result
+      // of renderSlot() with no valid children
+      n1.dynamicChildren) {
+        patchBlockChildren(
+          n1.dynamicChildren,
+          dynamicChildren,
+          container,
+          parentComponent,
+          parentSuspense,
+          namespace,
+          slotScopeIds
+        );
+        if (
+          // #2080 if the stable fragment has a key, it's a <template v-for> that may
+          //  get moved around. Make sure all root level vnodes inherit el.
+          // #2134 or if it's a component root, it may also get moved around
+          // as the component is being moved.
+          n2.key != null || parentComponent && n2 === parentComponent.subTree
+        ) {
+          traverseStaticChildren(
+            n1,
+            n2,
+            true
+            /* shallow */
           );
-      for (const _ in h) {
-        if (kt(_)) continue;
-        const E = h[_], S = f[_];
-        E !== S && _ !== "value" && i(u, _, S, E, b, v);
+        }
+      } else {
+        patchChildren(
+          n1,
+          n2,
+          container,
+          fragmentEndAnchor,
+          parentComponent,
+          parentSuspense,
+          namespace,
+          slotScopeIds,
+          optimized
+        );
       }
-      "value" in h && i(u, "value", f.value, h.value, b);
     }
-  }, ze = (u, f, h, v, b, _, E, S, w) => {
-    const y = f.el = u ? u.el : r(""), k = f.anchor = u ? u.anchor : r("");
-    let { patchFlag: I, dynamicChildren: M, slotScopeIds: P } = f;
-    P && (S = S ? S.concat(P) : P), u == null ? (n(y, h, v), n(k, h, v), D(
-      // #10007
-      // such fragment like `<></>` will be compiled into
-      // a fragment which doesn't have a children.
-      // In this case fallback to an empty array
-      f.children || [],
-      h,
-      k,
-      b,
-      _,
-      E,
-      S,
-      w
-    )) : I > 0 && I & 64 && M && // #2715 the previous fragment could've been a BAILed one as a result
-    // of renderSlot() with no valid children
-    u.dynamicChildren ? (Ne(
-      u.dynamicChildren,
-      M,
-      h,
-      b,
-      _,
-      E,
-      S
-    ), // #2080 if the stable fragment has a key, it's a <template v-for> that may
-    //  get moved around. Make sure all root level vnodes inherit el.
-    // #2134 or if it's a component root, it may also get moved around
-    // as the component is being moved.
-    (f.key != null || b && f === b.subTree) && Jo(
-      u,
-      f,
-      !0
-      /* shallow */
-    )) : X(
-      u,
-      f,
-      h,
-      k,
-      b,
-      _,
-      E,
-      S,
-      w
-    );
-  }, qe = (u, f, h, v, b, _, E, S, w) => {
-    f.slotScopeIds = S, u == null ? f.shapeFlag & 512 ? b.ctx.activate(
-      f,
-      h,
-      v,
-      E,
-      w
-    ) : ws(
-      f,
-      h,
-      v,
-      b,
-      _,
-      E,
-      w
-    ) : gn(u, f, w);
-  }, ws = (u, f, h, v, b, _, E) => {
-    const S = u.component = sr(
-      u,
-      v,
-      b
-    );
-    if (ko(u) && (S.ctx.renderer = $t), nr(S, !1, E), S.asyncDep) {
-      if (b && b.registerDep(S, de, E), !u.el) {
-        const w = S.subTree = ue(dt);
-        B(null, w, f, h);
+  };
+  const processComponent = (n1, n2, container, anchor, parentComponent, parentSuspense, namespace, slotScopeIds, optimized) => {
+    n2.slotScopeIds = slotScopeIds;
+    if (n1 == null) {
+      if (n2.shapeFlag & 512) {
+        parentComponent.ctx.activate(
+          n2,
+          container,
+          anchor,
+          namespace,
+          optimized
+        );
+      } else {
+        mountComponent(
+          n2,
+          container,
+          anchor,
+          parentComponent,
+          parentSuspense,
+          namespace,
+          optimized
+        );
       }
-    } else
-      de(
-        S,
-        u,
-        f,
-        h,
-        b,
-        _,
-        E
+    } else {
+      updateComponent(n1, n2, optimized);
+    }
+  };
+  const mountComponent = (initialVNode, container, anchor, parentComponent, parentSuspense, namespace, optimized) => {
+    const instance = initialVNode.component = createComponentInstance(
+      initialVNode,
+      parentComponent,
+      parentSuspense
+    );
+    if (isKeepAlive(initialVNode)) {
+      instance.ctx.renderer = internals;
+    }
+    {
+      setupComponent(instance, false, optimized);
+    }
+    if (instance.asyncDep) {
+      parentSuspense && parentSuspense.registerDep(instance, setupRenderEffect, optimized);
+      if (!initialVNode.el) {
+        const placeholder = instance.subTree = createVNode(Comment);
+        processCommentNode(null, placeholder, container, anchor);
+      }
+    } else {
+      setupRenderEffect(
+        instance,
+        initialVNode,
+        container,
+        anchor,
+        parentSuspense,
+        namespace,
+        optimized
       );
-  }, gn = (u, f, h) => {
-    const v = f.component = u.component;
-    if (zl(u, f, h))
-      if (v.asyncDep && !v.asyncResolved) {
-        te(v, f, h);
+    }
+  };
+  const updateComponent = (n1, n2, optimized) => {
+    const instance = n2.component = n1.component;
+    if (shouldUpdateComponent(n1, n2, optimized)) {
+      if (instance.asyncDep && !instance.asyncResolved) {
+        updateComponentPreRender(instance, n2, optimized);
         return;
-      } else
-        v.next = f, v.update();
-    else
-      f.el = u.el, v.vnode = f;
-  }, de = (u, f, h, v, b, _, E) => {
-    const S = () => {
-      if (u.isMounted) {
-        let { next: I, bu: M, u: P, parent: N, vnode: Z } = u;
+      } else {
+        instance.next = n2;
+        instance.update();
+      }
+    } else {
+      n2.el = n1.el;
+      instance.vnode = n2;
+    }
+  };
+  const setupRenderEffect = (instance, initialVNode, container, anchor, parentSuspense, namespace, optimized) => {
+    const componentUpdateFn = () => {
+      if (!instance.isMounted) {
+        let vnodeHook;
+        const { el, props } = initialVNode;
+        const { bm, m, parent, root, type } = instance;
+        const isAsyncWrapperVNode = isAsyncWrapper(initialVNode);
+        toggleRecurse(instance, false);
+        if (bm) {
+          invokeArrayFns(bm);
+        }
+        if (!isAsyncWrapperVNode && (vnodeHook = props && props.onVnodeBeforeMount)) {
+          invokeVNodeHook(vnodeHook, parent, initialVNode);
+        }
+        toggleRecurse(instance, true);
         {
-          const Ae = Go(u);
-          if (Ae) {
-            I && (I.el = Z.el, te(u, I, E)), Ae.asyncDep.then(() => {
-              u.isUnmounted || S();
+          if (root.ce) {
+            root.ce._injectChildStyle(type);
+          }
+          const subTree = instance.subTree = renderComponentRoot(instance);
+          patch(
+            null,
+            subTree,
+            container,
+            anchor,
+            instance,
+            parentSuspense,
+            namespace
+          );
+          initialVNode.el = subTree.el;
+        }
+        if (m) {
+          queuePostRenderEffect(m, parentSuspense);
+        }
+        if (!isAsyncWrapperVNode && (vnodeHook = props && props.onVnodeMounted)) {
+          const scopedInitialVNode = initialVNode;
+          queuePostRenderEffect(
+            () => invokeVNodeHook(vnodeHook, parent, scopedInitialVNode),
+            parentSuspense
+          );
+        }
+        if (initialVNode.shapeFlag & 256 || parent && isAsyncWrapper(parent.vnode) && parent.vnode.shapeFlag & 256) {
+          instance.a && queuePostRenderEffect(instance.a, parentSuspense);
+        }
+        instance.isMounted = true;
+        initialVNode = container = anchor = null;
+      } else {
+        let { next, bu, u, parent, vnode } = instance;
+        {
+          const nonHydratedAsyncRoot = locateNonHydratedAsyncRoot(instance);
+          if (nonHydratedAsyncRoot) {
+            if (next) {
+              next.el = vnode.el;
+              updateComponentPreRender(instance, next, optimized);
+            }
+            nonHydratedAsyncRoot.asyncDep.then(() => {
+              if (!instance.isUnmounted) {
+                componentUpdateFn();
+              }
             });
             return;
           }
         }
-        let W = I, _e;
-        it(u, !1), I ? (I.el = Z.el, te(u, I, E)) : I = Z, M && Zt(M), (_e = I.props && I.props.onVnodeBeforeUpdate) && Re(_e, N, I, Z), it(u, !0);
-        const be = kn(u), ke = u.subTree;
-        u.subTree = be, T(
-          ke,
-          be,
-          // parent may have changed if it's in a teleport
-          d(ke.el),
-          // anchor may have changed if it's in a fragment
-          Jt(ke),
-          u,
-          b,
-          _
-        ), I.el = be.el, W === null && ql(u, be.el), P && ye(P, b), (_e = I.props && I.props.onVnodeUpdated) && ye(
-          () => Re(_e, N, I, Z),
-          b
-        );
-      } else {
-        let I;
-        const { el: M, props: P } = f, { bm: N, m: Z, parent: W, root: _e, type: be } = u, ke = Rt(f);
-        it(u, !1), N && Zt(N), !ke && (I = P && P.onVnodeBeforeMount) && Re(I, W, f), it(u, !0);
-        {
-          _e.ce && _e.ce._injectChildStyle(be);
-          const Ae = u.subTree = kn(u);
-          T(
-            null,
-            Ae,
-            h,
-            v,
-            u,
-            b,
-            _
-          ), f.el = Ae.el;
+        let originNext = next;
+        let vnodeHook;
+        toggleRecurse(instance, false);
+        if (next) {
+          next.el = vnode.el;
+          updateComponentPreRender(instance, next, optimized);
+        } else {
+          next = vnode;
         }
-        if (Z && ye(Z, b), !ke && (I = P && P.onVnodeMounted)) {
-          const Ae = f;
-          ye(
-            () => Re(I, W, Ae),
-            b
+        if (bu) {
+          invokeArrayFns(bu);
+        }
+        if (vnodeHook = next.props && next.props.onVnodeBeforeUpdate) {
+          invokeVNodeHook(vnodeHook, parent, next, vnode);
+        }
+        toggleRecurse(instance, true);
+        const nextTree = renderComponentRoot(instance);
+        const prevTree = instance.subTree;
+        instance.subTree = nextTree;
+        patch(
+          prevTree,
+          nextTree,
+          // parent may have changed if it's in a teleport
+          hostParentNode(prevTree.el),
+          // anchor may have changed if it's in a fragment
+          getNextHostNode(prevTree),
+          instance,
+          parentSuspense,
+          namespace
+        );
+        next.el = nextTree.el;
+        if (originNext === null) {
+          updateHOCHostEl(instance, nextTree.el);
+        }
+        if (u) {
+          queuePostRenderEffect(u, parentSuspense);
+        }
+        if (vnodeHook = next.props && next.props.onVnodeUpdated) {
+          queuePostRenderEffect(
+            () => invokeVNodeHook(vnodeHook, parent, next, vnode),
+            parentSuspense
           );
         }
-        (f.shapeFlag & 256 || W && Rt(W.vnode) && W.vnode.shapeFlag & 256) && u.a && ye(u.a, b), u.isMounted = !0, f = h = v = null;
       }
     };
-    u.scope.on();
-    const w = u.effect = new co(S);
-    u.scope.off();
-    const y = u.update = w.run.bind(w), k = u.job = w.runIfDirty.bind(w);
-    k.i = u, k.id = u.uid, w.scheduler = () => fn(k), it(u, !0), y();
-  }, te = (u, f, h) => {
-    f.component = u;
-    const v = u.vnode.props;
-    u.vnode = f, u.next = null, Ml(u, f.props, v, h), Rl(u, f.children, h), Qe(), Cn(u), et();
-  }, X = (u, f, h, v, b, _, E, S, w = !1) => {
-    const y = u && u.children, k = u ? u.shapeFlag : 0, I = f.children, { patchFlag: M, shapeFlag: P } = f;
-    if (M > 0) {
-      if (M & 128) {
-        qt(
-          y,
-          I,
-          h,
-          v,
-          b,
-          _,
-          E,
-          S,
-          w
+    instance.scope.on();
+    const effect2 = instance.effect = new ReactiveEffect(componentUpdateFn);
+    instance.scope.off();
+    const update = instance.update = effect2.run.bind(effect2);
+    const job = instance.job = effect2.runIfDirty.bind(effect2);
+    job.i = instance;
+    job.id = instance.uid;
+    effect2.scheduler = () => queueJob(job);
+    toggleRecurse(instance, true);
+    update();
+  };
+  const updateComponentPreRender = (instance, nextVNode, optimized) => {
+    nextVNode.component = instance;
+    const prevProps = instance.vnode.props;
+    instance.vnode = nextVNode;
+    instance.next = null;
+    updateProps(instance, nextVNode.props, prevProps, optimized);
+    updateSlots(instance, nextVNode.children, optimized);
+    pauseTracking();
+    flushPreFlushCbs(instance);
+    resetTracking();
+  };
+  const patchChildren = (n1, n2, container, anchor, parentComponent, parentSuspense, namespace, slotScopeIds, optimized = false) => {
+    const c1 = n1 && n1.children;
+    const prevShapeFlag = n1 ? n1.shapeFlag : 0;
+    const c2 = n2.children;
+    const { patchFlag, shapeFlag } = n2;
+    if (patchFlag > 0) {
+      if (patchFlag & 128) {
+        patchKeyedChildren(
+          c1,
+          c2,
+          container,
+          anchor,
+          parentComponent,
+          parentSuspense,
+          namespace,
+          slotScopeIds,
+          optimized
         );
         return;
-      } else if (M & 256) {
-        st(
-          y,
-          I,
-          h,
-          v,
-          b,
-          _,
-          E,
-          S,
-          w
+      } else if (patchFlag & 256) {
+        patchUnkeyedChildren(
+          c1,
+          c2,
+          container,
+          anchor,
+          parentComponent,
+          parentSuspense,
+          namespace,
+          slotScopeIds,
+          optimized
         );
         return;
       }
     }
-    P & 8 ? (k & 16 && Et(y, b, _), I !== y && a(h, I)) : k & 16 ? P & 16 ? qt(
-      y,
-      I,
-      h,
-      v,
-      b,
-      _,
-      E,
-      S,
-      w
-    ) : Et(y, b, _, !0) : (k & 8 && a(h, ""), P & 16 && D(
-      I,
-      h,
-      v,
-      b,
-      _,
-      E,
-      S,
-      w
-    ));
-  }, st = (u, f, h, v, b, _, E, S, w) => {
-    u = u || _t, f = f || _t;
-    const y = u.length, k = f.length, I = Math.min(y, k);
-    let M;
-    for (M = 0; M < I; M++) {
-      const P = f[M] = w ? Ge(f[M]) : Ve(f[M]);
-      T(
-        u[M],
-        P,
-        h,
+    if (shapeFlag & 8) {
+      if (prevShapeFlag & 16) {
+        unmountChildren(c1, parentComponent, parentSuspense);
+      }
+      if (c2 !== c1) {
+        hostSetElementText(container, c2);
+      }
+    } else {
+      if (prevShapeFlag & 16) {
+        if (shapeFlag & 16) {
+          patchKeyedChildren(
+            c1,
+            c2,
+            container,
+            anchor,
+            parentComponent,
+            parentSuspense,
+            namespace,
+            slotScopeIds,
+            optimized
+          );
+        } else {
+          unmountChildren(c1, parentComponent, parentSuspense, true);
+        }
+      } else {
+        if (prevShapeFlag & 8) {
+          hostSetElementText(container, "");
+        }
+        if (shapeFlag & 16) {
+          mountChildren(
+            c2,
+            container,
+            anchor,
+            parentComponent,
+            parentSuspense,
+            namespace,
+            slotScopeIds,
+            optimized
+          );
+        }
+      }
+    }
+  };
+  const patchUnkeyedChildren = (c1, c2, container, anchor, parentComponent, parentSuspense, namespace, slotScopeIds, optimized) => {
+    c1 = c1 || EMPTY_ARR;
+    c2 = c2 || EMPTY_ARR;
+    const oldLength = c1.length;
+    const newLength = c2.length;
+    const commonLength = Math.min(oldLength, newLength);
+    let i;
+    for (i = 0; i < commonLength; i++) {
+      const nextChild = c2[i] = optimized ? cloneIfMounted(c2[i]) : normalizeVNode(c2[i]);
+      patch(
+        c1[i],
+        nextChild,
+        container,
         null,
-        b,
-        _,
-        E,
-        S,
-        w
+        parentComponent,
+        parentSuspense,
+        namespace,
+        slotScopeIds,
+        optimized
       );
     }
-    y > k ? Et(
-      u,
-      b,
-      _,
-      !0,
-      !1,
-      I
-    ) : D(
-      f,
-      h,
-      v,
-      b,
-      _,
-      E,
-      S,
-      w,
-      I
-    );
-  }, qt = (u, f, h, v, b, _, E, S, w) => {
-    let y = 0;
-    const k = f.length;
-    let I = u.length - 1, M = k - 1;
-    for (; y <= I && y <= M; ) {
-      const P = u[y], N = f[y] = w ? Ge(f[y]) : Ve(f[y]);
-      if (Ot(P, N))
-        T(
-          P,
-          N,
-          h,
-          null,
-          b,
-          _,
-          E,
-          S,
-          w
-        );
-      else
-        break;
-      y++;
+    if (oldLength > newLength) {
+      unmountChildren(
+        c1,
+        parentComponent,
+        parentSuspense,
+        true,
+        false,
+        commonLength
+      );
+    } else {
+      mountChildren(
+        c2,
+        container,
+        anchor,
+        parentComponent,
+        parentSuspense,
+        namespace,
+        slotScopeIds,
+        optimized,
+        commonLength
+      );
     }
-    for (; y <= I && y <= M; ) {
-      const P = u[I], N = f[M] = w ? Ge(f[M]) : Ve(f[M]);
-      if (Ot(P, N))
-        T(
-          P,
-          N,
-          h,
+  };
+  const patchKeyedChildren = (c1, c2, container, parentAnchor, parentComponent, parentSuspense, namespace, slotScopeIds, optimized) => {
+    let i = 0;
+    const l2 = c2.length;
+    let e1 = c1.length - 1;
+    let e2 = l2 - 1;
+    while (i <= e1 && i <= e2) {
+      const n1 = c1[i];
+      const n2 = c2[i] = optimized ? cloneIfMounted(c2[i]) : normalizeVNode(c2[i]);
+      if (isSameVNodeType(n1, n2)) {
+        patch(
+          n1,
+          n2,
+          container,
           null,
-          b,
-          _,
-          E,
-          S,
-          w
+          parentComponent,
+          parentSuspense,
+          namespace,
+          slotScopeIds,
+          optimized
         );
-      else
+      } else {
         break;
-      I--, M--;
+      }
+      i++;
     }
-    if (y > I) {
-      if (y <= M) {
-        const P = M + 1, N = P < k ? f[P].el : v;
-        for (; y <= M; )
-          T(
+    while (i <= e1 && i <= e2) {
+      const n1 = c1[e1];
+      const n2 = c2[e2] = optimized ? cloneIfMounted(c2[e2]) : normalizeVNode(c2[e2]);
+      if (isSameVNodeType(n1, n2)) {
+        patch(
+          n1,
+          n2,
+          container,
+          null,
+          parentComponent,
+          parentSuspense,
+          namespace,
+          slotScopeIds,
+          optimized
+        );
+      } else {
+        break;
+      }
+      e1--;
+      e2--;
+    }
+    if (i > e1) {
+      if (i <= e2) {
+        const nextPos = e2 + 1;
+        const anchor = nextPos < l2 ? c2[nextPos].el : parentAnchor;
+        while (i <= e2) {
+          patch(
             null,
-            f[y] = w ? Ge(f[y]) : Ve(f[y]),
-            h,
-            N,
-            b,
-            _,
-            E,
-            S,
-            w
-          ), y++;
+            c2[i] = optimized ? cloneIfMounted(c2[i]) : normalizeVNode(c2[i]),
+            container,
+            anchor,
+            parentComponent,
+            parentSuspense,
+            namespace,
+            slotScopeIds,
+            optimized
+          );
+          i++;
+        }
       }
-    } else if (y > M)
-      for (; y <= I; )
-        Me(u[y], b, _, !0), y++;
-    else {
-      const P = y, N = y, Z = /* @__PURE__ */ new Map();
-      for (y = N; y <= M; y++) {
-        const ve = f[y] = w ? Ge(f[y]) : Ve(f[y]);
-        ve.key != null && Z.set(ve.key, y);
+    } else if (i > e2) {
+      while (i <= e1) {
+        unmount(c1[i], parentComponent, parentSuspense, true);
+        i++;
       }
-      let W, _e = 0;
-      const be = M - N + 1;
-      let ke = !1, Ae = 0;
-      const Tt = new Array(be);
-      for (y = 0; y < be; y++) Tt[y] = 0;
-      for (y = P; y <= I; y++) {
-        const ve = u[y];
-        if (_e >= be) {
-          Me(ve, b, _, !0);
+    } else {
+      const s1 = i;
+      const s2 = i;
+      const keyToNewIndexMap = /* @__PURE__ */ new Map();
+      for (i = s2; i <= e2; i++) {
+        const nextChild = c2[i] = optimized ? cloneIfMounted(c2[i]) : normalizeVNode(c2[i]);
+        if (nextChild.key != null) {
+          keyToNewIndexMap.set(nextChild.key, i);
+        }
+      }
+      let j;
+      let patched = 0;
+      const toBePatched = e2 - s2 + 1;
+      let moved = false;
+      let maxNewIndexSoFar = 0;
+      const newIndexToOldIndexMap = new Array(toBePatched);
+      for (i = 0; i < toBePatched; i++) newIndexToOldIndexMap[i] = 0;
+      for (i = s1; i <= e1; i++) {
+        const prevChild = c1[i];
+        if (patched >= toBePatched) {
+          unmount(prevChild, parentComponent, parentSuspense, true);
           continue;
         }
-        let Pe;
-        if (ve.key != null)
-          Pe = Z.get(ve.key);
-        else
-          for (W = N; W <= M; W++)
-            if (Tt[W - N] === 0 && Ot(ve, f[W])) {
-              Pe = W;
+        let newIndex;
+        if (prevChild.key != null) {
+          newIndex = keyToNewIndexMap.get(prevChild.key);
+        } else {
+          for (j = s2; j <= e2; j++) {
+            if (newIndexToOldIndexMap[j - s2] === 0 && isSameVNodeType(prevChild, c2[j])) {
+              newIndex = j;
               break;
             }
-        Pe === void 0 ? Me(ve, b, _, !0) : (Tt[Pe - N] = y + 1, Pe >= Ae ? Ae = Pe : ke = !0, T(
-          ve,
-          f[Pe],
-          h,
-          null,
-          b,
-          _,
-          E,
-          S,
-          w
-        ), _e++);
+          }
+        }
+        if (newIndex === void 0) {
+          unmount(prevChild, parentComponent, parentSuspense, true);
+        } else {
+          newIndexToOldIndexMap[newIndex - s2] = i + 1;
+          if (newIndex >= maxNewIndexSoFar) {
+            maxNewIndexSoFar = newIndex;
+          } else {
+            moved = true;
+          }
+          patch(
+            prevChild,
+            c2[newIndex],
+            container,
+            null,
+            parentComponent,
+            parentSuspense,
+            namespace,
+            slotScopeIds,
+            optimized
+          );
+          patched++;
+        }
       }
-      const _n = ke ? Dl(Tt) : _t;
-      for (W = _n.length - 1, y = be - 1; y >= 0; y--) {
-        const ve = N + y, Pe = f[ve], vn = ve + 1 < k ? f[ve + 1].el : v;
-        Tt[y] === 0 ? T(
-          null,
-          Pe,
-          h,
-          vn,
-          b,
-          _,
-          E,
-          S,
-          w
-        ) : ke && (W < 0 || y !== _n[W] ? nt(Pe, h, vn, 2) : W--);
+      const increasingNewIndexSequence = moved ? getSequence(newIndexToOldIndexMap) : EMPTY_ARR;
+      j = increasingNewIndexSequence.length - 1;
+      for (i = toBePatched - 1; i >= 0; i--) {
+        const nextIndex = s2 + i;
+        const nextChild = c2[nextIndex];
+        const anchor = nextIndex + 1 < l2 ? c2[nextIndex + 1].el : parentAnchor;
+        if (newIndexToOldIndexMap[i] === 0) {
+          patch(
+            null,
+            nextChild,
+            container,
+            anchor,
+            parentComponent,
+            parentSuspense,
+            namespace,
+            slotScopeIds,
+            optimized
+          );
+        } else if (moved) {
+          if (j < 0 || i !== increasingNewIndexSequence[j]) {
+            move(nextChild, container, anchor, 2);
+          } else {
+            j--;
+          }
+        }
       }
     }
-  }, nt = (u, f, h, v, b = null) => {
-    const { el: _, type: E, transition: S, children: w, shapeFlag: y } = u;
-    if (y & 6) {
-      nt(u.component.subTree, f, h, v);
+  };
+  const move = (vnode, container, anchor, moveType, parentSuspense = null) => {
+    const { el, type, transition, children, shapeFlag } = vnode;
+    if (shapeFlag & 6) {
+      move(vnode.component.subTree, container, anchor, moveType);
       return;
     }
-    if (y & 128) {
-      u.suspense.move(f, h, v);
+    if (shapeFlag & 128) {
+      vnode.suspense.move(container, anchor, moveType);
       return;
     }
-    if (y & 64) {
-      E.move(u, f, h, $t);
+    if (shapeFlag & 64) {
+      type.move(vnode, container, anchor, internals);
       return;
     }
-    if (E === le) {
-      n(_, f, h);
-      for (let I = 0; I < w.length; I++)
-        nt(w[I], f, h, v);
-      n(u.anchor, f, h);
+    if (type === Fragment) {
+      hostInsert(el, container, anchor);
+      for (let i = 0; i < children.length; i++) {
+        move(children[i], container, anchor, moveType);
+      }
+      hostInsert(vnode.anchor, container, anchor);
       return;
     }
-    if (E === ks) {
-      G(u, f, h);
+    if (type === Static) {
+      moveStaticNode(vnode, container, anchor);
       return;
     }
-    if (v !== 2 && y & 1 && S)
-      if (v === 0)
-        S.beforeEnter(_), n(_, f, h), ye(() => S.enter(_), b);
-      else {
-        const { leave: I, delayLeave: M, afterLeave: P } = S, N = () => n(_, f, h), Z = () => {
-          I(_, () => {
-            N(), P && P();
+    const needTransition2 = moveType !== 2 && shapeFlag & 1 && transition;
+    if (needTransition2) {
+      if (moveType === 0) {
+        transition.beforeEnter(el);
+        hostInsert(el, container, anchor);
+        queuePostRenderEffect(() => transition.enter(el), parentSuspense);
+      } else {
+        const { leave, delayLeave, afterLeave } = transition;
+        const remove22 = () => hostInsert(el, container, anchor);
+        const performLeave = () => {
+          leave(el, () => {
+            remove22();
+            afterLeave && afterLeave();
           });
         };
-        M ? M(_, N, Z) : Z();
+        if (delayLeave) {
+          delayLeave(el, remove22, performLeave);
+        } else {
+          performLeave();
+        }
       }
-    else
-      n(_, f, h);
-  }, Me = (u, f, h, v = !1, b = !1) => {
+    } else {
+      hostInsert(el, container, anchor);
+    }
+  };
+  const unmount = (vnode, parentComponent, parentSuspense, doRemove = false, optimized = false) => {
     const {
-      type: _,
-      props: E,
-      ref: S,
-      children: w,
-      dynamicChildren: y,
-      shapeFlag: k,
-      patchFlag: I,
-      dirs: M,
-      cacheIndex: P
-    } = u;
-    if (I === -2 && (b = !1), S != null && ls(S, null, h, u, !0), P != null && (f.renderCache[P] = void 0), k & 256) {
-      f.ctx.deactivate(u);
+      type,
+      props,
+      ref: ref3,
+      children,
+      dynamicChildren,
+      shapeFlag,
+      patchFlag,
+      dirs,
+      cacheIndex
+    } = vnode;
+    if (patchFlag === -2) {
+      optimized = false;
+    }
+    if (ref3 != null) {
+      setRef(ref3, null, parentSuspense, vnode, true);
+    }
+    if (cacheIndex != null) {
+      parentComponent.renderCache[cacheIndex] = void 0;
+    }
+    if (shapeFlag & 256) {
+      parentComponent.ctx.deactivate(vnode);
       return;
     }
-    const N = k & 1 && M, Z = !Rt(u);
-    let W;
-    if (Z && (W = E && E.onVnodeBeforeUnmount) && Re(W, f, u), k & 6)
-      hi(u.component, h, v);
-    else {
-      if (k & 128) {
-        u.suspense.unmount(h, v);
+    const shouldInvokeDirs = shapeFlag & 1 && dirs;
+    const shouldInvokeVnodeHook = !isAsyncWrapper(vnode);
+    let vnodeHook;
+    if (shouldInvokeVnodeHook && (vnodeHook = props && props.onVnodeBeforeUnmount)) {
+      invokeVNodeHook(vnodeHook, parentComponent, vnode);
+    }
+    if (shapeFlag & 6) {
+      unmountComponent(vnode.component, parentSuspense, doRemove);
+    } else {
+      if (shapeFlag & 128) {
+        vnode.suspense.unmount(parentSuspense, doRemove);
         return;
       }
-      N && ot(u, null, f, "beforeUnmount"), k & 64 ? u.type.remove(
-        u,
-        f,
-        h,
-        $t,
-        v
-      ) : y && // #5154
+      if (shouldInvokeDirs) {
+        invokeDirectiveHook(vnode, null, parentComponent, "beforeUnmount");
+      }
+      if (shapeFlag & 64) {
+        vnode.type.remove(
+          vnode,
+          parentComponent,
+          parentSuspense,
+          internals,
+          doRemove
+        );
+      } else if (dynamicChildren && // #5154
       // when v-once is used inside a block, setBlockTracking(-1) marks the
       // parent block with hasOnce: true
       // so that it doesn't take the fast path during unmount - otherwise
       // components nested in v-once are never unmounted.
-      !y.hasOnce && // #1153: fast path should not be taken for non-stable (v-for) fragments
-      (_ !== le || I > 0 && I & 64) ? Et(
-        y,
-        f,
-        h,
-        !1,
-        !0
-      ) : (_ === le && I & 384 || !b && k & 16) && Et(w, f, h), v && mn(u);
+      !dynamicChildren.hasOnce && // #1153: fast path should not be taken for non-stable (v-for) fragments
+      (type !== Fragment || patchFlag > 0 && patchFlag & 64)) {
+        unmountChildren(
+          dynamicChildren,
+          parentComponent,
+          parentSuspense,
+          false,
+          true
+        );
+      } else if (type === Fragment && patchFlag & (128 | 256) || !optimized && shapeFlag & 16) {
+        unmountChildren(children, parentComponent, parentSuspense);
+      }
+      if (doRemove) {
+        remove2(vnode);
+      }
     }
-    (Z && (W = E && E.onVnodeUnmounted) || N) && ye(() => {
-      W && Re(W, f, u), N && ot(u, null, f, "unmounted");
-    }, h);
-  }, mn = (u) => {
-    const { type: f, el: h, anchor: v, transition: b } = u;
-    if (f === le) {
-      pi(h, v);
+    if (shouldInvokeVnodeHook && (vnodeHook = props && props.onVnodeUnmounted) || shouldInvokeDirs) {
+      queuePostRenderEffect(() => {
+        vnodeHook && invokeVNodeHook(vnodeHook, parentComponent, vnode);
+        shouldInvokeDirs && invokeDirectiveHook(vnode, null, parentComponent, "unmounted");
+      }, parentSuspense);
+    }
+  };
+  const remove2 = (vnode) => {
+    const { type, el, anchor, transition } = vnode;
+    if (type === Fragment) {
+      {
+        removeFragment(el, anchor);
+      }
       return;
     }
-    if (f === ks) {
-      x(u);
+    if (type === Static) {
+      removeStaticNode(vnode);
       return;
     }
-    const _ = () => {
-      o(h), b && !b.persisted && b.afterLeave && b.afterLeave();
+    const performRemove = () => {
+      hostRemove(el);
+      if (transition && !transition.persisted && transition.afterLeave) {
+        transition.afterLeave();
+      }
     };
-    if (u.shapeFlag & 1 && b && !b.persisted) {
-      const { leave: E, delayLeave: S } = b, w = () => E(h, _);
-      S ? S(u.el, _, w) : w();
-    } else
-      _();
-  }, pi = (u, f) => {
-    let h;
-    for (; u !== f; )
-      h = m(u), o(u), u = h;
-    o(f);
-  }, hi = (u, f, h) => {
-    const { bum: v, scope: b, job: _, subTree: E, um: S, m: w, a: y } = u;
-    Mn(w), Mn(y), v && Zt(v), b.stop(), _ && (_.flags |= 8, Me(E, u, f, h)), S && ye(S, f), ye(() => {
-      u.isUnmounted = !0;
-    }, f), f && f.pendingBranch && !f.isUnmounted && u.asyncDep && !u.asyncResolved && u.suspenseId === f.pendingId && (f.deps--, f.deps === 0 && f.resolve());
-  }, Et = (u, f, h, v = !1, b = !1, _ = 0) => {
-    for (let E = _; E < u.length; E++)
-      Me(u[E], f, h, v, b);
-  }, Jt = (u) => {
-    if (u.shapeFlag & 6)
-      return Jt(u.component.subTree);
-    if (u.shapeFlag & 128)
-      return u.suspense.next();
-    const f = m(u.anchor || u.el), h = f && f[rl];
-    return h ? m(h) : f;
-  };
-  let Ss = !1;
-  const bn = (u, f, h) => {
-    u == null ? f._vnode && Me(f._vnode, null, null, !0) : T(
-      f._vnode || null,
-      u,
-      f,
-      null,
-      null,
-      null,
-      h
-    ), f._vnode = u, Ss || (Ss = !0, Cn(), To(), Ss = !1);
-  }, $t = {
-    p: T,
-    um: Me,
-    m: nt,
-    r: mn,
-    mt: ws,
-    mc: D,
-    pc: X,
-    pbc: Ne,
-    n: Jt,
-    o: e
-  };
-  return {
-    render: bn,
-    hydrate: void 0,
-    createApp: Il(bn)
-  };
-}
-function Ms({ type: e, props: t }, s) {
-  return s === "svg" && e === "foreignObject" || s === "mathml" && e === "annotation-xml" && t && t.encoding && t.encoding.includes("html") ? void 0 : s;
-}
-function it({ effect: e, job: t }, s) {
-  s ? (e.flags |= 32, t.flags |= 4) : (e.flags &= -33, t.flags &= -5);
-}
-function jl(e, t) {
-  return (!e || e && !e.pendingBranch) && t && !t.persisted;
-}
-function Jo(e, t, s = !1) {
-  const n = e.children, o = t.children;
-  if (A(n) && A(o))
-    for (let i = 0; i < n.length; i++) {
-      const l = n[i];
-      let r = o[i];
-      r.shapeFlag & 1 && !r.dynamicChildren && ((r.patchFlag <= 0 || r.patchFlag === 32) && (r = o[i] = Ge(o[i]), r.el = l.el), !s && r.patchFlag !== -2 && Jo(l, r)), r.type === ys && (r.el = l.el);
+    if (vnode.shapeFlag & 1 && transition && !transition.persisted) {
+      const { leave, delayLeave } = transition;
+      const performLeave = () => leave(el, performRemove);
+      if (delayLeave) {
+        delayLeave(vnode.el, performRemove, performLeave);
+      } else {
+        performLeave();
+      }
+    } else {
+      performRemove();
     }
+  };
+  const removeFragment = (cur, end) => {
+    let next;
+    while (cur !== end) {
+      next = hostNextSibling(cur);
+      hostRemove(cur);
+      cur = next;
+    }
+    hostRemove(end);
+  };
+  const unmountComponent = (instance, parentSuspense, doRemove) => {
+    const { bum, scope, job, subTree, um, m, a } = instance;
+    invalidateMount(m);
+    invalidateMount(a);
+    if (bum) {
+      invokeArrayFns(bum);
+    }
+    scope.stop();
+    if (job) {
+      job.flags |= 8;
+      unmount(subTree, instance, parentSuspense, doRemove);
+    }
+    if (um) {
+      queuePostRenderEffect(um, parentSuspense);
+    }
+    queuePostRenderEffect(() => {
+      instance.isUnmounted = true;
+    }, parentSuspense);
+    if (parentSuspense && parentSuspense.pendingBranch && !parentSuspense.isUnmounted && instance.asyncDep && !instance.asyncResolved && instance.suspenseId === parentSuspense.pendingId) {
+      parentSuspense.deps--;
+      if (parentSuspense.deps === 0) {
+        parentSuspense.resolve();
+      }
+    }
+  };
+  const unmountChildren = (children, parentComponent, parentSuspense, doRemove = false, optimized = false, start = 0) => {
+    for (let i = start; i < children.length; i++) {
+      unmount(children[i], parentComponent, parentSuspense, doRemove, optimized);
+    }
+  };
+  const getNextHostNode = (vnode) => {
+    if (vnode.shapeFlag & 6) {
+      return getNextHostNode(vnode.component.subTree);
+    }
+    if (vnode.shapeFlag & 128) {
+      return vnode.suspense.next();
+    }
+    const el = hostNextSibling(vnode.anchor || vnode.el);
+    const teleportEnd = el && el[TeleportEndKey];
+    return teleportEnd ? hostNextSibling(teleportEnd) : el;
+  };
+  let isFlushing = false;
+  const render = (vnode, container, namespace) => {
+    if (vnode == null) {
+      if (container._vnode) {
+        unmount(container._vnode, null, null, true);
+      }
+    } else {
+      patch(
+        container._vnode || null,
+        vnode,
+        container,
+        null,
+        null,
+        null,
+        namespace
+      );
+    }
+    container._vnode = vnode;
+    if (!isFlushing) {
+      isFlushing = true;
+      flushPreFlushCbs();
+      flushPostFlushCbs();
+      isFlushing = false;
+    }
+  };
+  const internals = {
+    p: patch,
+    um: unmount,
+    m: move,
+    r: remove2,
+    mt: mountComponent,
+    mc: mountChildren,
+    pc: patchChildren,
+    pbc: patchBlockChildren,
+    n: getNextHostNode,
+    o: options
+  };
+  let hydrate;
+  return {
+    render,
+    hydrate,
+    createApp: createAppAPI(render)
+  };
 }
-function Dl(e) {
-  const t = e.slice(), s = [0];
-  let n, o, i, l, r;
-  const c = e.length;
-  for (n = 0; n < c; n++) {
-    const p = e[n];
-    if (p !== 0) {
-      if (o = s[s.length - 1], e[o] < p) {
-        t[n] = o, s.push(n);
+function resolveChildrenNamespace({ type, props }, currentNamespace) {
+  return currentNamespace === "svg" && type === "foreignObject" || currentNamespace === "mathml" && type === "annotation-xml" && props && props.encoding && props.encoding.includes("html") ? void 0 : currentNamespace;
+}
+function toggleRecurse({ effect: effect2, job }, allowed) {
+  if (allowed) {
+    effect2.flags |= 32;
+    job.flags |= 4;
+  } else {
+    effect2.flags &= -33;
+    job.flags &= -5;
+  }
+}
+function needTransition(parentSuspense, transition) {
+  return (!parentSuspense || parentSuspense && !parentSuspense.pendingBranch) && transition && !transition.persisted;
+}
+function traverseStaticChildren(n1, n2, shallow = false) {
+  const ch1 = n1.children;
+  const ch2 = n2.children;
+  if (isArray(ch1) && isArray(ch2)) {
+    for (let i = 0; i < ch1.length; i++) {
+      const c1 = ch1[i];
+      let c2 = ch2[i];
+      if (c2.shapeFlag & 1 && !c2.dynamicChildren) {
+        if (c2.patchFlag <= 0 || c2.patchFlag === 32) {
+          c2 = ch2[i] = cloneIfMounted(ch2[i]);
+          c2.el = c1.el;
+        }
+        if (!shallow && c2.patchFlag !== -2)
+          traverseStaticChildren(c1, c2);
+      }
+      if (c2.type === Text) {
+        c2.el = c1.el;
+      }
+    }
+  }
+}
+function getSequence(arr) {
+  const p2 = arr.slice();
+  const result = [0];
+  let i, j, u, v, c;
+  const len = arr.length;
+  for (i = 0; i < len; i++) {
+    const arrI = arr[i];
+    if (arrI !== 0) {
+      j = result[result.length - 1];
+      if (arr[j] < arrI) {
+        p2[i] = j;
+        result.push(i);
         continue;
       }
-      for (i = 0, l = s.length - 1; i < l; )
-        r = i + l >> 1, e[s[r]] < p ? i = r + 1 : l = r;
-      p < e[s[i]] && (i > 0 && (t[n] = s[i - 1]), s[i] = n);
+      u = 0;
+      v = result.length - 1;
+      while (u < v) {
+        c = u + v >> 1;
+        if (arr[result[c]] < arrI) {
+          u = c + 1;
+        } else {
+          v = c;
+        }
+      }
+      if (arrI < arr[result[u]]) {
+        if (u > 0) {
+          p2[i] = result[u - 1];
+        }
+        result[u] = i;
+      }
     }
   }
-  for (i = s.length, l = s[i - 1]; i-- > 0; )
-    s[i] = l, l = t[l];
-  return s;
+  u = result.length;
+  v = result[u - 1];
+  while (u-- > 0) {
+    result[u] = v;
+    v = p2[v];
+  }
+  return result;
 }
-function Go(e) {
-  const t = e.subTree.component;
-  if (t)
-    return t.asyncDep && !t.asyncResolved ? t : Go(t);
+function locateNonHydratedAsyncRoot(instance) {
+  const subComponent = instance.subTree.component;
+  if (subComponent) {
+    if (subComponent.asyncDep && !subComponent.asyncResolved) {
+      return subComponent;
+    } else {
+      return locateNonHydratedAsyncRoot(subComponent);
+    }
+  }
 }
-function Mn(e) {
-  if (e)
-    for (let t = 0; t < e.length; t++)
-      e[t].flags |= 8;
+function invalidateMount(hooks) {
+  if (hooks) {
+    for (let i = 0; i < hooks.length; i++)
+      hooks[i].flags |= 8;
+  }
 }
-const Hl = Symbol.for("v-scx"), Nl = () => Vt(Hl);
-function Qt(e, t, s) {
-  return Yo(e, t, s);
+const ssrContextKey = Symbol.for("v-scx");
+const useSSRContext = () => {
+  {
+    const ctx = inject(ssrContextKey);
+    return ctx;
+  }
+};
+function watch(source, cb, options) {
+  return doWatch(source, cb, options);
 }
-function Yo(e, t, s = q) {
-  const { immediate: n, deep: o, flush: i, once: l } = s, r = fe({}, s), c = t && n || !t && i !== "post";
-  let p;
-  if (Ut) {
-    if (i === "sync") {
-      const C = Nl();
-      p = C.__watcherHandles || (C.__watcherHandles = []);
-    } else if (!c) {
-      const C = () => {
+function doWatch(source, cb, options = EMPTY_OBJ) {
+  const { immediate, deep, flush, once } = options;
+  const baseWatchOptions = extend({}, options);
+  const runsImmediately = cb && immediate || !cb && flush !== "post";
+  let ssrCleanup;
+  if (isInSSRComponentSetup) {
+    if (flush === "sync") {
+      const ctx = useSSRContext();
+      ssrCleanup = ctx.__watcherHandles || (ctx.__watcherHandles = []);
+    } else if (!runsImmediately) {
+      const watchStopHandle = () => {
       };
-      return C.stop = je, C.resume = je, C.pause = je, C;
+      watchStopHandle.stop = NOOP;
+      watchStopHandle.resume = NOOP;
+      watchStopHandle.pause = NOOP;
+      return watchStopHandle;
     }
   }
-  const a = me;
-  r.call = (C, H, T) => He(C, a, H, T);
-  let d = !1;
-  i === "post" ? r.scheduler = (C) => {
-    ye(C, a && a.suspense);
-  } : i !== "sync" && (d = !0, r.scheduler = (C, H) => {
-    H ? C() : fn(C);
-  }), r.augmentJob = (C) => {
-    t && (C.flags |= 4), d && (C.flags |= 2, a && (C.id = a.uid, C.i = a));
+  const instance = currentInstance;
+  baseWatchOptions.call = (fn, type, args) => callWithAsyncErrorHandling(fn, instance, type, args);
+  let isPre = false;
+  if (flush === "post") {
+    baseWatchOptions.scheduler = (job) => {
+      queuePostRenderEffect(job, instance && instance.suspense);
+    };
+  } else if (flush !== "sync") {
+    isPre = true;
+    baseWatchOptions.scheduler = (job, isFirstRun) => {
+      if (isFirstRun) {
+        job();
+      } else {
+        queueJob(job);
+      }
+    };
+  }
+  baseWatchOptions.augmentJob = (job) => {
+    if (cb) {
+      job.flags |= 4;
+    }
+    if (isPre) {
+      job.flags |= 2;
+      if (instance) {
+        job.id = instance.uid;
+        job.i = instance;
+      }
+    }
   };
-  const m = tl(e, t, r);
-  return Ut && (p ? p.push(m) : c && m()), m;
+  const watchHandle = watch$1(source, cb, baseWatchOptions);
+  if (isInSSRComponentSetup) {
+    if (ssrCleanup) {
+      ssrCleanup.push(watchHandle);
+    } else if (runsImmediately) {
+      watchHandle();
+    }
+  }
+  return watchHandle;
 }
-function Ll(e, t, s) {
-  const n = this.proxy, o = se(e) ? e.includes(".") ? Xo(n, e) : () => n[e] : e.bind(n, n);
-  let i;
-  R(t) ? i = t : (i = t.handler, s = t);
-  const l = Wt(this), r = Yo(o, i.bind(n), s);
-  return l(), r;
+function instanceWatch(source, value, options) {
+  const publicThis = this.proxy;
+  const getter = isString(source) ? source.includes(".") ? createPathGetter(publicThis, source) : () => publicThis[source] : source.bind(publicThis, publicThis);
+  let cb;
+  if (isFunction(value)) {
+    cb = value;
+  } else {
+    cb = value.handler;
+    options = value;
+  }
+  const reset = setCurrentInstance(this);
+  const res = doWatch(getter, cb.bind(publicThis), options);
+  reset();
+  return res;
 }
-function Xo(e, t) {
-  const s = t.split(".");
+function createPathGetter(ctx, path) {
+  const segments = path.split(".");
   return () => {
-    let n = e;
-    for (let o = 0; o < s.length && n; o++)
-      n = n[s[o]];
-    return n;
+    let cur = ctx;
+    for (let i = 0; i < segments.length && cur; i++) {
+      cur = cur[segments[i]];
+    }
+    return cur;
   };
 }
-const Ul = (e, t) => t === "modelValue" || t === "model-value" ? e.modelModifiers : e[`${t}Modifiers`] || e[`${Ze(t)}Modifiers`] || e[`${pt(t)}Modifiers`];
-function Bl(e, t, ...s) {
-  if (e.isUnmounted) return;
-  const n = e.vnode.props || q;
-  let o = s;
-  const i = t.startsWith("update:"), l = i && Ul(n, t.slice(7));
-  l && (l.trim && (o = s.map((a) => se(a) ? a.trim() : a)), l.number && (o = s.map(Ds)));
-  let r, c = n[r = Cs(t)] || // also try camelCase event handler (#2249)
-  n[r = Cs(Ze(t))];
-  !c && i && (c = n[r = Cs(pt(t))]), c && He(
-    c,
-    e,
-    6,
-    o
-  );
-  const p = n[r + "Once"];
-  if (p) {
-    if (!e.emitted)
-      e.emitted = {};
-    else if (e.emitted[r])
-      return;
-    e.emitted[r] = !0, He(
-      p,
-      e,
+const getModelModifiers = (props, modelName) => {
+  return modelName === "modelValue" || modelName === "model-value" ? props.modelModifiers : props[`${modelName}Modifiers`] || props[`${camelize(modelName)}Modifiers`] || props[`${hyphenate(modelName)}Modifiers`];
+};
+function emit(instance, event, ...rawArgs) {
+  if (instance.isUnmounted) return;
+  const props = instance.vnode.props || EMPTY_OBJ;
+  let args = rawArgs;
+  const isModelListener2 = event.startsWith("update:");
+  const modifiers = isModelListener2 && getModelModifiers(props, event.slice(7));
+  if (modifiers) {
+    if (modifiers.trim) {
+      args = rawArgs.map((a) => isString(a) ? a.trim() : a);
+    }
+    if (modifiers.number) {
+      args = rawArgs.map(looseToNumber);
+    }
+  }
+  let handlerName;
+  let handler = props[handlerName = toHandlerKey(event)] || // also try camelCase event handler (#2249)
+  props[handlerName = toHandlerKey(camelize(event))];
+  if (!handler && isModelListener2) {
+    handler = props[handlerName = toHandlerKey(hyphenate(event))];
+  }
+  if (handler) {
+    callWithAsyncErrorHandling(
+      handler,
+      instance,
       6,
-      o
+      args
+    );
+  }
+  const onceHandler = props[handlerName + `Once`];
+  if (onceHandler) {
+    if (!instance.emitted) {
+      instance.emitted = {};
+    } else if (instance.emitted[handlerName]) {
+      return;
+    }
+    instance.emitted[handlerName] = true;
+    callWithAsyncErrorHandling(
+      onceHandler,
+      instance,
+      6,
+      args
     );
   }
 }
-function Zo(e, t, s = !1) {
-  const n = t.emitsCache, o = n.get(e);
-  if (o !== void 0)
-    return o;
-  const i = e.emits;
-  let l = {}, r = !1;
-  if (!R(e)) {
-    const c = (p) => {
-      const a = Zo(p, t, !0);
-      a && (r = !0, fe(l, a));
-    };
-    !s && t.mixins.length && t.mixins.forEach(c), e.extends && c(e.extends), e.mixins && e.mixins.forEach(c);
+function normalizeEmitsOptions(comp, appContext, asMixin = false) {
+  const cache = appContext.emitsCache;
+  const cached = cache.get(comp);
+  if (cached !== void 0) {
+    return cached;
   }
-  return !i && !r ? (ee(e) && n.set(e, null), null) : (A(i) ? i.forEach((c) => l[c] = null) : fe(l, i), ee(e) && n.set(e, l), l);
+  const raw = comp.emits;
+  let normalized = {};
+  let hasExtends = false;
+  if (!isFunction(comp)) {
+    const extendEmits = (raw2) => {
+      const normalizedFromExtend = normalizeEmitsOptions(raw2, appContext, true);
+      if (normalizedFromExtend) {
+        hasExtends = true;
+        extend(normalized, normalizedFromExtend);
+      }
+    };
+    if (!asMixin && appContext.mixins.length) {
+      appContext.mixins.forEach(extendEmits);
+    }
+    if (comp.extends) {
+      extendEmits(comp.extends);
+    }
+    if (comp.mixins) {
+      comp.mixins.forEach(extendEmits);
+    }
+  }
+  if (!raw && !hasExtends) {
+    if (isObject(comp)) {
+      cache.set(comp, null);
+    }
+    return null;
+  }
+  if (isArray(raw)) {
+    raw.forEach((key) => normalized[key] = null);
+  } else {
+    extend(normalized, raw);
+  }
+  if (isObject(comp)) {
+    cache.set(comp, normalized);
+  }
+  return normalized;
 }
-function vs(e, t) {
-  return !e || !as(t) ? !1 : (t = t.slice(2).replace(/Once$/, ""), U(e, t[0].toLowerCase() + t.slice(1)) || U(e, pt(t)) || U(e, t));
+function isEmitListener(options, key) {
+  if (!options || !isOn(key)) {
+    return false;
+  }
+  key = key.slice(2).replace(/Once$/, "");
+  return hasOwn(options, key[0].toLowerCase() + key.slice(1)) || hasOwn(options, hyphenate(key)) || hasOwn(options, key);
 }
-function kn(e) {
+function markAttrsAccessed() {
+}
+function renderComponentRoot(instance) {
   const {
-    type: t,
-    vnode: s,
-    proxy: n,
-    withProxy: o,
-    propsOptions: [i],
-    slots: l,
-    attrs: r,
-    emit: c,
-    render: p,
-    renderCache: a,
-    props: d,
-    data: m,
-    setupState: C,
-    ctx: H,
-    inheritAttrs: T
-  } = e, ne = is(e);
-  let B, J;
+    type: Component,
+    vnode,
+    proxy,
+    withProxy,
+    propsOptions: [propsOptions],
+    slots,
+    attrs,
+    emit: emit2,
+    render,
+    renderCache,
+    props,
+    data,
+    setupState,
+    ctx,
+    inheritAttrs
+  } = instance;
+  const prev = setCurrentRenderingInstance(instance);
+  let result;
+  let fallthroughAttrs;
   try {
-    if (s.shapeFlag & 4) {
-      const x = o || n, O = x;
-      B = Ve(
-        p.call(
-          O,
-          x,
-          a,
-          d,
-          C,
-          m,
-          H
+    if (vnode.shapeFlag & 4) {
+      const proxyToUse = withProxy || proxy;
+      const thisProxy = false ? new Proxy(proxyToUse, {
+        get(target, key, receiver) {
+          warn$1(
+            `Property '${String(
+              key
+            )}' was accessed via 'this'. Avoid using 'this' in templates.`
+          );
+          return Reflect.get(target, key, receiver);
+        }
+      }) : proxyToUse;
+      result = normalizeVNode(
+        render.call(
+          thisProxy,
+          proxyToUse,
+          renderCache,
+          false ? shallowReadonly(props) : props,
+          setupState,
+          data,
+          ctx
         )
-      ), J = r;
+      );
+      fallthroughAttrs = attrs;
     } else {
-      const x = t;
-      B = Ve(
-        x.length > 1 ? x(
-          d,
-          { attrs: r, slots: l, emit: c }
-        ) : x(
-          d,
+      const render2 = Component;
+      if (false) ;
+      result = normalizeVNode(
+        render2.length > 1 ? render2(
+          false ? shallowReadonly(props) : props,
+          false ? {
+            get attrs() {
+              markAttrsAccessed();
+              return shallowReadonly(attrs);
+            },
+            slots,
+            emit: emit2
+          } : { attrs, slots, emit: emit2 }
+        ) : render2(
+          false ? shallowReadonly(props) : props,
           null
         )
-      ), J = t.props ? r : Kl(r);
+      );
+      fallthroughAttrs = Component.props ? attrs : getFunctionalFallthrough(attrs);
     }
-  } catch (x) {
-    jt.length = 0, bs(x, e, 1), B = ue(dt);
+  } catch (err) {
+    blockStack.length = 0;
+    handleError(err, instance, 1);
+    result = createVNode(Comment);
   }
-  let G = B;
-  if (J && T !== !1) {
-    const x = Object.keys(J), { shapeFlag: O } = G;
-    x.length && O & 7 && (i && x.some(en) && (J = Wl(
-      J,
-      i
-    )), G = Ct(G, J, !1, !0));
-  }
-  return s.dirs && (G = Ct(G, null, !1, !0), G.dirs = G.dirs ? G.dirs.concat(s.dirs) : s.dirs), s.transition && dn(G, s.transition), B = G, is(ne), B;
-}
-const Kl = (e) => {
-  let t;
-  for (const s in e)
-    (s === "class" || s === "style" || as(s)) && ((t || (t = {}))[s] = e[s]);
-  return t;
-}, Wl = (e, t) => {
-  const s = {};
-  for (const n in e)
-    (!en(n) || !(n.slice(9) in t)) && (s[n] = e[n]);
-  return s;
-};
-function zl(e, t, s) {
-  const { props: n, children: o, component: i } = e, { props: l, children: r, patchFlag: c } = t, p = i.emitsOptions;
-  if (t.dirs || t.transition)
-    return !0;
-  if (s && c >= 0) {
-    if (c & 1024)
-      return !0;
-    if (c & 16)
-      return n ? An(n, l, p) : !!l;
-    if (c & 8) {
-      const a = t.dynamicProps;
-      for (let d = 0; d < a.length; d++) {
-        const m = a[d];
-        if (l[m] !== n[m] && !vs(p, m))
-          return !0;
+  let root = result;
+  if (fallthroughAttrs && inheritAttrs !== false) {
+    const keys = Object.keys(fallthroughAttrs);
+    const { shapeFlag } = root;
+    if (keys.length) {
+      if (shapeFlag & (1 | 6)) {
+        if (propsOptions && keys.some(isModelListener)) {
+          fallthroughAttrs = filterModelListeners(
+            fallthroughAttrs,
+            propsOptions
+          );
+        }
+        root = cloneVNode(root, fallthroughAttrs, false, true);
       }
     }
-  } else
-    return (o || r) && (!r || !r.$stable) ? !0 : n === l ? !1 : n ? l ? An(n, l, p) : !0 : !!l;
-  return !1;
-}
-function An(e, t, s) {
-  const n = Object.keys(t);
-  if (n.length !== Object.keys(e).length)
-    return !0;
-  for (let o = 0; o < n.length; o++) {
-    const i = n[o];
-    if (t[i] !== e[i] && !vs(s, i))
-      return !0;
   }
-  return !1;
+  if (vnode.dirs) {
+    root = cloneVNode(root, null, false, true);
+    root.dirs = root.dirs ? root.dirs.concat(vnode.dirs) : vnode.dirs;
+  }
+  if (vnode.transition) {
+    setTransitionHooks(root, vnode.transition);
+  }
+  {
+    result = root;
+  }
+  setCurrentRenderingInstance(prev);
+  return result;
 }
-function ql({ vnode: e, parent: t }, s) {
-  for (; t; ) {
-    const n = t.subTree;
-    if (n.suspense && n.suspense.activeBranch === e && (n.el = e.el), n === e)
-      (e = t.vnode).el = s, t = t.parent;
-    else
+const getFunctionalFallthrough = (attrs) => {
+  let res;
+  for (const key in attrs) {
+    if (key === "class" || key === "style" || isOn(key)) {
+      (res || (res = {}))[key] = attrs[key];
+    }
+  }
+  return res;
+};
+const filterModelListeners = (attrs, props) => {
+  const res = {};
+  for (const key in attrs) {
+    if (!isModelListener(key) || !(key.slice(9) in props)) {
+      res[key] = attrs[key];
+    }
+  }
+  return res;
+};
+function shouldUpdateComponent(prevVNode, nextVNode, optimized) {
+  const { props: prevProps, children: prevChildren, component } = prevVNode;
+  const { props: nextProps, children: nextChildren, patchFlag } = nextVNode;
+  const emits = component.emitsOptions;
+  if (nextVNode.dirs || nextVNode.transition) {
+    return true;
+  }
+  if (optimized && patchFlag >= 0) {
+    if (patchFlag & 1024) {
+      return true;
+    }
+    if (patchFlag & 16) {
+      if (!prevProps) {
+        return !!nextProps;
+      }
+      return hasPropsChanged(prevProps, nextProps, emits);
+    } else if (patchFlag & 8) {
+      const dynamicProps = nextVNode.dynamicProps;
+      for (let i = 0; i < dynamicProps.length; i++) {
+        const key = dynamicProps[i];
+        if (nextProps[key] !== prevProps[key] && !isEmitListener(emits, key)) {
+          return true;
+        }
+      }
+    }
+  } else {
+    if (prevChildren || nextChildren) {
+      if (!nextChildren || !nextChildren.$stable) {
+        return true;
+      }
+    }
+    if (prevProps === nextProps) {
+      return false;
+    }
+    if (!prevProps) {
+      return !!nextProps;
+    }
+    if (!nextProps) {
+      return true;
+    }
+    return hasPropsChanged(prevProps, nextProps, emits);
+  }
+  return false;
+}
+function hasPropsChanged(prevProps, nextProps, emitsOptions) {
+  const nextKeys = Object.keys(nextProps);
+  if (nextKeys.length !== Object.keys(prevProps).length) {
+    return true;
+  }
+  for (let i = 0; i < nextKeys.length; i++) {
+    const key = nextKeys[i];
+    if (nextProps[key] !== prevProps[key] && !isEmitListener(emitsOptions, key)) {
+      return true;
+    }
+  }
+  return false;
+}
+function updateHOCHostEl({ vnode, parent }, el) {
+  while (parent) {
+    const root = parent.subTree;
+    if (root.suspense && root.suspense.activeBranch === vnode) {
+      root.el = vnode.el;
+    }
+    if (root === vnode) {
+      (vnode = parent.vnode).el = el;
+      parent = parent.parent;
+    } else {
       break;
+    }
   }
 }
-const Qo = (e) => e.__isSuspense;
-function Jl(e, t) {
-  t && t.pendingBranch ? A(e) ? t.effects.push(...e) : t.effects.push(e) : il(e);
+const isSuspense = (type) => type.__isSuspense;
+function queueEffectWithSuspense(fn, suspense) {
+  if (suspense && suspense.pendingBranch) {
+    if (isArray(fn)) {
+      suspense.effects.push(...fn);
+    } else {
+      suspense.effects.push(fn);
+    }
+  } else {
+    queuePostFlushCb(fn);
+  }
 }
-const le = Symbol.for("v-fgt"), ys = Symbol.for("v-txt"), dt = Symbol.for("v-cmt"), ks = Symbol.for("v-stc"), jt = [];
-let we = null;
-function V(e = !1) {
-  jt.push(we = e ? null : []);
+const Fragment = Symbol.for("v-fgt");
+const Text = Symbol.for("v-txt");
+const Comment = Symbol.for("v-cmt");
+const Static = Symbol.for("v-stc");
+const blockStack = [];
+let currentBlock = null;
+function openBlock(disableTracking = false) {
+  blockStack.push(currentBlock = disableTracking ? null : []);
 }
-function Gl() {
-  jt.pop(), we = jt[jt.length - 1] || null;
+function closeBlock() {
+  blockStack.pop();
+  currentBlock = blockStack[blockStack.length - 1] || null;
 }
-let Lt = 1;
-function Pn(e, t = !1) {
-  Lt += e, e < 0 && we && t && (we.hasOnce = !0);
+let isBlockTreeEnabled = 1;
+function setBlockTracking(value, inVOnce = false) {
+  isBlockTreeEnabled += value;
+  if (value < 0 && currentBlock && inVOnce) {
+    currentBlock.hasOnce = true;
+  }
 }
-function ei(e) {
-  return e.dynamicChildren = Lt > 0 ? we || _t : null, Gl(), Lt > 0 && we && we.push(e), e;
+function setupBlock(vnode) {
+  vnode.dynamicChildren = isBlockTreeEnabled > 0 ? currentBlock || EMPTY_ARR : null;
+  closeBlock();
+  if (isBlockTreeEnabled > 0 && currentBlock) {
+    currentBlock.push(vnode);
+  }
+  return vnode;
 }
-function j(e, t, s, n, o, i) {
-  return ei(
-    g(
-      e,
-      t,
-      s,
-      n,
-      o,
-      i,
-      !0
+function createElementBlock(type, props, children, patchFlag, dynamicProps, shapeFlag) {
+  return setupBlock(
+    createBaseVNode(
+      type,
+      props,
+      children,
+      patchFlag,
+      dynamicProps,
+      shapeFlag,
+      true
     )
   );
 }
-function Yl(e, t, s, n, o) {
-  return ei(
-    ue(
-      e,
-      t,
-      s,
-      n,
-      o,
-      !0
+function createBlock(type, props, children, patchFlag, dynamicProps) {
+  return setupBlock(
+    createVNode(
+      type,
+      props,
+      children,
+      patchFlag,
+      dynamicProps,
+      true
     )
   );
 }
-function ti(e) {
-  return e ? e.__v_isVNode === !0 : !1;
+function isVNode(value) {
+  return value ? value.__v_isVNode === true : false;
 }
-function Ot(e, t) {
-  return e.type === t.type && e.key === t.key;
+function isSameVNodeType(n1, n2) {
+  return n1.type === n2.type && n1.key === n2.key;
 }
-const si = ({ key: e }) => e ?? null, es = ({
-  ref: e,
-  ref_key: t,
-  ref_for: s
-}) => (typeof e == "number" && (e = "" + e), e != null ? se(e) || ae(e) || R(e) ? { i: Ce, r: e, k: t, f: !!s } : e : null);
-function g(e, t = null, s = null, n = 0, o = null, i = e === le ? 0 : 1, l = !1, r = !1) {
-  const c = {
-    __v_isVNode: !0,
-    __v_skip: !0,
-    type: e,
-    props: t,
-    key: t && si(t),
-    ref: t && es(t),
-    scopeId: Oo,
+const normalizeKey = ({ key }) => key != null ? key : null;
+const normalizeRef = ({
+  ref: ref3,
+  ref_key,
+  ref_for
+}) => {
+  if (typeof ref3 === "number") {
+    ref3 = "" + ref3;
+  }
+  return ref3 != null ? isString(ref3) || isRef(ref3) || isFunction(ref3) ? { i: currentRenderingInstance, r: ref3, k: ref_key, f: !!ref_for } : ref3 : null;
+};
+function createBaseVNode(type, props = null, children = null, patchFlag = 0, dynamicProps = null, shapeFlag = type === Fragment ? 0 : 1, isBlockNode = false, needFullChildrenNormalization = false) {
+  const vnode = {
+    __v_isVNode: true,
+    __v_skip: true,
+    type,
+    props,
+    key: props && normalizeKey(props),
+    ref: props && normalizeRef(props),
+    scopeId: currentScopeId,
     slotScopeIds: null,
-    children: s,
+    children,
     component: null,
     suspense: null,
     ssContent: null,
@@ -3157,171 +5163,256 @@ function g(e, t = null, s = null, n = 0, o = null, i = e === le ? 0 : 1, l = !1,
     targetStart: null,
     targetAnchor: null,
     staticCount: 0,
-    shapeFlag: i,
-    patchFlag: n,
-    dynamicProps: o,
+    shapeFlag,
+    patchFlag,
+    dynamicProps,
     dynamicChildren: null,
     appContext: null,
-    ctx: Ce
+    ctx: currentRenderingInstance
   };
-  return r ? (hn(c, s), i & 128 && e.normalize(c)) : s && (c.shapeFlag |= se(s) ? 8 : 16), Lt > 0 && // avoid a block node from tracking itself
-  !l && // has current parent block
-  we && // presence of a patch flag indicates this node needs patching on updates.
+  if (needFullChildrenNormalization) {
+    normalizeChildren(vnode, children);
+    if (shapeFlag & 128) {
+      type.normalize(vnode);
+    }
+  } else if (children) {
+    vnode.shapeFlag |= isString(children) ? 8 : 16;
+  }
+  if (isBlockTreeEnabled > 0 && // avoid a block node from tracking itself
+  !isBlockNode && // has current parent block
+  currentBlock && // presence of a patch flag indicates this node needs patching on updates.
   // component nodes also should always be patched, because even if the
   // component doesn't need to update, it needs to persist the instance on to
   // the next vnode so that it can be properly unmounted later.
-  (c.patchFlag > 0 || i & 6) && // the EVENTS flag is only for hydration and if it is the only flag, the
+  (vnode.patchFlag > 0 || shapeFlag & 6) && // the EVENTS flag is only for hydration and if it is the only flag, the
   // vnode should not be considered dynamic due to handler caching.
-  c.patchFlag !== 32 && we.push(c), c;
+  vnode.patchFlag !== 32) {
+    currentBlock.push(vnode);
+  }
+  return vnode;
 }
-const ue = Xl;
-function Xl(e, t = null, s = null, n = 0, o = null, i = !1) {
-  if ((!e || e === yl) && (e = dt), ti(e)) {
-    const r = Ct(
-      e,
-      t,
-      !0
+const createVNode = _createVNode;
+function _createVNode(type, props = null, children = null, patchFlag = 0, dynamicProps = null, isBlockNode = false) {
+  if (!type || type === NULL_DYNAMIC_COMPONENT) {
+    type = Comment;
+  }
+  if (isVNode(type)) {
+    const cloned = cloneVNode(
+      type,
+      props,
+      true
       /* mergeRef: true */
     );
-    return s && hn(r, s), Lt > 0 && !i && we && (r.shapeFlag & 6 ? we[we.indexOf(e)] = r : we.push(r)), r.patchFlag = -2, r;
+    if (children) {
+      normalizeChildren(cloned, children);
+    }
+    if (isBlockTreeEnabled > 0 && !isBlockNode && currentBlock) {
+      if (cloned.shapeFlag & 6) {
+        currentBlock[currentBlock.indexOf(type)] = cloned;
+      } else {
+        currentBlock.push(cloned);
+      }
+    }
+    cloned.patchFlag = -2;
+    return cloned;
   }
-  if (rr(e) && (e = e.__vccOpts), t) {
-    t = Zl(t);
-    let { class: r, style: c } = t;
-    r && !se(r) && (t.class = ie(r)), ee(c) && (an(c) && !A(c) && (c = fe({}, c)), t.style = Te(c));
+  if (isClassComponent(type)) {
+    type = type.__vccOpts;
   }
-  const l = se(e) ? 1 : Qo(e) ? 128 : cl(e) ? 64 : ee(e) ? 4 : R(e) ? 2 : 0;
-  return g(
-    e,
-    t,
-    s,
-    n,
-    o,
-    l,
-    i,
-    !0
+  if (props) {
+    props = guardReactiveProps(props);
+    let { class: klass, style } = props;
+    if (klass && !isString(klass)) {
+      props.class = normalizeClass(klass);
+    }
+    if (isObject(style)) {
+      if (isProxy(style) && !isArray(style)) {
+        style = extend({}, style);
+      }
+      props.style = normalizeStyle(style);
+    }
+  }
+  const shapeFlag = isString(type) ? 1 : isSuspense(type) ? 128 : isTeleport(type) ? 64 : isObject(type) ? 4 : isFunction(type) ? 2 : 0;
+  return createBaseVNode(
+    type,
+    props,
+    children,
+    patchFlag,
+    dynamicProps,
+    shapeFlag,
+    isBlockNode,
+    true
   );
 }
-function Zl(e) {
-  return e ? an(e) || Lo(e) ? fe({}, e) : e : null;
+function guardReactiveProps(props) {
+  if (!props) return null;
+  return isProxy(props) || isInternalObject(props) ? extend({}, props) : props;
 }
-function Ct(e, t, s = !1, n = !1) {
-  const { props: o, ref: i, patchFlag: l, children: r, transition: c } = e, p = t ? Ql(o || {}, t) : o, a = {
-    __v_isVNode: !0,
-    __v_skip: !0,
-    type: e.type,
-    props: p,
-    key: p && si(p),
-    ref: t && t.ref ? (
+function cloneVNode(vnode, extraProps, mergeRef = false, cloneTransition = false) {
+  const { props, ref: ref3, patchFlag, children, transition } = vnode;
+  const mergedProps = extraProps ? mergeProps(props || {}, extraProps) : props;
+  const cloned = {
+    __v_isVNode: true,
+    __v_skip: true,
+    type: vnode.type,
+    props: mergedProps,
+    key: mergedProps && normalizeKey(mergedProps),
+    ref: extraProps && extraProps.ref ? (
       // #2078 in the case of <component :is="vnode" ref="extra"/>
       // if the vnode itself already has a ref, cloneVNode will need to merge
       // the refs so the single vnode can be set on multiple refs
-      s && i ? A(i) ? i.concat(es(t)) : [i, es(t)] : es(t)
-    ) : i,
-    scopeId: e.scopeId,
-    slotScopeIds: e.slotScopeIds,
-    children: r,
-    target: e.target,
-    targetStart: e.targetStart,
-    targetAnchor: e.targetAnchor,
-    staticCount: e.staticCount,
-    shapeFlag: e.shapeFlag,
+      mergeRef && ref3 ? isArray(ref3) ? ref3.concat(normalizeRef(extraProps)) : [ref3, normalizeRef(extraProps)] : normalizeRef(extraProps)
+    ) : ref3,
+    scopeId: vnode.scopeId,
+    slotScopeIds: vnode.slotScopeIds,
+    children,
+    target: vnode.target,
+    targetStart: vnode.targetStart,
+    targetAnchor: vnode.targetAnchor,
+    staticCount: vnode.staticCount,
+    shapeFlag: vnode.shapeFlag,
     // if the vnode is cloned with extra props, we can no longer assume its
     // existing patch flag to be reliable and need to add the FULL_PROPS flag.
     // note: preserve flag for fragments since they use the flag for children
     // fast paths only.
-    patchFlag: t && e.type !== le ? l === -1 ? 16 : l | 16 : l,
-    dynamicProps: e.dynamicProps,
-    dynamicChildren: e.dynamicChildren,
-    appContext: e.appContext,
-    dirs: e.dirs,
-    transition: c,
+    patchFlag: extraProps && vnode.type !== Fragment ? patchFlag === -1 ? 16 : patchFlag | 16 : patchFlag,
+    dynamicProps: vnode.dynamicProps,
+    dynamicChildren: vnode.dynamicChildren,
+    appContext: vnode.appContext,
+    dirs: vnode.dirs,
+    transition,
     // These should technically only be non-null on mounted VNodes. However,
     // they *should* be copied for kept-alive vnodes. So we just always copy
     // them since them being non-null during a mount doesn't affect the logic as
     // they will simply be overwritten.
-    component: e.component,
-    suspense: e.suspense,
-    ssContent: e.ssContent && Ct(e.ssContent),
-    ssFallback: e.ssFallback && Ct(e.ssFallback),
-    el: e.el,
-    anchor: e.anchor,
-    ctx: e.ctx,
-    ce: e.ce
+    component: vnode.component,
+    suspense: vnode.suspense,
+    ssContent: vnode.ssContent && cloneVNode(vnode.ssContent),
+    ssFallback: vnode.ssFallback && cloneVNode(vnode.ssFallback),
+    el: vnode.el,
+    anchor: vnode.anchor,
+    ctx: vnode.ctx,
+    ce: vnode.ce
   };
-  return c && n && dn(
-    a,
-    c.clone(a)
-  ), a;
+  if (transition && cloneTransition) {
+    setTransitionHooks(
+      cloned,
+      transition.clone(cloned)
+    );
+  }
+  return cloned;
 }
-function $e(e = " ", t = 0) {
-  return ue(ys, null, e, t);
+function createTextVNode(text = " ", flag = 0) {
+  return createVNode(Text, null, text, flag);
 }
-function oe(e = "", t = !1) {
-  return t ? (V(), Yl(dt, null, e)) : ue(dt, null, e);
+function createCommentVNode(text = "", asBlock = false) {
+  return asBlock ? (openBlock(), createBlock(Comment, null, text)) : createVNode(Comment, null, text);
 }
-function Ve(e) {
-  return e == null || typeof e == "boolean" ? ue(dt) : A(e) ? ue(
-    le,
-    null,
-    // #3666, avoid reference pollution when reusing vnode
-    e.slice()
-  ) : ti(e) ? Ge(e) : ue(ys, null, String(e));
+function normalizeVNode(child) {
+  if (child == null || typeof child === "boolean") {
+    return createVNode(Comment);
+  } else if (isArray(child)) {
+    return createVNode(
+      Fragment,
+      null,
+      // #3666, avoid reference pollution when reusing vnode
+      child.slice()
+    );
+  } else if (isVNode(child)) {
+    return cloneIfMounted(child);
+  } else {
+    return createVNode(Text, null, String(child));
+  }
 }
-function Ge(e) {
-  return e.el === null && e.patchFlag !== -1 || e.memo ? e : Ct(e);
+function cloneIfMounted(child) {
+  return child.el === null && child.patchFlag !== -1 || child.memo ? child : cloneVNode(child);
 }
-function hn(e, t) {
-  let s = 0;
-  const { shapeFlag: n } = e;
-  if (t == null)
-    t = null;
-  else if (A(t))
-    s = 16;
-  else if (typeof t == "object")
-    if (n & 65) {
-      const o = t.default;
-      o && (o._c && (o._d = !1), hn(e, o()), o._c && (o._d = !0));
+function normalizeChildren(vnode, children) {
+  let type = 0;
+  const { shapeFlag } = vnode;
+  if (children == null) {
+    children = null;
+  } else if (isArray(children)) {
+    type = 16;
+  } else if (typeof children === "object") {
+    if (shapeFlag & (1 | 64)) {
+      const slot = children.default;
+      if (slot) {
+        slot._c && (slot._d = false);
+        normalizeChildren(vnode, slot());
+        slot._c && (slot._d = true);
+      }
       return;
     } else {
-      s = 32;
-      const o = t._;
-      !o && !Lo(t) ? t._ctx = Ce : o === 3 && Ce && (Ce.slots._ === 1 ? t._ = 1 : (t._ = 2, e.patchFlag |= 1024));
+      type = 32;
+      const slotFlag = children._;
+      if (!slotFlag && !isInternalObject(children)) {
+        children._ctx = currentRenderingInstance;
+      } else if (slotFlag === 3 && currentRenderingInstance) {
+        if (currentRenderingInstance.slots._ === 1) {
+          children._ = 1;
+        } else {
+          children._ = 2;
+          vnode.patchFlag |= 1024;
+        }
+      }
     }
-  else R(t) ? (t = { default: t, _ctx: Ce }, s = 32) : (t = String(t), n & 64 ? (s = 16, t = [$e(t)]) : s = 8);
-  e.children = t, e.shapeFlag |= s;
-}
-function Ql(...e) {
-  const t = {};
-  for (let s = 0; s < e.length; s++) {
-    const n = e[s];
-    for (const o in n)
-      if (o === "class")
-        t.class !== n.class && (t.class = ie([t.class, n.class]));
-      else if (o === "style")
-        t.style = Te([t.style, n.style]);
-      else if (as(o)) {
-        const i = t[o], l = n[o];
-        l && i !== l && !(A(i) && i.includes(l)) && (t[o] = i ? [].concat(i, l) : l);
-      } else o !== "" && (t[o] = n[o]);
+  } else if (isFunction(children)) {
+    children = { default: children, _ctx: currentRenderingInstance };
+    type = 32;
+  } else {
+    children = String(children);
+    if (shapeFlag & 64) {
+      type = 16;
+      children = [createTextVNode(children)];
+    } else {
+      type = 8;
+    }
   }
-  return t;
+  vnode.children = children;
+  vnode.shapeFlag |= type;
 }
-function Re(e, t, s, n = null) {
-  He(e, t, 7, [
-    s,
-    n
+function mergeProps(...args) {
+  const ret = {};
+  for (let i = 0; i < args.length; i++) {
+    const toMerge = args[i];
+    for (const key in toMerge) {
+      if (key === "class") {
+        if (ret.class !== toMerge.class) {
+          ret.class = normalizeClass([ret.class, toMerge.class]);
+        }
+      } else if (key === "style") {
+        ret.style = normalizeStyle([ret.style, toMerge.style]);
+      } else if (isOn(key)) {
+        const existing = ret[key];
+        const incoming = toMerge[key];
+        if (incoming && existing !== incoming && !(isArray(existing) && existing.includes(incoming))) {
+          ret[key] = existing ? [].concat(existing, incoming) : incoming;
+        }
+      } else if (key !== "") {
+        ret[key] = toMerge[key];
+      }
+    }
+  }
+  return ret;
+}
+function invokeVNodeHook(hook, instance, vnode, prevVNode = null) {
+  callWithAsyncErrorHandling(hook, instance, 7, [
+    vnode,
+    prevVNode
   ]);
 }
-const er = jo();
-let tr = 0;
-function sr(e, t, s) {
-  const n = e.type, o = (t ? t.appContext : e.appContext) || er, i = {
-    uid: tr++,
-    vnode: e,
-    type: n,
-    parent: t,
-    appContext: o,
+const emptyAppContext = createAppContext();
+let uid = 0;
+function createComponentInstance(vnode, parent, suspense) {
+  const type = vnode.type;
+  const appContext = (parent ? parent.appContext : vnode.appContext) || emptyAppContext;
+  const instance = {
+    uid: uid++,
+    vnode,
+    type,
+    parent,
+    appContext,
     root: null,
     // to be immediately set
     next: null,
@@ -3331,8 +5422,8 @@ function sr(e, t, s) {
     update: null,
     // will be set synchronously right after creation
     job: null,
-    scope: new Ti(
-      !0
+    scope: new EffectScope(
+      true
       /* detached */
     ),
     render: null,
@@ -3340,43 +5431,43 @@ function sr(e, t, s) {
     exposed: null,
     exposeProxy: null,
     withProxy: null,
-    provides: t ? t.provides : Object.create(o.provides),
-    ids: t ? t.ids : ["", 0, 0],
+    provides: parent ? parent.provides : Object.create(appContext.provides),
+    ids: parent ? parent.ids : ["", 0, 0],
     accessCache: null,
     renderCache: [],
     // local resolved assets
     components: null,
     directives: null,
     // resolved props and emits options
-    propsOptions: Bo(n, o),
-    emitsOptions: Zo(n, o),
+    propsOptions: normalizePropsOptions(type, appContext),
+    emitsOptions: normalizeEmitsOptions(type, appContext),
     // emit
     emit: null,
     // to be set immediately
     emitted: null,
     // props default value
-    propsDefaults: q,
+    propsDefaults: EMPTY_OBJ,
     // inheritAttrs
-    inheritAttrs: n.inheritAttrs,
+    inheritAttrs: type.inheritAttrs,
     // state
-    ctx: q,
-    data: q,
-    props: q,
-    attrs: q,
-    slots: q,
-    refs: q,
-    setupState: q,
+    ctx: EMPTY_OBJ,
+    data: EMPTY_OBJ,
+    props: EMPTY_OBJ,
+    attrs: EMPTY_OBJ,
+    slots: EMPTY_OBJ,
+    refs: EMPTY_OBJ,
+    setupState: EMPTY_OBJ,
     setupContext: null,
     // suspense related
-    suspense: s,
-    suspenseId: s ? s.pendingId : 0,
+    suspense,
+    suspenseId: suspense ? suspense.pendingId : 0,
     asyncDep: null,
-    asyncResolved: !1,
+    asyncResolved: false,
     // lifecycle hooks
     // not using enums here because it results in computed properties
-    isMounted: !1,
-    isUnmounted: !1,
-    isDeactivated: !1,
+    isMounted: false,
+    isUnmounted: false,
+    isDeactivated: false,
     bc: null,
     c: null,
     bm: null,
@@ -3392,441 +5483,730 @@ function sr(e, t, s) {
     ec: null,
     sp: null
   };
-  return i.ctx = { _: i }, i.root = t ? t.root : i, i.emit = Bl.bind(null, i), e.ce && e.ce(i), i;
+  {
+    instance.ctx = { _: instance };
+  }
+  instance.root = parent ? parent.root : instance;
+  instance.emit = emit.bind(null, instance);
+  if (vnode.ce) {
+    vnode.ce(instance);
+  }
+  return instance;
 }
-let me = null, cs, Js;
+let currentInstance = null;
+let internalSetCurrentInstance;
+let setInSSRSetupState;
 {
-  const e = ps(), t = (s, n) => {
-    let o;
-    return (o = e[s]) || (o = e[s] = []), o.push(n), (i) => {
-      o.length > 1 ? o.forEach((l) => l(i)) : o[0](i);
+  const g = getGlobalThis();
+  const registerGlobalSetter = (key, setter) => {
+    let setters;
+    if (!(setters = g[key])) setters = g[key] = [];
+    setters.push(setter);
+    return (v) => {
+      if (setters.length > 1) setters.forEach((set) => set(v));
+      else setters[0](v);
     };
   };
-  cs = t(
-    "__VUE_INSTANCE_SETTERS__",
-    (s) => me = s
-  ), Js = t(
-    "__VUE_SSR_SETTERS__",
-    (s) => Ut = s
+  internalSetCurrentInstance = registerGlobalSetter(
+    `__VUE_INSTANCE_SETTERS__`,
+    (v) => currentInstance = v
+  );
+  setInSSRSetupState = registerGlobalSetter(
+    `__VUE_SSR_SETTERS__`,
+    (v) => isInSSRComponentSetup = v
   );
 }
-const Wt = (e) => {
-  const t = me;
-  return cs(e), e.scope.on(), () => {
-    e.scope.off(), cs(t);
+const setCurrentInstance = (instance) => {
+  const prev = currentInstance;
+  internalSetCurrentInstance(instance);
+  instance.scope.on();
+  return () => {
+    instance.scope.off();
+    internalSetCurrentInstance(prev);
   };
-}, Rn = () => {
-  me && me.scope.off(), cs(null);
 };
-function ni(e) {
-  return e.vnode.shapeFlag & 4;
+const unsetCurrentInstance = () => {
+  currentInstance && currentInstance.scope.off();
+  internalSetCurrentInstance(null);
+};
+function isStatefulComponent(instance) {
+  return instance.vnode.shapeFlag & 4;
 }
-let Ut = !1;
-function nr(e, t = !1, s = !1) {
-  t && Js(t);
-  const { props: n, children: o } = e.vnode, i = ni(e);
-  Ol(e, n, i, t), Pl(e, o, s);
-  const l = i ? or(e, t) : void 0;
-  return t && Js(!1), l;
+let isInSSRComponentSetup = false;
+function setupComponent(instance, isSSR = false, optimized = false) {
+  isSSR && setInSSRSetupState(isSSR);
+  const { props, children } = instance.vnode;
+  const isStateful = isStatefulComponent(instance);
+  initProps(instance, props, isStateful, isSSR);
+  initSlots(instance, children, optimized);
+  const setupResult = isStateful ? setupStatefulComponent(instance, isSSR) : void 0;
+  isSSR && setInSSRSetupState(false);
+  return setupResult;
 }
-function or(e, t) {
-  const s = e.type;
-  e.accessCache = /* @__PURE__ */ Object.create(null), e.proxy = new Proxy(e.ctx, xl);
-  const { setup: n } = s;
-  if (n) {
-    Qe();
-    const o = e.setupContext = n.length > 1 ? lr(e) : null, i = Wt(e), l = Kt(
-      n,
-      e,
+function setupStatefulComponent(instance, isSSR) {
+  const Component = instance.type;
+  instance.accessCache = /* @__PURE__ */ Object.create(null);
+  instance.proxy = new Proxy(instance.ctx, PublicInstanceProxyHandlers);
+  const { setup } = Component;
+  if (setup) {
+    pauseTracking();
+    const setupContext = instance.setupContext = setup.length > 1 ? createSetupContext(instance) : null;
+    const reset = setCurrentInstance(instance);
+    const setupResult = callWithErrorHandling(
+      setup,
+      instance,
       0,
       [
-        e.props,
-        o
+        instance.props,
+        setupContext
       ]
-    ), r = Qn(l);
-    if (et(), i(), (r || e.sp) && !Rt(e) && Mo(e), r) {
-      if (l.then(Rn, Rn), t)
-        return l.then((c) => {
-          Fn(e, c);
-        }).catch((c) => {
-          bs(c, e, 0);
+    );
+    const isAsyncSetup = isPromise(setupResult);
+    resetTracking();
+    reset();
+    if ((isAsyncSetup || instance.sp) && !isAsyncWrapper(instance)) {
+      markAsyncBoundary(instance);
+    }
+    if (isAsyncSetup) {
+      setupResult.then(unsetCurrentInstance, unsetCurrentInstance);
+      if (isSSR) {
+        return setupResult.then((resolvedResult) => {
+          handleSetupResult(instance, resolvedResult);
+        }).catch((e) => {
+          handleError(e, instance, 0);
         });
-      e.asyncDep = l;
-    } else
-      Fn(e, l);
-  } else
-    oi(e);
+      } else {
+        instance.asyncDep = setupResult;
+      }
+    } else {
+      handleSetupResult(instance, setupResult);
+    }
+  } else {
+    finishComponentSetup(instance);
+  }
 }
-function Fn(e, t, s) {
-  R(t) ? e.type.__ssrInlineRender ? e.ssrRender = t : e.render = t : ee(t) && (e.setupState = Co(t)), oi(e);
+function handleSetupResult(instance, setupResult, isSSR) {
+  if (isFunction(setupResult)) {
+    if (instance.type.__ssrInlineRender) {
+      instance.ssrRender = setupResult;
+    } else {
+      instance.render = setupResult;
+    }
+  } else if (isObject(setupResult)) {
+    instance.setupState = proxyRefs(setupResult);
+  } else ;
+  finishComponentSetup(instance);
 }
-function oi(e, t, s) {
-  const n = e.type;
-  e.render || (e.render = n.render || je);
+function finishComponentSetup(instance, isSSR, skipOptions) {
+  const Component = instance.type;
+  if (!instance.render) {
+    instance.render = Component.render || NOOP;
+  }
   {
-    const o = Wt(e);
-    Qe();
+    const reset = setCurrentInstance(instance);
+    pauseTracking();
     try {
-      wl(e);
+      applyOptions(instance);
     } finally {
-      et(), o();
+      resetTracking();
+      reset();
     }
   }
 }
-const ir = {
-  get(e, t) {
-    return re(e, "get", ""), e[t];
+const attrsProxyHandlers = {
+  get(target, key) {
+    track(target, "get", "");
+    return target[key];
   }
 };
-function lr(e) {
-  const t = (s) => {
-    e.exposed = s || {};
+function createSetupContext(instance) {
+  const expose = (exposed) => {
+    instance.exposed = exposed || {};
   };
-  return {
-    attrs: new Proxy(e.attrs, ir),
-    slots: e.slots,
-    emit: e.emit,
-    expose: t
-  };
+  {
+    return {
+      attrs: new Proxy(instance.attrs, attrsProxyHandlers),
+      slots: instance.slots,
+      emit: instance.emit,
+      expose
+    };
+  }
 }
-function xs(e) {
-  return e.exposed ? e.exposeProxy || (e.exposeProxy = new Proxy(Co(Ji(e.exposed)), {
-    get(t, s) {
-      if (s in t)
-        return t[s];
-      if (s in Ft)
-        return Ft[s](e);
-    },
-    has(t, s) {
-      return s in t || s in Ft;
+function getComponentPublicInstance(instance) {
+  if (instance.exposed) {
+    return instance.exposeProxy || (instance.exposeProxy = new Proxy(proxyRefs(markRaw(instance.exposed)), {
+      get(target, key) {
+        if (key in target) {
+          return target[key];
+        } else if (key in publicPropertiesMap) {
+          return publicPropertiesMap[key](instance);
+        }
+      },
+      has(target, key) {
+        return key in target || key in publicPropertiesMap;
+      }
+    }));
+  } else {
+    return instance.proxy;
+  }
+}
+const classifyRE = /(?:^|[-_])(\w)/g;
+const classify = (str) => str.replace(classifyRE, (c) => c.toUpperCase()).replace(/[-_]/g, "");
+function getComponentName(Component, includeInferred = true) {
+  return isFunction(Component) ? Component.displayName || Component.name : Component.name || includeInferred && Component.__name;
+}
+function formatComponentName(instance, Component, isRoot = false) {
+  let name = getComponentName(Component);
+  if (!name && Component.__file) {
+    const match = Component.__file.match(/([^/\\]+)\.\w+$/);
+    if (match) {
+      name = match[1];
     }
-  })) : e.proxy;
+  }
+  if (!name && instance && instance.parent) {
+    const inferFromRegistry = (registry) => {
+      for (const key in registry) {
+        if (registry[key] === Component) {
+          return key;
+        }
+      }
+    };
+    name = inferFromRegistry(
+      instance.components || instance.parent.type.components
+    ) || inferFromRegistry(instance.appContext.components);
+  }
+  return name ? classify(name) : isRoot ? `App` : `Anonymous`;
 }
-function rr(e) {
-  return R(e) && "__vccOpts" in e;
+function isClassComponent(value) {
+  return isFunction(value) && "__vccOpts" in value;
 }
-const Ie = (e, t) => Qi(e, t, Ut), cr = "3.5.13";
+const computed = (getterOrOptions, debugOptions) => {
+  const c = computed$1(getterOrOptions, debugOptions, isInSSRComponentSetup);
+  return c;
+};
+const version = "3.5.13";
 /**
 * @vue/runtime-dom v3.5.13
 * (c) 2018-present Yuxi (Evan) You and Vue contributors
 * @license MIT
 **/
-let Gs;
-const Vn = typeof window < "u" && window.trustedTypes;
-if (Vn)
+let policy = void 0;
+const tt = typeof window !== "undefined" && window.trustedTypes;
+if (tt) {
   try {
-    Gs = /* @__PURE__ */ Vn.createPolicy("vue", {
-      createHTML: (e) => e
+    policy = /* @__PURE__ */ tt.createPolicy("vue", {
+      createHTML: (val) => val
     });
-  } catch {
+  } catch (e) {
   }
-const ii = Gs ? (e) => Gs.createHTML(e) : (e) => e, ur = "http://www.w3.org/2000/svg", ar = "http://www.w3.org/1998/Math/MathML", Ue = typeof document < "u" ? document : null, jn = Ue && /* @__PURE__ */ Ue.createElement("template"), fr = {
-  insert: (e, t, s) => {
-    t.insertBefore(e, s || null);
+}
+const unsafeToTrustedHTML = policy ? (val) => policy.createHTML(val) : (val) => val;
+const svgNS = "http://www.w3.org/2000/svg";
+const mathmlNS = "http://www.w3.org/1998/Math/MathML";
+const doc = typeof document !== "undefined" ? document : null;
+const templateContainer = doc && /* @__PURE__ */ doc.createElement("template");
+const nodeOps = {
+  insert: (child, parent, anchor) => {
+    parent.insertBefore(child, anchor || null);
   },
-  remove: (e) => {
-    const t = e.parentNode;
-    t && t.removeChild(e);
+  remove: (child) => {
+    const parent = child.parentNode;
+    if (parent) {
+      parent.removeChild(child);
+    }
   },
-  createElement: (e, t, s, n) => {
-    const o = t === "svg" ? Ue.createElementNS(ur, e) : t === "mathml" ? Ue.createElementNS(ar, e) : s ? Ue.createElement(e, { is: s }) : Ue.createElement(e);
-    return e === "select" && n && n.multiple != null && o.setAttribute("multiple", n.multiple), o;
+  createElement: (tag, namespace, is, props) => {
+    const el = namespace === "svg" ? doc.createElementNS(svgNS, tag) : namespace === "mathml" ? doc.createElementNS(mathmlNS, tag) : is ? doc.createElement(tag, { is }) : doc.createElement(tag);
+    if (tag === "select" && props && props.multiple != null) {
+      el.setAttribute("multiple", props.multiple);
+    }
+    return el;
   },
-  createText: (e) => Ue.createTextNode(e),
-  createComment: (e) => Ue.createComment(e),
-  setText: (e, t) => {
-    e.nodeValue = t;
+  createText: (text) => doc.createTextNode(text),
+  createComment: (text) => doc.createComment(text),
+  setText: (node, text) => {
+    node.nodeValue = text;
   },
-  setElementText: (e, t) => {
-    e.textContent = t;
+  setElementText: (el, text) => {
+    el.textContent = text;
   },
-  parentNode: (e) => e.parentNode,
-  nextSibling: (e) => e.nextSibling,
-  querySelector: (e) => Ue.querySelector(e),
-  setScopeId(e, t) {
-    e.setAttribute(t, "");
+  parentNode: (node) => node.parentNode,
+  nextSibling: (node) => node.nextSibling,
+  querySelector: (selector) => doc.querySelector(selector),
+  setScopeId(el, id) {
+    el.setAttribute(id, "");
   },
   // __UNSAFE__
   // Reason: innerHTML.
   // Static content here can only come from compiled templates.
   // As long as the user only uses trusted templates, this is safe.
-  insertStaticContent(e, t, s, n, o, i) {
-    const l = s ? s.previousSibling : t.lastChild;
-    if (o && (o === i || o.nextSibling))
-      for (; t.insertBefore(o.cloneNode(!0), s), !(o === i || !(o = o.nextSibling)); )
-        ;
-    else {
-      jn.innerHTML = ii(
-        n === "svg" ? `<svg>${e}</svg>` : n === "mathml" ? `<math>${e}</math>` : e
-      );
-      const r = jn.content;
-      if (n === "svg" || n === "mathml") {
-        const c = r.firstChild;
-        for (; c.firstChild; )
-          r.appendChild(c.firstChild);
-        r.removeChild(c);
+  insertStaticContent(content, parent, anchor, namespace, start, end) {
+    const before = anchor ? anchor.previousSibling : parent.lastChild;
+    if (start && (start === end || start.nextSibling)) {
+      while (true) {
+        parent.insertBefore(start.cloneNode(true), anchor);
+        if (start === end || !(start = start.nextSibling)) break;
       }
-      t.insertBefore(r, s);
+    } else {
+      templateContainer.innerHTML = unsafeToTrustedHTML(
+        namespace === "svg" ? `<svg>${content}</svg>` : namespace === "mathml" ? `<math>${content}</math>` : content
+      );
+      const template = templateContainer.content;
+      if (namespace === "svg" || namespace === "mathml") {
+        const wrapper = template.firstChild;
+        while (wrapper.firstChild) {
+          template.appendChild(wrapper.firstChild);
+        }
+        template.removeChild(wrapper);
+      }
+      parent.insertBefore(template, anchor);
     }
     return [
       // first
-      l ? l.nextSibling : t.firstChild,
+      before ? before.nextSibling : parent.firstChild,
       // last
-      s ? s.previousSibling : t.lastChild
+      anchor ? anchor.previousSibling : parent.lastChild
     ];
   }
-}, dr = Symbol("_vtc");
-function pr(e, t, s) {
-  const n = e[dr];
-  n && (t = (t ? [t, ...n] : [...n]).join(" ")), t == null ? e.removeAttribute("class") : s ? e.setAttribute("class", t) : e.className = t;
+};
+const vtcKey = Symbol("_vtc");
+function patchClass(el, value, isSVG) {
+  const transitionClasses = el[vtcKey];
+  if (transitionClasses) {
+    value = (value ? [value, ...transitionClasses] : [...transitionClasses]).join(" ");
+  }
+  if (value == null) {
+    el.removeAttribute("class");
+  } else if (isSVG) {
+    el.setAttribute("class", value);
+  } else {
+    el.className = value;
+  }
 }
-const Dn = Symbol("_vod"), hr = Symbol("_vsh"), gr = Symbol(""), mr = /(^|;)\s*display\s*:/;
-function br(e, t, s) {
-  const n = e.style, o = se(s);
-  let i = !1;
-  if (s && !o) {
-    if (t)
-      if (se(t))
-        for (const l of t.split(";")) {
-          const r = l.slice(0, l.indexOf(":")).trim();
-          s[r] == null && ts(n, r, "");
+const vShowOriginalDisplay = Symbol("_vod");
+const vShowHidden = Symbol("_vsh");
+const CSS_VAR_TEXT = Symbol("");
+const displayRE = /(^|;)\s*display\s*:/;
+function patchStyle(el, prev, next) {
+  const style = el.style;
+  const isCssString = isString(next);
+  let hasControlledDisplay = false;
+  if (next && !isCssString) {
+    if (prev) {
+      if (!isString(prev)) {
+        for (const key in prev) {
+          if (next[key] == null) {
+            setStyle(style, key, "");
+          }
         }
-      else
-        for (const l in t)
-          s[l] == null && ts(n, l, "");
-    for (const l in s)
-      l === "display" && (i = !0), ts(n, l, s[l]);
-  } else if (o) {
-    if (t !== s) {
-      const l = n[gr];
-      l && (s += ";" + l), n.cssText = s, i = mr.test(s);
+      } else {
+        for (const prevStyle of prev.split(";")) {
+          const key = prevStyle.slice(0, prevStyle.indexOf(":")).trim();
+          if (next[key] == null) {
+            setStyle(style, key, "");
+          }
+        }
+      }
     }
-  } else t && e.removeAttribute("style");
-  Dn in e && (e[Dn] = i ? n.display : "", e[hr] && (n.display = "none"));
-}
-const Hn = /\s*!important$/;
-function ts(e, t, s) {
-  if (A(s))
-    s.forEach((n) => ts(e, t, n));
-  else if (s == null && (s = ""), t.startsWith("--"))
-    e.setProperty(t, s);
-  else {
-    const n = _r(e, t);
-    Hn.test(s) ? e.setProperty(
-      pt(n),
-      s.replace(Hn, ""),
-      "important"
-    ) : e[n] = s;
+    for (const key in next) {
+      if (key === "display") {
+        hasControlledDisplay = true;
+      }
+      setStyle(style, key, next[key]);
+    }
+  } else {
+    if (isCssString) {
+      if (prev !== next) {
+        const cssVarText = style[CSS_VAR_TEXT];
+        if (cssVarText) {
+          next += ";" + cssVarText;
+        }
+        style.cssText = next;
+        hasControlledDisplay = displayRE.test(next);
+      }
+    } else if (prev) {
+      el.removeAttribute("style");
+    }
+  }
+  if (vShowOriginalDisplay in el) {
+    el[vShowOriginalDisplay] = hasControlledDisplay ? style.display : "";
+    if (el[vShowHidden]) {
+      style.display = "none";
+    }
   }
 }
-const Nn = ["Webkit", "Moz", "ms"], As = {};
-function _r(e, t) {
-  const s = As[t];
-  if (s)
-    return s;
-  let n = Ze(t);
-  if (n !== "filter" && n in e)
-    return As[t] = n;
-  n = so(n);
-  for (let o = 0; o < Nn.length; o++) {
-    const i = Nn[o] + n;
-    if (i in e)
-      return As[t] = i;
+const importantRE = /\s*!important$/;
+function setStyle(style, name, val) {
+  if (isArray(val)) {
+    val.forEach((v) => setStyle(style, name, v));
+  } else {
+    if (val == null) val = "";
+    if (name.startsWith("--")) {
+      style.setProperty(name, val);
+    } else {
+      const prefixed = autoPrefix(style, name);
+      if (importantRE.test(val)) {
+        style.setProperty(
+          hyphenate(prefixed),
+          val.replace(importantRE, ""),
+          "important"
+        );
+      } else {
+        style[prefixed] = val;
+      }
+    }
   }
-  return t;
 }
-const Ln = "http://www.w3.org/1999/xlink";
-function Un(e, t, s, n, o, i = Ei(t)) {
-  n && t.startsWith("xlink:") ? s == null ? e.removeAttributeNS(Ln, t.slice(6, t.length)) : e.setAttributeNS(Ln, t, s) : s == null || i && !oo(s) ? e.removeAttribute(t) : e.setAttribute(
-    t,
-    i ? "" : De(s) ? String(s) : s
-  );
+const prefixes = ["Webkit", "Moz", "ms"];
+const prefixCache = {};
+function autoPrefix(style, rawName) {
+  const cached = prefixCache[rawName];
+  if (cached) {
+    return cached;
+  }
+  let name = camelize(rawName);
+  if (name !== "filter" && name in style) {
+    return prefixCache[rawName] = name;
+  }
+  name = capitalize(name);
+  for (let i = 0; i < prefixes.length; i++) {
+    const prefixed = prefixes[i] + name;
+    if (prefixed in style) {
+      return prefixCache[rawName] = prefixed;
+    }
+  }
+  return rawName;
 }
-function Bn(e, t, s, n, o) {
-  if (t === "innerHTML" || t === "textContent") {
-    s != null && (e[t] = t === "innerHTML" ? ii(s) : s);
+const xlinkNS = "http://www.w3.org/1999/xlink";
+function patchAttr(el, key, value, isSVG, instance, isBoolean = isSpecialBooleanAttr(key)) {
+  if (isSVG && key.startsWith("xlink:")) {
+    if (value == null) {
+      el.removeAttributeNS(xlinkNS, key.slice(6, key.length));
+    } else {
+      el.setAttributeNS(xlinkNS, key, value);
+    }
+  } else {
+    if (value == null || isBoolean && !includeBooleanAttr(value)) {
+      el.removeAttribute(key);
+    } else {
+      el.setAttribute(
+        key,
+        isBoolean ? "" : isSymbol(value) ? String(value) : value
+      );
+    }
+  }
+}
+function patchDOMProp(el, key, value, parentComponent, attrName) {
+  if (key === "innerHTML" || key === "textContent") {
+    if (value != null) {
+      el[key] = key === "innerHTML" ? unsafeToTrustedHTML(value) : value;
+    }
     return;
   }
-  const i = e.tagName;
-  if (t === "value" && i !== "PROGRESS" && // custom elements may use _value internally
-  !i.includes("-")) {
-    const r = i === "OPTION" ? e.getAttribute("value") || "" : e.value, c = s == null ? (
+  const tag = el.tagName;
+  if (key === "value" && tag !== "PROGRESS" && // custom elements may use _value internally
+  !tag.includes("-")) {
+    const oldValue = tag === "OPTION" ? el.getAttribute("value") || "" : el.value;
+    const newValue = value == null ? (
       // #11647: value should be set as empty string for null and undefined,
       // but <input type="checkbox"> should be set as 'on'.
-      e.type === "checkbox" ? "on" : ""
-    ) : String(s);
-    (r !== c || !("_value" in e)) && (e.value = c), s == null && e.removeAttribute(t), e._value = s;
+      el.type === "checkbox" ? "on" : ""
+    ) : String(value);
+    if (oldValue !== newValue || !("_value" in el)) {
+      el.value = newValue;
+    }
+    if (value == null) {
+      el.removeAttribute(key);
+    }
+    el._value = value;
     return;
   }
-  let l = !1;
-  if (s === "" || s == null) {
-    const r = typeof e[t];
-    r === "boolean" ? s = oo(s) : s == null && r === "string" ? (s = "", l = !0) : r === "number" && (s = 0, l = !0);
+  let needRemove = false;
+  if (value === "" || value == null) {
+    const type = typeof el[key];
+    if (type === "boolean") {
+      value = includeBooleanAttr(value);
+    } else if (value == null && type === "string") {
+      value = "";
+      needRemove = true;
+    } else if (type === "number") {
+      value = 0;
+      needRemove = true;
+    }
   }
   try {
-    e[t] = s;
-  } catch {
+    el[key] = value;
+  } catch (e) {
   }
-  l && e.removeAttribute(o || t);
+  needRemove && el.removeAttribute(attrName || key);
 }
-function ct(e, t, s, n) {
-  e.addEventListener(t, s, n);
+function addEventListener(el, event, handler, options) {
+  el.addEventListener(event, handler, options);
 }
-function vr(e, t, s, n) {
-  e.removeEventListener(t, s, n);
+function removeEventListener(el, event, handler, options) {
+  el.removeEventListener(event, handler, options);
 }
-const Kn = Symbol("_vei");
-function yr(e, t, s, n, o = null) {
-  const i = e[Kn] || (e[Kn] = {}), l = i[t];
-  if (n && l)
-    l.value = n;
-  else {
-    const [r, c] = xr(t);
-    if (n) {
-      const p = i[t] = Cr(
-        n,
-        o
+const veiKey = Symbol("_vei");
+function patchEvent(el, rawName, prevValue, nextValue, instance = null) {
+  const invokers = el[veiKey] || (el[veiKey] = {});
+  const existingInvoker = invokers[rawName];
+  if (nextValue && existingInvoker) {
+    existingInvoker.value = nextValue;
+  } else {
+    const [name, options] = parseName(rawName);
+    if (nextValue) {
+      const invoker = invokers[rawName] = createInvoker(
+        nextValue,
+        instance
       );
-      ct(e, r, p, c);
-    } else l && (vr(e, r, l, c), i[t] = void 0);
+      addEventListener(el, name, invoker, options);
+    } else if (existingInvoker) {
+      removeEventListener(el, name, existingInvoker, options);
+      invokers[rawName] = void 0;
+    }
   }
 }
-const Wn = /(?:Once|Passive|Capture)$/;
-function xr(e) {
-  let t;
-  if (Wn.test(e)) {
-    t = {};
-    let n;
-    for (; n = e.match(Wn); )
-      e = e.slice(0, e.length - n[0].length), t[n[0].toLowerCase()] = !0;
+const optionsModifierRE = /(?:Once|Passive|Capture)$/;
+function parseName(name) {
+  let options;
+  if (optionsModifierRE.test(name)) {
+    options = {};
+    let m;
+    while (m = name.match(optionsModifierRE)) {
+      name = name.slice(0, name.length - m[0].length);
+      options[m[0].toLowerCase()] = true;
+    }
   }
-  return [e[2] === ":" ? e.slice(3) : pt(e.slice(2)), t];
+  const event = name[2] === ":" ? name.slice(3) : hyphenate(name.slice(2));
+  return [event, options];
 }
-let Ps = 0;
-const wr = /* @__PURE__ */ Promise.resolve(), Sr = () => Ps || (wr.then(() => Ps = 0), Ps = Date.now());
-function Cr(e, t) {
-  const s = (n) => {
-    if (!n._vts)
-      n._vts = Date.now();
-    else if (n._vts <= s.attached)
+let cachedNow = 0;
+const p = /* @__PURE__ */ Promise.resolve();
+const getNow = () => cachedNow || (p.then(() => cachedNow = 0), cachedNow = Date.now());
+function createInvoker(initialValue, instance) {
+  const invoker = (e) => {
+    if (!e._vts) {
+      e._vts = Date.now();
+    } else if (e._vts <= invoker.attached) {
       return;
-    He(
-      Er(n, s.value),
-      t,
+    }
+    callWithAsyncErrorHandling(
+      patchStopImmediatePropagation(e, invoker.value),
+      instance,
       5,
-      [n]
+      [e]
     );
   };
-  return s.value = e, s.attached = Sr(), s;
+  invoker.value = initialValue;
+  invoker.attached = getNow();
+  return invoker;
 }
-function Er(e, t) {
-  if (A(t)) {
-    const s = e.stopImmediatePropagation;
-    return e.stopImmediatePropagation = () => {
-      s.call(e), e._stopped = !0;
-    }, t.map(
-      (n) => (o) => !o._stopped && n && n(o)
+function patchStopImmediatePropagation(e, value) {
+  if (isArray(value)) {
+    const originalStop = e.stopImmediatePropagation;
+    e.stopImmediatePropagation = () => {
+      originalStop.call(e);
+      e._stopped = true;
+    };
+    return value.map(
+      (fn) => (e2) => !e2._stopped && fn && fn(e2)
     );
-  } else
-    return t;
-}
-const zn = (e) => e.charCodeAt(0) === 111 && e.charCodeAt(1) === 110 && // lowercase letter
-e.charCodeAt(2) > 96 && e.charCodeAt(2) < 123, $r = (e, t, s, n, o, i) => {
-  const l = o === "svg";
-  t === "class" ? pr(e, n, l) : t === "style" ? br(e, s, n) : as(t) ? en(t) || yr(e, t, s, n, i) : (t[0] === "." ? (t = t.slice(1), !0) : t[0] === "^" ? (t = t.slice(1), !1) : Tr(e, t, n, l)) ? (Bn(e, t, n), !e.tagName.includes("-") && (t === "value" || t === "checked" || t === "selected") && Un(e, t, n, l, i, t !== "value")) : /* #11081 force set props for possible async custom element */ e._isVueCE && (/[A-Z]/.test(t) || !se(n)) ? Bn(e, Ze(t), n, i, t) : (t === "true-value" ? e._trueValue = n : t === "false-value" && (e._falseValue = n), Un(e, t, n, l));
-};
-function Tr(e, t, s, n) {
-  if (n)
-    return !!(t === "innerHTML" || t === "textContent" || t in e && zn(t) && R(s));
-  if (t === "spellcheck" || t === "draggable" || t === "translate" || t === "form" || t === "list" && e.tagName === "INPUT" || t === "type" && e.tagName === "TEXTAREA")
-    return !1;
-  if (t === "width" || t === "height") {
-    const o = e.tagName;
-    if (o === "IMG" || o === "VIDEO" || o === "CANVAS" || o === "SOURCE")
-      return !1;
+  } else {
+    return value;
   }
-  return zn(t) && se(s) ? !1 : t in e;
 }
-const us = (e) => {
-  const t = e.props["onUpdate:modelValue"] || !1;
-  return A(t) ? (s) => Zt(t, s) : t;
+const isNativeOn = (key) => key.charCodeAt(0) === 111 && key.charCodeAt(1) === 110 && // lowercase letter
+key.charCodeAt(2) > 96 && key.charCodeAt(2) < 123;
+const patchProp = (el, key, prevValue, nextValue, namespace, parentComponent) => {
+  const isSVG = namespace === "svg";
+  if (key === "class") {
+    patchClass(el, nextValue, isSVG);
+  } else if (key === "style") {
+    patchStyle(el, prevValue, nextValue);
+  } else if (isOn(key)) {
+    if (!isModelListener(key)) {
+      patchEvent(el, key, prevValue, nextValue, parentComponent);
+    }
+  } else if (key[0] === "." ? (key = key.slice(1), true) : key[0] === "^" ? (key = key.slice(1), false) : shouldSetAsProp(el, key, nextValue, isSVG)) {
+    patchDOMProp(el, key, nextValue);
+    if (!el.tagName.includes("-") && (key === "value" || key === "checked" || key === "selected")) {
+      patchAttr(el, key, nextValue, isSVG, parentComponent, key !== "value");
+    }
+  } else if (
+    // #11081 force set props for possible async custom element
+    el._isVueCE && (/[A-Z]/.test(key) || !isString(nextValue))
+  ) {
+    patchDOMProp(el, camelize(key), nextValue, parentComponent, key);
+  } else {
+    if (key === "true-value") {
+      el._trueValue = nextValue;
+    } else if (key === "false-value") {
+      el._falseValue = nextValue;
+    }
+    patchAttr(el, key, nextValue, isSVG);
+  }
 };
-function Ir(e) {
-  e.target.composing = !0;
+function shouldSetAsProp(el, key, value, isSVG) {
+  if (isSVG) {
+    if (key === "innerHTML" || key === "textContent") {
+      return true;
+    }
+    if (key in el && isNativeOn(key) && isFunction(value)) {
+      return true;
+    }
+    return false;
+  }
+  if (key === "spellcheck" || key === "draggable" || key === "translate") {
+    return false;
+  }
+  if (key === "form") {
+    return false;
+  }
+  if (key === "list" && el.tagName === "INPUT") {
+    return false;
+  }
+  if (key === "type" && el.tagName === "TEXTAREA") {
+    return false;
+  }
+  if (key === "width" || key === "height") {
+    const tag = el.tagName;
+    if (tag === "IMG" || tag === "VIDEO" || tag === "CANVAS" || tag === "SOURCE") {
+      return false;
+    }
+  }
+  if (isNativeOn(key) && isString(value)) {
+    return false;
+  }
+  return key in el;
 }
-function qn(e) {
-  const t = e.target;
-  t.composing && (t.composing = !1, t.dispatchEvent(new Event("input")));
+const getModelAssigner = (vnode) => {
+  const fn = vnode.props["onUpdate:modelValue"] || false;
+  return isArray(fn) ? (value) => invokeArrayFns(fn, value) : fn;
+};
+function onCompositionStart(e) {
+  e.target.composing = true;
 }
-const St = Symbol("_assign"), Se = {
-  created(e, { modifiers: { lazy: t, trim: s, number: n } }, o) {
-    e[St] = us(o);
-    const i = n || o.props && o.props.type === "number";
-    ct(e, t ? "change" : "input", (l) => {
-      if (l.target.composing) return;
-      let r = e.value;
-      s && (r = r.trim()), i && (r = Ds(r)), e[St](r);
-    }), s && ct(e, "change", () => {
-      e.value = e.value.trim();
-    }), t || (ct(e, "compositionstart", Ir), ct(e, "compositionend", qn), ct(e, "change", qn));
+function onCompositionEnd(e) {
+  const target = e.target;
+  if (target.composing) {
+    target.composing = false;
+    target.dispatchEvent(new Event("input"));
+  }
+}
+const assignKey = Symbol("_assign");
+const vModelText = {
+  created(el, { modifiers: { lazy, trim, number } }, vnode) {
+    el[assignKey] = getModelAssigner(vnode);
+    const castToNumber = number || vnode.props && vnode.props.type === "number";
+    addEventListener(el, lazy ? "change" : "input", (e) => {
+      if (e.target.composing) return;
+      let domValue = el.value;
+      if (trim) {
+        domValue = domValue.trim();
+      }
+      if (castToNumber) {
+        domValue = looseToNumber(domValue);
+      }
+      el[assignKey](domValue);
+    });
+    if (trim) {
+      addEventListener(el, "change", () => {
+        el.value = el.value.trim();
+      });
+    }
+    if (!lazy) {
+      addEventListener(el, "compositionstart", onCompositionStart);
+      addEventListener(el, "compositionend", onCompositionEnd);
+      addEventListener(el, "change", onCompositionEnd);
+    }
   },
   // set value on mounted so it's after min/max for type="range"
-  mounted(e, { value: t }) {
-    e.value = t ?? "";
+  mounted(el, { value }) {
+    el.value = value == null ? "" : value;
   },
-  beforeUpdate(e, { value: t, oldValue: s, modifiers: { lazy: n, trim: o, number: i } }, l) {
-    if (e[St] = us(l), e.composing) return;
-    const r = (i || e.type === "number") && !/^0\d/.test(e.value) ? Ds(e.value) : e.value, c = t ?? "";
-    r !== c && (document.activeElement === e && e.type !== "range" && (n && t === s || o && e.value.trim() === c) || (e.value = c));
+  beforeUpdate(el, { value, oldValue, modifiers: { lazy, trim, number } }, vnode) {
+    el[assignKey] = getModelAssigner(vnode);
+    if (el.composing) return;
+    const elValue = (number || el.type === "number") && !/^0\d/.test(el.value) ? looseToNumber(el.value) : el.value;
+    const newValue = value == null ? "" : value;
+    if (elValue === newValue) {
+      return;
+    }
+    if (document.activeElement === el && el.type !== "range") {
+      if (lazy && value === oldValue) {
+        return;
+      }
+      if (trim && el.value.trim() === newValue) {
+        return;
+      }
+    }
+    el.value = newValue;
   }
-}, Ys = {
+};
+const vModelCheckbox = {
   // #4096 array checkboxes need to be deep traversed
-  deep: !0,
-  created(e, t, s) {
-    e[St] = us(s), ct(e, "change", () => {
-      const n = e._modelValue, o = Or(e), i = e.checked, l = e[St];
-      if (A(n)) {
-        const r = io(n, o), c = r !== -1;
-        if (i && !c)
-          l(n.concat(o));
-        else if (!i && c) {
-          const p = [...n];
-          p.splice(r, 1), l(p);
+  deep: true,
+  created(el, _, vnode) {
+    el[assignKey] = getModelAssigner(vnode);
+    addEventListener(el, "change", () => {
+      const modelValue = el._modelValue;
+      const elementValue = getValue(el);
+      const checked = el.checked;
+      const assign = el[assignKey];
+      if (isArray(modelValue)) {
+        const index = looseIndexOf(modelValue, elementValue);
+        const found = index !== -1;
+        if (checked && !found) {
+          assign(modelValue.concat(elementValue));
+        } else if (!checked && found) {
+          const filtered = [...modelValue];
+          filtered.splice(index, 1);
+          assign(filtered);
         }
-      } else if (fs(n)) {
-        const r = new Set(n);
-        i ? r.add(o) : r.delete(o), l(r);
-      } else
-        l(li(e, i));
+      } else if (isSet(modelValue)) {
+        const cloned = new Set(modelValue);
+        if (checked) {
+          cloned.add(elementValue);
+        } else {
+          cloned.delete(elementValue);
+        }
+        assign(cloned);
+      } else {
+        assign(getCheckboxValue(el, checked));
+      }
     });
   },
   // set initial checked on mount to wait for true-value/false-value
-  mounted: Jn,
-  beforeUpdate(e, t, s) {
-    e[St] = us(s), Jn(e, t, s);
+  mounted: setChecked,
+  beforeUpdate(el, binding, vnode) {
+    el[assignKey] = getModelAssigner(vnode);
+    setChecked(el, binding, vnode);
   }
 };
-function Jn(e, { value: t, oldValue: s }, n) {
-  e._modelValue = t;
-  let o;
-  if (A(t))
-    o = io(t, n.props.value) > -1;
-  else if (fs(t))
-    o = t.has(n.props.value);
-  else {
-    if (t === s) return;
-    o = hs(t, li(e, !0));
+function setChecked(el, { value, oldValue }, vnode) {
+  el._modelValue = value;
+  let checked;
+  if (isArray(value)) {
+    checked = looseIndexOf(value, vnode.props.value) > -1;
+  } else if (isSet(value)) {
+    checked = value.has(vnode.props.value);
+  } else {
+    if (value === oldValue) return;
+    checked = looseEqual(value, getCheckboxValue(el, true));
   }
-  e.checked !== o && (e.checked = o);
+  if (el.checked !== checked) {
+    el.checked = checked;
+  }
 }
-function Or(e) {
-  return "_value" in e ? e._value : e.value;
+function getValue(el) {
+  return "_value" in el ? el._value : el.value;
 }
-function li(e, t) {
-  const s = t ? "_trueValue" : "_falseValue";
-  return s in e ? e[s] : t;
+function getCheckboxValue(el, checked) {
+  const key = checked ? "_trueValue" : "_falseValue";
+  return key in el ? el[key] : checked;
 }
-const Mr = ["ctrl", "shift", "alt", "meta"], kr = {
+const systemModifiers = ["ctrl", "shift", "alt", "meta"];
+const modifierGuards = {
   stop: (e) => e.stopPropagation(),
   prevent: (e) => e.preventDefault(),
   self: (e) => e.target !== e.currentTarget,
@@ -3837,85 +6217,112 @@ const Mr = ["ctrl", "shift", "alt", "meta"], kr = {
   left: (e) => "button" in e && e.button !== 0,
   middle: (e) => "button" in e && e.button !== 1,
   right: (e) => "button" in e && e.button !== 2,
-  exact: (e, t) => Mr.some((s) => e[`${s}Key`] && !t.includes(s))
-}, rt = (e, t) => {
-  const s = e._withMods || (e._withMods = {}), n = t.join(".");
-  return s[n] || (s[n] = (o, ...i) => {
-    for (let l = 0; l < t.length; l++) {
-      const r = kr[t[l]];
-      if (r && r(o, t)) return;
-    }
-    return e(o, ...i);
-  });
-}, Ar = /* @__PURE__ */ fe({ patchProp: $r }, fr);
-let Gn;
-function Pr() {
-  return Gn || (Gn = Fl(Ar));
-}
-const Rr = (...e) => {
-  const t = Pr().createApp(...e), { mount: s } = t;
-  return t.mount = (n) => {
-    const o = Vr(n);
-    if (!o) return;
-    const i = t._component;
-    !R(i) && !i.render && !i.template && (i.template = o.innerHTML), o.nodeType === 1 && (o.textContent = "");
-    const l = s(o, !1, Fr(o));
-    return o instanceof Element && (o.removeAttribute("v-cloak"), o.setAttribute("data-v-app", "")), l;
-  }, t;
+  exact: (e, modifiers) => systemModifiers.some((m) => e[`${m}Key`] && !modifiers.includes(m))
 };
-function Fr(e) {
-  if (e instanceof SVGElement)
+const withModifiers = (fn, modifiers) => {
+  const cache = fn._withMods || (fn._withMods = {});
+  const cacheKey = modifiers.join(".");
+  return cache[cacheKey] || (cache[cacheKey] = (event, ...args) => {
+    for (let i = 0; i < modifiers.length; i++) {
+      const guard = modifierGuards[modifiers[i]];
+      if (guard && guard(event, modifiers)) return;
+    }
+    return fn(event, ...args);
+  });
+};
+const rendererOptions = /* @__PURE__ */ extend({ patchProp }, nodeOps);
+let renderer;
+function ensureRenderer() {
+  return renderer || (renderer = createRenderer(rendererOptions));
+}
+const createApp = (...args) => {
+  const app2 = ensureRenderer().createApp(...args);
+  const { mount } = app2;
+  app2.mount = (containerOrSelector) => {
+    const container = normalizeContainer(containerOrSelector);
+    if (!container) return;
+    const component = app2._component;
+    if (!isFunction(component) && !component.render && !component.template) {
+      component.template = container.innerHTML;
+    }
+    if (container.nodeType === 1) {
+      container.textContent = "";
+    }
+    const proxy = mount(container, false, resolveRootNamespace(container));
+    if (container instanceof Element) {
+      container.removeAttribute("v-cloak");
+      container.setAttribute("data-v-app", "");
+    }
+    return proxy;
+  };
+  return app2;
+};
+function resolveRootNamespace(container) {
+  if (container instanceof SVGElement) {
     return "svg";
-  if (typeof MathMLElement == "function" && e instanceof MathMLElement)
+  }
+  if (typeof MathMLElement === "function" && container instanceof MathMLElement) {
     return "mathml";
+  }
 }
-function Vr(e) {
-  return se(e) ? document.querySelector(e) : e;
+function normalizeContainer(container) {
+  if (isString(container)) {
+    const res = document.querySelector(container);
+    return res;
+  }
+  return container;
 }
-const Rs = /* @__PURE__ */ new WeakMap();
-function jr(e, t) {
-  const s = document.createElement("div");
-  s.dataset.ideogram = t.widgetType, Object.assign(s.style, {
+const liveApps = /* @__PURE__ */ new WeakMap();
+function mountWidget(node, opts) {
+  const container = document.createElement("div");
+  container.dataset["ideogram"] = opts.widgetType;
+  Object.assign(container.style, {
     width: "100%",
     height: "100%",
-    minHeight: `${t.minHeight ?? 80}px`,
+    minHeight: `${opts.minHeight ?? 80}px`,
     overflow: "hidden",
     pointerEvents: "auto"
   });
-  let n = t.defaultValue;
-  const o = e.addDOMWidget(t.widgetName, t.widgetType, s, {
-    getMinHeight: () => t.minHeight ?? 80,
-    hideOnZoom: !1,
-    serialize: t.serialize ?? !0,
-    getValue: () => n,
-    setValue: (l) => {
-      n = l;
+  let storedValue = opts.defaultValue;
+  const widget = node.addDOMWidget(opts.widgetName, opts.widgetType, container, {
+    getMinHeight: () => opts.minHeight ?? 80,
+    hideOnZoom: false,
+    serialize: opts.serialize ?? true,
+    getValue: () => storedValue,
+    setValue: (v) => {
+      storedValue = v;
     }
   });
-  o.serializeValue = () => n, Promise.resolve().then(() => {
+  widget.serializeValue = () => storedValue;
+  Promise.resolve().then(() => {
     try {
-      const l = Rr(t.component, { widget: o, node: e });
-      l.mount(s), Rs.set(o, l);
-    } catch (l) {
-      console.error("[IdeogramStudio] failed to mount Vue widget", t.widgetType, l);
+      const vueApp = createApp(opts.component, { widget, node });
+      vueApp.mount(container);
+      liveApps.set(widget, vueApp);
+    } catch (err) {
+      console.error("[IdeogramStudio] failed to mount Vue widget", opts.widgetType, err);
     }
   });
-  const i = o.onRemove;
-  return o.onRemove = () => {
+  const previousOnRemove = widget.onRemove;
+  widget.onRemove = () => {
     try {
-      const l = Rs.get(o);
-      l && (l.unmount(), Rs.delete(o));
-    } catch (l) {
-      console.error("[IdeogramStudio] error during widget unmount", l);
+      const live = liveApps.get(widget);
+      if (live) {
+        live.unmount();
+        liveApps.delete(widget);
+      }
+    } catch (err) {
+      console.error("[IdeogramStudio] error during widget unmount", err);
     }
     try {
-      i?.call(o);
-    } catch (l) {
-      console.error("[IdeogramStudio] error in chained onRemove", l);
+      previousOnRemove?.call(widget);
+    } catch (err) {
+      console.error("[IdeogramStudio] error in chained onRemove", err);
     }
-  }, { widget: o };
+  };
+  return { widget };
 }
-const Yn = [
+const BOX_PALETTE = [
   "#3B82F6",
   "#F59E0B",
   "#10B981",
@@ -3927,12 +6334,13 @@ const Yn = [
   "#84CC16",
   "#06B6D4"
 ];
-let Xn = 0;
-function Dr() {
-  const e = Yn[Xn % Yn.length];
-  return Xn += 1, e;
+let _colorSeq = 0;
+function nextBoxColor() {
+  const c = BOX_PALETTE[_colorSeq % BOX_PALETTE.length];
+  _colorSeq += 1;
+  return c;
 }
-const Fs = [
+const FORMATS = [
   { label: "1:1 · 1024×1024", w: 1024, h: 1024 },
   { label: "3:2 · 1248×832", w: 1248, h: 832 },
   { label: "2:3 · 832×1248", w: 832, h: 1248 },
@@ -3942,12 +6350,12 @@ const Fs = [
   { label: "3:4 · 896×1152", w: 896, h: 1152 },
   { label: "16:10 · 1280×800", w: 1280, h: 800 }
 ];
-function Hr() {
-  return { lineWidth: 3, fillAlpha: 0.18, labelSize: 16, showIndex: !0, showText: !0 };
+function emptyOverlay() {
+  return { lineWidth: 3, fillAlpha: 0.18, labelSize: 16, showIndex: true, showText: true };
 }
-function Nr() {
+function emptyStyle() {
   return {
-    enabled: !0,
+    enabled: true,
     mode: "photo",
     aesthetics: "",
     lighting: "",
@@ -3957,353 +6365,470 @@ function Nr() {
     color_palette: []
   };
 }
-let Vs = 0;
-function ri() {
-  return Vs += 1, `el_${Vs}_${Vs * 2654435761 % 1e5}`;
+let _seq = 0;
+function newId() {
+  _seq += 1;
+  return `el_${_seq}_${_seq * 2654435761 % 1e5}`;
 }
-function js(e, t = null) {
-  return { id: ri(), type: e, bbox: t, desc: "", text: "", color_palette: [], boxColor: Dr(), linkId: null, enabled: !0 };
+function newElement(type, bbox = null) {
+  return { id: newId(), type, bbox, desc: "", text: "", color_palette: [], boxColor: nextBoxColor(), linkId: null, enabled: true };
 }
-function ss() {
+function emptyState() {
   return {
     high_level_description: "",
     width: 1024,
     height: 1024,
-    style: Nr(),
+    style: emptyStyle(),
     background: "",
     elements: [],
-    overlay: Hr()
+    overlay: emptyOverlay()
   };
 }
-const Lr = /^#[0-9A-F]{6}$/;
-function ci(e) {
-  let t = (e || "").trim().toUpperCase();
-  return t.startsWith("#") || (t = "#" + t), t.length === 4 && (t = "#" + t.slice(1).split("").map((s) => s + s).join("")), Lr.test(t) ? t : null;
+const HEX_RE = /^#[0-9A-F]{6}$/;
+function normalizeHex(raw) {
+  let h = (raw || "").trim().toUpperCase();
+  if (!h.startsWith("#")) h = "#" + h;
+  if (h.length === 4) h = "#" + h.slice(1).split("").map((c) => c + c).join("");
+  return HEX_RE.test(h) ? h : null;
 }
-function Zn(e, t, s, n) {
-  const o = [];
-  for (const i of e || []) {
-    const l = ci(i);
-    if (!l) {
-      i && i.trim() && n.push(`${s}: dropped invalid hex ${i}`);
+function cleanHexList(values, limit, where, warnings) {
+  const out = [];
+  for (const raw of values || []) {
+    const h = normalizeHex(raw);
+    if (!h) {
+      if (raw && raw.trim()) warnings.push(`${where}: dropped invalid hex ${raw}`);
       continue;
     }
-    o.push(l);
+    out.push(h);
   }
-  return o.length > t && (n.push(`${s}: ${o.length} colors exceeds max ${t}; truncated`), o.length = t), o.length ? o : null;
+  if (out.length > limit) {
+    warnings.push(`${where}: ${out.length} colors exceeds max ${limit}; truncated`);
+    out.length = limit;
+  }
+  return out.length ? out : null;
 }
-function Ur(e) {
-  const t = (l) => Math.max(0, Math.min(1e3, Math.round(l)));
-  let [s, n, o, i] = e.map(t);
-  return s > o && ([s, o] = [o, s]), n > i && ([n, i] = [i, n]), [s, n, o, i];
+function clampBbox(b) {
+  const c = (v) => Math.max(0, Math.min(1e3, Math.round(v)));
+  let [y0, x0, y1, x1] = b.map(c);
+  if (y0 > y1) [y0, y1] = [y1, y0];
+  if (x0 > x1) [x0, x1] = [x1, x0];
+  return [y0, x0, y1, x1];
 }
-function Xs(e) {
-  const t = [], s = {}, n = e.high_level_description.trim();
-  if (n ? s.high_level_description = n : t.push("high_level_description is empty (strongly recommended)"), e.style.enabled) {
-    const l = e.style, r = l.mode === "photo", c = {};
-    for (const m of ["aesthetics", "lighting", "medium"]) {
-      const C = l[m].trim();
-      C ? c[m] = C : t.push(`style_description.${m} is required`);
+function buildCaption(state) {
+  const warnings = [];
+  const out = {};
+  const hld = state.high_level_description.trim();
+  if (hld) out.high_level_description = hld;
+  else warnings.push("high_level_description is empty (strongly recommended)");
+  if (state.style.enabled) {
+    const st = state.style;
+    const isPhoto = st.mode === "photo";
+    const s = {};
+    for (const k of ["aesthetics", "lighting", "medium"]) {
+      const v = st[k].trim();
+      if (v) s[k] = v;
+      else warnings.push(`style_description.${k} is required`);
     }
-    if (r) {
-      const m = l.photo.trim();
-      m ? c.photo = m : t.push("style_description.photo is required in photo mode");
+    if (isPhoto) {
+      const v = st.photo.trim();
+      if (v) s.photo = v;
+      else warnings.push("style_description.photo is required in photo mode");
     } else {
-      const m = l.art_style.trim();
-      m ? c.art_style = m : t.push("style_description.art_style is required in art mode");
+      const v = st.art_style.trim();
+      if (v) s.art_style = v;
+      else warnings.push("style_description.art_style is required in art mode");
     }
-    const p = Zn(l.color_palette, 16, "style_description.color_palette", t), a = {}, d = r ? ["aesthetics", "lighting", "photo", "medium", "color_palette"] : ["aesthetics", "lighting", "medium", "art_style", "color_palette"];
-    for (const m of d) c[m] !== void 0 && (a[m] = c[m]);
-    p && (a.color_palette = p), s.style_description = a;
+    const palette = cleanHexList(st.color_palette, 16, "style_description.color_palette", warnings);
+    const ordered = {};
+    const order = isPhoto ? ["aesthetics", "lighting", "photo", "medium", "color_palette"] : ["aesthetics", "lighting", "medium", "art_style", "color_palette"];
+    for (const k of order) if (s[k] !== void 0) ordered[k] = s[k];
+    if (palette) ordered.color_palette = palette;
+    out.style_description = ordered;
   }
-  const o = e.background.trim();
-  o || t.push("compositional_deconstruction.background is required");
-  const i = [];
-  return e.elements.forEach((l, r) => {
-    if (l.enabled === !1) return;
-    const c = { type: l.type };
-    if (l.bbox && (c.bbox = Ur(l.bbox)), l.type === "text") {
-      const C = l.text.trim();
-      C || t.push(`elements[${r}]: text element has no text to render`), c.text = C;
+  const background = state.background.trim();
+  if (!background) warnings.push("compositional_deconstruction.background is required");
+  const elements = [];
+  state.elements.forEach((el, i) => {
+    if (el.enabled === false) return;
+    const e = { type: el.type };
+    if (el.bbox) e.bbox = clampBbox(el.bbox);
+    if (el.type === "text") {
+      const t = el.text.trim();
+      if (!t) warnings.push(`elements[${i}]: text element has no text to render`);
+      e.text = t;
     }
-    const p = l.desc.trim();
-    p || t.push(`elements[${r}]: desc is empty`), c.desc = p;
-    const a = Zn(l.color_palette, 5, `elements[${r}].color_palette`, t);
-    a && (c.color_palette = a);
-    const d = l.type === "text" ? ["type", "bbox", "text", "desc", "color_palette"] : ["type", "bbox", "desc", "color_palette"], m = {};
-    for (const C of d) c[C] !== void 0 && (m[C] = c[C]);
-    i.push(m);
-  }), s.compositional_deconstruction = { background: o, elements: i }, { caption: s, warnings: t };
+    const desc = el.desc.trim();
+    if (!desc) warnings.push(`elements[${i}]: desc is empty`);
+    e.desc = desc;
+    const palette = cleanHexList(el.color_palette, 5, `elements[${i}].color_palette`, warnings);
+    if (palette) e.color_palette = palette;
+    const order = el.type === "text" ? ["type", "bbox", "text", "desc", "color_palette"] : ["type", "bbox", "desc", "color_palette"];
+    const ordered = {};
+    for (const k of order) if (e[k] !== void 0) ordered[k] = e[k];
+    elements.push(ordered);
+  });
+  out.compositional_deconstruction = { background, elements };
+  return { caption: out, warnings };
 }
-function Br(e) {
-  const { caption: t, warnings: s } = Xs(e);
+function serialize(state) {
+  const { caption, warnings } = buildCaption(state);
   return {
-    json: JSON.stringify(t),
+    json: JSON.stringify(caption),
     // minified, matches separators=(",",":")
-    pretty: JSON.stringify(t, null, 2),
-    warnings: s
+    pretty: JSON.stringify(caption, null, 2),
+    warnings
   };
 }
-const ui = Symbol("ideogram-studio");
-function Kr() {
-  const e = ms({
-    state: ss(),
+const KEY = Symbol("ideogram-studio");
+function createStudioStore() {
+  const store = reactive({
+    state: emptyState(),
     selectedId: null,
     // history (snapshots of JSON state)
     _hist: [],
     _hi: -1,
-    restoring: !1,
+    restoring: false,
     get canUndo() {
-      return e._hi > 0;
+      return store._hi > 0;
     },
     get canRedo() {
-      return e._hi >= 0 && e._hi < e._hist.length - 1;
+      return store._hi >= 0 && store._hi < store._hist.length - 1;
     },
     snapshot() {
-      if (e.restoring) return;
-      const t = JSON.stringify(e.state);
-      e._hist[e._hi] !== t && (e._hist = e._hist.slice(0, e._hi + 1), e._hist.push(t), e._hist.length > 80 && e._hist.shift(), e._hi = e._hist.length - 1);
+      if (store.restoring) return;
+      const snap = JSON.stringify(store.state);
+      if (store._hist[store._hi] === snap) return;
+      store._hist = store._hist.slice(0, store._hi + 1);
+      store._hist.push(snap);
+      if (store._hist.length > 80) store._hist.shift();
+      store._hi = store._hist.length - 1;
     },
-    _restore(t) {
-      e.restoring = !0;
-      const s = JSON.parse(t);
-      Object.assign(e.state, ss(), s), e.selectedId && !e.getElement(e.selectedId) && (e.selectedId = null), setTimeout(() => {
-        e.restoring = !1;
+    _restore(snap) {
+      store.restoring = true;
+      const parsed = JSON.parse(snap);
+      Object.assign(store.state, emptyState(), parsed);
+      if (store.selectedId && !store.getElement(store.selectedId)) store.selectedId = null;
+      setTimeout(() => {
+        store.restoring = false;
       }, 0);
     },
     undo() {
-      e.canUndo && (e._hi -= 1, e._restore(e._hist[e._hi]));
+      if (!store.canUndo) return;
+      store._hi -= 1;
+      store._restore(store._hist[store._hi]);
     },
     redo() {
-      e.canRedo && (e._hi += 1, e._restore(e._hist[e._hi]));
+      if (!store.canRedo) return;
+      store._hi += 1;
+      store._restore(store._hist[store._hi]);
     },
     resetHistory() {
-      e._hist = [JSON.stringify(e.state)], e._hi = 0;
+      store._hist = [JSON.stringify(store.state)];
+      store._hi = 0;
     },
-    select(t) {
-      e.selectedId = t;
+    select(id) {
+      store.selectedId = id;
     },
-    addElement(t, s = null) {
-      const n = js(t, s);
-      return e.state.elements.push(n), e.selectedId = n.id, n;
+    addElement(type, bbox = null) {
+      const el = newElement(type, bbox);
+      store.state.elements.push(el);
+      store.selectedId = el.id;
+      return el;
     },
-    removeElement(t) {
-      const s = e.state.elements.findIndex((n) => n.id === t);
-      s >= 0 && e.state.elements.splice(s, 1), e.selectedId === t && (e.selectedId = null);
+    removeElement(id) {
+      const i = store.state.elements.findIndex((e) => e.id === id);
+      if (i >= 0) store.state.elements.splice(i, 1);
+      if (store.selectedId === id) store.selectedId = null;
     },
-    duplicateElement(t) {
-      const s = e.getElement(t);
-      if (!s) return;
-      const n = js(s.type, s.bbox ? [...s.bbox] : null);
-      n.desc = s.desc, n.text = s.text, n.color_palette = [...s.color_palette], n.bbox && (n.bbox = n.bbox.map((o, i) => Math.max(0, Math.min(1e3, o + (i < 2, 20))))), e.state.elements.push(n), e.selectedId = n.id;
+    duplicateElement(id) {
+      const src = store.getElement(id);
+      if (!src) return;
+      const copy = newElement(src.type, src.bbox ? [...src.bbox] : null);
+      copy.desc = src.desc;
+      copy.text = src.text;
+      copy.color_palette = [...src.color_palette];
+      if (copy.bbox) {
+        copy.bbox = copy.bbox.map((v, idx) => Math.max(0, Math.min(1e3, v + (idx < 2 ? 20 : 20))));
+      }
+      store.state.elements.push(copy);
+      store.selectedId = copy.id;
     },
-    toggleEnabled(t) {
-      const s = e.getElement(t);
-      s && (s.enabled = s.enabled === !1);
+    toggleEnabled(id) {
+      const el = store.getElement(id);
+      if (el) el.enabled = el.enabled === false;
     },
-    duplicateLinked(t) {
-      const s = e.getElement(t);
-      if (!s) return;
-      s.linkId || (s.linkId = ri());
-      const n = js(s.type, s.bbox ? [...s.bbox] : null);
-      n.desc = s.desc, n.text = s.text, n.color_palette = [...s.color_palette], n.boxColor = s.boxColor, n.linkId = s.linkId, n.bbox && (n.bbox = n.bbox.map((o, i) => Math.max(0, Math.min(1e3, o + (i < 2, 30))))), e.state.elements.push(n), e.selectedId = n.id;
+    duplicateLinked(id) {
+      const src = store.getElement(id);
+      if (!src) return;
+      if (!src.linkId) src.linkId = newId();
+      const copy = newElement(src.type, src.bbox ? [...src.bbox] : null);
+      copy.desc = src.desc;
+      copy.text = src.text;
+      copy.color_palette = [...src.color_palette];
+      copy.boxColor = src.boxColor;
+      copy.linkId = src.linkId;
+      if (copy.bbox) {
+        copy.bbox = copy.bbox.map((v, idx) => Math.max(0, Math.min(1e3, v + (idx < 2 ? 30 : 30))));
+      }
+      store.state.elements.push(copy);
+      store.selectedId = copy.id;
     },
-    unlink(t) {
-      const s = e.getElement(t);
-      s && (s.linkId = null);
+    unlink(id) {
+      const el = store.getElement(id);
+      if (el) el.linkId = null;
     },
-    linkGroupSize(t) {
-      const s = e.getElement(t);
-      return s?.linkId ? e.state.elements.filter((n) => n.linkId === s.linkId).length : 1;
+    linkGroupSize(id) {
+      const el = store.getElement(id);
+      if (!el?.linkId) return 1;
+      return store.state.elements.filter((e) => e.linkId === el.linkId).length;
     },
-    setShared(t, s, n) {
-      const o = e.getElement(t);
-      if (!o) return;
-      const i = o.linkId ? e.state.elements.filter((l) => l.linkId === o.linkId) : [o];
-      for (const l of i) l[s] = n;
+    setShared(id, key, value) {
+      const el = store.getElement(id);
+      if (!el) return;
+      const members = el.linkId ? store.state.elements.filter((e) => e.linkId === el.linkId) : [el];
+      for (const m of members) m[key] = value;
     },
-    moveElement(t, s) {
-      const n = e.state.elements.findIndex((l) => l.id === t), o = n + s;
-      if (n < 0 || o < 0 || o >= e.state.elements.length) return;
-      const i = e.state.elements;
-      [i[n], i[o]] = [i[o], i[n]];
+    moveElement(id, dir) {
+      const i = store.state.elements.findIndex((e) => e.id === id);
+      const j = i + dir;
+      if (i < 0 || j < 0 || j >= store.state.elements.length) return;
+      const arr = store.state.elements;
+      [arr[i], arr[j]] = [arr[j], arr[i]];
     },
-    getElement(t) {
-      return e.state.elements.find((s) => s.id === t);
+    getElement(id) {
+      return store.state.elements.find((e) => e.id === id);
     },
-    load(t) {
-      Object.assign(e.state, ss(), t);
+    load(s) {
+      Object.assign(store.state, emptyState(), s);
     }
   });
-  return e;
+  return store;
 }
-function Wr(e) {
-  Do(ui, e);
+function provideStudioStore(store) {
+  provide(KEY, store);
 }
-function zt() {
-  const e = Vt(ui);
-  if (!e) throw new Error("StudioStore not provided");
-  return e;
+function useStudioStore() {
+  const s = inject(KEY);
+  if (!s) throw new Error("StudioStore not provided");
+  return s;
 }
-const zr = { class: "canvas-wrap" }, qr = { class: "seg" }, Jr = { class: "dims" }, Gr = ["data-box"], Yr = ["data-handle"], Xr = { class: "coordhint" }, Zr = /* @__PURE__ */ ht({
+const _hoisted_1$6 = { class: "canvas-wrap" };
+const _hoisted_2$6 = { class: "seg" };
+const _hoisted_3$6 = { class: "dims" };
+const _hoisted_4$6 = ["data-box"];
+const _hoisted_5$6 = ["data-handle"];
+const _hoisted_6$6 = { class: "coordhint" };
+const _sfc_main$6 = /* @__PURE__ */ defineComponent({
   __name: "BBoxCanvas",
-  setup(e) {
-    const t = zt(), s = ["nw", "n", "ne", "e", "se", "s", "sw", "w"], n = Ye("obj"), o = Ye(!0), i = Ye(null), l = Ye(null), r = Ye("drag on empty space to add a box · drag a box to move · drag a handle to resize"), c = Ie(() => t.state.elements.filter((x) => x.bbox)), p = Ie(() => ({ aspectRatio: `${t.state.width} / ${t.state.height}` }));
-    function a(x, O) {
-      const F = x.replace("#", ""), Y = parseInt(F.slice(0, 2), 16) || 0, D = parseInt(F.slice(2, 4), 16) || 0, K = parseInt(F.slice(4, 6), 16) || 0;
-      return `rgba(${Y},${D},${K},${O})`;
+  setup(__props) {
+    const store = useStudioStore();
+    const HANDLES = ["nw", "n", "ne", "e", "se", "s", "sw", "w"];
+    const newType = ref("obj");
+    const showLabels = ref(true);
+    const stage = ref(null);
+    const draft = ref(null);
+    const hint = ref("drag on empty space to add a box · drag a box to move · drag a handle to resize");
+    const boxed = computed(() => store.state.elements.filter((e) => e.bbox));
+    const stageStyle = computed(() => ({ aspectRatio: `${store.state.width} / ${store.state.height}` }));
+    function hexToRgba(hex, a) {
+      const h = hex.replace("#", "");
+      const r = parseInt(h.slice(0, 2), 16) || 0;
+      const g = parseInt(h.slice(2, 4), 16) || 0;
+      const b = parseInt(h.slice(4, 6), 16) || 0;
+      return `rgba(${r},${g},${b},${a})`;
     }
-    function d(x) {
-      const [O, F, Y, D] = x.bbox, K = x.boxColor || "#3b82f6";
+    function boxStyle(el) {
+      const [y0, x0, y1, x1] = el.bbox;
+      const color = el.boxColor || "#3b82f6";
       return {
-        left: `${F / 10}%`,
-        top: `${O / 10}%`,
-        width: `${(D - F) / 10}%`,
-        height: `${(Y - O) / 10}%`,
-        borderColor: K,
+        left: `${x0 / 10}%`,
+        top: `${y0 / 10}%`,
+        width: `${(x1 - x0) / 10}%`,
+        height: `${(y1 - y0) / 10}%`,
+        borderColor: color,
         // outline-first: no fill by default so overlapping boxes stay readable;
         // a faint tint appears on hover/selection (see CSS using --c).
-        "--c": K,
-        "--fill": a(K, 0.16)
+        "--c": color,
+        "--fill": hexToRgba(color, 0.16)
       };
     }
-    function m(x) {
-      return { background: a(x.boxColor || "#3b82f6", 0.88), color: "#fff" };
+    function tagStyle(el) {
+      return { background: hexToRgba(el.boxColor || "#3b82f6", 0.88), color: "#fff" };
     }
-    const C = (x) => Math.max(0, Math.min(1e3, Math.round(x)));
-    function H(x) {
-      const O = i.value.getBoundingClientRect();
+    const clamp = (v) => Math.max(0, Math.min(1e3, Math.round(v)));
+    function pointToCoords(ev) {
+      const r = stage.value.getBoundingClientRect();
       return {
-        x: C((x.clientX - O.left) / O.width * 1e3),
-        y: C((x.clientY - O.top) / O.height * 1e3)
+        x: clamp((ev.clientX - r.left) / r.width * 1e3),
+        y: clamp((ev.clientY - r.top) / r.height * 1e3)
       };
     }
-    let T = null;
-    function ne(x) {
-      x.preventDefault(), x.stopPropagation();
+    let drag = null;
+    function onPointerDown(ev) {
+      ev.preventDefault();
+      ev.stopPropagation();
       try {
-        i.value.setPointerCapture(x.pointerId);
+        stage.value.setPointerCapture(ev.pointerId);
       } catch {
       }
-      const O = x.target, F = O.dataset.handle, Y = O.closest("[data-box]")?.getAttribute("data-box") ?? void 0, D = H(x);
-      if (F && t.selectedId) {
-        const K = t.getElement(t.selectedId);
-        if (K?.bbox) {
-          T = { kind: "resize", el: K, handle: F, start: D, moved: !1 };
+      const target = ev.target;
+      const handle = target.dataset.handle;
+      const boxId = target.closest("[data-box]")?.getAttribute("data-box") ?? void 0;
+      const start = pointToCoords(ev);
+      if (handle && store.selectedId) {
+        const el = store.getElement(store.selectedId);
+        if (el?.bbox) {
+          drag = { kind: "resize", el, handle, start, moved: false };
           return;
         }
       }
-      if (Y) {
-        const K = t.getElement(Y);
-        if (t.select(Y), K?.bbox) {
-          T = { kind: "move", el: K, start: D, startBbox: [...K.bbox], moved: !1 };
+      if (boxId) {
+        const el = store.getElement(boxId);
+        store.select(boxId);
+        if (el?.bbox) {
+          drag = { kind: "move", el, start, startBbox: [...el.bbox], moved: false };
           return;
         }
       }
-      l.value = [D.y, D.x, D.y, D.x], T = { kind: "draw", start: D, moved: !1 };
+      draft.value = [start.y, start.x, start.y, start.x];
+      drag = { kind: "draw", start, moved: false };
     }
-    function B(x) {
-      if (!T) return;
-      x.preventDefault();
-      const O = H(x);
-      if ((Math.abs(O.x - T.start.x) > 2 || Math.abs(O.y - T.start.y) > 2) && (T.moved = !0), T.kind === "draw")
-        l.value = [Math.min(T.start.y, O.y), Math.min(T.start.x, O.x), Math.max(T.start.y, O.y), Math.max(T.start.x, O.x)], r.value = G(l.value);
-      else if (T.kind === "move" && T.el && T.startBbox) {
-        const F = O.y - T.start.y, Y = O.x - T.start.x;
-        let [D, K, Ne, tt] = T.startBbox;
-        const ze = Ne - D, qe = tt - K;
-        D = C(D + F), K = C(K + Y), D + ze > 1e3 && (D = 1e3 - ze), K + qe > 1e3 && (K = 1e3 - qe), T.el.bbox = [D, K, D + ze, K + qe], r.value = G(T.el.bbox);
-      } else if (T.kind === "resize" && T.el?.bbox && T.handle) {
-        let [F, Y, D, K] = T.el.bbox;
-        T.handle.includes("n") && (F = Math.min(O.y, D - 2)), T.handle.includes("s") && (D = Math.max(O.y, F + 2)), T.handle.includes("w") && (Y = Math.min(O.x, K - 2)), T.handle.includes("e") && (K = Math.max(O.x, Y + 2)), T.el.bbox = [F, Y, D, K], r.value = G(T.el.bbox);
+    function onPointerMove(ev) {
+      if (!drag) return;
+      ev.preventDefault();
+      const p2 = pointToCoords(ev);
+      if (Math.abs(p2.x - drag.start.x) > 2 || Math.abs(p2.y - drag.start.y) > 2) drag.moved = true;
+      if (drag.kind === "draw") {
+        draft.value = [Math.min(drag.start.y, p2.y), Math.min(drag.start.x, p2.x), Math.max(drag.start.y, p2.y), Math.max(drag.start.x, p2.x)];
+        hint.value = bboxLabel(draft.value);
+      } else if (drag.kind === "move" && drag.el && drag.startBbox) {
+        const dy = p2.y - drag.start.y;
+        const dx = p2.x - drag.start.x;
+        let [y0, x0, y1, x1] = drag.startBbox;
+        const h = y1 - y0;
+        const w = x1 - x0;
+        y0 = clamp(y0 + dy);
+        x0 = clamp(x0 + dx);
+        if (y0 + h > 1e3) y0 = 1e3 - h;
+        if (x0 + w > 1e3) x0 = 1e3 - w;
+        drag.el.bbox = [y0, x0, y0 + h, x0 + w];
+        hint.value = bboxLabel(drag.el.bbox);
+      } else if (drag.kind === "resize" && drag.el?.bbox && drag.handle) {
+        let [y0, x0, y1, x1] = drag.el.bbox;
+        if (drag.handle.includes("n")) y0 = Math.min(p2.y, y1 - 2);
+        if (drag.handle.includes("s")) y1 = Math.max(p2.y, y0 + 2);
+        if (drag.handle.includes("w")) x0 = Math.min(p2.x, x1 - 2);
+        if (drag.handle.includes("e")) x1 = Math.max(p2.x, x0 + 2);
+        drag.el.bbox = [y0, x0, y1, x1];
+        hint.value = bboxLabel(drag.el.bbox);
       }
     }
-    function J(x) {
-      if (T) {
-        try {
-          i.value.releasePointerCapture(x.pointerId);
-        } catch {
-        }
-        if (T.kind === "draw") {
-          const O = l.value;
-          l.value = null, O && O[2] - O[0] >= 8 && O[3] - O[1] >= 8 ? t.addElement(n.value, O) : T.moved || t.select(null);
-        }
-        T = null;
+    function onPointerUp(ev) {
+      if (!drag) return;
+      try {
+        stage.value.releasePointerCapture(ev.pointerId);
+      } catch {
       }
+      if (drag.kind === "draw") {
+        const b = draft.value;
+        draft.value = null;
+        if (b && b[2] - b[0] >= 8 && b[3] - b[1] >= 8) {
+          store.addElement(newType.value, b);
+        } else if (!drag.moved) {
+          store.select(null);
+        }
+      }
+      drag = null;
     }
-    function G(x) {
-      return `bbox [y${x[0]} x${x[1]} y${x[2]} x${x[3]}]  ·  ${x[3] - x[1]}×${x[2] - x[0]}`;
+    function bboxLabel(b) {
+      return `bbox [y${b[0]} x${b[1]} y${b[2]} x${b[3]}]  ·  ${b[3] - b[1]}×${b[2] - b[0]}`;
     }
-    return (x, O) => (V(), j("div", zr, [
-      g("div", {
-        class: "toolbar",
-        onPointerdown: O[3] || (O[3] = rt(() => {
-        }, ["stop"]))
-      }, [
-        O[4] || (O[4] = g("span", { class: "lbl" }, "new box:", -1)),
-        g("div", qr, [
-          g("button", {
-            class: ie({ on: n.value === "obj" }),
-            title: "New boxes are objects",
-            onClick: O[0] || (O[0] = (F) => n.value = "obj")
-          }, "obj", 2),
-          g("button", {
-            class: ie({ on: n.value === "text" }),
-            title: "New boxes are text",
-            onClick: O[1] || (O[1] = (F) => n.value = "text")
-          }, "text", 2)
-        ]),
-        g("span", Jr, z($(t).state.width) + "×" + z($(t).state.height), 1),
-        g("button", {
-          class: ie(["ghost", { on: o.value }]),
-          title: "Toggle labels",
-          onClick: O[2] || (O[2] = (F) => o.value = !o.value)
-        }, "⌗ labels", 2)
-      ], 32),
-      g("div", {
-        ref_key: "stage",
-        ref: i,
-        class: ie(["stage", { dragging: !!$(T) }]),
-        onPointerdown: ne,
-        onPointermove: B,
-        onPointerup: J,
-        onPointercancel: J,
-        onLostpointercapture: J,
-        style: Te(p.value)
-      }, [
-        O[5] || (O[5] = g("div", { class: "grid" }, null, -1)),
-        (V(!0), j(le, null, ft(c.value, (F, Y) => (V(), j("div", {
-          key: F.id,
-          class: ie(["box", { sel: F.id === $(t).selectedId, muted: F.enabled === !1 }]),
-          style: Te(d(F)),
-          "data-box": F.id
+    return (_ctx, _cache) => {
+      return openBlock(), createElementBlock("div", _hoisted_1$6, [
+        createBaseVNode("div", {
+          class: "toolbar",
+          onPointerdown: _cache[3] || (_cache[3] = withModifiers(() => {
+          }, ["stop"]))
         }, [
-          o.value ? (V(), j("span", {
+          _cache[4] || (_cache[4] = createBaseVNode("span", { class: "lbl" }, "new box:", -1)),
+          createBaseVNode("div", _hoisted_2$6, [
+            createBaseVNode("button", {
+              class: normalizeClass({ on: newType.value === "obj" }),
+              title: "New boxes are objects",
+              onClick: _cache[0] || (_cache[0] = ($event) => newType.value = "obj")
+            }, "obj", 2),
+            createBaseVNode("button", {
+              class: normalizeClass({ on: newType.value === "text" }),
+              title: "New boxes are text",
+              onClick: _cache[1] || (_cache[1] = ($event) => newType.value = "text")
+            }, "text", 2)
+          ]),
+          createBaseVNode("span", _hoisted_3$6, toDisplayString(unref(store).state.width) + "×" + toDisplayString(unref(store).state.height), 1),
+          createBaseVNode("button", {
+            class: normalizeClass(["ghost", { on: showLabels.value }]),
+            title: "Toggle labels",
+            onClick: _cache[2] || (_cache[2] = ($event) => showLabels.value = !showLabels.value)
+          }, "⌗ labels", 2)
+        ], 32),
+        createBaseVNode("div", {
+          ref_key: "stage",
+          ref: stage,
+          class: normalizeClass(["stage", { dragging: !!unref(drag) }]),
+          onPointerdown: onPointerDown,
+          onPointermove: onPointerMove,
+          onPointerup: onPointerUp,
+          onPointercancel: onPointerUp,
+          onLostpointercapture: onPointerUp,
+          style: normalizeStyle(stageStyle.value)
+        }, [
+          _cache[5] || (_cache[5] = createBaseVNode("div", { class: "grid" }, null, -1)),
+          (openBlock(true), createElementBlock(Fragment, null, renderList(boxed.value, (el, i) => {
+            return openBlock(), createElementBlock("div", {
+              key: el.id,
+              class: normalizeClass(["box", { sel: el.id === unref(store).selectedId, muted: el.enabled === false }]),
+              style: normalizeStyle(boxStyle(el)),
+              "data-box": el.id
+            }, [
+              showLabels.value ? (openBlock(), createElementBlock("span", {
+                key: 0,
+                class: "tag",
+                style: normalizeStyle(tagStyle(el))
+              }, toDisplayString(el.linkId ? "🔗" : el.type === "text" ? "T" : "▣") + " " + toDisplayString(i + 1) + " · " + toDisplayString(el.type === "text" ? el.text || "text" : el.desc || "obj"), 5)) : createCommentVNode("", true),
+              el.id === unref(store).selectedId ? (openBlock(), createElementBlock(Fragment, { key: 1 }, renderList(HANDLES, (hdl) => {
+                return createBaseVNode("i", {
+                  key: hdl,
+                  class: normalizeClass(["h", "h-" + hdl]),
+                  "data-handle": hdl
+                }, null, 10, _hoisted_5$6);
+              }), 64)) : createCommentVNode("", true)
+            ], 14, _hoisted_4$6);
+          }), 128)),
+          draft.value ? (openBlock(), createElementBlock("div", {
             key: 0,
-            class: "tag",
-            style: Te(m(F))
-          }, z(F.linkId ? "🔗" : F.type === "text" ? "T" : "▣") + " " + z(Y + 1) + " · " + z(F.type === "text" ? F.text || "text" : F.desc || "obj"), 5)) : oe("", !0),
-          F.id === $(t).selectedId ? (V(), j(le, { key: 1 }, ft(s, (D) => g("i", {
-            key: D,
-            class: ie(["h", "h-" + D]),
-            "data-handle": D
-          }, null, 10, Yr)), 64)) : oe("", !0)
-        ], 14, Gr))), 128)),
-        l.value ? (V(), j("div", {
-          key: 0,
-          class: "box draft",
-          style: Te(d({ bbox: l.value, boxColor: "#9ca3af" }))
-        }, null, 4)) : oe("", !0)
-      ], 38),
-      g("div", Xr, z(r.value), 1)
-    ]));
+            class: "box draft",
+            style: normalizeStyle(boxStyle({ bbox: draft.value, boxColor: "#9ca3af" }))
+          }, null, 4)) : createCommentVNode("", true)
+        ], 38),
+        createBaseVNode("div", _hoisted_6$6, toDisplayString(hint.value), 1)
+      ]);
+    };
   }
-}), gt = (e, t) => {
-  const s = e.__vccOpts || e;
-  for (const [n, o] of t)
-    s[n] = o;
-  return s;
-}, Qr = /* @__PURE__ */ gt(Zr, [["__scopeId", "data-v-237a165f"]]), ec = { class: "palette" }, tc = { class: "swatches" }, sc = ["title"], nc = ["value", "onInput"], oc = ["onClick"], ic = { class: "hint" }, lc = /* @__PURE__ */ ht({
+});
+const _export_sfc = (sfc, props) => {
+  const target = sfc.__vccOpts || sfc;
+  for (const [key, val] of props) {
+    target[key] = val;
+  }
+  return target;
+};
+const BBoxCanvas = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["__scopeId", "data-v-237a165f"]]);
+const _hoisted_1$5 = { class: "palette" };
+const _hoisted_2$5 = { class: "swatches" };
+const _hoisted_3$5 = ["title"];
+const _hoisted_4$5 = ["value", "onInput"];
+const _hoisted_5$5 = ["onClick"];
+const _hoisted_6$5 = { class: "hint" };
+const _sfc_main$5 = /* @__PURE__ */ defineComponent({
   __name: "PaletteEditor",
   props: {
     modelValue: {},
@@ -4311,704 +6836,848 @@ const zr = { class: "canvas-wrap" }, qr = { class: "seg" }, Jr = { class: "dims"
     label: { default: "colors" }
   },
   emits: ["update:modelValue"],
-  setup(e, { emit: t }) {
-    const s = e, n = t;
-    function o() {
-      n("update:modelValue", [...s.modelValue, "#888888"]);
+  setup(__props, { emit: __emit }) {
+    const props = __props;
+    const emit2 = __emit;
+    function add() {
+      emit2("update:modelValue", [...props.modelValue, "#888888"]);
     }
-    function i(r) {
-      const c = s.modelValue.slice();
-      c.splice(r, 1), n("update:modelValue", c);
+    function remove2(i) {
+      const next = props.modelValue.slice();
+      next.splice(i, 1);
+      emit2("update:modelValue", next);
     }
-    function l(r, c) {
-      const p = ci(c) ?? s.modelValue[r], a = s.modelValue.slice();
-      a[r] = p, n("update:modelValue", a);
+    function update(i, raw) {
+      const h = normalizeHex(raw) ?? props.modelValue[i];
+      const next = props.modelValue.slice();
+      next[i] = h;
+      emit2("update:modelValue", next);
     }
-    return (r, c) => (V(), j("div", ec, [
-      g("div", tc, [
-        (V(!0), j(le, null, ft(r.modelValue, (p, a) => (V(), j("div", {
-          key: a,
-          class: "swatch-wrap"
-        }, [
-          g("label", {
-            class: "swatch",
-            style: Te({ background: p }),
-            title: p
-          }, [
-            g("input", {
-              type: "color",
-              value: p,
-              onInput: (d) => l(a, d.target.value)
-            }, null, 40, nc)
-          ], 12, sc),
-          g("button", {
-            class: "x",
-            title: "Remove",
-            onClick: (d) => i(a)
-          }, "×", 8, oc)
-        ]))), 128)),
-        r.modelValue.length < r.max ? (V(), j("button", {
-          key: 0,
-          class: "add",
-          title: "Add color",
-          onClick: o
-        }, "+")) : oe("", !0)
-      ]),
-      g("div", ic, z(r.modelValue.length) + "/" + z(r.max) + " " + z(r.label), 1)
-    ]));
+    return (_ctx, _cache) => {
+      return openBlock(), createElementBlock("div", _hoisted_1$5, [
+        createBaseVNode("div", _hoisted_2$5, [
+          (openBlock(true), createElementBlock(Fragment, null, renderList(_ctx.modelValue, (c, i) => {
+            return openBlock(), createElementBlock("div", {
+              key: i,
+              class: "swatch-wrap"
+            }, [
+              createBaseVNode("label", {
+                class: "swatch",
+                style: normalizeStyle({ background: c }),
+                title: c
+              }, [
+                createBaseVNode("input", {
+                  type: "color",
+                  value: c,
+                  onInput: ($event) => update(i, $event.target.value)
+                }, null, 40, _hoisted_4$5)
+              ], 12, _hoisted_3$5),
+              createBaseVNode("button", {
+                class: "x",
+                title: "Remove",
+                onClick: ($event) => remove2(i)
+              }, "×", 8, _hoisted_5$5)
+            ]);
+          }), 128)),
+          _ctx.modelValue.length < _ctx.max ? (openBlock(), createElementBlock("button", {
+            key: 0,
+            class: "add",
+            title: "Add color",
+            onClick: add
+          }, "+")) : createCommentVNode("", true)
+        ]),
+        createBaseVNode("div", _hoisted_6$5, toDisplayString(_ctx.modelValue.length) + "/" + toDisplayString(_ctx.max) + " " + toDisplayString(_ctx.label), 1)
+      ]);
+    };
   }
-}), ai = /* @__PURE__ */ gt(lc, [["__scopeId", "data-v-3d11bea8"]]), rc = { class: "style" }, cc = { class: "head" }, uc = { class: "en" }, ac = {
+});
+const PaletteEditor = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["__scopeId", "data-v-3d11bea8"]]);
+const _hoisted_1$4 = { class: "style" };
+const _hoisted_2$4 = { class: "head" };
+const _hoisted_3$4 = { class: "en" };
+const _hoisted_4$4 = {
   key: 0,
   class: "seg"
-}, fc = { class: "field" }, dc = { class: "field" }, pc = {
+};
+const _hoisted_5$4 = { class: "field" };
+const _hoisted_6$4 = { class: "field" };
+const _hoisted_7$3 = {
   key: 0,
   class: "field"
-}, hc = { class: "field" }, gc = ["placeholder"], mc = {
+};
+const _hoisted_8$3 = { class: "field" };
+const _hoisted_9$3 = ["placeholder"];
+const _hoisted_10$3 = {
   key: 1,
   class: "field"
-}, bc = { class: "field" }, _c = /* @__PURE__ */ ht({
+};
+const _hoisted_11$3 = { class: "field" };
+const _sfc_main$4 = /* @__PURE__ */ defineComponent({
   __name: "StylePanel",
-  setup(e) {
-    const t = zt();
-    return (s, n) => (V(), j("div", rc, [
-      g("div", cc, [
-        g("label", uc, [
-          he(g("input", {
-            type: "checkbox",
-            "onUpdate:modelValue": n[0] || (n[0] = (o) => $(t).state.style.enabled = o)
-          }, null, 512), [
-            [Ys, $(t).state.style.enabled]
+  setup(__props) {
+    const store = useStudioStore();
+    return (_ctx, _cache) => {
+      return openBlock(), createElementBlock("div", _hoisted_1$4, [
+        createBaseVNode("div", _hoisted_2$4, [
+          createBaseVNode("label", _hoisted_3$4, [
+            withDirectives(createBaseVNode("input", {
+              type: "checkbox",
+              "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => unref(store).state.style.enabled = $event)
+            }, null, 512), [
+              [vModelCheckbox, unref(store).state.style.enabled]
+            ]),
+            _cache[9] || (_cache[9] = createTextVNode(" style_description"))
           ]),
-          n[9] || (n[9] = $e(" style_description"))
+          unref(store).state.style.enabled ? (openBlock(), createElementBlock("div", _hoisted_4$4, [
+            createBaseVNode("button", {
+              class: normalizeClass({ on: unref(store).state.style.mode === "photo" }),
+              onClick: _cache[1] || (_cache[1] = ($event) => unref(store).state.style.mode = "photo")
+            }, "photo", 2),
+            createBaseVNode("button", {
+              class: normalizeClass({ on: unref(store).state.style.mode === "art" }),
+              onClick: _cache[2] || (_cache[2] = ($event) => unref(store).state.style.mode = "art")
+            }, "art", 2)
+          ])) : createCommentVNode("", true)
         ]),
-        $(t).state.style.enabled ? (V(), j("div", ac, [
-          g("button", {
-            class: ie({ on: $(t).state.style.mode === "photo" }),
-            onClick: n[1] || (n[1] = (o) => $(t).state.style.mode = "photo")
-          }, "photo", 2),
-          g("button", {
-            class: ie({ on: $(t).state.style.mode === "art" }),
-            onClick: n[2] || (n[2] = (o) => $(t).state.style.mode = "art")
-          }, "art", 2)
-        ])) : oe("", !0)
-      ]),
-      $(t).state.style.enabled ? (V(), j(le, { key: 0 }, [
-        g("label", fc, [
-          n[10] || (n[10] = g("span", null, "aesthetics", -1)),
-          he(g("input", {
-            "onUpdate:modelValue": n[3] || (n[3] = (o) => $(t).state.style.aesthetics = o),
-            placeholder: "moody, cinematic, desaturated"
-          }, null, 512), [
-            [Se, $(t).state.style.aesthetics]
-          ])
-        ]),
-        g("label", dc, [
-          n[11] || (n[11] = g("span", null, "lighting", -1)),
-          he(g("input", {
-            "onUpdate:modelValue": n[4] || (n[4] = (o) => $(t).state.style.lighting = o),
-            placeholder: "golden hour, rim light, soft shadows"
-          }, null, 512), [
-            [Se, $(t).state.style.lighting]
-          ])
-        ]),
-        $(t).state.style.mode === "photo" ? (V(), j("label", pc, [
-          n[12] || (n[12] = g("span", null, "photo (camera/lens)", -1)),
-          he(g("input", {
-            "onUpdate:modelValue": n[5] || (n[5] = (o) => $(t).state.style.photo = o),
-            placeholder: "35mm, f/1.4, shallow depth of field"
-          }, null, 512), [
-            [Se, $(t).state.style.photo]
-          ])
-        ])) : oe("", !0),
-        g("label", hc, [
-          n[13] || (n[13] = g("span", null, "medium", -1)),
-          he(g("input", {
-            "onUpdate:modelValue": n[6] || (n[6] = (o) => $(t).state.style.medium = o),
-            placeholder: $(t).state.style.mode === "photo" ? "photograph" : "illustration / 3d_render / painting…",
-            list: "media"
-          }, null, 8, gc), [
-            [Se, $(t).state.style.medium]
+        unref(store).state.style.enabled ? (openBlock(), createElementBlock(Fragment, { key: 0 }, [
+          createBaseVNode("label", _hoisted_5$4, [
+            _cache[10] || (_cache[10] = createBaseVNode("span", null, "aesthetics", -1)),
+            withDirectives(createBaseVNode("input", {
+              "onUpdate:modelValue": _cache[3] || (_cache[3] = ($event) => unref(store).state.style.aesthetics = $event),
+              placeholder: "moody, cinematic, desaturated"
+            }, null, 512), [
+              [vModelText, unref(store).state.style.aesthetics]
+            ])
           ]),
-          n[14] || (n[14] = g("datalist", { id: "media" }, [
-            g("option", null, "photograph"),
-            g("option", null, "illustration"),
-            g("option", null, "3d_render"),
-            g("option", null, "painting"),
-            g("option", null, "graphic_design")
-          ], -1))
-        ]),
-        $(t).state.style.mode === "art" ? (V(), j("label", mc, [
-          n[15] || (n[15] = g("span", null, "art_style", -1)),
-          he(g("input", {
-            "onUpdate:modelValue": n[7] || (n[7] = (o) => $(t).state.style.art_style = o),
-            placeholder: "flat vector illustration, bold outlines"
-          }, null, 512), [
-            [Se, $(t).state.style.art_style]
+          createBaseVNode("label", _hoisted_6$4, [
+            _cache[11] || (_cache[11] = createBaseVNode("span", null, "lighting", -1)),
+            withDirectives(createBaseVNode("input", {
+              "onUpdate:modelValue": _cache[4] || (_cache[4] = ($event) => unref(store).state.style.lighting = $event),
+              placeholder: "golden hour, rim light, soft shadows"
+            }, null, 512), [
+              [vModelText, unref(store).state.style.lighting]
+            ])
+          ]),
+          unref(store).state.style.mode === "photo" ? (openBlock(), createElementBlock("label", _hoisted_7$3, [
+            _cache[12] || (_cache[12] = createBaseVNode("span", null, "photo (camera/lens)", -1)),
+            withDirectives(createBaseVNode("input", {
+              "onUpdate:modelValue": _cache[5] || (_cache[5] = ($event) => unref(store).state.style.photo = $event),
+              placeholder: "35mm, f/1.4, shallow depth of field"
+            }, null, 512), [
+              [vModelText, unref(store).state.style.photo]
+            ])
+          ])) : createCommentVNode("", true),
+          createBaseVNode("label", _hoisted_8$3, [
+            _cache[13] || (_cache[13] = createBaseVNode("span", null, "medium", -1)),
+            withDirectives(createBaseVNode("input", {
+              "onUpdate:modelValue": _cache[6] || (_cache[6] = ($event) => unref(store).state.style.medium = $event),
+              placeholder: unref(store).state.style.mode === "photo" ? "photograph" : "illustration / 3d_render / painting…",
+              list: "media"
+            }, null, 8, _hoisted_9$3), [
+              [vModelText, unref(store).state.style.medium]
+            ]),
+            _cache[14] || (_cache[14] = createBaseVNode("datalist", { id: "media" }, [
+              createBaseVNode("option", null, "photograph"),
+              createBaseVNode("option", null, "illustration"),
+              createBaseVNode("option", null, "3d_render"),
+              createBaseVNode("option", null, "painting"),
+              createBaseVNode("option", null, "graphic_design")
+            ], -1))
+          ]),
+          unref(store).state.style.mode === "art" ? (openBlock(), createElementBlock("label", _hoisted_10$3, [
+            _cache[15] || (_cache[15] = createBaseVNode("span", null, "art_style", -1)),
+            withDirectives(createBaseVNode("input", {
+              "onUpdate:modelValue": _cache[7] || (_cache[7] = ($event) => unref(store).state.style.art_style = $event),
+              placeholder: "flat vector illustration, bold outlines"
+            }, null, 512), [
+              [vModelText, unref(store).state.style.art_style]
+            ])
+          ])) : createCommentVNode("", true),
+          createBaseVNode("div", _hoisted_11$3, [
+            _cache[16] || (_cache[16] = createBaseVNode("span", null, "color_palette (max 16)", -1)),
+            createVNode(PaletteEditor, {
+              modelValue: unref(store).state.style.color_palette,
+              "onUpdate:modelValue": _cache[8] || (_cache[8] = ($event) => unref(store).state.style.color_palette = $event),
+              max: 16,
+              label: "image colors"
+            }, null, 8, ["modelValue"])
           ])
-        ])) : oe("", !0),
-        g("div", bc, [
-          n[16] || (n[16] = g("span", null, "color_palette (max 16)", -1)),
-          ue(ai, {
-            modelValue: $(t).state.style.color_palette,
-            "onUpdate:modelValue": n[8] || (n[8] = (o) => $(t).state.style.color_palette = o),
-            max: 16,
-            label: "image colors"
-          }, null, 8, ["modelValue"])
-        ])
-      ], 64)) : oe("", !0)
-    ]));
+        ], 64)) : createCommentVNode("", true)
+      ]);
+    };
   }
-}), vc = /* @__PURE__ */ gt(_c, [["__scopeId", "data-v-41f81c5e"]]), yc = { class: "ellist" }, xc = { class: "head" }, wc = { class: "adds" }, Sc = ["onClick"], Cc = ["title", "onClick"], Ec = { class: "idx" }, $c = ["title"], Tc = { class: "snip" }, Ic = ["title"], Oc = { class: "ops" }, Mc = ["onClick"], kc = ["onClick"], Ac = ["onClick"], Pc = ["onClick"], Rc = ["onClick"], Fc = {
+});
+const StylePanel = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["__scopeId", "data-v-41f81c5e"]]);
+const _hoisted_1$3 = { class: "ellist" };
+const _hoisted_2$3 = { class: "head" };
+const _hoisted_3$3 = { class: "adds" };
+const _hoisted_4$3 = ["onClick"];
+const _hoisted_5$3 = ["title", "onClick"];
+const _hoisted_6$3 = { class: "idx" };
+const _hoisted_7$2 = ["title"];
+const _hoisted_8$2 = { class: "snip" };
+const _hoisted_9$2 = ["title"];
+const _hoisted_10$2 = { class: "ops" };
+const _hoisted_11$2 = ["onClick"];
+const _hoisted_12$2 = ["onClick"];
+const _hoisted_13$2 = ["onClick"];
+const _hoisted_14$2 = ["onClick"];
+const _hoisted_15$2 = ["onClick"];
+const _hoisted_16$2 = {
   key: 0,
   class: "empty"
-}, Vc = /* @__PURE__ */ ht({
+};
+const _sfc_main$3 = /* @__PURE__ */ defineComponent({
   __name: "ElementList",
-  setup(e) {
-    const t = zt();
-    return (s, n) => (V(), j("div", yc, [
-      g("div", xc, [
-        g("span", null, "Elements (" + z($(t).state.elements.length) + ")", 1),
-        g("div", wc, [
-          g("button", {
-            class: "obj",
-            title: "Add object",
-            onClick: n[0] || (n[0] = (o) => $(t).addElement("obj"))
-          }, "＋ obj"),
-          g("button", {
-            class: "text",
-            title: "Add text",
-            onClick: n[1] || (n[1] = (o) => $(t).addElement("text"))
-          }, "＋ text")
-        ])
-      ]),
-      g("ul", null, [
-        (V(!0), j(le, null, ft($(t).state.elements, (o, i) => (V(), j("li", {
-          key: o.id,
-          class: ie({ sel: o.id === $(t).selectedId, muted: o.enabled === !1 }),
-          onClick: (l) => $(t).select(o.id)
-        }, [
-          g("button", {
-            class: "eye",
-            title: o.enabled === !1 ? "Muted — click to enable" : "Mute (keep, exclude from output)",
-            onClick: rt((l) => $(t).toggleEnabled(o.id), ["stop"])
-          }, z(o.enabled === !1 ? "🚫" : "👁"), 9, Cc),
-          g("span", {
-            class: "dot",
-            style: Te({ background: o.boxColor })
-          }, null, 4),
-          g("span", Ec, z(i + 1), 1),
-          o.linkId ? (V(), j("span", {
-            key: 0,
-            class: "link",
-            title: "Linked ×" + $(t).linkGroupSize(o.id)
-          }, "🔗", 8, $c)) : oe("", !0),
-          g("span", Tc, z(o.type === "text" ? "“" + (o.text || "…") + "”" : o.desc || "object…"), 1),
-          g("span", {
-            class: "bb",
-            title: o.bbox ? "has bbox" : "no bbox (model auto-places)"
-          }, z(o.bbox ? "▣" : "◌"), 9, Ic),
-          g("span", Oc, [
-            g("button", {
-              title: "Move up",
-              onClick: rt((l) => $(t).moveElement(o.id, -1), ["stop"])
-            }, "↑", 8, Mc),
-            g("button", {
-              title: "Move down",
-              onClick: rt((l) => $(t).moveElement(o.id, 1), ["stop"])
-            }, "↓", 8, kc),
-            g("button", {
-              title: "Linked copy (shares prompt, own position)",
-              onClick: rt((l) => $(t).duplicateLinked(o.id), ["stop"])
-            }, "🔗", 8, Ac),
-            g("button", {
-              title: "Duplicate",
-              onClick: rt((l) => $(t).duplicateElement(o.id), ["stop"])
-            }, "⧉", 8, Pc),
-            g("button", {
-              title: "Delete",
-              onClick: rt((l) => $(t).removeElement(o.id), ["stop"])
-            }, "✕", 8, Rc)
+  setup(__props) {
+    const store = useStudioStore();
+    return (_ctx, _cache) => {
+      return openBlock(), createElementBlock("div", _hoisted_1$3, [
+        createBaseVNode("div", _hoisted_2$3, [
+          createBaseVNode("span", null, "Elements (" + toDisplayString(unref(store).state.elements.length) + ")", 1),
+          createBaseVNode("div", _hoisted_3$3, [
+            createBaseVNode("button", {
+              class: "obj",
+              title: "Add object",
+              onClick: _cache[0] || (_cache[0] = ($event) => unref(store).addElement("obj"))
+            }, "＋ obj"),
+            createBaseVNode("button", {
+              class: "text",
+              title: "Add text",
+              onClick: _cache[1] || (_cache[1] = ($event) => unref(store).addElement("text"))
+            }, "＋ text")
           ])
-        ], 10, Sc))), 128))
-      ]),
-      $(t).state.elements.length ? oe("", !0) : (V(), j("p", Fc, "No elements yet — draw a box on the canvas or use ＋ obj / ＋ text."))
-    ]));
+        ]),
+        createBaseVNode("ul", null, [
+          (openBlock(true), createElementBlock(Fragment, null, renderList(unref(store).state.elements, (el, i) => {
+            return openBlock(), createElementBlock("li", {
+              key: el.id,
+              class: normalizeClass({ sel: el.id === unref(store).selectedId, muted: el.enabled === false }),
+              onClick: ($event) => unref(store).select(el.id)
+            }, [
+              createBaseVNode("button", {
+                class: "eye",
+                title: el.enabled === false ? "Muted — click to enable" : "Mute (keep, exclude from output)",
+                onClick: withModifiers(($event) => unref(store).toggleEnabled(el.id), ["stop"])
+              }, toDisplayString(el.enabled === false ? "🚫" : "👁"), 9, _hoisted_5$3),
+              createBaseVNode("span", {
+                class: "dot",
+                style: normalizeStyle({ background: el.boxColor })
+              }, null, 4),
+              createBaseVNode("span", _hoisted_6$3, toDisplayString(i + 1), 1),
+              el.linkId ? (openBlock(), createElementBlock("span", {
+                key: 0,
+                class: "link",
+                title: "Linked ×" + unref(store).linkGroupSize(el.id)
+              }, "🔗", 8, _hoisted_7$2)) : createCommentVNode("", true),
+              createBaseVNode("span", _hoisted_8$2, toDisplayString(el.type === "text" ? "“" + (el.text || "…") + "”" : el.desc || "object…"), 1),
+              createBaseVNode("span", {
+                class: "bb",
+                title: el.bbox ? "has bbox" : "no bbox (model auto-places)"
+              }, toDisplayString(el.bbox ? "▣" : "◌"), 9, _hoisted_9$2),
+              createBaseVNode("span", _hoisted_10$2, [
+                createBaseVNode("button", {
+                  title: "Move up",
+                  onClick: withModifiers(($event) => unref(store).moveElement(el.id, -1), ["stop"])
+                }, "↑", 8, _hoisted_11$2),
+                createBaseVNode("button", {
+                  title: "Move down",
+                  onClick: withModifiers(($event) => unref(store).moveElement(el.id, 1), ["stop"])
+                }, "↓", 8, _hoisted_12$2),
+                createBaseVNode("button", {
+                  title: "Linked copy (shares prompt, own position)",
+                  onClick: withModifiers(($event) => unref(store).duplicateLinked(el.id), ["stop"])
+                }, "🔗", 8, _hoisted_13$2),
+                createBaseVNode("button", {
+                  title: "Duplicate",
+                  onClick: withModifiers(($event) => unref(store).duplicateElement(el.id), ["stop"])
+                }, "⧉", 8, _hoisted_14$2),
+                createBaseVNode("button", {
+                  title: "Delete",
+                  onClick: withModifiers(($event) => unref(store).removeElement(el.id), ["stop"])
+                }, "✕", 8, _hoisted_15$2)
+              ])
+            ], 10, _hoisted_4$3);
+          }), 128))
+        ]),
+        !unref(store).state.elements.length ? (openBlock(), createElementBlock("p", _hoisted_16$2, "No elements yet — draw a box on the canvas or use ＋ obj / ＋ text.")) : createCommentVNode("", true)
+      ]);
+    };
   }
-}), jc = /* @__PURE__ */ gt(Vc, [["__scopeId", "data-v-e924e066"]]), Dc = {
+});
+const ElementList = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["__scopeId", "data-v-e924e066"]]);
+const _hoisted_1$2 = {
   key: 0,
   class: "editor"
-}, Hc = { class: "row type-row" }, Nc = ["title"], Lc = ["value"], Uc = { class: "lbl" }, Bc = { class: "seg" }, Kc = ["title"], Wc = ["title"], zc = ["checked"], qc = { class: "row link-row" }, Jc = {
+};
+const _hoisted_2$2 = { class: "row type-row" };
+const _hoisted_3$2 = ["title"];
+const _hoisted_4$2 = ["value"];
+const _hoisted_5$2 = { class: "lbl" };
+const _hoisted_6$2 = { class: "seg" };
+const _hoisted_7$1 = ["title"];
+const _hoisted_8$1 = ["title"];
+const _hoisted_9$1 = ["checked"];
+const _hoisted_10$1 = { class: "row link-row" };
+const _hoisted_11$1 = {
   key: 1,
   class: "unlinked"
-}, Gc = {
+};
+const _hoisted_12$1 = {
   key: 3,
   class: "hint"
-}, Yc = {
+};
+const _hoisted_13$1 = {
   key: 0,
   class: "row bbox-row"
-}, Xc = ["value", "onInput"], Zc = {
+};
+const _hoisted_14$1 = ["value", "onInput"];
+const _hoisted_15$1 = {
   key: 1,
   class: "field"
-}, Qc = ["value"], eu = { class: "field" }, tu = ["value", "placeholder"], su = { class: "field" }, nu = {
+};
+const _hoisted_16$1 = ["value"];
+const _hoisted_17 = { class: "field" };
+const _hoisted_18 = ["value", "placeholder"];
+const _hoisted_19 = { class: "field" };
+const _hoisted_20 = {
   key: 1,
   class: "editor empty"
-}, ou = /* @__PURE__ */ ht({
+};
+const _sfc_main$2 = /* @__PURE__ */ defineComponent({
   __name: "ElementEditor",
-  setup(e) {
-    const t = zt(), s = Ie(() => t.getElement(t.selectedId)), n = Ie(() => t.state.elements.findIndex((p) => p.id === t.selectedId)), o = Ie(() => !!s.value?.linkId), i = Ie(() => s.value ? t.linkGroupSize(s.value.id) : 1);
-    function l(p, a) {
-      s.value && t.setShared(s.value.id, p, a);
+  setup(__props) {
+    const store = useStudioStore();
+    const el = computed(() => store.getElement(store.selectedId));
+    const index = computed(() => store.state.elements.findIndex((e) => e.id === store.selectedId));
+    const linked = computed(() => !!el.value?.linkId);
+    const groupSize = computed(() => el.value ? store.linkGroupSize(el.value.id) : 1);
+    function setShared(key, value) {
+      if (el.value) store.setShared(el.value.id, key, value);
     }
-    function r(p) {
-      s.value && (s.value.bbox = p.target.checked ? [300, 300, 700, 700] : null);
+    function toggleBbox(e) {
+      if (!el.value) return;
+      el.value.bbox = e.target.checked ? [300, 300, 700, 700] : null;
     }
-    function c(p, a) {
-      s.value?.bbox && (s.value.bbox[p] = Math.max(0, Math.min(1e3, Math.round(Number(a) || 0))));
+    function setBbox(i, raw) {
+      if (!el.value?.bbox) return;
+      el.value.bbox[i] = Math.max(0, Math.min(1e3, Math.round(Number(raw) || 0)));
     }
-    return (p, a) => s.value ? (V(), j("div", Dc, [
-      g("div", Hc, [
-        g("label", {
-          class: "color",
-          title: "Box color" + (o.value ? " (shared with link group)" : "")
-        }, [
-          g("span", {
-            class: "chip",
-            style: Te({ background: s.value.boxColor })
-          }, null, 4),
-          g("input", {
-            type: "color",
-            value: s.value.boxColor,
-            onInput: a[0] || (a[0] = (d) => l("boxColor", d.target.value))
-          }, null, 40, Lc)
-        ], 8, Nc),
-        g("span", Uc, "#" + z(n.value + 1), 1),
-        g("div", Bc, [
-          g("button", {
-            class: ie({ on: s.value.type === "obj" }),
-            onClick: a[1] || (a[1] = (d) => l("type", "obj"))
-          }, "object", 2),
-          g("button", {
-            class: ie({ on: s.value.type === "text" }),
-            onClick: a[2] || (a[2] = (d) => l("type", "text"))
-          }, "text", 2)
+    return (_ctx, _cache) => {
+      return el.value ? (openBlock(), createElementBlock("div", _hoisted_1$2, [
+        createBaseVNode("div", _hoisted_2$2, [
+          createBaseVNode("label", {
+            class: "color",
+            title: "Box color" + (linked.value ? " (shared with link group)" : "")
+          }, [
+            createBaseVNode("span", {
+              class: "chip",
+              style: normalizeStyle({ background: el.value.boxColor })
+            }, null, 4),
+            createBaseVNode("input", {
+              type: "color",
+              value: el.value.boxColor,
+              onInput: _cache[0] || (_cache[0] = ($event) => setShared("boxColor", $event.target.value))
+            }, null, 40, _hoisted_4$2)
+          ], 8, _hoisted_3$2),
+          createBaseVNode("span", _hoisted_5$2, "#" + toDisplayString(index.value + 1), 1),
+          createBaseVNode("div", _hoisted_6$2, [
+            createBaseVNode("button", {
+              class: normalizeClass({ on: el.value.type === "obj" }),
+              onClick: _cache[1] || (_cache[1] = ($event) => setShared("type", "obj"))
+            }, "object", 2),
+            createBaseVNode("button", {
+              class: normalizeClass({ on: el.value.type === "text" }),
+              onClick: _cache[2] || (_cache[2] = ($event) => setShared("type", "text"))
+            }, "text", 2)
+          ]),
+          createBaseVNode("button", {
+            class: normalizeClass(["mute", { off: el.value.enabled === false }]),
+            title: el.value.enabled === false ? "Muted — excluded from output. Click to enable." : "Mute (keep but exclude from output)",
+            onClick: _cache[3] || (_cache[3] = ($event) => unref(store).toggleEnabled(el.value.id))
+          }, toDisplayString(el.value.enabled === false ? "🚫 muted" : "👁 active"), 11, _hoisted_7$1),
+          createBaseVNode("label", {
+            class: "bbtoggle",
+            title: el.value.bbox ? "Remove bbox (let model auto-place)" : "Add a default bbox"
+          }, [
+            createBaseVNode("input", {
+              type: "checkbox",
+              checked: !!el.value.bbox,
+              onChange: toggleBbox
+            }, null, 40, _hoisted_9$1),
+            _cache[9] || (_cache[9] = createTextVNode(" bbox "))
+          ], 8, _hoisted_8$1)
         ]),
-        g("button", {
-          class: ie(["mute", { off: s.value.enabled === !1 }]),
-          title: s.value.enabled === !1 ? "Muted — excluded from output. Click to enable." : "Mute (keep but exclude from output)",
-          onClick: a[3] || (a[3] = (d) => $(t).toggleEnabled(s.value.id))
-        }, z(s.value.enabled === !1 ? "🚫 muted" : "👁 active"), 11, Kc),
-        g("label", {
-          class: "bbtoggle",
-          title: s.value.bbox ? "Remove bbox (let model auto-place)" : "Add a default bbox"
-        }, [
-          g("input", {
-            type: "checkbox",
-            checked: !!s.value.bbox,
-            onChange: r
-          }, null, 40, zc),
-          a[9] || (a[9] = $e(" bbox "))
-        ], 8, Wc)
-      ]),
-      g("div", qc, [
-        o.value ? (V(), j("span", {
-          key: 0,
-          class: "linkbadge",
-          style: Te({ borderColor: s.value.boxColor })
-        }, "🔗 linked ×" + z(i.value), 5)) : (V(), j("span", Jc, "not linked")),
-        g("button", {
-          class: "mini",
-          title: "Make a linked copy (shares prompt, own position)",
-          onClick: a[4] || (a[4] = (d) => $(t).duplicateLinked(s.value.id))
-        }, "＋ linked copy"),
-        o.value ? (V(), j("button", {
-          key: 2,
-          class: "mini",
-          title: "Detach this box from its link group",
-          onClick: a[5] || (a[5] = (d) => $(t).unlink(s.value.id))
-        }, "unlink")) : oe("", !0),
-        o.value ? (V(), j("span", Gc, "editing prompt/text/color updates all " + z(i.value) + "; bbox stays per-box", 1)) : oe("", !0)
-      ]),
-      s.value.bbox ? (V(), j("div", Yc, [
-        (V(), j(le, null, ft(["y₀", "x₀", "y₁", "x₁"], (d, m) => g("label", { key: d }, [
-          $e(z(d) + " ", 1),
-          g("input", {
-            type: "number",
-            min: "0",
-            max: "1000",
-            value: s.value.bbox[m],
-            onInput: (C) => c(m, C.target.value)
-          }, null, 40, Xc)
-        ])), 64))
-      ])) : oe("", !0),
-      s.value.type === "text" ? (V(), j("label", Zc, [
-        a[10] || (a[10] = g("span", null, "Text to render", -1)),
-        g("input", {
-          value: s.value.text,
-          type: "text",
-          placeholder: "literal text the model should draw",
-          onInput: a[6] || (a[6] = (d) => l("text", d.target.value))
-        }, null, 40, Qc)
-      ])) : oe("", !0),
-      g("label", eu, [
-        a[11] || (a[11] = g("span", null, "Description", -1)),
-        g("textarea", {
-          value: s.value.desc,
-          rows: "2",
-          placeholder: s.value.type === "text" ? "how the text looks (font, color, placement)" : "detailed description of this object",
-          onInput: a[7] || (a[7] = (d) => l("desc", d.target.value))
-        }, null, 40, tu)
-      ]),
-      g("div", su, [
-        a[12] || (a[12] = g("span", null, "Per-element palette (max 5)", -1)),
-        ue(ai, {
-          modelValue: s.value.color_palette,
-          max: 5,
-          label: "element colors",
-          "onUpdate:modelValue": a[8] || (a[8] = (d) => l("color_palette", d))
-        }, null, 8, ["modelValue"])
-      ])
-    ])) : (V(), j("div", nu, "Select an element to edit it, or draw a box on the canvas."));
+        createBaseVNode("div", _hoisted_10$1, [
+          linked.value ? (openBlock(), createElementBlock("span", {
+            key: 0,
+            class: "linkbadge",
+            style: normalizeStyle({ borderColor: el.value.boxColor })
+          }, "🔗 linked ×" + toDisplayString(groupSize.value), 5)) : (openBlock(), createElementBlock("span", _hoisted_11$1, "not linked")),
+          createBaseVNode("button", {
+            class: "mini",
+            title: "Make a linked copy (shares prompt, own position)",
+            onClick: _cache[4] || (_cache[4] = ($event) => unref(store).duplicateLinked(el.value.id))
+          }, "＋ linked copy"),
+          linked.value ? (openBlock(), createElementBlock("button", {
+            key: 2,
+            class: "mini",
+            title: "Detach this box from its link group",
+            onClick: _cache[5] || (_cache[5] = ($event) => unref(store).unlink(el.value.id))
+          }, "unlink")) : createCommentVNode("", true),
+          linked.value ? (openBlock(), createElementBlock("span", _hoisted_12$1, "editing prompt/text/color updates all " + toDisplayString(groupSize.value) + "; bbox stays per-box", 1)) : createCommentVNode("", true)
+        ]),
+        el.value.bbox ? (openBlock(), createElementBlock("div", _hoisted_13$1, [
+          (openBlock(), createElementBlock(Fragment, null, renderList(["y₀", "x₀", "y₁", "x₁"], (k, i) => {
+            return createBaseVNode("label", { key: k }, [
+              createTextVNode(toDisplayString(k) + " ", 1),
+              createBaseVNode("input", {
+                type: "number",
+                min: "0",
+                max: "1000",
+                value: el.value.bbox[i],
+                onInput: ($event) => setBbox(i, $event.target.value)
+              }, null, 40, _hoisted_14$1)
+            ]);
+          }), 64))
+        ])) : createCommentVNode("", true),
+        el.value.type === "text" ? (openBlock(), createElementBlock("label", _hoisted_15$1, [
+          _cache[10] || (_cache[10] = createBaseVNode("span", null, "Text to render", -1)),
+          createBaseVNode("input", {
+            value: el.value.text,
+            type: "text",
+            placeholder: "literal text the model should draw",
+            onInput: _cache[6] || (_cache[6] = ($event) => setShared("text", $event.target.value))
+          }, null, 40, _hoisted_16$1)
+        ])) : createCommentVNode("", true),
+        createBaseVNode("label", _hoisted_17, [
+          _cache[11] || (_cache[11] = createBaseVNode("span", null, "Description", -1)),
+          createBaseVNode("textarea", {
+            value: el.value.desc,
+            rows: "2",
+            placeholder: el.value.type === "text" ? "how the text looks (font, color, placement)" : "detailed description of this object",
+            onInput: _cache[7] || (_cache[7] = ($event) => setShared("desc", $event.target.value))
+          }, null, 40, _hoisted_18)
+        ]),
+        createBaseVNode("div", _hoisted_19, [
+          _cache[12] || (_cache[12] = createBaseVNode("span", null, "Per-element palette (max 5)", -1)),
+          createVNode(PaletteEditor, {
+            modelValue: el.value.color_palette,
+            max: 5,
+            label: "element colors",
+            "onUpdate:modelValue": _cache[8] || (_cache[8] = ($event) => setShared("color_palette", $event))
+          }, null, 8, ["modelValue"])
+        ])
+      ])) : (openBlock(), createElementBlock("div", _hoisted_20, "Select an element to edit it, or draw a box on the canvas."));
+    };
   }
-}), iu = /* @__PURE__ */ gt(ou, [["__scopeId", "data-v-ca5140c7"]]), lu = { class: "preview" }, ru = { class: "head" }, cu = { class: "actions" }, uu = ["title"], au = {
+});
+const ElementEditor = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["__scopeId", "data-v-ca5140c7"]]);
+const _hoisted_1$1 = { class: "preview" };
+const _hoisted_2$1 = { class: "head" };
+const _hoisted_3$1 = { class: "actions" };
+const _hoisted_4$1 = ["title"];
+const _hoisted_5$1 = {
   key: 0,
   class: "json"
-}, fu = {
+};
+const _hoisted_6$1 = {
   key: 1,
   class: "warnlist"
-}, du = /* @__PURE__ */ ht({
+};
+const _sfc_main$1 = /* @__PURE__ */ defineComponent({
   __name: "JsonPreview",
-  setup(e) {
-    const t = zt(), s = Ye(!0), n = Ye(!1), o = Ie(() => Br(t.state)), i = Ie(() => o.value.pretty), l = Ie(() => o.value.warnings);
-    async function r() {
+  setup(__props) {
+    const store = useStudioStore();
+    const open = ref(true);
+    const copied = ref(false);
+    const result = computed(() => serialize(store.state));
+    const pretty = computed(() => result.value.pretty);
+    const warnings = computed(() => result.value.warnings);
+    async function copy() {
       try {
-        await navigator.clipboard.writeText(o.value.json), n.value = !0, setTimeout(() => n.value = !1, 1200);
+        await navigator.clipboard.writeText(result.value.json);
+        copied.value = true;
+        setTimeout(() => copied.value = false, 1200);
       } catch {
       }
     }
-    return (c, p) => (V(), j("div", lu, [
-      g("div", ru, [
-        p[1] || (p[1] = g("span", null, "JSON caption", -1)),
-        g("div", cu, [
-          g("span", {
-            class: ie(["warns", { ok: !l.value.length }]),
-            title: l.value.join(`
-`)
-          }, z(l.value.length ? `⚠ ${l.value.length}` : "✓ valid"), 11, uu),
-          g("button", { onClick: r }, z(n.value ? "copied ✓" : "copy"), 1),
-          g("button", {
-            onClick: p[0] || (p[0] = (a) => s.value = !s.value)
-          }, z(s.value ? "hide" : "show"), 1)
-        ])
-      ]),
-      s.value ? (V(), j("pre", au, z(i.value), 1)) : oe("", !0),
-      s.value && l.value.length ? (V(), j("ul", fu, [
-        (V(!0), j(le, null, ft(l.value, (a, d) => (V(), j("li", { key: d }, z(a), 1))), 128))
-      ])) : oe("", !0)
-    ]));
+    return (_ctx, _cache) => {
+      return openBlock(), createElementBlock("div", _hoisted_1$1, [
+        createBaseVNode("div", _hoisted_2$1, [
+          _cache[1] || (_cache[1] = createBaseVNode("span", null, "JSON caption", -1)),
+          createBaseVNode("div", _hoisted_3$1, [
+            createBaseVNode("span", {
+              class: normalizeClass(["warns", { ok: !warnings.value.length }]),
+              title: warnings.value.join("\n")
+            }, toDisplayString(warnings.value.length ? `⚠ ${warnings.value.length}` : "✓ valid"), 11, _hoisted_4$1),
+            createBaseVNode("button", { onClick: copy }, toDisplayString(copied.value ? "copied ✓" : "copy"), 1),
+            createBaseVNode("button", {
+              onClick: _cache[0] || (_cache[0] = ($event) => open.value = !open.value)
+            }, toDisplayString(open.value ? "hide" : "show"), 1)
+          ])
+        ]),
+        open.value ? (openBlock(), createElementBlock("pre", _hoisted_5$1, toDisplayString(pretty.value), 1)) : createCommentVNode("", true),
+        open.value && warnings.value.length ? (openBlock(), createElementBlock("ul", _hoisted_6$1, [
+          (openBlock(true), createElementBlock(Fragment, null, renderList(warnings.value, (w, i) => {
+            return openBlock(), createElementBlock("li", { key: i }, toDisplayString(w), 1);
+          }), 128))
+        ])) : createCommentVNode("", true)
+      ]);
+    };
   }
-}), pu = /* @__PURE__ */ gt(du, [["__scopeId", "data-v-d02f898f"]]), hu = { class: "studio" }, gu = { class: "topbar" }, mu = { class: "tools" }, bu = ["disabled"], _u = ["disabled"], vu = ["value"], yu = ["value"], xu = {
+});
+const JsonPreview = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-d02f898f"]]);
+const _hoisted_1 = { class: "studio" };
+const _hoisted_2 = { class: "topbar" };
+const _hoisted_3 = { class: "tools" };
+const _hoisted_4 = ["disabled"];
+const _hoisted_5 = ["disabled"];
+const _hoisted_6 = ["value"];
+const _hoisted_7 = ["value"];
+const _hoisted_8 = {
   key: 0,
   value: "custom"
-}, wu = {
+};
+const _hoisted_9 = {
   key: 0,
   class: "advanced"
-}, Su = { class: "ck" }, Cu = { class: "ck" }, Eu = { class: "hld" }, $u = { class: "main" }, Tu = { class: "left" }, Iu = { class: "bg" }, Ou = { class: "right" }, Mu = /* @__PURE__ */ ht({
+};
+const _hoisted_10 = { class: "ck" };
+const _hoisted_11 = { class: "ck" };
+const _hoisted_12 = { class: "hld" };
+const _hoisted_13 = { class: "main" };
+const _hoisted_14 = { class: "left" };
+const _hoisted_15 = { class: "bg" };
+const _hoisted_16 = { class: "right" };
+const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: "IdeogramStudio",
   props: {
     widget: {},
     node: {}
   },
-  setup(e) {
-    const t = e, s = Kr();
-    Wr(s);
-    const n = Ye(!1), o = Ie(() => {
-      const a = Fs.find((d) => d.w === s.state.width && d.h === s.state.height);
-      return a ? a.label : "custom";
+  setup(__props) {
+    const props = __props;
+    const store = createStudioStore();
+    provideStudioStore(store);
+    const showAdvanced = ref(false);
+    const formatValue = computed(() => {
+      const f = FORMATS.find((f2) => f2.w === store.state.width && f2.h === store.state.height);
+      return f ? f.label : "custom";
     });
-    function i(a) {
-      const d = Fs.find((m) => m.label === a);
-      d && (s.state.width = d.w, s.state.height = d.h);
+    function setFormat(label) {
+      const f = FORMATS.find((f2) => f2.label === label);
+      if (f) {
+        store.state.width = f.w;
+        store.state.height = f.h;
+      }
     }
-    function l() {
-      return JSON.parse(JSON.stringify(s.state));
+    function plainState() {
+      return JSON.parse(JSON.stringify(store.state));
     }
-    function r() {
-      s.load(ss()), s.select(null), s.resetHistory();
+    function resetAll() {
+      store.load(emptyState());
+      store.select(null);
+      store.resetHistory();
     }
-    let c;
-    function p() {
-      clearTimeout(c), c = setTimeout(() => s.snapshot(), 350);
+    let snapTimer;
+    function scheduleSnapshot() {
+      clearTimeout(snapTimer);
+      snapTimer = setTimeout(() => store.snapshot(), 350);
     }
-    return Po(() => {
-      const a = t.widget?.value;
-      a && typeof a == "object" && a.studio && s.load(a.studio), s.resetHistory(), t.widget.serializeValue = async () => {
-        const { caption: d } = Xs(s.state);
-        return { caption: d, studio: l() };
-      }, Qt(
-        () => s.state,
+    onMounted(() => {
+      const v = props.widget?.value;
+      if (v && typeof v === "object" && v.studio) {
+        store.load(v.studio);
+      }
+      store.resetHistory();
+      props.widget.serializeValue = async () => {
+        const { caption } = buildCaption(store.state);
+        return { caption, studio: plainState() };
+      };
+      watch(
+        () => store.state,
         () => {
-          const { caption: d } = Xs(s.state);
-          t.widget.value = { caption: d, studio: l() }, s.restoring || p();
+          const { caption } = buildCaption(store.state);
+          props.widget.value = { caption, studio: plainState() };
+          if (!store.restoring) scheduleSnapshot();
         },
-        { deep: !0, immediate: !0 }
+        { deep: true, immediate: true }
       );
-    }), (a, d) => (V(), j("div", hu, [
-      g("div", gu, [
-        d[13] || (d[13] = g("div", { class: "title" }, "🎨 Ideogram Studio", -1)),
-        g("div", mu, [
-          g("button", {
-            class: "ic",
-            disabled: !$(s).canUndo,
-            title: "Undo",
-            onClick: d[0] || (d[0] = (m) => $(s).undo())
-          }, "↶", 8, bu),
-          g("button", {
-            class: "ic",
-            disabled: !$(s).canRedo,
-            title: "Redo",
-            onClick: d[1] || (d[1] = (m) => $(s).redo())
-          }, "↷", 8, _u),
-          g("select", {
-            class: "fmt",
-            value: o.value,
-            onChange: d[2] || (d[2] = (m) => i(m.target.value)),
-            title: "Output format / resolution"
-          }, [
-            (V(!0), j(le, null, ft($(Fs), (m) => (V(), j("option", {
-              key: m.label,
-              value: m.label
-            }, z(m.label), 9, yu))), 128)),
-            o.value === "custom" ? (V(), j("option", xu, "custom " + z($(s).state.width) + "×" + z($(s).state.height), 1)) : oe("", !0)
-          ], 40, vu),
-          g("button", {
-            class: ie(["ic", { on: n.value }]),
-            title: "Advanced overlay settings",
-            onClick: d[3] || (d[3] = (m) => n.value = !n.value)
-          }, "⚙", 2),
-          g("button", {
-            class: "reset",
-            title: "Clear everything",
-            onClick: r
-          }, "reset")
-        ])
-      ]),
-      n.value ? (V(), j("div", wu, [
-        g("label", null, [
-          d[14] || (d[14] = $e("W ")),
-          he(g("input", {
-            type: "number",
-            min: "16",
-            max: "8192",
-            step: "8",
-            "onUpdate:modelValue": d[4] || (d[4] = (m) => $(s).state.width = m)
-          }, null, 512), [
-            [
-              Se,
-              $(s).state.width,
-              void 0,
-              { number: !0 }
-            ]
+    });
+    return (_ctx, _cache) => {
+      return openBlock(), createElementBlock("div", _hoisted_1, [
+        createBaseVNode("div", _hoisted_2, [
+          _cache[13] || (_cache[13] = createBaseVNode("div", { class: "title" }, "🎨 Ideogram Studio", -1)),
+          createBaseVNode("div", _hoisted_3, [
+            createBaseVNode("button", {
+              class: "ic",
+              disabled: !unref(store).canUndo,
+              title: "Undo",
+              onClick: _cache[0] || (_cache[0] = ($event) => unref(store).undo())
+            }, "↶", 8, _hoisted_4),
+            createBaseVNode("button", {
+              class: "ic",
+              disabled: !unref(store).canRedo,
+              title: "Redo",
+              onClick: _cache[1] || (_cache[1] = ($event) => unref(store).redo())
+            }, "↷", 8, _hoisted_5),
+            createBaseVNode("select", {
+              class: "fmt",
+              value: formatValue.value,
+              onChange: _cache[2] || (_cache[2] = ($event) => setFormat($event.target.value)),
+              title: "Output format / resolution"
+            }, [
+              (openBlock(true), createElementBlock(Fragment, null, renderList(unref(FORMATS), (f) => {
+                return openBlock(), createElementBlock("option", {
+                  key: f.label,
+                  value: f.label
+                }, toDisplayString(f.label), 9, _hoisted_7);
+              }), 128)),
+              formatValue.value === "custom" ? (openBlock(), createElementBlock("option", _hoisted_8, "custom " + toDisplayString(unref(store).state.width) + "×" + toDisplayString(unref(store).state.height), 1)) : createCommentVNode("", true)
+            ], 40, _hoisted_6),
+            createBaseVNode("button", {
+              class: normalizeClass(["ic", { on: showAdvanced.value }]),
+              title: "Advanced overlay settings",
+              onClick: _cache[3] || (_cache[3] = ($event) => showAdvanced.value = !showAdvanced.value)
+            }, "⚙", 2),
+            createBaseVNode("button", {
+              class: "reset",
+              title: "Clear everything",
+              onClick: resetAll
+            }, "reset")
           ])
         ]),
-        g("label", null, [
-          d[15] || (d[15] = $e("H ")),
-          he(g("input", {
-            type: "number",
-            min: "16",
-            max: "8192",
-            step: "8",
-            "onUpdate:modelValue": d[5] || (d[5] = (m) => $(s).state.height = m)
-          }, null, 512), [
-            [
-              Se,
-              $(s).state.height,
-              void 0,
-              { number: !0 }
-            ]
-          ])
-        ]),
-        g("label", null, [
-          d[16] || (d[16] = $e("line ")),
-          he(g("input", {
-            type: "number",
-            min: "1",
-            max: "40",
-            "onUpdate:modelValue": d[6] || (d[6] = (m) => $(s).state.overlay.lineWidth = m)
-          }, null, 512), [
-            [
-              Se,
-              $(s).state.overlay.lineWidth,
-              void 0,
-              { number: !0 }
-            ]
-          ])
-        ]),
-        g("label", null, [
-          d[17] || (d[17] = $e("fill ")),
-          he(g("input", {
-            type: "range",
-            min: "0",
-            max: "1",
-            step: "0.02",
-            "onUpdate:modelValue": d[7] || (d[7] = (m) => $(s).state.overlay.fillAlpha = m)
-          }, null, 512), [
-            [
-              Se,
-              $(s).state.overlay.fillAlpha,
-              void 0,
-              { number: !0 }
-            ]
-          ])
-        ]),
-        g("label", null, [
-          d[18] || (d[18] = $e("label ")),
-          he(g("input", {
-            type: "number",
-            min: "6",
-            max: "96",
-            "onUpdate:modelValue": d[8] || (d[8] = (m) => $(s).state.overlay.labelSize = m)
-          }, null, 512), [
-            [
-              Se,
-              $(s).state.overlay.labelSize,
-              void 0,
-              { number: !0 }
-            ]
-          ])
-        ]),
-        g("label", Su, [
-          he(g("input", {
-            type: "checkbox",
-            "onUpdate:modelValue": d[9] || (d[9] = (m) => $(s).state.overlay.showIndex = m)
-          }, null, 512), [
-            [Ys, $(s).state.overlay.showIndex]
-          ]),
-          d[19] || (d[19] = $e(" idx"))
-        ]),
-        g("label", Cu, [
-          he(g("input", {
-            type: "checkbox",
-            "onUpdate:modelValue": d[10] || (d[10] = (m) => $(s).state.overlay.showText = m)
-          }, null, 512), [
-            [Ys, $(s).state.overlay.showText]
-          ]),
-          d[20] || (d[20] = $e(" text"))
-        ])
-      ])) : oe("", !0),
-      g("label", Eu, [
-        d[21] || (d[21] = g("span", null, "high_level_description", -1)),
-        he(g("textarea", {
-          "onUpdate:modelValue": d[11] || (d[11] = (m) => $(s).state.high_level_description = m),
-          rows: "2",
-          placeholder: "One or two sentences summarizing the whole image (strongly recommended)."
-        }, null, 512), [
-          [Se, $(s).state.high_level_description]
-        ])
-      ]),
-      g("div", $u, [
-        g("div", Tu, [
-          ue(Qr),
-          g("label", Iu, [
-            d[22] || (d[22] = g("span", null, "background", -1)),
-            he(g("textarea", {
-              "onUpdate:modelValue": d[12] || (d[12] = (m) => $(s).state.background = m),
-              rows: "2",
-              placeholder: "Describe the background / environment (required)."
+        showAdvanced.value ? (openBlock(), createElementBlock("div", _hoisted_9, [
+          createBaseVNode("label", null, [
+            _cache[14] || (_cache[14] = createTextVNode("W ")),
+            withDirectives(createBaseVNode("input", {
+              type: "number",
+              min: "16",
+              max: "8192",
+              step: "8",
+              "onUpdate:modelValue": _cache[4] || (_cache[4] = ($event) => unref(store).state.width = $event)
             }, null, 512), [
-              [Se, $(s).state.background]
+              [
+                vModelText,
+                unref(store).state.width,
+                void 0,
+                { number: true }
+              ]
             ])
+          ]),
+          createBaseVNode("label", null, [
+            _cache[15] || (_cache[15] = createTextVNode("H ")),
+            withDirectives(createBaseVNode("input", {
+              type: "number",
+              min: "16",
+              max: "8192",
+              step: "8",
+              "onUpdate:modelValue": _cache[5] || (_cache[5] = ($event) => unref(store).state.height = $event)
+            }, null, 512), [
+              [
+                vModelText,
+                unref(store).state.height,
+                void 0,
+                { number: true }
+              ]
+            ])
+          ]),
+          createBaseVNode("label", null, [
+            _cache[16] || (_cache[16] = createTextVNode("line ")),
+            withDirectives(createBaseVNode("input", {
+              type: "number",
+              min: "1",
+              max: "40",
+              "onUpdate:modelValue": _cache[6] || (_cache[6] = ($event) => unref(store).state.overlay.lineWidth = $event)
+            }, null, 512), [
+              [
+                vModelText,
+                unref(store).state.overlay.lineWidth,
+                void 0,
+                { number: true }
+              ]
+            ])
+          ]),
+          createBaseVNode("label", null, [
+            _cache[17] || (_cache[17] = createTextVNode("fill ")),
+            withDirectives(createBaseVNode("input", {
+              type: "range",
+              min: "0",
+              max: "1",
+              step: "0.02",
+              "onUpdate:modelValue": _cache[7] || (_cache[7] = ($event) => unref(store).state.overlay.fillAlpha = $event)
+            }, null, 512), [
+              [
+                vModelText,
+                unref(store).state.overlay.fillAlpha,
+                void 0,
+                { number: true }
+              ]
+            ])
+          ]),
+          createBaseVNode("label", null, [
+            _cache[18] || (_cache[18] = createTextVNode("label ")),
+            withDirectives(createBaseVNode("input", {
+              type: "number",
+              min: "6",
+              max: "96",
+              "onUpdate:modelValue": _cache[8] || (_cache[8] = ($event) => unref(store).state.overlay.labelSize = $event)
+            }, null, 512), [
+              [
+                vModelText,
+                unref(store).state.overlay.labelSize,
+                void 0,
+                { number: true }
+              ]
+            ])
+          ]),
+          createBaseVNode("label", _hoisted_10, [
+            withDirectives(createBaseVNode("input", {
+              type: "checkbox",
+              "onUpdate:modelValue": _cache[9] || (_cache[9] = ($event) => unref(store).state.overlay.showIndex = $event)
+            }, null, 512), [
+              [vModelCheckbox, unref(store).state.overlay.showIndex]
+            ]),
+            _cache[19] || (_cache[19] = createTextVNode(" idx"))
+          ]),
+          createBaseVNode("label", _hoisted_11, [
+            withDirectives(createBaseVNode("input", {
+              type: "checkbox",
+              "onUpdate:modelValue": _cache[10] || (_cache[10] = ($event) => unref(store).state.overlay.showText = $event)
+            }, null, 512), [
+              [vModelCheckbox, unref(store).state.overlay.showText]
+            ]),
+            _cache[20] || (_cache[20] = createTextVNode(" text"))
+          ])
+        ])) : createCommentVNode("", true),
+        createBaseVNode("label", _hoisted_12, [
+          _cache[21] || (_cache[21] = createBaseVNode("span", null, "high_level_description", -1)),
+          withDirectives(createBaseVNode("textarea", {
+            "onUpdate:modelValue": _cache[11] || (_cache[11] = ($event) => unref(store).state.high_level_description = $event),
+            rows: "2",
+            placeholder: "One or two sentences summarizing the whole image (strongly recommended)."
+          }, null, 512), [
+            [vModelText, unref(store).state.high_level_description]
           ])
         ]),
-        g("div", Ou, [
-          ue(vc),
-          d[23] || (d[23] = g("hr", null, null, -1)),
-          ue(jc)
-        ])
-      ]),
-      ue(iu),
-      ue(pu)
-    ]));
+        createBaseVNode("div", _hoisted_13, [
+          createBaseVNode("div", _hoisted_14, [
+            createVNode(BBoxCanvas),
+            createBaseVNode("label", _hoisted_15, [
+              _cache[22] || (_cache[22] = createBaseVNode("span", null, "background", -1)),
+              withDirectives(createBaseVNode("textarea", {
+                "onUpdate:modelValue": _cache[12] || (_cache[12] = ($event) => unref(store).state.background = $event),
+                rows: "2",
+                placeholder: "Describe the background / environment (required)."
+              }, null, 512), [
+                [vModelText, unref(store).state.background]
+              ])
+            ])
+          ]),
+          createBaseVNode("div", _hoisted_16, [
+            createVNode(StylePanel),
+            _cache[23] || (_cache[23] = createBaseVNode("hr", null, null, -1)),
+            createVNode(ElementList)
+          ])
+        ]),
+        createVNode(ElementEditor),
+        createVNode(JsonPreview)
+      ]);
+    };
   }
-}), ku = /* @__PURE__ */ gt(Mu, [["__scopeId", "data-v-10629887"]]), fi = "[data-ideogram]";
-function di(e) {
+});
+const IdeogramStudio = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-10629887"]]);
+const SEL = "[data-ideogram]";
+function inWidget(e) {
   const t = e.target;
-  return !!(t && typeof t.closest == "function" && t.closest(fi));
+  return !!(t && typeof t.closest === "function" && t.closest(SEL));
 }
-function Au(e) {
-  const t = e.closest(fi);
-  if (!t) return null;
-  let s = e;
-  for (; s && s !== t.parentElement; ) {
-    if (s instanceof HTMLElement) {
-      if (s.tagName === "TEXTAREA") return s;
-      const n = getComputedStyle(s), o = (n.overflowY === "auto" || n.overflowY === "scroll") && s.scrollHeight > s.clientHeight, i = (n.overflowX === "auto" || n.overflowX === "scroll") && s.scrollWidth > s.clientWidth;
-      if (o || i) return s;
+function findScrollable(start) {
+  const root = start.closest(SEL);
+  if (!root) return null;
+  let el = start;
+  while (el && el !== root.parentElement) {
+    if (el instanceof HTMLElement) {
+      if (el.tagName === "TEXTAREA") return el;
+      const s = getComputedStyle(el);
+      const vy = (s.overflowY === "auto" || s.overflowY === "scroll") && el.scrollHeight > el.clientHeight;
+      const vx = (s.overflowX === "auto" || s.overflowX === "scroll") && el.scrollWidth > el.clientWidth;
+      if (vy || vx) return el;
     }
-    s = s.parentElement;
+    el = el.parentElement;
   }
   return null;
 }
 document.addEventListener(
   "wheel",
   (e) => {
-    if (!di(e)) return;
-    const t = e.target;
-    if (!t) return;
-    const s = Au(t);
-    if (s) {
-      if (s.tagName === "TEXTAREA") {
-        e.stopPropagation(), e.stopImmediatePropagation();
-        return;
-      }
-      e.preventDefault(), e.stopPropagation(), e.stopImmediatePropagation(), s.scrollTop += e.deltaY, s.scrollLeft += e.deltaX;
+    if (!inWidget(e)) return;
+    const start = e.target;
+    if (!start) return;
+    const el = findScrollable(start);
+    if (!el) return;
+    if (el.tagName === "TEXTAREA") {
+      e.stopPropagation();
+      e.stopImmediatePropagation();
+      return;
     }
+    e.preventDefault();
+    e.stopPropagation();
+    e.stopImmediatePropagation();
+    el.scrollTop += e.deltaY;
+    el.scrollLeft += e.deltaX;
   },
-  { capture: !0, passive: !1 }
+  { capture: true, passive: false }
 );
-function Pu() {
-  const e = Zs.canvas;
-  if (!e) return !1;
-  const t = e._mousewheel_callback, s = e.canvas;
-  if (!t || !s || typeof s.addEventListener != "function") return !1;
+function patchCanvasWheel() {
+  const canvas = app.canvas;
+  if (!canvas) return false;
+  const oldCb = canvas._mousewheel_callback;
+  const targetEl = canvas.canvas;
+  if (!oldCb || !targetEl || typeof targetEl.addEventListener !== "function") return false;
   try {
-    s.removeEventListener("wheel", t);
+    targetEl.removeEventListener("wheel", oldCb);
   } catch {
   }
-  const n = (o) => {
-    di(o) || t.call(e, o);
+  const wrapped = (e) => {
+    if (inWidget(e)) return;
+    oldCb.call(canvas, e);
   };
-  return e._mousewheel_callback = n, s.addEventListener("wheel", n, { passive: !1 }), !0;
+  canvas._mousewheel_callback = wrapped;
+  targetEl.addEventListener("wheel", wrapped, { passive: false });
+  return true;
 }
-Zs.registerExtension({
+app.registerExtension({
   name: "nynxz.ideogram-studio.scrollFix",
   async setup() {
-    for (let e = 0; e < 8; e++) {
-      if (Pu()) return;
-      await new Promise((t) => setTimeout(t, 250));
+    for (let i = 0; i < 8; i++) {
+      if (patchCanvasWheel()) return;
+      await new Promise((r) => setTimeout(r, 250));
     }
     console.warn("[IdeogramStudio] could not patch canvas wheel; relying on document capture listener");
   }
 });
 console.log("[IdeogramStudio] main.js loaded — registering extension");
-Zs.registerExtension({
+app.registerExtension({
   name: "nynxz.ideogram-studio",
   getCustomWidgets() {
     return {
-      IDEOGRAM_STUDIO(e) {
-        return jr(e, {
+      IDEOGRAM_STUDIO(node) {
+        return mountWidget(node, {
           widgetName: "studio",
           widgetType: "IDEOGRAM_STUDIO",
-          component: ku,
+          component: IdeogramStudio,
           minHeight: 680,
           defaultValue: null
         });
       }
     };
   },
-  nodeCreated(e) {
-    const t = e;
-    if (t.constructor?.comfyClass !== "IdeogramStudio") return;
-    const [s, n] = t.size;
-    t.setSize([Math.max(s, 560), Math.max(n, 760)]);
+  nodeCreated(node) {
+    const lg = node;
+    if (lg.constructor?.comfyClass !== "IdeogramStudio") return;
+    const [w, h] = lg.size;
+    lg.setSize([Math.max(w, 560), Math.max(h, 760)]);
   }
 });

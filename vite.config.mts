@@ -63,6 +63,9 @@ export default defineConfig({
     target: 'es2022',
     outDir: 'js',
     emptyOutDir: true,
+    // Committed to git + served locally, so keep it readable (real names, no
+    // mangling). Larger file, but easier to debug/trust. Set true to minify.
+    minify: false,
     sourcemap: false, // shipped build is committed to git; flip to true to debug
     cssCodeSplit: false,
     assetsInlineLimit: Infinity,
