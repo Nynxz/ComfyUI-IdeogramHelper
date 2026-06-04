@@ -63,7 +63,7 @@ export default defineConfig({
     target: 'es2022',
     outDir: 'js',
     emptyOutDir: true,
-    sourcemap: true,
+    sourcemap: false, // shipped build is committed to git; flip to true to debug
     cssCodeSplit: false,
     assetsInlineLimit: Infinity,
     lib: {
