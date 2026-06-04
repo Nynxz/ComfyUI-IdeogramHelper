@@ -1,10 +1,9 @@
-(function(){var s=document.createElement('style');s.setAttribute('data-extension','comfyui-ideogramhelper');s.textContent="\n.canvas-wrap[data-v-237a165f] { display: flex; flex-direction: column; gap: 6px;\n}\n.toolbar[data-v-237a165f] { display: flex; flex-wrap: wrap; gap: 6px; align-items: center;\n}\n.lbl[data-v-237a165f] { font-size: 11px; color: #999;\n}\n.seg[data-v-237a165f] { display: flex; gap: 2px;\n}\n.seg button[data-v-237a165f], .ghost[data-v-237a165f] {\n  background: #2a2a30; color: #ddd; border: 1px solid #3a3a44; border-radius: 5px;\n  padding: 3px 8px; font-size: 11px; cursor: pointer;\n}\n.seg button.on[data-v-237a165f] { background: #3b82f6; border-color: #3b82f6; color: #fff;\n}\n.seg button.on.text[data-v-237a165f], .seg button.text.on[data-v-237a165f] { background: #f59e0b; border-color: #f59e0b; color: #1a1a1a;\n}\n.ghost.on[data-v-237a165f] { background: #3b82f6; border-color: #3b82f6; color: #fff;\n}\n.dims[data-v-237a165f] { font-size: 11px; color: #888; font-family: monospace;\n}\n.stage[data-v-237a165f] {\n  position: relative; width: 100%; background: #15151a;\n  border: 1px solid #3a3a44; border-radius: 6px; overflow: hidden;\n  background-image: linear-gradient(45deg, #1d1d22 25%, transparent 25%),\n    linear-gradient(-45deg, #1d1d22 25%, transparent 25%),\n    linear-gradient(45deg, transparent 75%, #1d1d22 75%),\n    linear-gradient(-45deg, transparent 75%, #1d1d22 75%);\n  background-size: 18px 18px;\n  background-position: 0 0, 0 9px, 9px -9px, -9px 0;\n  touch-action: none; user-select: none; cursor: crosshair;\n}\n.stage.dragging[data-v-237a165f] { cursor: grabbing;\n}\n.grid[data-v-237a165f] {\n  position: absolute; inset: 0; pointer-events: none;\n  background-image: linear-gradient(to right, rgba(255,255,255,.06) 1px, transparent 1px),\n    linear-gradient(to bottom, rgba(255,255,255,.06) 1px, transparent 1px);\n  background-size: 10% 10%;\n}\n.box[data-v-237a165f] { position: absolute; border: 2px solid; box-sizing: border-box; cursor: move; background: transparent; transition: background .1s;\n}\n.box[data-v-237a165f]:hover { background: var(--fill);\n}\n.box.sel[data-v-237a165f] { background: var(--fill); box-shadow: 0 0 0 1px #fff, 0 0 10px rgba(0,0,0,.6); z-index: 5;\n}\n.box.muted[data-v-237a165f] { opacity: 0.32; border-style: dashed; background: transparent !important;\n}\n.box.muted .tag[data-v-237a165f] { opacity: 0.6;\n}\n.box.draft[data-v-237a165f] { border-style: dashed; opacity: 0.8; pointer-events: none; background: rgba(156,163,175,.12);\n}\n.tag[data-v-237a165f] {\n  position: absolute; top: 0; left: 0; transform: translateY(-100%);\n  font-size: 10px; line-height: 1.4; padding: 1px 5px; white-space: nowrap;\n  max-width: 220px; overflow: hidden; text-overflow: ellipsis;\n  border-radius: 3px 3px 0 0; pointer-events: none;\n}\n.h[data-v-237a165f] { position: absolute; width: 11px; height: 11px; background: #fff; border: 1px solid #333; border-radius: 2px;\n}\n.h-nw[data-v-237a165f] { top: -6px; left: -6px; cursor: nwse-resize;\n}\n.h-n[data-v-237a165f]  { top: -6px; left: 50%; margin-left: -5px; cursor: ns-resize;\n}\n.h-ne[data-v-237a165f] { top: -6px; right: -6px; cursor: nesw-resize;\n}\n.h-e[data-v-237a165f]  { top: 50%; right: -6px; margin-top: -5px; cursor: ew-resize;\n}\n.h-se[data-v-237a165f] { bottom: -6px; right: -6px; cursor: nwse-resize;\n}\n.h-s[data-v-237a165f]  { bottom: -6px; left: 50%; margin-left: -5px; cursor: ns-resize;\n}\n.h-sw[data-v-237a165f] { bottom: -6px; left: -6px; cursor: nesw-resize;\n}\n.h-w[data-v-237a165f]  { top: 50%; left: -6px; margin-top: -5px; cursor: ew-resize;\n}\n.coordhint[data-v-237a165f] { font-size: 10px; color: rgba(255,255,255,.45); font-family: monospace;\n}\n\n.palette[data-v-3d11bea8] { display: flex; flex-direction: column; gap: 4px;\n}\n.swatches[data-v-3d11bea8] { display: flex; flex-wrap: wrap; gap: 6px; align-items: center;\n}\n.swatch-wrap[data-v-3d11bea8] { position: relative;\n}\n.swatch[data-v-3d11bea8] {\n  display: block; width: 26px; height: 26px; border-radius: 5px;\n  border: 1px solid rgba(255, 255, 255, 0.25); cursor: pointer; overflow: hidden;\n}\n.swatch input[data-v-3d11bea8] { opacity: 0; width: 100%; height: 100%; cursor: pointer;\n}\n.x[data-v-3d11bea8] {\n  position: absolute; top: -6px; right: -6px; width: 15px; height: 15px;\n  border-radius: 50%; border: none; background: #b23; color: #fff;\n  font-size: 11px; line-height: 11px; cursor: pointer; padding: 0;\n}\n.add[data-v-3d11bea8] {\n  width: 26px; height: 26px; border-radius: 5px; cursor: pointer;\n  border: 1px dashed rgba(255, 255, 255, 0.35); background: transparent;\n  color: rgba(255, 255, 255, 0.7); font-size: 16px; line-height: 1;\n}\n.hint[data-v-3d11bea8] { font-size: 10px; color: rgba(255, 255, 255, 0.45);\n}\n\n.style[data-v-41f81c5e] { display: flex; flex-direction: column; gap: 7px;\n}\n.head[data-v-41f81c5e] { display: flex; justify-content: space-between; align-items: center;\n}\n.en[data-v-41f81c5e] { font-size: 12px; color: #ccc; display: flex; gap: 5px; align-items: center; font-weight: 600;\n}\n.seg[data-v-41f81c5e] { display: flex; gap: 2px;\n}\n.seg button[data-v-41f81c5e] { background: #2a2a30; color: #ccc; border: 1px solid #3a3a44; border-radius: 4px; padding: 2px 9px; font-size: 11px; cursor: pointer;\n}\n.seg button.on[data-v-41f81c5e] { background: #8b5cf6; border-color: #8b5cf6; color: #fff;\n}\n.field[data-v-41f81c5e] { display: flex; flex-direction: column; gap: 3px; font-size: 11px; color: #aaa;\n}\n.field input[data-v-41f81c5e] { background: #15151a; border: 1px solid #3a3a44; color: #eee; border-radius: 5px; padding: 6px; font-size: 12px;\n}\n\n.ellist[data-v-e924e066] { display: flex; flex-direction: column; gap: 6px;\n}\n.head[data-v-e924e066] { display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: #ccc;\n}\n.adds[data-v-e924e066] { display: flex; gap: 4px;\n}\n.adds button[data-v-e924e066] { border: none; border-radius: 4px; padding: 3px 8px; font-size: 11px; cursor: pointer; color: #fff;\n}\n.adds .obj[data-v-e924e066] { background: #3b82f6;\n}\n.adds .text[data-v-e924e066] { background: #f59e0b; color: #1a1a1a;\n}\nul[data-v-e924e066] { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 3px; max-height: 180px; overflow-y: auto;\n}\nli[data-v-e924e066] {\n  display: flex; align-items: center; gap: 6px; padding: 4px 6px; border-radius: 5px;\n  background: #232329; border: 1px solid transparent; cursor: pointer; font-size: 12px; color: #ddd;\n}\nli[data-v-e924e066]:hover { background: #2b2b33;\n}\nli.sel[data-v-e924e066] { border-color: #fff; background: #2e2e38;\n}\nli.muted .snip[data-v-e924e066] { opacity: .45; text-decoration: line-through;\n}\n.eye[data-v-e924e066] { background: none; border: none; cursor: pointer; padding: 0; font-size: 11px; flex: none; line-height: 1; filter: grayscale(.3);\n}\n.dot[data-v-e924e066] { width: 9px; height: 9px; border-radius: 2px; flex: none;\n}\n.idx[data-v-e924e066] { color: #888; width: 14px; flex: none;\n}\n.link[data-v-e924e066] { flex: none; font-size: 10px;\n}\n.snip[data-v-e924e066] { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\n}\n.bb[data-v-e924e066] { color: #777; flex: none;\n}\n.ops[data-v-e924e066] { display: flex; gap: 1px; opacity: 0; transition: opacity .12s;\n}\nli:hover .ops[data-v-e924e066], li.sel .ops[data-v-e924e066] { opacity: 1;\n}\n.ops button[data-v-e924e066] { background: #34343c; border: none; color: #bbb; border-radius: 3px; width: 18px; height: 18px; font-size: 11px; cursor: pointer; padding: 0;\n}\n.ops button[data-v-e924e066]:hover { background: #44444e; color: #fff;\n}\n.empty[data-v-e924e066] { font-size: 11px; color: #777; margin: 2px 0;\n}\n\n.editor[data-v-ca5140c7] { display: flex; flex-direction: column; gap: 8px; padding: 8px; background: #202026; border-radius: 6px; border: 1px solid #32323c;\n}\n.editor.empty[data-v-ca5140c7] { color: #777; font-size: 12px; align-items: center;\n}\n.row[data-v-ca5140c7] { display: flex; align-items: center; gap: 8px; flex-wrap: wrap;\n}\n.color[data-v-ca5140c7] { position: relative; width: 22px; height: 22px; cursor: pointer;\n}\n.color .chip[data-v-ca5140c7] { display: block; width: 22px; height: 22px; border-radius: 5px; border: 1px solid rgba(255,255,255,.3);\n}\n.color input[data-v-ca5140c7] { position: absolute; inset: 0; opacity: 0; cursor: pointer;\n}\n.lbl[data-v-ca5140c7] { font-size: 12px; color: #ccc; font-weight: 600;\n}\n.seg[data-v-ca5140c7] { display: flex; gap: 2px;\n}\n.seg button[data-v-ca5140c7] { background: #2a2a30; color: #ccc; border: 1px solid #3a3a44; border-radius: 4px; padding: 2px 8px; font-size: 11px; cursor: pointer;\n}\n.seg button.on[data-v-ca5140c7] { background: #3b82f6; border-color: #3b82f6; color: #fff;\n}\n.mute[data-v-ca5140c7] { margin-left: auto; background: #2a2a30; color: #9ae6b4; border: 1px solid #3a3a44; border-radius: 4px; padding: 2px 8px; font-size: 11px; cursor: pointer;\n}\n.mute.off[data-v-ca5140c7] { color: #f87171;\n}\n.bbtoggle[data-v-ca5140c7] { font-size: 11px; color: #aaa; display: flex; gap: 4px; align-items: center;\n}\n.link-row[data-v-ca5140c7] { font-size: 11px;\n}\n.linkbadge[data-v-ca5140c7] { border: 1px solid; border-radius: 4px; padding: 1px 6px; color: #ddd;\n}\n.unlinked[data-v-ca5140c7] { color: #666;\n}\n.mini[data-v-ca5140c7] { background: #2a2a30; color: #ccc; border: 1px solid #3a3a44; border-radius: 4px; padding: 2px 8px; font-size: 11px; cursor: pointer;\n}\n.mini[data-v-ca5140c7]:hover { background: #34343c; color: #fff;\n}\n.hint[data-v-ca5140c7] { color: #777;\n}\n.bbox-row[data-v-ca5140c7] { gap: 6px;\n}\n.bbox-row label[data-v-ca5140c7] { display: flex; flex-direction: column; font-size: 10px; color: #999; gap: 2px;\n}\n.bbox-row input[data-v-ca5140c7] { width: 52px; background: #15151a; border: 1px solid #3a3a44; color: #eee; border-radius: 4px; padding: 3px; font-size: 11px;\n}\n.field[data-v-ca5140c7] { display: flex; flex-direction: column; gap: 3px; font-size: 11px; color: #aaa;\n}\n.field input[type='text'][data-v-ca5140c7], .field textarea[data-v-ca5140c7] {\n  background: #15151a; border: 1px solid #3a3a44; color: #eee; border-radius: 5px; padding: 6px; font-size: 12px; resize: vertical; font-family: inherit;\n}\n\n.preview[data-v-d02f898f] { display: flex; flex-direction: column; gap: 5px;\n}\n.head[data-v-d02f898f] { display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: #ccc;\n}\n.actions[data-v-d02f898f] { display: flex; gap: 6px; align-items: center;\n}\n.actions button[data-v-d02f898f] { background: #2a2a30; color: #ccc; border: 1px solid #3a3a44; border-radius: 4px; padding: 2px 8px; font-size: 11px; cursor: pointer;\n}\n.warns[data-v-d02f898f] { font-size: 11px; color: #f59e0b; cursor: help;\n}\n.warns.ok[data-v-d02f898f] { color: #34d399;\n}\n.json[data-v-d02f898f] {\n  margin: 0; background: #121216; border: 1px solid #2c2c34; border-radius: 6px; padding: 8px;\n  font-size: 11px; line-height: 1.4; max-height: 200px; overflow: auto; color: #cdd6f4;\n  white-space: pre; font-family: ui-monospace, monospace;\n}\n.warnlist[data-v-d02f898f] { margin: 0; padding-left: 16px; font-size: 10px; color: #f59e0b; max-height: 90px; overflow: auto;\n}\n\n.studio[data-v-10629887] {\n  display: flex; flex-direction: column; gap: 9px; padding: 10px;\n  font-family: -apple-system, system-ui, sans-serif; color: #e5e5ea;\n  background: #1a1a1f; border-radius: 8px; box-sizing: border-box; width: 100%;\n}\n.topbar[data-v-10629887] { display: flex; justify-content: space-between; align-items: center; gap: 8px;\n}\n.title[data-v-10629887] { font-size: 14px; font-weight: 700; letter-spacing: .3px; white-space: nowrap;\n}\n.tools[data-v-10629887] { display: flex; gap: 5px; align-items: center;\n}\n.ic[data-v-10629887] { background: #2a2a30; color: #ccc; border: 1px solid #3a3a44; border-radius: 5px; padding: 3px 8px; font-size: 12px; cursor: pointer;\n}\n.ic[data-v-10629887]:disabled { opacity: .35; cursor: default;\n}\n.ic.on[data-v-10629887] { background: #3b82f6; border-color: #3b82f6; color: #fff;\n}\n.fmt[data-v-10629887] { background: #2a2a30; color: #ddd; border: 1px solid #3a3a44; border-radius: 5px; font-size: 11px; padding: 3px; max-width: 150px;\n}\n.reset[data-v-10629887] { background: #2a2a30; color: #bbb; border: 1px solid #3a3a44; border-radius: 5px; padding: 3px 10px; font-size: 11px; cursor: pointer;\n}\n.advanced[data-v-10629887] {\n  display: flex; flex-wrap: wrap; gap: 8px; align-items: center; padding: 7px 8px;\n  background: #202026; border: 1px solid #32323c; border-radius: 6px; font-size: 11px; color: #aaa;\n}\n.advanced label[data-v-10629887] { display: flex; align-items: center; gap: 4px;\n}\n.advanced input[type='number'][data-v-10629887] { width: 56px; background: #15151a; border: 1px solid #3a3a44; color: #eee; border-radius: 4px; padding: 3px; font-size: 11px;\n}\n.advanced input[type='range'][data-v-10629887] { width: 70px;\n}\n.advanced .ck[data-v-10629887] { gap: 3px;\n}\n.hld[data-v-10629887], .bg[data-v-10629887] { display: flex; flex-direction: column; gap: 3px; font-size: 11px; color: #aaa;\n}\n.hld textarea[data-v-10629887], .bg textarea[data-v-10629887] {\n  background: #15151a; border: 1px solid #3a3a44; color: #eee; border-radius: 6px;\n  padding: 7px; font-size: 12px; resize: vertical; font-family: inherit; line-height: 1.4;\n}\n.main[data-v-10629887] { display: grid; grid-template-columns: minmax(280px, 1.4fr) minmax(220px, 1fr); gap: 12px; align-items: start;\n}\n.left[data-v-10629887] { display: flex; flex-direction: column; gap: 8px; min-width: 0;\n}\n.right[data-v-10629887] { display: flex; flex-direction: column; gap: 8px; min-width: 0;\n}\nhr[data-v-10629887] { border: none; border-top: 1px solid #2e2e36; width: 100%; margin: 2px 0;\n}\n@media (max-width: 520px) {\n.main[data-v-10629887] { grid-template-columns: 1fr;\n}\n}\n";document.head.appendChild(s);})();import { app } from "../../../scripts/app.js";
+(function(){var s=document.createElement('style');s.setAttribute('data-extension','comfyui-ideogramhelper');s.textContent="\n.canvas-wrap[data-v-237a165f] { display: flex; flex-direction: column; gap: 6px;\n}\n.toolbar[data-v-237a165f] { display: flex; flex-wrap: wrap; gap: 6px; align-items: center;\n}\n.lbl[data-v-237a165f] { font-size: 11px; color: #999;\n}\n.seg[data-v-237a165f] { display: flex; gap: 2px;\n}\n.seg button[data-v-237a165f], .ghost[data-v-237a165f] {\n  background: #2a2a30; color: #ddd; border: 1px solid #3a3a44; border-radius: 5px;\n  padding: 3px 8px; font-size: 11px; cursor: pointer;\n}\n.seg button.on[data-v-237a165f] { background: #3b82f6; border-color: #3b82f6; color: #fff;\n}\n.seg button.on.text[data-v-237a165f], .seg button.text.on[data-v-237a165f] { background: #f59e0b; border-color: #f59e0b; color: #1a1a1a;\n}\n.ghost.on[data-v-237a165f] { background: #3b82f6; border-color: #3b82f6; color: #fff;\n}\n.dims[data-v-237a165f] { font-size: 11px; color: #888; font-family: monospace;\n}\n.stage[data-v-237a165f] {\n  position: relative; width: 100%; background: #15151a;\n  border: 1px solid #3a3a44; border-radius: 6px; overflow: hidden;\n  background-image: linear-gradient(45deg, #1d1d22 25%, transparent 25%),\n    linear-gradient(-45deg, #1d1d22 25%, transparent 25%),\n    linear-gradient(45deg, transparent 75%, #1d1d22 75%),\n    linear-gradient(-45deg, transparent 75%, #1d1d22 75%);\n  background-size: 18px 18px;\n  background-position: 0 0, 0 9px, 9px -9px, -9px 0;\n  touch-action: none; user-select: none; cursor: crosshair;\n}\n.stage.dragging[data-v-237a165f] { cursor: grabbing;\n}\n.grid[data-v-237a165f] {\n  position: absolute; inset: 0; pointer-events: none;\n  background-image: linear-gradient(to right, rgba(255,255,255,.06) 1px, transparent 1px),\n    linear-gradient(to bottom, rgba(255,255,255,.06) 1px, transparent 1px);\n  background-size: 10% 10%;\n}\n.box[data-v-237a165f] { position: absolute; border: 2px solid; box-sizing: border-box; cursor: move; background: transparent; transition: background .1s;\n}\n.box[data-v-237a165f]:hover { background: var(--fill);\n}\n.box.sel[data-v-237a165f] { background: var(--fill); box-shadow: 0 0 0 1px #fff, 0 0 10px rgba(0,0,0,.6); z-index: 5;\n}\n.box.muted[data-v-237a165f] { opacity: 0.32; border-style: dashed; background: transparent !important;\n}\n.box.muted .tag[data-v-237a165f] { opacity: 0.6;\n}\n.box.draft[data-v-237a165f] { border-style: dashed; opacity: 0.8; pointer-events: none; background: rgba(156,163,175,.12);\n}\n.tag[data-v-237a165f] {\n  position: absolute; top: 0; left: 0; transform: translateY(-100%);\n  font-size: 10px; line-height: 1.4; padding: 1px 5px; white-space: nowrap;\n  max-width: 220px; overflow: hidden; text-overflow: ellipsis;\n  border-radius: 3px 3px 0 0; pointer-events: none;\n}\n.h[data-v-237a165f] { position: absolute; width: 11px; height: 11px; background: #fff; border: 1px solid #333; border-radius: 2px;\n}\n.h-nw[data-v-237a165f] { top: -6px; left: -6px; cursor: nwse-resize;\n}\n.h-n[data-v-237a165f]  { top: -6px; left: 50%; margin-left: -5px; cursor: ns-resize;\n}\n.h-ne[data-v-237a165f] { top: -6px; right: -6px; cursor: nesw-resize;\n}\n.h-e[data-v-237a165f]  { top: 50%; right: -6px; margin-top: -5px; cursor: ew-resize;\n}\n.h-se[data-v-237a165f] { bottom: -6px; right: -6px; cursor: nwse-resize;\n}\n.h-s[data-v-237a165f]  { bottom: -6px; left: 50%; margin-left: -5px; cursor: ns-resize;\n}\n.h-sw[data-v-237a165f] { bottom: -6px; left: -6px; cursor: nesw-resize;\n}\n.h-w[data-v-237a165f]  { top: 50%; left: -6px; margin-top: -5px; cursor: ew-resize;\n}\n.coordhint[data-v-237a165f] { font-size: 10px; color: rgba(255,255,255,.45); font-family: monospace;\n}\n\n.palette[data-v-3d11bea8] { display: flex; flex-direction: column; gap: 4px;\n}\n.swatches[data-v-3d11bea8] { display: flex; flex-wrap: wrap; gap: 6px; align-items: center;\n}\n.swatch-wrap[data-v-3d11bea8] { position: relative;\n}\n.swatch[data-v-3d11bea8] {\n  display: block; width: 26px; height: 26px; border-radius: 5px;\n  border: 1px solid rgba(255, 255, 255, 0.25); cursor: pointer; overflow: hidden;\n}\n.swatch input[data-v-3d11bea8] { opacity: 0; width: 100%; height: 100%; cursor: pointer;\n}\n.x[data-v-3d11bea8] {\n  position: absolute; top: -6px; right: -6px; width: 15px; height: 15px;\n  border-radius: 50%; border: none; background: #b23; color: #fff;\n  font-size: 11px; line-height: 11px; cursor: pointer; padding: 0;\n}\n.add[data-v-3d11bea8] {\n  width: 26px; height: 26px; border-radius: 5px; cursor: pointer;\n  border: 1px dashed rgba(255, 255, 255, 0.35); background: transparent;\n  color: rgba(255, 255, 255, 0.7); font-size: 16px; line-height: 1;\n}\n.hint[data-v-3d11bea8] { font-size: 10px; color: rgba(255, 255, 255, 0.45);\n}\n\n.style[data-v-41f81c5e] { display: flex; flex-direction: column; gap: 7px;\n}\n.head[data-v-41f81c5e] { display: flex; justify-content: space-between; align-items: center;\n}\n.en[data-v-41f81c5e] { font-size: 12px; color: #ccc; display: flex; gap: 5px; align-items: center; font-weight: 600;\n}\n.seg[data-v-41f81c5e] { display: flex; gap: 2px;\n}\n.seg button[data-v-41f81c5e] { background: #2a2a30; color: #ccc; border: 1px solid #3a3a44; border-radius: 4px; padding: 2px 9px; font-size: 11px; cursor: pointer;\n}\n.seg button.on[data-v-41f81c5e] { background: #8b5cf6; border-color: #8b5cf6; color: #fff;\n}\n.field[data-v-41f81c5e] { display: flex; flex-direction: column; gap: 3px; font-size: 11px; color: #aaa;\n}\n.field input[data-v-41f81c5e] { background: #15151a; border: 1px solid #3a3a44; color: #eee; border-radius: 5px; padding: 6px; font-size: 12px;\n}\n\n.ellist[data-v-5e6fcb49] { display: flex; flex-direction: column; gap: 6px; flex: 1 1 auto; min-height: 0;\n}\n.head[data-v-5e6fcb49] { display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: #ccc;\n}\n.adds[data-v-5e6fcb49] { display: flex; gap: 4px;\n}\n.adds button[data-v-5e6fcb49] { border: none; border-radius: 4px; padding: 3px 8px; font-size: 11px; cursor: pointer; color: #fff;\n}\n.adds .obj[data-v-5e6fcb49] { background: #3b82f6;\n}\n.adds .text[data-v-5e6fcb49] { background: #f59e0b; color: #1a1a1a;\n}\nul[data-v-5e6fcb49] { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 3px; flex: 1 1 auto; min-height: 80px; overflow-y: auto;\n}\nli[data-v-5e6fcb49] {\n  display: flex; align-items: center; gap: 6px; padding: 4px 6px; border-radius: 5px;\n  background: #232329; border: 1px solid transparent; cursor: pointer; font-size: 12px; color: #ddd;\n}\nli[data-v-5e6fcb49]:hover { background: #2b2b33;\n}\nli.sel[data-v-5e6fcb49] { border-color: #fff; background: #2e2e38;\n}\nli.muted .snip[data-v-5e6fcb49] { opacity: .45; text-decoration: line-through;\n}\n.eye[data-v-5e6fcb49] { background: none; border: none; cursor: pointer; padding: 0; font-size: 11px; flex: none; line-height: 1; filter: grayscale(.3);\n}\n.dot[data-v-5e6fcb49] { width: 9px; height: 9px; border-radius: 2px; flex: none;\n}\n.idx[data-v-5e6fcb49] { color: #888; width: 14px; flex: none;\n}\n.link[data-v-5e6fcb49] { flex: none; font-size: 10px;\n}\n.snip[data-v-5e6fcb49] { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\n}\n.bb[data-v-5e6fcb49] { color: #777; flex: none;\n}\n.ops[data-v-5e6fcb49] { display: flex; gap: 1px; opacity: 0; transition: opacity .12s;\n}\nli:hover .ops[data-v-5e6fcb49], li.sel .ops[data-v-5e6fcb49] { opacity: 1;\n}\n.ops button[data-v-5e6fcb49] { background: #34343c; border: none; color: #bbb; border-radius: 3px; width: 18px; height: 18px; font-size: 11px; cursor: pointer; padding: 0;\n}\n.ops button[data-v-5e6fcb49]:hover { background: #44444e; color: #fff;\n}\n.empty[data-v-5e6fcb49] { font-size: 11px; color: #777; margin: 2px 0;\n}\n\n.editor[data-v-ca5140c7] { display: flex; flex-direction: column; gap: 8px; padding: 8px; background: #202026; border-radius: 6px; border: 1px solid #32323c;\n}\n.editor.empty[data-v-ca5140c7] { color: #777; font-size: 12px; align-items: center;\n}\n.row[data-v-ca5140c7] { display: flex; align-items: center; gap: 8px; flex-wrap: wrap;\n}\n.color[data-v-ca5140c7] { position: relative; width: 22px; height: 22px; cursor: pointer;\n}\n.color .chip[data-v-ca5140c7] { display: block; width: 22px; height: 22px; border-radius: 5px; border: 1px solid rgba(255,255,255,.3);\n}\n.color input[data-v-ca5140c7] { position: absolute; inset: 0; opacity: 0; cursor: pointer;\n}\n.lbl[data-v-ca5140c7] { font-size: 12px; color: #ccc; font-weight: 600;\n}\n.seg[data-v-ca5140c7] { display: flex; gap: 2px;\n}\n.seg button[data-v-ca5140c7] { background: #2a2a30; color: #ccc; border: 1px solid #3a3a44; border-radius: 4px; padding: 2px 8px; font-size: 11px; cursor: pointer;\n}\n.seg button.on[data-v-ca5140c7] { background: #3b82f6; border-color: #3b82f6; color: #fff;\n}\n.mute[data-v-ca5140c7] { margin-left: auto; background: #2a2a30; color: #9ae6b4; border: 1px solid #3a3a44; border-radius: 4px; padding: 2px 8px; font-size: 11px; cursor: pointer;\n}\n.mute.off[data-v-ca5140c7] { color: #f87171;\n}\n.bbtoggle[data-v-ca5140c7] { font-size: 11px; color: #aaa; display: flex; gap: 4px; align-items: center;\n}\n.link-row[data-v-ca5140c7] { font-size: 11px;\n}\n.linkbadge[data-v-ca5140c7] { border: 1px solid; border-radius: 4px; padding: 1px 6px; color: #ddd;\n}\n.unlinked[data-v-ca5140c7] { color: #666;\n}\n.mini[data-v-ca5140c7] { background: #2a2a30; color: #ccc; border: 1px solid #3a3a44; border-radius: 4px; padding: 2px 8px; font-size: 11px; cursor: pointer;\n}\n.mini[data-v-ca5140c7]:hover { background: #34343c; color: #fff;\n}\n.hint[data-v-ca5140c7] { color: #777;\n}\n.bbox-row[data-v-ca5140c7] { gap: 6px;\n}\n.bbox-row label[data-v-ca5140c7] { display: flex; flex-direction: column; font-size: 10px; color: #999; gap: 2px;\n}\n.bbox-row input[data-v-ca5140c7] { width: 52px; background: #15151a; border: 1px solid #3a3a44; color: #eee; border-radius: 4px; padding: 3px; font-size: 11px;\n}\n.field[data-v-ca5140c7] { display: flex; flex-direction: column; gap: 3px; font-size: 11px; color: #aaa;\n}\n.field input[type='text'][data-v-ca5140c7], .field textarea[data-v-ca5140c7] {\n  background: #15151a; border: 1px solid #3a3a44; color: #eee; border-radius: 5px; padding: 6px; font-size: 12px; resize: vertical; font-family: inherit;\n}\n\n.preview[data-v-2df22a32] { display: flex; flex-direction: column; gap: 5px;\n}\n.head[data-v-2df22a32] { display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: #ccc;\n}\n.actions[data-v-2df22a32] { display: flex; gap: 6px; align-items: center; flex-wrap: wrap;\n}\n.actions button[data-v-2df22a32] { background: #2a2a30; color: #ccc; border: 1px solid #3a3a44; border-radius: 4px; padding: 2px 8px; font-size: 11px; cursor: pointer;\n}\n.actions button.apply[data-v-2df22a32] { background: #2563eb; border-color: #2563eb; color: #fff;\n}\n.actions button.apply[data-v-2df22a32]:disabled { opacity: .4; cursor: default;\n}\n.warns[data-v-2df22a32] { font-size: 11px; color: #f59e0b; cursor: help;\n}\n.warns.ok[data-v-2df22a32] { color: #34d399;\n}\n.json[data-v-2df22a32] {\n  margin: 0; background: #121216; border: 1px solid #2c2c34; border-radius: 6px; padding: 8px;\n  font-size: 11px; line-height: 1.4; max-height: 220px; overflow: auto; color: #cdd6f4;\n  white-space: pre; font-family: ui-monospace, monospace;\n}\n.json.edit[data-v-2df22a32] { width: 100%; box-sizing: border-box; min-height: 160px; resize: vertical; white-space: pre;\n}\n.parseerr[data-v-2df22a32] { font-size: 10px; color: #f87171; font-family: ui-monospace, monospace;\n}\n.warnlist[data-v-2df22a32] { margin: 0; padding-left: 16px; font-size: 10px; color: #f59e0b; max-height: 90px; overflow: auto;\n}\n\n.studio[data-v-d5988e1a] {\n  display: flex; flex-direction: column; gap: 9px; padding: 10px;\n  font-family: -apple-system, system-ui, sans-serif; color: #e5e5ea;\n  background: #1a1a1f; border-radius: 8px; box-sizing: border-box;\n  width: 100%; min-height: 100%; /* fill the node so the layout grows to fit */\n}\n.topbar[data-v-d5988e1a] { display: flex; justify-content: space-between; align-items: center; gap: 8px;\n}\n.title[data-v-d5988e1a] { font-size: 14px; font-weight: 700; letter-spacing: .3px; white-space: nowrap;\n}\n.tools[data-v-d5988e1a] { display: flex; gap: 5px; align-items: center;\n}\n.ic[data-v-d5988e1a] { background: #2a2a30; color: #ccc; border: 1px solid #3a3a44; border-radius: 5px; padding: 3px 8px; font-size: 12px; cursor: pointer;\n}\n.ic[data-v-d5988e1a]:disabled { opacity: .35; cursor: default;\n}\n.ic.on[data-v-d5988e1a] { background: #3b82f6; border-color: #3b82f6; color: #fff;\n}\n.fmt[data-v-d5988e1a] { background: #2a2a30; color: #ddd; border: 1px solid #3a3a44; border-radius: 5px; font-size: 11px; padding: 3px; max-width: 150px;\n}\n.reset[data-v-d5988e1a] { background: #2a2a30; color: #bbb; border: 1px solid #3a3a44; border-radius: 5px; padding: 3px 10px; font-size: 11px; cursor: pointer;\n}\n.advanced[data-v-d5988e1a] {\n  display: flex; flex-wrap: wrap; gap: 8px; align-items: center; padding: 7px 8px;\n  background: #202026; border: 1px solid #32323c; border-radius: 6px; font-size: 11px; color: #aaa;\n}\n.advanced label[data-v-d5988e1a] { display: flex; align-items: center; gap: 4px;\n}\n.advanced input[type='number'][data-v-d5988e1a] { width: 56px; background: #15151a; border: 1px solid #3a3a44; color: #eee; border-radius: 4px; padding: 3px; font-size: 11px;\n}\n.advanced input[type='range'][data-v-d5988e1a] { width: 70px;\n}\n.advanced .ck[data-v-d5988e1a] { gap: 3px;\n}\n.hld[data-v-d5988e1a], .bg[data-v-d5988e1a] { display: flex; flex-direction: column; gap: 3px; font-size: 11px; color: #aaa;\n}\n.hld textarea[data-v-d5988e1a], .bg textarea[data-v-d5988e1a] {\n  background: #15151a; border: 1px solid #3a3a44; color: #eee; border-radius: 6px;\n  padding: 7px; font-size: 12px; resize: vertical; font-family: inherit; line-height: 1.4;\n}\n/* flex:1 → the canvas/list area soaks up spare node height; align-items:stretch\n   makes both columns equal height so the right column no longer floats. */\n.main[data-v-d5988e1a] { display: grid; grid-template-columns: minmax(280px, 1.4fr) minmax(220px, 1fr); gap: 12px; align-items: stretch; flex: 1 1 auto; min-height: 0;\n}\n/* left keeps its natural height (canvas + a normal, resizable background);\n   only the right column stretches, so the elements LIST is what grows to fill\n   the node — the background stays a normal, drag-to-resize textarea. */\n.left[data-v-d5988e1a] { display: flex; flex-direction: column; gap: 8px; min-width: 0; align-self: start;\n}\n.right[data-v-d5988e1a] { display: flex; flex-direction: column; gap: 8px; min-width: 0; min-height: 0;\n}\nhr[data-v-d5988e1a] { border: none; border-top: 1px solid #2e2e36; width: 100%; margin: 2px 0;\n}\n@media (max-width: 520px) {\n.main[data-v-d5988e1a] { grid-template-columns: 1fr;\n}\n}\n";document.head.appendChild(s);})();import { app } from "../../../scripts/app.js";
 /**
-* @vue/shared v3.5.13
+* @vue/shared v3.5.35
 * (c) 2018-present Yuxi (Evan) You and Vue contributors
 * @license MIT
 **/
-/*! #__NO_SIDE_EFFECTS__ */
 // @__NO_SIDE_EFFECTS__
 function makeMap(str) {
   const map = /* @__PURE__ */ Object.create(null);
@@ -52,15 +51,15 @@ const isReservedProp = /* @__PURE__ */ makeMap(
 );
 const cacheStringFunction = (fn) => {
   const cache = /* @__PURE__ */ Object.create(null);
-  return (str) => {
+  return ((str) => {
     const hit = cache[str];
     return hit || (cache[str] = fn(str));
-  };
+  });
 };
-const camelizeRE = /-(\w)/g;
+const camelizeRE = /-\w/g;
 const camelize = cacheStringFunction(
   (str) => {
-    return str.replace(camelizeRE, (_, c) => c ? c.toUpperCase() : "");
+    return str.replace(camelizeRE, (c) => c.slice(1).toUpperCase());
   }
 );
 const hyphenateRE = /\B([A-Z])/g;
@@ -241,23 +240,32 @@ const stringifySymbol = (v, i = "") => {
   );
 };
 /**
-* @vue/reactivity v3.5.13
+* @vue/reactivity v3.5.35
 * (c) 2018-present Yuxi (Evan) You and Vue contributors
 * @license MIT
 **/
 let activeEffectScope;
 class EffectScope {
+  // TODO isolatedDeclarations "__v_skip"
   constructor(detached = false) {
     this.detached = detached;
     this._active = true;
+    this._on = 0;
     this.effects = [];
     this.cleanups = [];
     this._isPaused = false;
-    this.parent = activeEffectScope;
+    this._warnOnRun = true;
+    this.__v_skip = true;
     if (!detached && activeEffectScope) {
-      this.index = (activeEffectScope.scopes || (activeEffectScope.scopes = [])).push(
-        this
-      ) - 1;
+      if (activeEffectScope.active) {
+        this.parent = activeEffectScope;
+        this.index = (activeEffectScope.scopes || (activeEffectScope.scopes = [])).push(
+          this
+        ) - 1;
+      } else {
+        this._active = false;
+        this._warnOnRun = false;
+      }
     }
   }
   get active() {
@@ -312,14 +320,31 @@ class EffectScope {
    * @internal
    */
   on() {
-    activeEffectScope = this;
+    if (++this._on === 1) {
+      this.prevScope = activeEffectScope;
+      activeEffectScope = this;
+    }
   }
   /**
    * This should only be called on non-detached scopes
    * @internal
    */
   off() {
-    activeEffectScope = this.parent;
+    if (this._on > 0 && --this._on === 0) {
+      if (activeEffectScope === this) {
+        activeEffectScope = this.prevScope;
+      } else {
+        let current = activeEffectScope;
+        while (current) {
+          if (current.prevScope === this) {
+            current.prevScope = this.prevScope;
+            break;
+          }
+          current = current.prevScope;
+        }
+      }
+      this.prevScope = void 0;
+    }
   }
   stop(fromParent) {
     if (this._active) {
@@ -364,8 +389,12 @@ class ReactiveEffect {
     this.next = void 0;
     this.cleanup = void 0;
     this.scheduler = void 0;
-    if (activeEffectScope && activeEffectScope.active) {
-      activeEffectScope.effects.push(this);
+    if (activeEffectScope) {
+      if (activeEffectScope.active) {
+        activeEffectScope.effects.push(this);
+      } else {
+        this.flags &= -2;
+      }
     }
   }
   pause() {
@@ -541,12 +570,11 @@ function refreshComputed(computed2) {
     return;
   }
   computed2.globalVersion = globalVersion;
-  const dep = computed2.dep;
-  computed2.flags |= 2;
-  if (dep.version > 0 && !computed2.isSSR && computed2.deps && !isDirty(computed2)) {
-    computed2.flags &= -3;
+  if (!computed2.isSSR && computed2.flags & 128 && (!computed2.deps && !computed2._dirty || !isDirty(computed2))) {
     return;
   }
+  computed2.flags |= 2;
+  const dep = computed2.dep;
   const prevSub = activeSub;
   const prevShouldTrack = shouldTrack;
   activeSub = computed2;
@@ -555,6 +583,7 @@ function refreshComputed(computed2) {
     prepareDeps(computed2);
     const value = computed2.fn(computed2._value);
     if (dep.version === 0 || hasChanged(value, computed2._value)) {
+      computed2.flags |= 128;
       computed2._value = value;
       dep.version++;
     }
@@ -635,6 +664,7 @@ class Link {
   }
 }
 class Dep {
+  // TODO isolatedDeclarations "__v_skip"
   constructor(computed2) {
     this.computed = computed2;
     this.version = 0;
@@ -643,6 +673,7 @@ class Dep {
     this.map = void 0;
     this.key = void 0;
     this.sc = 0;
+    this.__v_skip = true;
   }
   track(debugInfo) {
     if (!activeSub || !shouldTrack || activeSub === this.computed) {
@@ -717,13 +748,13 @@ function addSub(link) {
   }
 }
 const targetMap = /* @__PURE__ */ new WeakMap();
-const ITERATE_KEY = Symbol(
+const ITERATE_KEY = /* @__PURE__ */ Symbol(
   ""
 );
-const MAP_KEY_ITERATE_KEY = Symbol(
+const MAP_KEY_ITERATE_KEY = /* @__PURE__ */ Symbol(
   ""
 );
-const ARRAY_ITERATE_KEY = Symbol(
+const ARRAY_ITERATE_KEY = /* @__PURE__ */ Symbol(
   ""
 );
 function track(target, type, key) {
@@ -806,19 +837,25 @@ function trigger(target, type, key, newValue, oldValue, oldTarget) {
   endBatch();
 }
 function reactiveReadArray(array) {
-  const raw = toRaw(array);
+  const raw = /* @__PURE__ */ toRaw(array);
   if (raw === array) return raw;
   track(raw, "iterate", ARRAY_ITERATE_KEY);
-  return isShallow(array) ? raw : raw.map(toReactive);
+  return /* @__PURE__ */ isShallow(array) ? raw : raw.map(toReactive);
 }
 function shallowReadArray(arr) {
-  track(arr = toRaw(arr), "iterate", ARRAY_ITERATE_KEY);
+  track(arr = /* @__PURE__ */ toRaw(arr), "iterate", ARRAY_ITERATE_KEY);
   return arr;
+}
+function toWrapped(target, item) {
+  if (/* @__PURE__ */ isReadonly(target)) {
+    return /* @__PURE__ */ isReactive(target) ? toReadonly(toReactive(item)) : toReadonly(item);
+  }
+  return toReactive(item);
 }
 const arrayInstrumentations = {
   __proto__: null,
   [Symbol.iterator]() {
-    return iterator(this, Symbol.iterator, toReactive);
+    return iterator(this, Symbol.iterator, (item) => toWrapped(this, item));
   },
   concat(...args) {
     return reactiveReadArray(this).concat(
@@ -827,7 +864,7 @@ const arrayInstrumentations = {
   },
   entries() {
     return iterator(this, "entries", (value) => {
-      value[1] = toReactive(value[1]);
+      value[1] = toWrapped(this, value[1]);
       return value;
     });
   },
@@ -835,16 +872,37 @@ const arrayInstrumentations = {
     return apply(this, "every", fn, thisArg, void 0, arguments);
   },
   filter(fn, thisArg) {
-    return apply(this, "filter", fn, thisArg, (v) => v.map(toReactive), arguments);
+    return apply(
+      this,
+      "filter",
+      fn,
+      thisArg,
+      (v) => v.map((item) => toWrapped(this, item)),
+      arguments
+    );
   },
   find(fn, thisArg) {
-    return apply(this, "find", fn, thisArg, toReactive, arguments);
+    return apply(
+      this,
+      "find",
+      fn,
+      thisArg,
+      (item) => toWrapped(this, item),
+      arguments
+    );
   },
   findIndex(fn, thisArg) {
     return apply(this, "findIndex", fn, thisArg, void 0, arguments);
   },
   findLast(fn, thisArg) {
-    return apply(this, "findLast", fn, thisArg, toReactive, arguments);
+    return apply(
+      this,
+      "findLast",
+      fn,
+      thisArg,
+      (item) => toWrapped(this, item),
+      arguments
+    );
   },
   findLastIndex(fn, thisArg) {
     return apply(this, "findLastIndex", fn, thisArg, void 0, arguments);
@@ -862,7 +920,7 @@ const arrayInstrumentations = {
   join(separator) {
     return reactiveReadArray(this).join(separator);
   },
-  // keys() iterator only reads `length`, no optimisation required
+  // keys() iterator only reads `length`, no optimization required
   lastIndexOf(...args) {
     return searchProxy(this, "lastIndexOf", args);
   },
@@ -904,17 +962,17 @@ const arrayInstrumentations = {
     return noTracking(this, "unshift", args);
   },
   values() {
-    return iterator(this, "values", toReactive);
+    return iterator(this, "values", (item) => toWrapped(this, item));
   }
 };
 function iterator(self2, method, wrapValue) {
   const arr = shallowReadArray(self2);
   const iter = arr[method]();
-  if (arr !== self2 && !isShallow(self2)) {
+  if (arr !== self2 && !/* @__PURE__ */ isShallow(self2)) {
     iter._next = iter.next;
     iter.next = () => {
       const result = iter._next();
-      if (result.value) {
+      if (!result.done) {
         result.value = wrapValue(result.value);
       }
       return result;
@@ -925,7 +983,7 @@ function iterator(self2, method, wrapValue) {
 const arrayProto = Array.prototype;
 function apply(self2, method, fn, thisArg, wrappedRetFn, args) {
   const arr = shallowReadArray(self2);
-  const needsWrap = arr !== self2 && !isShallow(self2);
+  const needsWrap = arr !== self2 && !/* @__PURE__ */ isShallow(self2);
   const methodFn = arr[method];
   if (methodFn !== arrayProto[method]) {
     const result2 = methodFn.apply(self2, args);
@@ -935,7 +993,7 @@ function apply(self2, method, fn, thisArg, wrappedRetFn, args) {
   if (arr !== self2) {
     if (needsWrap) {
       wrappedFn = function(item, index) {
-        return fn.call(this, toReactive(item), index, self2);
+        return fn.call(this, toWrapped(self2, item), index, self2);
       };
     } else if (fn.length > 2) {
       wrappedFn = function(item, index) {
@@ -948,11 +1006,18 @@ function apply(self2, method, fn, thisArg, wrappedRetFn, args) {
 }
 function reduce(self2, method, fn, args) {
   const arr = shallowReadArray(self2);
+  const needsWrap = arr !== self2 && !/* @__PURE__ */ isShallow(self2);
   let wrappedFn = fn;
+  let wrapInitialAccumulator = false;
   if (arr !== self2) {
-    if (!isShallow(self2)) {
+    if (needsWrap) {
+      wrapInitialAccumulator = args.length === 0;
       wrappedFn = function(acc, item, index) {
-        return fn.call(this, acc, toReactive(item), index, self2);
+        if (wrapInitialAccumulator) {
+          wrapInitialAccumulator = false;
+          acc = toWrapped(self2, acc);
+        }
+        return fn.call(this, acc, toWrapped(self2, item), index, self2);
       };
     } else if (fn.length > 3) {
       wrappedFn = function(acc, item, index) {
@@ -960,14 +1025,15 @@ function reduce(self2, method, fn, args) {
       };
     }
   }
-  return arr[method](wrappedFn, ...args);
+  const result = arr[method](wrappedFn, ...args);
+  return wrapInitialAccumulator ? toWrapped(self2, result) : result;
 }
 function searchProxy(self2, method, args) {
-  const arr = toRaw(self2);
+  const arr = /* @__PURE__ */ toRaw(self2);
   track(arr, "iterate", ARRAY_ITERATE_KEY);
   const res = arr[method](...args);
-  if ((res === -1 || res === false) && isProxy(args[0])) {
-    args[0] = toRaw(args[0]);
+  if ((res === -1 || res === false) && /* @__PURE__ */ isProxy(args[0])) {
+    args[0] = /* @__PURE__ */ toRaw(args[0]);
     return arr[method](...args);
   }
   return res;
@@ -975,7 +1041,7 @@ function searchProxy(self2, method, args) {
 function noTracking(self2, method, args = []) {
   pauseTracking();
   startBatch();
-  const res = toRaw(self2)[method].apply(self2, args);
+  const res = (/* @__PURE__ */ toRaw(self2))[method].apply(self2, args);
   endBatch();
   resetTracking();
   return res;
@@ -986,7 +1052,7 @@ const builtInSymbols = new Set(
 );
 function hasOwnProperty(key) {
   if (!isSymbol(key)) key = String(key);
-  const obj = toRaw(this);
+  const obj = /* @__PURE__ */ toRaw(this);
   track(obj, "has", key);
   return obj.hasOwnProperty(key);
 }
@@ -1028,7 +1094,7 @@ class BaseReactiveHandler {
       // if this is a proxy wrapping a ref, return methods using the raw ref
       // as receiver so that we don't have to call `toRaw` on the ref in all
       // its class methods
-      isRef(target) ? target : receiver
+      /* @__PURE__ */ isRef(target) ? target : receiver
     );
     if (isSymbol(key) ? builtInSymbols.has(key) : isNonTrackableKeys(key)) {
       return res;
@@ -1039,11 +1105,12 @@ class BaseReactiveHandler {
     if (isShallow2) {
       return res;
     }
-    if (isRef(res)) {
-      return targetIsArray && isIntegerKey(key) ? res : res.value;
+    if (/* @__PURE__ */ isRef(res)) {
+      const value = targetIsArray && isIntegerKey(key) ? res : res.value;
+      return isReadonly2 && isObject(value) ? /* @__PURE__ */ readonly(value) : value;
     }
     if (isObject(res)) {
-      return isReadonly2 ? readonly(res) : reactive(res);
+      return isReadonly2 ? /* @__PURE__ */ readonly(res) : /* @__PURE__ */ reactive(res);
     }
     return res;
   }
@@ -1054,29 +1121,30 @@ class MutableReactiveHandler extends BaseReactiveHandler {
   }
   set(target, key, value, receiver) {
     let oldValue = target[key];
+    const isArrayWithIntegerKey = isArray(target) && isIntegerKey(key);
     if (!this._isShallow) {
-      const isOldValueReadonly = isReadonly(oldValue);
-      if (!isShallow(value) && !isReadonly(value)) {
-        oldValue = toRaw(oldValue);
-        value = toRaw(value);
+      const isOldValueReadonly = /* @__PURE__ */ isReadonly(oldValue);
+      if (!/* @__PURE__ */ isShallow(value) && !/* @__PURE__ */ isReadonly(value)) {
+        oldValue = /* @__PURE__ */ toRaw(oldValue);
+        value = /* @__PURE__ */ toRaw(value);
       }
-      if (!isArray(target) && isRef(oldValue) && !isRef(value)) {
+      if (!isArrayWithIntegerKey && /* @__PURE__ */ isRef(oldValue) && !/* @__PURE__ */ isRef(value)) {
         if (isOldValueReadonly) {
-          return false;
+          return true;
         } else {
           oldValue.value = value;
           return true;
         }
       }
     }
-    const hadKey = isArray(target) && isIntegerKey(key) ? Number(key) < target.length : hasOwn(target, key);
+    const hadKey = isArrayWithIntegerKey ? Number(key) < target.length : hasOwn(target, key);
     const result = Reflect.set(
       target,
       key,
       value,
-      isRef(target) ? target : receiver
+      /* @__PURE__ */ isRef(target) ? target : receiver
     );
-    if (target === toRaw(receiver)) {
+    if (target === /* @__PURE__ */ toRaw(receiver)) {
       if (!hadKey) {
         trigger(target, "add", key, value);
       } else if (hasChanged(value, oldValue)) {
@@ -1130,7 +1198,7 @@ const getProto = (v) => Reflect.getPrototypeOf(v);
 function createIterableMethod(method, isReadonly2, isShallow2) {
   return function(...args) {
     const target = this["__v_raw"];
-    const rawTarget = toRaw(target);
+    const rawTarget = /* @__PURE__ */ toRaw(target);
     const targetIsMap = isMap(rawTarget);
     const isPair = method === "entries" || method === Symbol.iterator && targetIsMap;
     const isKeyOnly = method === "keys" && targetIsMap;
@@ -1141,20 +1209,20 @@ function createIterableMethod(method, isReadonly2, isShallow2) {
       "iterate",
       isKeyOnly ? MAP_KEY_ITERATE_KEY : ITERATE_KEY
     );
-    return {
-      // iterator protocol
-      next() {
-        const { value, done } = innerIterator.next();
-        return done ? { value, done } : {
-          value: isPair ? [wrap(value[0]), wrap(value[1])] : wrap(value),
-          done
-        };
-      },
-      // iterable protocol
-      [Symbol.iterator]() {
-        return this;
+    return extend(
+      // inheriting all iterator properties
+      Object.create(innerIterator),
+      {
+        // iterator protocol
+        next() {
+          const { value, done } = innerIterator.next();
+          return done ? { value, done } : {
+            value: isPair ? [wrap(value[0]), wrap(value[1])] : wrap(value),
+            done
+          };
+        }
       }
-    };
+    );
   };
 }
 function createReadonlyMethod(type) {
@@ -1166,8 +1234,8 @@ function createInstrumentations(readonly2, shallow) {
   const instrumentations = {
     get(key) {
       const target = this["__v_raw"];
-      const rawTarget = toRaw(target);
-      const rawKey = toRaw(key);
+      const rawTarget = /* @__PURE__ */ toRaw(target);
+      const rawKey = /* @__PURE__ */ toRaw(key);
       if (!readonly2) {
         if (hasChanged(key, rawKey)) {
           track(rawTarget, "get", key);
@@ -1186,13 +1254,13 @@ function createInstrumentations(readonly2, shallow) {
     },
     get size() {
       const target = this["__v_raw"];
-      !readonly2 && track(toRaw(target), "iterate", ITERATE_KEY);
-      return Reflect.get(target, "size", target);
+      !readonly2 && track(/* @__PURE__ */ toRaw(target), "iterate", ITERATE_KEY);
+      return target.size;
     },
     has(key) {
       const target = this["__v_raw"];
-      const rawTarget = toRaw(target);
-      const rawKey = toRaw(key);
+      const rawTarget = /* @__PURE__ */ toRaw(target);
+      const rawKey = /* @__PURE__ */ toRaw(key);
       if (!readonly2) {
         if (hasChanged(key, rawKey)) {
           track(rawTarget, "has", key);
@@ -1204,7 +1272,7 @@ function createInstrumentations(readonly2, shallow) {
     forEach(callback, thisArg) {
       const observed = this;
       const target = observed["__v_raw"];
-      const rawTarget = toRaw(target);
+      const rawTarget = /* @__PURE__ */ toRaw(target);
       const wrap = shallow ? toShallow : readonly2 ? toReadonly : toReactive;
       !readonly2 && track(rawTarget, "iterate", ITERATE_KEY);
       return target.forEach((value, key) => {
@@ -1221,27 +1289,26 @@ function createInstrumentations(readonly2, shallow) {
       clear: createReadonlyMethod("clear")
     } : {
       add(value) {
-        if (!shallow && !isShallow(value) && !isReadonly(value)) {
-          value = toRaw(value);
-        }
-        const target = toRaw(this);
+        const target = /* @__PURE__ */ toRaw(this);
         const proto = getProto(target);
-        const hadKey = proto.has.call(target, value);
+        const rawValue = /* @__PURE__ */ toRaw(value);
+        const valueToAdd = !shallow && !/* @__PURE__ */ isShallow(value) && !/* @__PURE__ */ isReadonly(value) ? rawValue : value;
+        const hadKey = proto.has.call(target, valueToAdd) || hasChanged(value, valueToAdd) && proto.has.call(target, value) || hasChanged(rawValue, valueToAdd) && proto.has.call(target, rawValue);
         if (!hadKey) {
-          target.add(value);
-          trigger(target, "add", value, value);
+          target.add(valueToAdd);
+          trigger(target, "add", valueToAdd, valueToAdd);
         }
         return this;
       },
       set(key, value) {
-        if (!shallow && !isShallow(value) && !isReadonly(value)) {
-          value = toRaw(value);
+        if (!shallow && !/* @__PURE__ */ isShallow(value) && !/* @__PURE__ */ isReadonly(value)) {
+          value = /* @__PURE__ */ toRaw(value);
         }
-        const target = toRaw(this);
+        const target = /* @__PURE__ */ toRaw(this);
         const { has, get } = getProto(target);
         let hadKey = has.call(target, key);
         if (!hadKey) {
-          key = toRaw(key);
+          key = /* @__PURE__ */ toRaw(key);
           hadKey = has.call(target, key);
         }
         const oldValue = get.call(target, key);
@@ -1254,11 +1321,11 @@ function createInstrumentations(readonly2, shallow) {
         return this;
       },
       delete(key) {
-        const target = toRaw(this);
+        const target = /* @__PURE__ */ toRaw(this);
         const { has, get } = getProto(target);
         let hadKey = has.call(target, key);
         if (!hadKey) {
-          key = toRaw(key);
+          key = /* @__PURE__ */ toRaw(key);
           hadKey = has.call(target, key);
         }
         get ? get.call(target, key) : void 0;
@@ -1269,7 +1336,7 @@ function createInstrumentations(readonly2, shallow) {
         return result;
       },
       clear() {
-        const target = toRaw(this);
+        const target = /* @__PURE__ */ toRaw(this);
         const hadItems = target.size !== 0;
         const result = target.clear();
         if (hadItems) {
@@ -1342,11 +1409,9 @@ function targetTypeMap(rawType) {
       return 0;
   }
 }
-function getTargetType(value) {
-  return value["__v_skip"] || !Object.isExtensible(value) ? 0 : targetTypeMap(toRawType(value));
-}
+// @__NO_SIDE_EFFECTS__
 function reactive(target) {
-  if (isReadonly(target)) {
+  if (/* @__PURE__ */ isReadonly(target)) {
     return target;
   }
   return createReactiveObject(
@@ -1357,6 +1422,7 @@ function reactive(target) {
     reactiveMap
   );
 }
+// @__NO_SIDE_EFFECTS__
 function shallowReactive(target) {
   return createReactiveObject(
     target,
@@ -1366,6 +1432,7 @@ function shallowReactive(target) {
     shallowReactiveMap
   );
 }
+// @__NO_SIDE_EFFECTS__
 function readonly(target) {
   return createReactiveObject(
     target,
@@ -1375,6 +1442,7 @@ function readonly(target) {
     readonlyMap
   );
 }
+// @__NO_SIDE_EFFECTS__
 function shallowReadonly(target) {
   return createReactiveObject(
     target,
@@ -1391,11 +1459,14 @@ function createReactiveObject(target, isReadonly2, baseHandlers, collectionHandl
   if (target["__v_raw"] && !(isReadonly2 && target["__v_isReactive"])) {
     return target;
   }
+  if (target["__v_skip"] || !Object.isExtensible(target)) {
+    return target;
+  }
   const existingProxy = proxyMap.get(target);
   if (existingProxy) {
     return existingProxy;
   }
-  const targetType = getTargetType(target);
+  const targetType = targetTypeMap(toRawType(target));
   if (targetType === 0) {
     return target;
   }
@@ -1406,24 +1477,29 @@ function createReactiveObject(target, isReadonly2, baseHandlers, collectionHandl
   proxyMap.set(target, proxy);
   return proxy;
 }
+// @__NO_SIDE_EFFECTS__
 function isReactive(value) {
-  if (isReadonly(value)) {
-    return isReactive(value["__v_raw"]);
+  if (/* @__PURE__ */ isReadonly(value)) {
+    return /* @__PURE__ */ isReactive(value["__v_raw"]);
   }
   return !!(value && value["__v_isReactive"]);
 }
+// @__NO_SIDE_EFFECTS__
 function isReadonly(value) {
   return !!(value && value["__v_isReadonly"]);
 }
+// @__NO_SIDE_EFFECTS__
 function isShallow(value) {
   return !!(value && value["__v_isShallow"]);
 }
+// @__NO_SIDE_EFFECTS__
 function isProxy(value) {
   return value ? !!value["__v_raw"] : false;
 }
+// @__NO_SIDE_EFFECTS__
 function toRaw(observed) {
   const raw = observed && observed["__v_raw"];
-  return raw ? toRaw(raw) : observed;
+  return raw ? /* @__PURE__ */ toRaw(raw) : observed;
 }
 function markRaw(value) {
   if (!hasOwn(value, "__v_skip") && Object.isExtensible(value)) {
@@ -1431,16 +1507,18 @@ function markRaw(value) {
   }
   return value;
 }
-const toReactive = (value) => isObject(value) ? reactive(value) : value;
-const toReadonly = (value) => isObject(value) ? readonly(value) : value;
+const toReactive = (value) => isObject(value) ? /* @__PURE__ */ reactive(value) : value;
+const toReadonly = (value) => isObject(value) ? /* @__PURE__ */ readonly(value) : value;
+// @__NO_SIDE_EFFECTS__
 function isRef(r) {
   return r ? r["__v_isRef"] === true : false;
 }
+// @__NO_SIDE_EFFECTS__
 function ref(value) {
   return createRef(value, false);
 }
 function createRef(rawValue, shallow) {
-  if (isRef(rawValue)) {
+  if (/* @__PURE__ */ isRef(rawValue)) {
     return rawValue;
   }
   return new RefImpl(rawValue, shallow);
@@ -1450,7 +1528,7 @@ class RefImpl {
     this.dep = new Dep();
     this["__v_isRef"] = true;
     this["__v_isShallow"] = false;
-    this._rawValue = isShallow2 ? value : toRaw(value);
+    this._rawValue = isShallow2 ? value : /* @__PURE__ */ toRaw(value);
     this._value = isShallow2 ? value : toReactive(value);
     this["__v_isShallow"] = isShallow2;
   }
@@ -1462,8 +1540,8 @@ class RefImpl {
   }
   set value(newValue) {
     const oldValue = this._rawValue;
-    const useDirectValue = this["__v_isShallow"] || isShallow(newValue) || isReadonly(newValue);
-    newValue = useDirectValue ? newValue : toRaw(newValue);
+    const useDirectValue = this["__v_isShallow"] || /* @__PURE__ */ isShallow(newValue) || /* @__PURE__ */ isReadonly(newValue);
+    newValue = useDirectValue ? newValue : /* @__PURE__ */ toRaw(newValue);
     if (hasChanged(newValue, oldValue)) {
       this._rawValue = newValue;
       this._value = useDirectValue ? newValue : toReactive(newValue);
@@ -1474,13 +1552,13 @@ class RefImpl {
   }
 }
 function unref(ref2) {
-  return isRef(ref2) ? ref2.value : ref2;
+  return /* @__PURE__ */ isRef(ref2) ? ref2.value : ref2;
 }
 const shallowUnwrapHandlers = {
   get: (target, key, receiver) => key === "__v_raw" ? target : unref(Reflect.get(target, key, receiver)),
   set: (target, key, value, receiver) => {
     const oldValue = target[key];
-    if (isRef(oldValue) && !isRef(value)) {
+    if (/* @__PURE__ */ isRef(oldValue) && !/* @__PURE__ */ isRef(value)) {
       oldValue.value = value;
       return true;
     } else {
@@ -1489,7 +1567,7 @@ const shallowUnwrapHandlers = {
   }
 };
 function proxyRefs(objectWithRefs) {
-  return isReactive(objectWithRefs) ? objectWithRefs : new Proxy(objectWithRefs, shallowUnwrapHandlers);
+  return /* @__PURE__ */ isReactive(objectWithRefs) ? objectWithRefs : new Proxy(objectWithRefs, shallowUnwrapHandlers);
 }
 class ComputedRefImpl {
   constructor(fn, setter, isSSR) {
@@ -1532,6 +1610,7 @@ class ComputedRefImpl {
     }
   }
 }
+// @__NO_SIDE_EFFECTS__
 function computed$1(getterOrOptions, debugOptions, isSSR = false) {
   let getter;
   let setter;
@@ -1558,7 +1637,7 @@ function watch$1(source, cb, options = EMPTY_OBJ) {
   const { immediate, deep, once, scheduler, augmentJob, call } = options;
   const reactiveGetter = (source2) => {
     if (deep) return source2;
-    if (isShallow(source2) || deep === false || deep === 0)
+    if (/* @__PURE__ */ isShallow(source2) || deep === false || deep === 0)
       return traverse(source2, 1);
     return traverse(source2);
   };
@@ -1568,19 +1647,19 @@ function watch$1(source, cb, options = EMPTY_OBJ) {
   let boundCleanup;
   let forceTrigger = false;
   let isMultiSource = false;
-  if (isRef(source)) {
+  if (/* @__PURE__ */ isRef(source)) {
     getter = () => source.value;
-    forceTrigger = isShallow(source);
-  } else if (isReactive(source)) {
+    forceTrigger = /* @__PURE__ */ isShallow(source);
+  } else if (/* @__PURE__ */ isReactive(source)) {
     getter = () => reactiveGetter(source);
     forceTrigger = true;
   } else if (isArray(source)) {
     isMultiSource = true;
-    forceTrigger = source.some((s) => isReactive(s) || isShallow(s));
+    forceTrigger = source.some((s) => /* @__PURE__ */ isReactive(s) || /* @__PURE__ */ isShallow(s));
     getter = () => source.map((s) => {
-      if (isRef(s)) {
+      if (/* @__PURE__ */ isRef(s)) {
         return s.value;
-      } else if (isReactive(s)) {
+      } else if (/* @__PURE__ */ isReactive(s)) {
         return reactiveGetter(s);
       } else if (isFunction(s)) {
         return call ? call(s, 2) : s();
@@ -1650,11 +1729,11 @@ function watch$1(source, cb, options = EMPTY_OBJ) {
             oldValue === INITIAL_WATCHER_VALUE ? void 0 : isMultiSource && oldValue[0] === INITIAL_WATCHER_VALUE ? [] : oldValue,
             boundCleanup
           ];
+          oldValue = newValue;
           call ? call(cb, 3, args) : (
             // @ts-expect-error
             cb(...args)
           );
-          oldValue = newValue;
         } finally {
           activeWatcher = currentWatcher;
         }
@@ -1700,13 +1779,13 @@ function traverse(value, depth = Infinity, seen) {
   if (depth <= 0 || !isObject(value) || value["__v_skip"]) {
     return value;
   }
-  seen = seen || /* @__PURE__ */ new Set();
-  if (seen.has(value)) {
+  seen = seen || /* @__PURE__ */ new Map();
+  if ((seen.get(value) || 0) >= depth) {
     return value;
   }
-  seen.add(value);
+  seen.set(value, depth);
   depth--;
-  if (isRef(value)) {
+  if (/* @__PURE__ */ isRef(value)) {
     traverse(value.value, depth, seen);
   } else if (isArray(value)) {
     for (let i = 0; i < value.length; i++) {
@@ -1729,7 +1808,7 @@ function traverse(value, depth = Infinity, seen) {
   return value;
 }
 /**
-* @vue/runtime-core v3.5.13
+* @vue/runtime-core v3.5.35
 * (c) 2018-present Yuxi (Evan) You and Vue contributors
 * @license MIT
 **/
@@ -1829,13 +1908,13 @@ function formatProp(key, value, raw) {
     return raw ? value : [`${key}=${value}`];
   } else if (typeof value === "number" || typeof value === "boolean" || value == null) {
     return raw ? value : [`${key}=${value}`];
-  } else if (isRef(value)) {
-    value = formatProp(key, toRaw(value.value), true);
+  } else if (/* @__PURE__ */ isRef(value)) {
+    value = formatProp(key, /* @__PURE__ */ toRaw(value.value), true);
     return raw ? value : [`${key}=Ref<`, value, `>`];
   } else if (isFunction(value)) {
     return [`${key}=fn${value.name ? `<${value.name}>` : ``}`];
   } else {
-    value = toRaw(value);
+    value = /* @__PURE__ */ toRaw(value);
     return raw ? value : [`${key}=`, value];
   }
 }
@@ -2123,8 +2202,122 @@ function invokeDirectiveHook(vnode, prevVNode, instance, name) {
     }
   }
 }
-const TeleportEndKey = Symbol("_vte");
+function provide(key, value) {
+  if (currentInstance) {
+    let provides = currentInstance.provides;
+    const parentProvides = currentInstance.parent && currentInstance.parent.provides;
+    if (parentProvides === provides) {
+      provides = currentInstance.provides = Object.create(parentProvides);
+    }
+    provides[key] = value;
+  }
+}
+function inject(key, defaultValue, treatDefaultAsFactory = false) {
+  const instance = getCurrentInstance();
+  if (instance || currentApp) {
+    let provides = currentApp ? currentApp._context.provides : instance ? instance.parent == null || instance.ce ? instance.vnode.appContext && instance.vnode.appContext.provides : instance.parent.provides : void 0;
+    if (provides && key in provides) {
+      return provides[key];
+    } else if (arguments.length > 1) {
+      return treatDefaultAsFactory && isFunction(defaultValue) ? defaultValue.call(instance && instance.proxy) : defaultValue;
+    } else ;
+  }
+}
+const ssrContextKey = /* @__PURE__ */ Symbol.for("v-scx");
+const useSSRContext = () => {
+  {
+    const ctx = inject(ssrContextKey);
+    return ctx;
+  }
+};
+function watch(source, cb, options) {
+  return doWatch(source, cb, options);
+}
+function doWatch(source, cb, options = EMPTY_OBJ) {
+  const { immediate, deep, flush, once } = options;
+  const baseWatchOptions = extend({}, options);
+  const runsImmediately = cb && immediate || !cb && flush !== "post";
+  let ssrCleanup;
+  if (isInSSRComponentSetup) {
+    if (flush === "sync") {
+      const ctx = useSSRContext();
+      ssrCleanup = ctx.__watcherHandles || (ctx.__watcherHandles = []);
+    } else if (!runsImmediately) {
+      const watchStopHandle = () => {
+      };
+      watchStopHandle.stop = NOOP;
+      watchStopHandle.resume = NOOP;
+      watchStopHandle.pause = NOOP;
+      return watchStopHandle;
+    }
+  }
+  const instance = currentInstance;
+  baseWatchOptions.call = (fn, type, args) => callWithAsyncErrorHandling(fn, instance, type, args);
+  let isPre = false;
+  if (flush === "post") {
+    baseWatchOptions.scheduler = (job) => {
+      queuePostRenderEffect(job, instance && instance.suspense);
+    };
+  } else if (flush !== "sync") {
+    isPre = true;
+    baseWatchOptions.scheduler = (job, isFirstRun) => {
+      if (isFirstRun) {
+        job();
+      } else {
+        queueJob(job);
+      }
+    };
+  }
+  baseWatchOptions.augmentJob = (job) => {
+    if (cb) {
+      job.flags |= 4;
+    }
+    if (isPre) {
+      job.flags |= 2;
+      if (instance) {
+        job.id = instance.uid;
+        job.i = instance;
+      }
+    }
+  };
+  const watchHandle = watch$1(source, cb, baseWatchOptions);
+  if (isInSSRComponentSetup) {
+    if (ssrCleanup) {
+      ssrCleanup.push(watchHandle);
+    } else if (runsImmediately) {
+      watchHandle();
+    }
+  }
+  return watchHandle;
+}
+function instanceWatch(source, value, options) {
+  const publicThis = this.proxy;
+  const getter = isString(source) ? source.includes(".") ? createPathGetter(publicThis, source) : () => publicThis[source] : source.bind(publicThis, publicThis);
+  let cb;
+  if (isFunction(value)) {
+    cb = value;
+  } else {
+    cb = value.handler;
+    options = value;
+  }
+  const reset = setCurrentInstance(this);
+  const res = doWatch(getter, cb.bind(publicThis), options);
+  reset();
+  return res;
+}
+function createPathGetter(ctx, path) {
+  const segments = path.split(".");
+  return () => {
+    let cur = ctx;
+    for (let i = 0; i < segments.length && cur; i++) {
+      cur = cur[segments[i]];
+    }
+    return cur;
+  };
+}
+const TeleportEndKey = /* @__PURE__ */ Symbol("_vte");
 const isTeleport = (type) => type.__isTeleport;
+const leaveCbKey = /* @__PURE__ */ Symbol("_leaveCb");
 function setTransitionHooks(vnode, hooks) {
   if (vnode.shapeFlag & 6 && vnode.component) {
     vnode.transition = hooks;
@@ -2136,7 +2329,6 @@ function setTransitionHooks(vnode, hooks) {
     vnode.transition = hooks;
   }
 }
-/*! #__NO_SIDE_EFFECTS__ */
 // @__NO_SIDE_EFFECTS__
 function defineComponent(options, extraOptions) {
   return isFunction(options) ? (
@@ -2148,6 +2340,11 @@ function defineComponent(options, extraOptions) {
 function markAsyncBoundary(instance) {
   instance.ids = [instance.ids[0] + instance.ids[2]++ + "-", 0, 0];
 }
+function isTemplateRefKey(refs, key) {
+  let desc;
+  return !!((desc = Object.getOwnPropertyDescriptor(refs, key)) && !desc.configurable);
+}
+const pendingSetRefMap = /* @__PURE__ */ new WeakMap();
 function setRef(rawRef, oldRawRef, parentSuspense, vnode, isUnmount = false) {
   if (isArray(rawRef)) {
     rawRef.forEach(
@@ -2173,29 +2370,43 @@ function setRef(rawRef, oldRawRef, parentSuspense, vnode, isUnmount = false) {
   const oldRef = oldRawRef && oldRawRef.r;
   const refs = owner.refs === EMPTY_OBJ ? owner.refs = {} : owner.refs;
   const setupState = owner.setupState;
-  const rawSetupState = toRaw(setupState);
-  const canSetSetupRef = setupState === EMPTY_OBJ ? () => false : (key) => {
+  const rawSetupState = /* @__PURE__ */ toRaw(setupState);
+  const canSetSetupRef = setupState === EMPTY_OBJ ? NO : (key) => {
+    if (isTemplateRefKey(refs, key)) {
+      return false;
+    }
     return hasOwn(rawSetupState, key);
   };
+  const canSetRef = (ref22, key) => {
+    if (key && isTemplateRefKey(refs, key)) {
+      return false;
+    }
+    return true;
+  };
   if (oldRef != null && oldRef !== ref3) {
+    invalidatePendingSetRef(oldRawRef);
     if (isString(oldRef)) {
       refs[oldRef] = null;
       if (canSetSetupRef(oldRef)) {
         setupState[oldRef] = null;
       }
-    } else if (isRef(oldRef)) {
-      oldRef.value = null;
+    } else if (/* @__PURE__ */ isRef(oldRef)) {
+      const oldRawRefAtom = oldRawRef;
+      if (canSetRef(oldRef, oldRawRefAtom.k)) {
+        oldRef.value = null;
+      }
+      if (oldRawRefAtom.k) refs[oldRawRefAtom.k] = null;
     }
   }
   if (isFunction(ref3)) {
     callWithErrorHandling(ref3, owner, 12, [value, refs]);
   } else {
     const _isString = isString(ref3);
-    const _isRef = isRef(ref3);
+    const _isRef = /* @__PURE__ */ isRef(ref3);
     if (_isString || _isRef) {
       const doSet = () => {
         if (rawRef.f) {
-          const existing = _isString ? canSetSetupRef(ref3) ? setupState[ref3] : refs[ref3] : ref3.value;
+          const existing = _isString ? canSetSetupRef(ref3) ? setupState[ref3] : refs[ref3] : canSetRef() || !rawRef.k ? ref3.value : refs[rawRef.k];
           if (isUnmount) {
             isArray(existing) && remove(existing, refValue);
           } else {
@@ -2206,8 +2417,11 @@ function setRef(rawRef, oldRawRef, parentSuspense, vnode, isUnmount = false) {
                   setupState[ref3] = refs[ref3];
                 }
               } else {
-                ref3.value = [refValue];
-                if (rawRef.k) refs[rawRef.k] = ref3.value;
+                const newVal = [refValue];
+                if (canSetRef(ref3, rawRef.k)) {
+                  ref3.value = newVal;
+                }
+                if (rawRef.k) refs[rawRef.k] = newVal;
               }
             } else if (!existing.includes(refValue)) {
               existing.push(refValue);
@@ -2219,17 +2433,32 @@ function setRef(rawRef, oldRawRef, parentSuspense, vnode, isUnmount = false) {
             setupState[ref3] = value;
           }
         } else if (_isRef) {
-          ref3.value = value;
+          if (canSetRef(ref3, rawRef.k)) {
+            ref3.value = value;
+          }
           if (rawRef.k) refs[rawRef.k] = value;
         } else ;
       };
       if (value) {
-        doSet.id = -1;
-        queuePostRenderEffect(doSet, parentSuspense);
+        const job = () => {
+          doSet();
+          pendingSetRefMap.delete(rawRef);
+        };
+        job.id = -1;
+        pendingSetRefMap.set(rawRef, job);
+        queuePostRenderEffect(job, parentSuspense);
       } else {
+        invalidatePendingSetRef(rawRef);
         doSet();
       }
     }
+  }
+}
+function invalidatePendingSetRef(rawRef) {
+  const pendingSetRef = pendingSetRefMap.get(rawRef);
+  if (pendingSetRef) {
+    pendingSetRef.flags |= 8;
+    pendingSetRefMap.delete(rawRef);
   }
 }
 getGlobalThis().requestIdleCallback || ((cb) => setTimeout(cb, 1));
@@ -2318,31 +2547,35 @@ const onRenderTracked = createHook("rtc");
 function onErrorCaptured(hook, target = currentInstance) {
   injectHook("ec", hook, target);
 }
-const NULL_DYNAMIC_COMPONENT = Symbol.for("v-ndc");
+const NULL_DYNAMIC_COMPONENT = /* @__PURE__ */ Symbol.for("v-ndc");
 function renderList(source, renderItem, cache, index) {
   let ret;
   const cached = cache;
   const sourceIsArray = isArray(source);
   if (sourceIsArray || isString(source)) {
-    const sourceIsReactiveArray = sourceIsArray && isReactive(source);
+    const sourceIsReactiveArray = sourceIsArray && /* @__PURE__ */ isReactive(source);
     let needsWrap = false;
+    let isReadonlySource = false;
     if (sourceIsReactiveArray) {
-      needsWrap = !isShallow(source);
+      needsWrap = !/* @__PURE__ */ isShallow(source);
+      isReadonlySource = /* @__PURE__ */ isReadonly(source);
       source = shallowReadArray(source);
     }
     ret = new Array(source.length);
     for (let i = 0, l = source.length; i < l; i++) {
       ret[i] = renderItem(
-        needsWrap ? toReactive(source[i]) : source[i],
+        needsWrap ? isReadonlySource ? toReadonly(toReactive(source[i])) : toReactive(source[i]) : source[i],
         i,
         void 0,
         cached
       );
     }
   } else if (typeof source === "number") {
-    ret = new Array(source);
-    for (let i = 0; i < source; i++) {
-      ret[i] = renderItem(i + 1, i, void 0, cached);
+    {
+      ret = new Array(source);
+      for (let i = 0; i < source; i++) {
+        ret[i] = renderItem(i + 1, i, void 0, cached);
+      }
     }
   } else if (isObject(source)) {
     if (source[Symbol.iterator]) {
@@ -2398,7 +2631,6 @@ const PublicInstanceProxyHandlers = {
       return true;
     }
     const { ctx, setupState, data, props, accessCache, type, appContext } = instance;
-    let normalizedProps;
     if (key[0] !== "$") {
       const n = accessCache[key];
       if (n !== void 0) {
@@ -2418,11 +2650,7 @@ const PublicInstanceProxyHandlers = {
       } else if (data !== EMPTY_OBJ && hasOwn(data, key)) {
         accessCache[key] = 2;
         return data[key];
-      } else if (
-        // only cache other properties when instance has declared (thus stable)
-        // props
-        (normalizedProps = instance.propsOptions[0]) && hasOwn(normalizedProps, key)
-      ) {
+      } else if (hasOwn(props, key)) {
         accessCache[key] = 3;
         return props[key];
       } else if (ctx !== EMPTY_OBJ && hasOwn(ctx, key)) {
@@ -2477,10 +2705,10 @@ const PublicInstanceProxyHandlers = {
     return true;
   },
   has({
-    _: { data, setupState, accessCache, ctx, appContext, propsOptions }
+    _: { data, setupState, accessCache, ctx, appContext, props, type }
   }, key) {
-    let normalizedProps;
-    return !!accessCache[key] || data !== EMPTY_OBJ && hasOwn(data, key) || hasSetupBinding(setupState, key) || (normalizedProps = propsOptions[0]) && hasOwn(normalizedProps, key) || hasOwn(ctx, key) || hasOwn(publicPropertiesMap, key) || hasOwn(appContext.config.globalProperties, key);
+    let cssModules;
+    return !!(accessCache[key] || data !== EMPTY_OBJ && key[0] !== "$" && hasOwn(data, key) || hasSetupBinding(setupState, key) || hasOwn(props, key) || hasOwn(ctx, key) || hasOwn(publicPropertiesMap, key) || hasOwn(appContext.config.globalProperties, key) || (cssModules = type.__cssModules) && cssModules[key]);
   },
   defineProperty(target, key, descriptor) {
     if (descriptor.get != null) {
@@ -2557,7 +2785,7 @@ function applyOptions(instance) {
     const data = dataOptions.call(publicThis, publicThis);
     if (!isObject(data)) ;
     else {
-      instance.data = reactive(data);
+      instance.data = /* @__PURE__ */ reactive(data);
     }
   }
   shouldCacheAccess = true;
@@ -2617,7 +2845,8 @@ function applyOptions(instance) {
       expose.forEach((key) => {
         Object.defineProperty(exposed, key, {
           get: () => publicThis[key],
-          set: (val) => publicThis[key] = val
+          set: (val) => publicThis[key] = val,
+          enumerable: true
         });
       });
     } else if (!instance.exposed) {
@@ -2656,7 +2885,7 @@ function resolveInjections(injectOptions, ctx, checkDuplicateProperties = NOOP) 
     } else {
       injected = inject(opt);
     }
-    if (isRef(injected)) {
+    if (/* @__PURE__ */ isRef(injected)) {
       Object.defineProperty(ctx, key, {
         enumerable: true,
         configurable: true,
@@ -2965,26 +3194,306 @@ function createAppAPI(render, hydrate) {
   };
 }
 let currentApp = null;
-function provide(key, value) {
-  if (!currentInstance) ;
-  else {
-    let provides = currentInstance.provides;
-    const parentProvides = currentInstance.parent && currentInstance.parent.provides;
-    if (parentProvides === provides) {
-      provides = currentInstance.provides = Object.create(parentProvides);
+const getModelModifiers = (props, modelName) => {
+  return modelName === "modelValue" || modelName === "model-value" ? props.modelModifiers : props[`${modelName}Modifiers`] || props[`${camelize(modelName)}Modifiers`] || props[`${hyphenate(modelName)}Modifiers`];
+};
+function emit(instance, event, ...rawArgs) {
+  if (instance.isUnmounted) return;
+  const props = instance.vnode.props || EMPTY_OBJ;
+  let args = rawArgs;
+  const isModelListener2 = event.startsWith("update:");
+  const modifiers = isModelListener2 && getModelModifiers(props, event.slice(7));
+  if (modifiers) {
+    if (modifiers.trim) {
+      args = rawArgs.map((a) => isString(a) ? a.trim() : a);
     }
-    provides[key] = value;
+    if (modifiers.number) {
+      args = rawArgs.map(looseToNumber);
+    }
+  }
+  let handlerName;
+  let handler = props[handlerName = toHandlerKey(event)] || // also try camelCase event handler (#2249)
+  props[handlerName = toHandlerKey(camelize(event))];
+  if (!handler && isModelListener2) {
+    handler = props[handlerName = toHandlerKey(hyphenate(event))];
+  }
+  if (handler) {
+    callWithAsyncErrorHandling(
+      handler,
+      instance,
+      6,
+      args
+    );
+  }
+  const onceHandler = props[handlerName + `Once`];
+  if (onceHandler) {
+    if (!instance.emitted) {
+      instance.emitted = {};
+    } else if (instance.emitted[handlerName]) {
+      return;
+    }
+    instance.emitted[handlerName] = true;
+    callWithAsyncErrorHandling(
+      onceHandler,
+      instance,
+      6,
+      args
+    );
   }
 }
-function inject(key, defaultValue, treatDefaultAsFactory = false) {
-  const instance = currentInstance || currentRenderingInstance;
-  if (instance || currentApp) {
-    const provides = currentApp ? currentApp._context.provides : instance ? instance.parent == null ? instance.vnode.appContext && instance.vnode.appContext.provides : instance.parent.provides : void 0;
-    if (provides && key in provides) {
-      return provides[key];
-    } else if (arguments.length > 1) {
-      return treatDefaultAsFactory && isFunction(defaultValue) ? defaultValue.call(instance && instance.proxy) : defaultValue;
-    } else ;
+const mixinEmitsCache = /* @__PURE__ */ new WeakMap();
+function normalizeEmitsOptions(comp, appContext, asMixin = false) {
+  const cache = asMixin ? mixinEmitsCache : appContext.emitsCache;
+  const cached = cache.get(comp);
+  if (cached !== void 0) {
+    return cached;
+  }
+  const raw = comp.emits;
+  let normalized = {};
+  let hasExtends = false;
+  if (!isFunction(comp)) {
+    const extendEmits = (raw2) => {
+      const normalizedFromExtend = normalizeEmitsOptions(raw2, appContext, true);
+      if (normalizedFromExtend) {
+        hasExtends = true;
+        extend(normalized, normalizedFromExtend);
+      }
+    };
+    if (!asMixin && appContext.mixins.length) {
+      appContext.mixins.forEach(extendEmits);
+    }
+    if (comp.extends) {
+      extendEmits(comp.extends);
+    }
+    if (comp.mixins) {
+      comp.mixins.forEach(extendEmits);
+    }
+  }
+  if (!raw && !hasExtends) {
+    if (isObject(comp)) {
+      cache.set(comp, null);
+    }
+    return null;
+  }
+  if (isArray(raw)) {
+    raw.forEach((key) => normalized[key] = null);
+  } else {
+    extend(normalized, raw);
+  }
+  if (isObject(comp)) {
+    cache.set(comp, normalized);
+  }
+  return normalized;
+}
+function isEmitListener(options, key) {
+  if (!options || !isOn(key)) {
+    return false;
+  }
+  key = key.slice(2).replace(/Once$/, "");
+  return hasOwn(options, key[0].toLowerCase() + key.slice(1)) || hasOwn(options, hyphenate(key)) || hasOwn(options, key);
+}
+function markAttrsAccessed() {
+}
+function renderComponentRoot(instance) {
+  const {
+    type: Component,
+    vnode,
+    proxy,
+    withProxy,
+    propsOptions: [propsOptions],
+    slots,
+    attrs,
+    emit: emit2,
+    render,
+    renderCache,
+    props,
+    data,
+    setupState,
+    ctx,
+    inheritAttrs
+  } = instance;
+  const prev = setCurrentRenderingInstance(instance);
+  let result;
+  let fallthroughAttrs;
+  try {
+    if (vnode.shapeFlag & 4) {
+      const proxyToUse = withProxy || proxy;
+      const thisProxy = false ? new Proxy(proxyToUse, {
+        get(target, key, receiver) {
+          warn$1(
+            `Property '${String(
+              key
+            )}' was accessed via 'this'. Avoid using 'this' in templates.`
+          );
+          return Reflect.get(target, key, receiver);
+        }
+      }) : proxyToUse;
+      result = normalizeVNode(
+        render.call(
+          thisProxy,
+          proxyToUse,
+          renderCache,
+          false ? /* @__PURE__ */ shallowReadonly(props) : props,
+          setupState,
+          data,
+          ctx
+        )
+      );
+      fallthroughAttrs = attrs;
+    } else {
+      const render2 = Component;
+      if (false) ;
+      result = normalizeVNode(
+        render2.length > 1 ? render2(
+          false ? /* @__PURE__ */ shallowReadonly(props) : props,
+          false ? {
+            get attrs() {
+              markAttrsAccessed();
+              return /* @__PURE__ */ shallowReadonly(attrs);
+            },
+            slots,
+            emit: emit2
+          } : { attrs, slots, emit: emit2 }
+        ) : render2(
+          false ? /* @__PURE__ */ shallowReadonly(props) : props,
+          null
+        )
+      );
+      fallthroughAttrs = Component.props ? attrs : getFunctionalFallthrough(attrs);
+    }
+  } catch (err) {
+    blockStack.length = 0;
+    handleError(err, instance, 1);
+    result = createVNode(Comment);
+  }
+  let root = result;
+  if (fallthroughAttrs && inheritAttrs !== false) {
+    const keys = Object.keys(fallthroughAttrs);
+    const { shapeFlag } = root;
+    if (keys.length) {
+      if (shapeFlag & (1 | 6)) {
+        if (propsOptions && keys.some(isModelListener)) {
+          fallthroughAttrs = filterModelListeners(
+            fallthroughAttrs,
+            propsOptions
+          );
+        }
+        root = cloneVNode(root, fallthroughAttrs, false, true);
+      }
+    }
+  }
+  if (vnode.dirs) {
+    root = cloneVNode(root, null, false, true);
+    root.dirs = root.dirs ? root.dirs.concat(vnode.dirs) : vnode.dirs;
+  }
+  if (vnode.transition) {
+    setTransitionHooks(root, vnode.transition);
+  }
+  {
+    result = root;
+  }
+  setCurrentRenderingInstance(prev);
+  return result;
+}
+const getFunctionalFallthrough = (attrs) => {
+  let res;
+  for (const key in attrs) {
+    if (key === "class" || key === "style" || isOn(key)) {
+      (res || (res = {}))[key] = attrs[key];
+    }
+  }
+  return res;
+};
+const filterModelListeners = (attrs, props) => {
+  const res = {};
+  for (const key in attrs) {
+    if (!isModelListener(key) || !(key.slice(9) in props)) {
+      res[key] = attrs[key];
+    }
+  }
+  return res;
+};
+function shouldUpdateComponent(prevVNode, nextVNode, optimized) {
+  const { props: prevProps, children: prevChildren, component } = prevVNode;
+  const { props: nextProps, children: nextChildren, patchFlag } = nextVNode;
+  const emits = component.emitsOptions;
+  if (nextVNode.dirs || nextVNode.transition) {
+    return true;
+  }
+  if (optimized && patchFlag >= 0) {
+    if (patchFlag & 1024) {
+      return true;
+    }
+    if (patchFlag & 16) {
+      if (!prevProps) {
+        return !!nextProps;
+      }
+      return hasPropsChanged(prevProps, nextProps, emits);
+    } else if (patchFlag & 8) {
+      const dynamicProps = nextVNode.dynamicProps;
+      for (let i = 0; i < dynamicProps.length; i++) {
+        const key = dynamicProps[i];
+        if (hasPropValueChanged(nextProps, prevProps, key) && !isEmitListener(emits, key)) {
+          return true;
+        }
+      }
+    }
+  } else {
+    if (prevChildren || nextChildren) {
+      if (!nextChildren || !nextChildren.$stable) {
+        return true;
+      }
+    }
+    if (prevProps === nextProps) {
+      return false;
+    }
+    if (!prevProps) {
+      return !!nextProps;
+    }
+    if (!nextProps) {
+      return true;
+    }
+    return hasPropsChanged(prevProps, nextProps, emits);
+  }
+  return false;
+}
+function hasPropsChanged(prevProps, nextProps, emitsOptions) {
+  const nextKeys = Object.keys(nextProps);
+  if (nextKeys.length !== Object.keys(prevProps).length) {
+    return true;
+  }
+  for (let i = 0; i < nextKeys.length; i++) {
+    const key = nextKeys[i];
+    if (hasPropValueChanged(nextProps, prevProps, key) && !isEmitListener(emitsOptions, key)) {
+      return true;
+    }
+  }
+  return false;
+}
+function hasPropValueChanged(nextProps, prevProps, key) {
+  const nextProp = nextProps[key];
+  const prevProp = prevProps[key];
+  if (key === "style" && isObject(nextProp) && isObject(prevProp)) {
+    return !looseEqual(nextProp, prevProp);
+  }
+  return nextProp !== prevProp;
+}
+function updateHOCHostEl({ vnode, parent, suspense }, el) {
+  while (parent) {
+    const root = parent.subTree;
+    if (root.suspense && root.suspense.activeBranch === vnode) {
+      root.suspense.vnode.el = root.el = el;
+      vnode = root;
+    }
+    if (root === vnode) {
+      (vnode = parent.vnode).el = el;
+      parent = parent.parent;
+    } else {
+      break;
+    }
+  }
+  if (suspense && suspense.activeBranch === vnode) {
+    suspense.vnode.el = el;
   }
 }
 const internalObjectProto = {};
@@ -3001,7 +3510,7 @@ function initProps(instance, rawProps, isStateful, isSSR = false) {
     }
   }
   if (isStateful) {
-    instance.props = isSSR ? props : shallowReactive(props);
+    instance.props = isSSR ? props : /* @__PURE__ */ shallowReactive(props);
   } else {
     if (!instance.type.props) {
       instance.props = attrs;
@@ -3017,7 +3526,7 @@ function updateProps(instance, rawProps, rawPrevProps, optimized) {
     attrs,
     vnode: { patchFlag }
   } = instance;
-  const rawCurrentProps = toRaw(props);
+  const rawCurrentProps = /* @__PURE__ */ toRaw(props);
   const [options] = instance.propsOptions;
   let hasAttrsChanged = false;
   if (
@@ -3126,7 +3635,7 @@ function setFullProps(instance, rawProps, props, attrs) {
     }
   }
   if (needCastKeys) {
-    const rawCurrentProps = toRaw(props);
+    const rawCurrentProps = /* @__PURE__ */ toRaw(props);
     const castValues = rawCastValues || EMPTY_OBJ;
     for (let i = 0; i < needCastKeys.length; i++) {
       const key = needCastKeys[i];
@@ -3273,7 +3782,7 @@ function validatePropName(key) {
   }
   return false;
 }
-const isInternalKey = (key) => key[0] === "_" || key === "$stable";
+const isInternalKey = (key) => key === "_" || key === "_ctx" || key === "$stable";
 const normalizeSlotValue = (value) => isArray(value) ? value.map(normalizeVNode) : [normalizeVNode(value)];
 const normalizeSlot = (key, rawSlot, ctx) => {
   if (rawSlot._n) {
@@ -3305,7 +3814,7 @@ const normalizeVNodeSlots = (instance, children) => {
 };
 const assignSlots = (slots, children, optimized) => {
   for (const key in children) {
-    if (optimized || key !== "_") {
+    if (optimized || !isInternalKey(key)) {
       slots[key] = children[key];
     }
   }
@@ -3470,6 +3979,8 @@ function baseCreateRenderer(options, createHydrationFns) {
     }
     if (ref3 != null && parentComponent) {
       setRef(ref3, n1 && n1.ref, parentSuspense, n2 || n1, !n2);
+    } else if (ref3 == null && n1 && n1.ref != null) {
+      setRef(n1.ref, null, parentSuspense, n1, true);
     }
   };
   const processText = (n1, n2, container, anchor) => {
@@ -3543,15 +4054,25 @@ function baseCreateRenderer(options, createHydrationFns) {
         optimized
       );
     } else {
-      patchElement(
-        n1,
-        n2,
-        parentComponent,
-        parentSuspense,
-        namespace,
-        slotScopeIds,
-        optimized
-      );
+      const customElement = n1.el && n1.el._isVueCE ? n1.el : null;
+      try {
+        if (customElement) {
+          customElement._beginPatch();
+        }
+        patchElement(
+          n1,
+          n2,
+          parentComponent,
+          parentSuspense,
+          namespace,
+          slotScopeIds,
+          optimized
+        );
+      } finally {
+        if (customElement) {
+          customElement._endPatch();
+        }
+      }
     }
   };
   const mountElement = (vnode, container, anchor, parentComponent, parentSuspense, namespace, slotScopeIds, optimized) => {
@@ -3605,9 +4126,12 @@ function baseCreateRenderer(options, createHydrationFns) {
     hostInsert(el, container, anchor);
     if ((vnodeHook = props && props.onVnodeMounted) || needCallTransitionHooks || dirs) {
       queuePostRenderEffect(() => {
-        vnodeHook && invokeVNodeHook(vnodeHook, parentComponent, vnode);
-        needCallTransitionHooks && transition.enter(el);
-        dirs && invokeDirectiveHook(vnode, null, parentComponent, "mounted");
+        try {
+          vnodeHook && invokeVNodeHook(vnodeHook, parentComponent, vnode);
+          needCallTransitionHooks && transition.enter(el);
+          dirs && invokeDirectiveHook(vnode, null, parentComponent, "mounted");
+        } finally {
+        }
       }, parentSuspense);
     }
   };
@@ -3742,7 +4266,7 @@ function baseCreateRenderer(options, createHydrationFns) {
         (oldVNode.type === Fragment || // - In the case of different nodes, there is going to be a replacement
         // which also requires the correct parent container
         !isSameVNodeType(oldVNode, newVNode) || // - In the case of a component, it could contain anything.
-        oldVNode.shapeFlag & (6 | 64)) ? hostParentNode(oldVNode.el) : (
+        oldVNode.shapeFlag & (6 | 64 | 128)) ? hostParentNode(oldVNode.el) : (
           // In other cases, the parent container is not actually used so we
           // just pass the block element here to avoid a DOM parentNode call.
           fallbackContainer
@@ -3817,7 +4341,7 @@ function baseCreateRenderer(options, createHydrationFns) {
     } else {
       if (patchFlag > 0 && patchFlag & 64 && dynamicChildren && // #2715 the previous fragment could've been a BAILed one as a result
       // of renderSlot() with no valid children
-      n1.dynamicChildren) {
+      n1.dynamicChildren && n1.dynamicChildren.length === dynamicChildren.length) {
         patchBlockChildren(
           n1.dynamicChildren,
           dynamicChildren,
@@ -3899,6 +4423,7 @@ function baseCreateRenderer(options, createHydrationFns) {
       if (!initialVNode.el) {
         const placeholder = instance.subTree = createVNode(Comment);
         processCommentNode(null, placeholder, container, anchor);
+        initialVNode.placeholder = placeholder.el;
       }
     } else {
       setupRenderEffect(
@@ -3943,8 +4468,11 @@ function baseCreateRenderer(options, createHydrationFns) {
         }
         toggleRecurse(instance, true);
         {
-          if (root.ce) {
-            root.ce._injectChildStyle(type);
+          if (root.ce && root.ce._hasShadowRoot()) {
+            root.ce._injectChildStyle(
+              type,
+              instance.parent ? instance.parent.type : void 0
+            );
           }
           const subTree = instance.subTree = renderComponentRoot(instance);
           patch(
@@ -3983,9 +4511,9 @@ function baseCreateRenderer(options, createHydrationFns) {
               updateComponentPreRender(instance, next, optimized);
             }
             nonHydratedAsyncRoot.asyncDep.then(() => {
-              if (!instance.isUnmounted) {
-                componentUpdateFn();
-              }
+              queuePostRenderEffect(() => {
+                if (!instance.isUnmounted) update();
+              }, parentSuspense);
             });
             return;
           }
@@ -4310,7 +4838,11 @@ function baseCreateRenderer(options, createHydrationFns) {
       for (i = toBePatched - 1; i >= 0; i--) {
         const nextIndex = s2 + i;
         const nextChild = c2[nextIndex];
-        const anchor = nextIndex + 1 < l2 ? c2[nextIndex + 1].el : parentAnchor;
+        const anchorVNode = c2[nextIndex + 1];
+        const anchor = nextIndex + 1 < l2 ? (
+          // #13559, #14173 fallback to el placeholder for unresolved async component
+          anchorVNode.el || resolveAsyncComponentPlaceholder(anchorVNode)
+        ) : parentAnchor;
         if (newIndexToOldIndexMap[i] === 0) {
           patch(
             null,
@@ -4362,17 +4894,38 @@ function baseCreateRenderer(options, createHydrationFns) {
     const needTransition2 = moveType !== 2 && shapeFlag & 1 && transition;
     if (needTransition2) {
       if (moveType === 0) {
-        transition.beforeEnter(el);
-        hostInsert(el, container, anchor);
-        queuePostRenderEffect(() => transition.enter(el), parentSuspense);
+        if (transition.persisted && !el[leaveCbKey]) {
+          hostInsert(el, container, anchor);
+        } else {
+          transition.beforeEnter(el);
+          hostInsert(el, container, anchor);
+          queuePostRenderEffect(() => transition.enter(el), parentSuspense);
+        }
       } else {
         const { leave, delayLeave, afterLeave } = transition;
-        const remove22 = () => hostInsert(el, container, anchor);
+        const remove22 = () => {
+          if (vnode.ctx.isUnmounted) {
+            hostRemove(el);
+          } else {
+            hostInsert(el, container, anchor);
+          }
+        };
         const performLeave = () => {
-          leave(el, () => {
+          const wasLeaving = el._isLeaving || !!el[leaveCbKey];
+          if (el._isLeaving) {
+            el[leaveCbKey](
+              true
+              /* cancelled */
+            );
+          }
+          if (transition.persisted && !wasLeaving) {
             remove22();
-            afterLeave && afterLeave();
-          });
+          } else {
+            leave(el, () => {
+              remove22();
+              afterLeave && afterLeave();
+            });
+          }
         };
         if (delayLeave) {
           delayLeave(el, remove22, performLeave);
@@ -4394,13 +4947,16 @@ function baseCreateRenderer(options, createHydrationFns) {
       shapeFlag,
       patchFlag,
       dirs,
-      cacheIndex
+      cacheIndex,
+      memo
     } = vnode;
     if (patchFlag === -2) {
       optimized = false;
     }
     if (ref3 != null) {
+      pauseTracking();
       setRef(ref3, null, parentSuspense, vnode, true);
+      resetTracking();
     }
     if (cacheIndex != null) {
       parentComponent.renderCache[cacheIndex] = void 0;
@@ -4454,10 +5010,14 @@ function baseCreateRenderer(options, createHydrationFns) {
         remove2(vnode);
       }
     }
-    if (shouldInvokeVnodeHook && (vnodeHook = props && props.onVnodeUnmounted) || shouldInvokeDirs) {
+    const shouldInvalidateMemo = memo != null && cacheIndex == null;
+    if (shouldInvokeVnodeHook && (vnodeHook = props && props.onVnodeUnmounted) || shouldInvokeDirs || shouldInvalidateMemo) {
       queuePostRenderEffect(() => {
         vnodeHook && invokeVNodeHook(vnodeHook, parentComponent, vnode);
         shouldInvokeDirs && invokeDirectiveHook(vnode, null, parentComponent, "unmounted");
+        if (shouldInvalidateMemo) {
+          vnode.el = null;
+        }
       }, parentSuspense);
     }
   };
@@ -4518,12 +5078,6 @@ function baseCreateRenderer(options, createHydrationFns) {
     queuePostRenderEffect(() => {
       instance.isUnmounted = true;
     }, parentSuspense);
-    if (parentSuspense && parentSuspense.pendingBranch && !parentSuspense.isUnmounted && instance.asyncDep && !instance.asyncResolved && instance.suspenseId === parentSuspense.pendingId) {
-      parentSuspense.deps--;
-      if (parentSuspense.deps === 0) {
-        parentSuspense.resolve();
-      }
-    }
   };
   const unmountChildren = (children, parentComponent, parentSuspense, doRemove = false, optimized = false, start = 0) => {
     for (let i = start; i < children.length; i++) {
@@ -4543,9 +5097,11 @@ function baseCreateRenderer(options, createHydrationFns) {
   };
   let isFlushing = false;
   const render = (vnode, container, namespace) => {
+    let instance;
     if (vnode == null) {
       if (container._vnode) {
         unmount(container._vnode, null, null, true);
+        instance = container._vnode.component;
       }
     } else {
       patch(
@@ -4561,7 +5117,7 @@ function baseCreateRenderer(options, createHydrationFns) {
     container._vnode = vnode;
     if (!isFlushing) {
       isFlushing = true;
-      flushPreFlushCbs();
+      flushPreFlushCbs(instance);
       flushPostFlushCbs();
       isFlushing = false;
     }
@@ -4616,6 +5172,12 @@ function traverseStaticChildren(n1, n2, shallow = false) {
           traverseStaticChildren(c1, c2);
       }
       if (c2.type === Text) {
+        if (c2.patchFlag === -1) {
+          c2 = ch2[i] = cloneIfMounted(c2);
+        }
+        c2.el = c1.el;
+      }
+      if (c2.type === Comment && !c2.el) {
         c2.el = c1.el;
       }
     }
@@ -4677,386 +5239,15 @@ function invalidateMount(hooks) {
       hooks[i].flags |= 8;
   }
 }
-const ssrContextKey = Symbol.for("v-scx");
-const useSSRContext = () => {
-  {
-    const ctx = inject(ssrContextKey);
-    return ctx;
+function resolveAsyncComponentPlaceholder(anchorVnode) {
+  if (anchorVnode.placeholder) {
+    return anchorVnode.placeholder;
   }
-};
-function watch(source, cb, options) {
-  return doWatch(source, cb, options);
-}
-function doWatch(source, cb, options = EMPTY_OBJ) {
-  const { immediate, deep, flush, once } = options;
-  const baseWatchOptions = extend({}, options);
-  const runsImmediately = cb && immediate || !cb && flush !== "post";
-  let ssrCleanup;
-  if (isInSSRComponentSetup) {
-    if (flush === "sync") {
-      const ctx = useSSRContext();
-      ssrCleanup = ctx.__watcherHandles || (ctx.__watcherHandles = []);
-    } else if (!runsImmediately) {
-      const watchStopHandle = () => {
-      };
-      watchStopHandle.stop = NOOP;
-      watchStopHandle.resume = NOOP;
-      watchStopHandle.pause = NOOP;
-      return watchStopHandle;
-    }
+  const instance = anchorVnode.component;
+  if (instance) {
+    return resolveAsyncComponentPlaceholder(instance.subTree);
   }
-  const instance = currentInstance;
-  baseWatchOptions.call = (fn, type, args) => callWithAsyncErrorHandling(fn, instance, type, args);
-  let isPre = false;
-  if (flush === "post") {
-    baseWatchOptions.scheduler = (job) => {
-      queuePostRenderEffect(job, instance && instance.suspense);
-    };
-  } else if (flush !== "sync") {
-    isPre = true;
-    baseWatchOptions.scheduler = (job, isFirstRun) => {
-      if (isFirstRun) {
-        job();
-      } else {
-        queueJob(job);
-      }
-    };
-  }
-  baseWatchOptions.augmentJob = (job) => {
-    if (cb) {
-      job.flags |= 4;
-    }
-    if (isPre) {
-      job.flags |= 2;
-      if (instance) {
-        job.id = instance.uid;
-        job.i = instance;
-      }
-    }
-  };
-  const watchHandle = watch$1(source, cb, baseWatchOptions);
-  if (isInSSRComponentSetup) {
-    if (ssrCleanup) {
-      ssrCleanup.push(watchHandle);
-    } else if (runsImmediately) {
-      watchHandle();
-    }
-  }
-  return watchHandle;
-}
-function instanceWatch(source, value, options) {
-  const publicThis = this.proxy;
-  const getter = isString(source) ? source.includes(".") ? createPathGetter(publicThis, source) : () => publicThis[source] : source.bind(publicThis, publicThis);
-  let cb;
-  if (isFunction(value)) {
-    cb = value;
-  } else {
-    cb = value.handler;
-    options = value;
-  }
-  const reset = setCurrentInstance(this);
-  const res = doWatch(getter, cb.bind(publicThis), options);
-  reset();
-  return res;
-}
-function createPathGetter(ctx, path) {
-  const segments = path.split(".");
-  return () => {
-    let cur = ctx;
-    for (let i = 0; i < segments.length && cur; i++) {
-      cur = cur[segments[i]];
-    }
-    return cur;
-  };
-}
-const getModelModifiers = (props, modelName) => {
-  return modelName === "modelValue" || modelName === "model-value" ? props.modelModifiers : props[`${modelName}Modifiers`] || props[`${camelize(modelName)}Modifiers`] || props[`${hyphenate(modelName)}Modifiers`];
-};
-function emit(instance, event, ...rawArgs) {
-  if (instance.isUnmounted) return;
-  const props = instance.vnode.props || EMPTY_OBJ;
-  let args = rawArgs;
-  const isModelListener2 = event.startsWith("update:");
-  const modifiers = isModelListener2 && getModelModifiers(props, event.slice(7));
-  if (modifiers) {
-    if (modifiers.trim) {
-      args = rawArgs.map((a) => isString(a) ? a.trim() : a);
-    }
-    if (modifiers.number) {
-      args = rawArgs.map(looseToNumber);
-    }
-  }
-  let handlerName;
-  let handler = props[handlerName = toHandlerKey(event)] || // also try camelCase event handler (#2249)
-  props[handlerName = toHandlerKey(camelize(event))];
-  if (!handler && isModelListener2) {
-    handler = props[handlerName = toHandlerKey(hyphenate(event))];
-  }
-  if (handler) {
-    callWithAsyncErrorHandling(
-      handler,
-      instance,
-      6,
-      args
-    );
-  }
-  const onceHandler = props[handlerName + `Once`];
-  if (onceHandler) {
-    if (!instance.emitted) {
-      instance.emitted = {};
-    } else if (instance.emitted[handlerName]) {
-      return;
-    }
-    instance.emitted[handlerName] = true;
-    callWithAsyncErrorHandling(
-      onceHandler,
-      instance,
-      6,
-      args
-    );
-  }
-}
-function normalizeEmitsOptions(comp, appContext, asMixin = false) {
-  const cache = appContext.emitsCache;
-  const cached = cache.get(comp);
-  if (cached !== void 0) {
-    return cached;
-  }
-  const raw = comp.emits;
-  let normalized = {};
-  let hasExtends = false;
-  if (!isFunction(comp)) {
-    const extendEmits = (raw2) => {
-      const normalizedFromExtend = normalizeEmitsOptions(raw2, appContext, true);
-      if (normalizedFromExtend) {
-        hasExtends = true;
-        extend(normalized, normalizedFromExtend);
-      }
-    };
-    if (!asMixin && appContext.mixins.length) {
-      appContext.mixins.forEach(extendEmits);
-    }
-    if (comp.extends) {
-      extendEmits(comp.extends);
-    }
-    if (comp.mixins) {
-      comp.mixins.forEach(extendEmits);
-    }
-  }
-  if (!raw && !hasExtends) {
-    if (isObject(comp)) {
-      cache.set(comp, null);
-    }
-    return null;
-  }
-  if (isArray(raw)) {
-    raw.forEach((key) => normalized[key] = null);
-  } else {
-    extend(normalized, raw);
-  }
-  if (isObject(comp)) {
-    cache.set(comp, normalized);
-  }
-  return normalized;
-}
-function isEmitListener(options, key) {
-  if (!options || !isOn(key)) {
-    return false;
-  }
-  key = key.slice(2).replace(/Once$/, "");
-  return hasOwn(options, key[0].toLowerCase() + key.slice(1)) || hasOwn(options, hyphenate(key)) || hasOwn(options, key);
-}
-function markAttrsAccessed() {
-}
-function renderComponentRoot(instance) {
-  const {
-    type: Component,
-    vnode,
-    proxy,
-    withProxy,
-    propsOptions: [propsOptions],
-    slots,
-    attrs,
-    emit: emit2,
-    render,
-    renderCache,
-    props,
-    data,
-    setupState,
-    ctx,
-    inheritAttrs
-  } = instance;
-  const prev = setCurrentRenderingInstance(instance);
-  let result;
-  let fallthroughAttrs;
-  try {
-    if (vnode.shapeFlag & 4) {
-      const proxyToUse = withProxy || proxy;
-      const thisProxy = false ? new Proxy(proxyToUse, {
-        get(target, key, receiver) {
-          warn$1(
-            `Property '${String(
-              key
-            )}' was accessed via 'this'. Avoid using 'this' in templates.`
-          );
-          return Reflect.get(target, key, receiver);
-        }
-      }) : proxyToUse;
-      result = normalizeVNode(
-        render.call(
-          thisProxy,
-          proxyToUse,
-          renderCache,
-          false ? shallowReadonly(props) : props,
-          setupState,
-          data,
-          ctx
-        )
-      );
-      fallthroughAttrs = attrs;
-    } else {
-      const render2 = Component;
-      if (false) ;
-      result = normalizeVNode(
-        render2.length > 1 ? render2(
-          false ? shallowReadonly(props) : props,
-          false ? {
-            get attrs() {
-              markAttrsAccessed();
-              return shallowReadonly(attrs);
-            },
-            slots,
-            emit: emit2
-          } : { attrs, slots, emit: emit2 }
-        ) : render2(
-          false ? shallowReadonly(props) : props,
-          null
-        )
-      );
-      fallthroughAttrs = Component.props ? attrs : getFunctionalFallthrough(attrs);
-    }
-  } catch (err) {
-    blockStack.length = 0;
-    handleError(err, instance, 1);
-    result = createVNode(Comment);
-  }
-  let root = result;
-  if (fallthroughAttrs && inheritAttrs !== false) {
-    const keys = Object.keys(fallthroughAttrs);
-    const { shapeFlag } = root;
-    if (keys.length) {
-      if (shapeFlag & (1 | 6)) {
-        if (propsOptions && keys.some(isModelListener)) {
-          fallthroughAttrs = filterModelListeners(
-            fallthroughAttrs,
-            propsOptions
-          );
-        }
-        root = cloneVNode(root, fallthroughAttrs, false, true);
-      }
-    }
-  }
-  if (vnode.dirs) {
-    root = cloneVNode(root, null, false, true);
-    root.dirs = root.dirs ? root.dirs.concat(vnode.dirs) : vnode.dirs;
-  }
-  if (vnode.transition) {
-    setTransitionHooks(root, vnode.transition);
-  }
-  {
-    result = root;
-  }
-  setCurrentRenderingInstance(prev);
-  return result;
-}
-const getFunctionalFallthrough = (attrs) => {
-  let res;
-  for (const key in attrs) {
-    if (key === "class" || key === "style" || isOn(key)) {
-      (res || (res = {}))[key] = attrs[key];
-    }
-  }
-  return res;
-};
-const filterModelListeners = (attrs, props) => {
-  const res = {};
-  for (const key in attrs) {
-    if (!isModelListener(key) || !(key.slice(9) in props)) {
-      res[key] = attrs[key];
-    }
-  }
-  return res;
-};
-function shouldUpdateComponent(prevVNode, nextVNode, optimized) {
-  const { props: prevProps, children: prevChildren, component } = prevVNode;
-  const { props: nextProps, children: nextChildren, patchFlag } = nextVNode;
-  const emits = component.emitsOptions;
-  if (nextVNode.dirs || nextVNode.transition) {
-    return true;
-  }
-  if (optimized && patchFlag >= 0) {
-    if (patchFlag & 1024) {
-      return true;
-    }
-    if (patchFlag & 16) {
-      if (!prevProps) {
-        return !!nextProps;
-      }
-      return hasPropsChanged(prevProps, nextProps, emits);
-    } else if (patchFlag & 8) {
-      const dynamicProps = nextVNode.dynamicProps;
-      for (let i = 0; i < dynamicProps.length; i++) {
-        const key = dynamicProps[i];
-        if (nextProps[key] !== prevProps[key] && !isEmitListener(emits, key)) {
-          return true;
-        }
-      }
-    }
-  } else {
-    if (prevChildren || nextChildren) {
-      if (!nextChildren || !nextChildren.$stable) {
-        return true;
-      }
-    }
-    if (prevProps === nextProps) {
-      return false;
-    }
-    if (!prevProps) {
-      return !!nextProps;
-    }
-    if (!nextProps) {
-      return true;
-    }
-    return hasPropsChanged(prevProps, nextProps, emits);
-  }
-  return false;
-}
-function hasPropsChanged(prevProps, nextProps, emitsOptions) {
-  const nextKeys = Object.keys(nextProps);
-  if (nextKeys.length !== Object.keys(prevProps).length) {
-    return true;
-  }
-  for (let i = 0; i < nextKeys.length; i++) {
-    const key = nextKeys[i];
-    if (nextProps[key] !== prevProps[key] && !isEmitListener(emitsOptions, key)) {
-      return true;
-    }
-  }
-  return false;
-}
-function updateHOCHostEl({ vnode, parent }, el) {
-  while (parent) {
-    const root = parent.subTree;
-    if (root.suspense && root.suspense.activeBranch === vnode) {
-      root.el = vnode.el;
-    }
-    if (root === vnode) {
-      (vnode = parent.vnode).el = el;
-      parent = parent.parent;
-    } else {
-      break;
-    }
-  }
+  return null;
 }
 const isSuspense = (type) => type.__isSuspense;
 function queueEffectWithSuspense(fn, suspense) {
@@ -5070,10 +5261,10 @@ function queueEffectWithSuspense(fn, suspense) {
     queuePostFlushCb(fn);
   }
 }
-const Fragment = Symbol.for("v-fgt");
-const Text = Symbol.for("v-txt");
-const Comment = Symbol.for("v-cmt");
-const Static = Symbol.for("v-stc");
+const Fragment = /* @__PURE__ */ Symbol.for("v-fgt");
+const Text = /* @__PURE__ */ Symbol.for("v-txt");
+const Comment = /* @__PURE__ */ Symbol.for("v-cmt");
+const Static = /* @__PURE__ */ Symbol.for("v-stc");
 const blockStack = [];
 let currentBlock = null;
 function openBlock(disableTracking = false) {
@@ -5138,7 +5329,7 @@ const normalizeRef = ({
   if (typeof ref3 === "number") {
     ref3 = "" + ref3;
   }
-  return ref3 != null ? isString(ref3) || isRef(ref3) || isFunction(ref3) ? { i: currentRenderingInstance, r: ref3, k: ref_key, f: !!ref_for } : ref3 : null;
+  return ref3 != null ? isString(ref3) || /* @__PURE__ */ isRef(ref3) || isFunction(ref3) ? { i: currentRenderingInstance, r: ref3, k: ref_key, f: !!ref_for } : ref3 : null;
 };
 function createBaseVNode(type, props = null, children = null, patchFlag = 0, dynamicProps = null, shapeFlag = type === Fragment ? 0 : 1, isBlockNode = false, needFullChildrenNormalization = false) {
   const vnode = {
@@ -5226,7 +5417,7 @@ function _createVNode(type, props = null, children = null, patchFlag = 0, dynami
       props.class = normalizeClass(klass);
     }
     if (isObject(style)) {
-      if (isProxy(style) && !isArray(style)) {
+      if (/* @__PURE__ */ isProxy(style) && !isArray(style)) {
         style = extend({}, style);
       }
       props.style = normalizeStyle(style);
@@ -5246,7 +5437,7 @@ function _createVNode(type, props = null, children = null, patchFlag = 0, dynami
 }
 function guardReactiveProps(props) {
   if (!props) return null;
-  return isProxy(props) || isInternalObject(props) ? extend({}, props) : props;
+  return /* @__PURE__ */ isProxy(props) || isInternalObject(props) ? extend({}, props) : props;
 }
 function cloneVNode(vnode, extraProps, mergeRef = false, cloneTransition = false) {
   const { props, ref: ref3, patchFlag, children, transition } = vnode;
@@ -5289,6 +5480,7 @@ function cloneVNode(vnode, extraProps, mergeRef = false, cloneTransition = false
     suspense: vnode.suspense,
     ssContent: vnode.ssContent && cloneVNode(vnode.ssContent),
     ssFallback: vnode.ssFallback && cloneVNode(vnode.ssFallback),
+    placeholder: vnode.placeholder,
     el: vnode.el,
     anchor: vnode.anchor,
     ctx: vnode.ctx,
@@ -5388,6 +5580,10 @@ function mergeProps(...args) {
         const incoming = toMerge[key];
         if (incoming && existing !== incoming && !(isArray(existing) && existing.includes(incoming))) {
           ret[key] = existing ? [].concat(existing, incoming) : incoming;
+        } else if (incoming == null && existing == null && // mergeProps({ 'onUpdate:modelValue': undefined }) should not retain
+        // the model listener.
+        !isModelListener(key)) {
+          ret[key] = incoming;
         }
       } else if (key !== "") {
         ret[key] = toMerge[key];
@@ -5494,6 +5690,7 @@ function createComponentInstance(vnode, parent, suspense) {
   return instance;
 }
 let currentInstance = null;
+const getCurrentInstance = () => currentInstance || currentRenderingInstance;
 let internalSetCurrentInstance;
 let setInSSRSetupState;
 {
@@ -5538,7 +5735,7 @@ function setupComponent(instance, isSSR = false, optimized = false) {
   const { props, children } = instance.vnode;
   const isStateful = isStatefulComponent(instance);
   initProps(instance, props, isStateful, isSSR);
-  initSlots(instance, children, optimized);
+  initSlots(instance, children, optimized || isSSR);
   const setupResult = isStateful ? setupStatefulComponent(instance, isSSR) : void 0;
   isSSR && setInSSRSetupState(false);
   return setupResult;
@@ -5650,7 +5847,7 @@ function getComponentPublicInstance(instance) {
     return instance.proxy;
   }
 }
-const classifyRE = /(?:^|[-_])(\w)/g;
+const classifyRE = /(?:^|[-_])\w/g;
 const classify = (str) => str.replace(classifyRE, (c) => c.toUpperCase()).replace(/[-_]/g, "");
 function getComponentName(Component, includeInferred = true) {
   return isFunction(Component) ? Component.displayName || Component.name : Component.name || includeInferred && Component.__name;
@@ -5663,7 +5860,7 @@ function formatComponentName(instance, Component, isRoot = false) {
       name = match[1];
     }
   }
-  if (!name && instance && instance.parent) {
+  if (!name && instance) {
     const inferFromRegistry = (registry) => {
       for (const key in registry) {
         if (registry[key] === Component) {
@@ -5671,8 +5868,8 @@ function formatComponentName(instance, Component, isRoot = false) {
         }
       }
     };
-    name = inferFromRegistry(
-      instance.components || instance.parent.type.components
+    name = inferFromRegistry(instance.components) || instance.parent && inferFromRegistry(
+      instance.parent.type.components
     ) || inferFromRegistry(instance.appContext.components);
   }
   return name ? classify(name) : isRoot ? `App` : `Anonymous`;
@@ -5681,12 +5878,12 @@ function isClassComponent(value) {
   return isFunction(value) && "__vccOpts" in value;
 }
 const computed = (getterOrOptions, debugOptions) => {
-  const c = computed$1(getterOrOptions, debugOptions, isInSSRComponentSetup);
+  const c = /* @__PURE__ */ computed$1(getterOrOptions, debugOptions, isInSSRComponentSetup);
   return c;
 };
-const version = "3.5.13";
+const version = "3.5.35";
 /**
-* @vue/runtime-dom v3.5.13
+* @vue/runtime-dom v3.5.35
 * (c) 2018-present Yuxi (Evan) You and Vue contributors
 * @license MIT
 **/
@@ -5769,7 +5966,7 @@ const nodeOps = {
     ];
   }
 };
-const vtcKey = Symbol("_vtc");
+const vtcKey = /* @__PURE__ */ Symbol("_vtc");
 function patchClass(el, value, isSVG) {
   const transitionClasses = el[vtcKey];
   if (transitionClasses) {
@@ -5783,10 +5980,10 @@ function patchClass(el, value, isSVG) {
     el.className = value;
   }
 }
-const vShowOriginalDisplay = Symbol("_vod");
-const vShowHidden = Symbol("_vsh");
-const CSS_VAR_TEXT = Symbol("");
-const displayRE = /(^|;)\s*display\s*:/;
+const vShowOriginalDisplay = /* @__PURE__ */ Symbol("_vod");
+const vShowHidden = /* @__PURE__ */ Symbol("_vsh");
+const CSS_VAR_TEXT = /* @__PURE__ */ Symbol("");
+const displayRE = /(?:^|;)\s*display\s*:/;
 function patchStyle(el, prev, next) {
   const style = el.style;
   const isCssString = isString(next);
@@ -5812,7 +6009,19 @@ function patchStyle(el, prev, next) {
       if (key === "display") {
         hasControlledDisplay = true;
       }
-      setStyle(style, key, next[key]);
+      const value = next[key];
+      if (value != null) {
+        if (!shouldPreserveTextareaResizeStyle(
+          el,
+          key,
+          !isString(prev) && prev ? prev[key] : void 0,
+          value
+        )) {
+          setStyle(style, key, value);
+        }
+      } else {
+        setStyle(style, key, "");
+      }
     }
   } else {
     if (isCssString) {
@@ -5876,6 +6085,9 @@ function autoPrefix(style, rawName) {
     }
   }
   return rawName;
+}
+function shouldPreserveTextareaResizeStyle(el, key, prev, next) {
+  return el.tagName === "TEXTAREA" && (key === "width" || key === "height") && isString(next) && prev === next;
 }
 const xlinkNS = "http://www.w3.org/1999/xlink";
 function patchAttr(el, key, value, isSVG, instance, isBoolean = isSpecialBooleanAttr(key)) {
@@ -5946,7 +6158,7 @@ function addEventListener(el, event, handler, options) {
 function removeEventListener(el, event, handler, options) {
   el.removeEventListener(event, handler, options);
 }
-const veiKey = Symbol("_vei");
+const veiKey = /* @__PURE__ */ Symbol("_vei");
 function patchEvent(el, rawName, prevValue, nextValue, instance = null) {
   const invokers = el[veiKey] || (el[veiKey] = {});
   const existingInvoker = invokers[rawName];
@@ -5990,30 +6202,41 @@ function createInvoker(initialValue, instance) {
     } else if (e._vts <= invoker.attached) {
       return;
     }
-    callWithAsyncErrorHandling(
-      patchStopImmediatePropagation(e, invoker.value),
-      instance,
-      5,
-      [e]
-    );
+    const value = invoker.value;
+    if (isArray(value)) {
+      const originalStop = e.stopImmediatePropagation;
+      e.stopImmediatePropagation = () => {
+        originalStop.call(e);
+        e._stopped = true;
+      };
+      const handlers = value.slice();
+      const args = [e];
+      for (let i = 0; i < handlers.length; i++) {
+        if (e._stopped) {
+          break;
+        }
+        const handler = handlers[i];
+        if (handler) {
+          callWithAsyncErrorHandling(
+            handler,
+            instance,
+            5,
+            args
+          );
+        }
+      }
+    } else {
+      callWithAsyncErrorHandling(
+        value,
+        instance,
+        5,
+        [e]
+      );
+    }
   };
   invoker.value = initialValue;
   invoker.attached = getNow();
   return invoker;
-}
-function patchStopImmediatePropagation(e, value) {
-  if (isArray(value)) {
-    const originalStop = e.stopImmediatePropagation;
-    e.stopImmediatePropagation = () => {
-      originalStop.call(e);
-      e._stopped = true;
-    };
-    return value.map(
-      (fn) => (e2) => !e2._stopped && fn && fn(e2)
-    );
-  } else {
-    return value;
-  }
 }
 const isNativeOn = (key) => key.charCodeAt(0) === 111 && key.charCodeAt(1) === 110 && // lowercase letter
 key.charCodeAt(2) > 96 && key.charCodeAt(2) < 123;
@@ -6034,7 +6257,9 @@ const patchProp = (el, key, prevValue, nextValue, namespace, parentComponent) =>
     }
   } else if (
     // #11081 force set props for possible async custom element
-    el._isVueCE && (/[A-Z]/.test(key) || !isString(nextValue))
+    el._isVueCE && // #12408 check if it's declared prop or it's async custom element
+    (shouldSetAsPropForVueCE(el, key) || // @ts-expect-error _def is private
+    el._def.__asyncLoader && (/[A-Z]/.test(key) || !isString(nextValue)))
   ) {
     patchDOMProp(el, camelize(key), nextValue, parentComponent, key);
   } else {
@@ -6056,7 +6281,10 @@ function shouldSetAsProp(el, key, value, isSVG) {
     }
     return false;
   }
-  if (key === "spellcheck" || key === "draggable" || key === "translate") {
+  if (key === "spellcheck" || key === "draggable" || key === "translate" || key === "autocorrect") {
+    return false;
+  }
+  if (key === "sandbox" && el.tagName === "IFRAME") {
     return false;
   }
   if (key === "form") {
@@ -6079,6 +6307,17 @@ function shouldSetAsProp(el, key, value, isSVG) {
   }
   return key in el;
 }
+function shouldSetAsPropForVueCE(el, key) {
+  const props = (
+    // @ts-expect-error _def is private
+    el._def.props
+  );
+  if (!props) {
+    return false;
+  }
+  const camelKey = camelize(key);
+  return Array.isArray(props) ? props.some((prop) => camelize(prop) === camelKey) : Object.keys(props).some((prop) => camelize(prop) === camelKey);
+}
 const getModelAssigner = (vnode) => {
   const fn = vnode.props["onUpdate:modelValue"] || false;
   return isArray(fn) ? (value) => invokeArrayFns(fn, value) : fn;
@@ -6093,25 +6332,23 @@ function onCompositionEnd(e) {
     target.dispatchEvent(new Event("input"));
   }
 }
-const assignKey = Symbol("_assign");
+const assignKey = /* @__PURE__ */ Symbol("_assign");
+function castValue(value, trim, number) {
+  if (trim) value = value.trim();
+  if (number) value = looseToNumber(value);
+  return value;
+}
 const vModelText = {
   created(el, { modifiers: { lazy, trim, number } }, vnode) {
     el[assignKey] = getModelAssigner(vnode);
     const castToNumber = number || vnode.props && vnode.props.type === "number";
     addEventListener(el, lazy ? "change" : "input", (e) => {
       if (e.target.composing) return;
-      let domValue = el.value;
-      if (trim) {
-        domValue = domValue.trim();
-      }
-      if (castToNumber) {
-        domValue = looseToNumber(domValue);
-      }
-      el[assignKey](domValue);
+      el[assignKey](castValue(el.value, trim, castToNumber));
     });
-    if (trim) {
+    if (trim || castToNumber) {
       addEventListener(el, "change", () => {
-        el.value = el.value.trim();
+        el.value = castValue(el.value, trim, castToNumber);
       });
     }
     if (!lazy) {
@@ -6132,7 +6369,8 @@ const vModelText = {
     if (elValue === newValue) {
       return;
     }
-    if (document.activeElement === el && el.type !== "range") {
+    const rootNode = el.getRootNode();
+    if ((rootNode instanceof Document || rootNode instanceof ShadowRoot) && rootNode.activeElement === el && el.type !== "range") {
       if (lazy && value === oldValue) {
         return;
       }
@@ -6220,22 +6458,23 @@ const modifierGuards = {
   exact: (e, modifiers) => systemModifiers.some((m) => e[`${m}Key`] && !modifiers.includes(m))
 };
 const withModifiers = (fn, modifiers) => {
+  if (!fn) return fn;
   const cache = fn._withMods || (fn._withMods = {});
   const cacheKey = modifiers.join(".");
-  return cache[cacheKey] || (cache[cacheKey] = (event, ...args) => {
+  return cache[cacheKey] || (cache[cacheKey] = ((event, ...args) => {
     for (let i = 0; i < modifiers.length; i++) {
       const guard = modifierGuards[modifiers[i]];
       if (guard && guard(event, modifiers)) return;
     }
     return fn(event, ...args);
-  });
+  }));
 };
 const rendererOptions = /* @__PURE__ */ extend({ patchProp }, nodeOps);
 let renderer;
 function ensureRenderer() {
   return renderer || (renderer = createRenderer(rendererOptions));
 }
-const createApp = (...args) => {
+const createApp = ((...args) => {
   const app2 = ensureRenderer().createApp(...args);
   const { mount } = app2;
   app2.mount = (containerOrSelector) => {
@@ -6256,7 +6495,7 @@ const createApp = (...args) => {
     return proxy;
   };
   return app2;
-};
+});
 function resolveRootNamespace(container) {
   if (container instanceof SVGElement) {
     return "svg";
@@ -6479,9 +6718,44 @@ function serialize(state) {
     warnings
   };
 }
+function captionToState(obj) {
+  const hld = typeof obj?.high_level_description === "string" ? obj.high_level_description : "";
+  const style = emptyStyle();
+  const sd = obj?.style_description;
+  if (sd && typeof sd === "object") {
+    style.enabled = true;
+    style.aesthetics = typeof sd.aesthetics === "string" ? sd.aesthetics : "";
+    style.lighting = typeof sd.lighting === "string" ? sd.lighting : "";
+    style.medium = typeof sd.medium === "string" ? sd.medium : "";
+    if (typeof sd.photo === "string" && sd.photo.trim()) {
+      style.mode = "photo";
+      style.photo = sd.photo;
+    } else if (typeof sd.art_style === "string" && sd.art_style.trim()) {
+      style.mode = "art";
+      style.art_style = sd.art_style;
+    }
+    if (Array.isArray(sd.color_palette)) style.color_palette = sd.color_palette.map(String);
+  } else {
+    style.enabled = false;
+  }
+  const comp = obj?.compositional_deconstruction ?? {};
+  const background = typeof comp.background === "string" ? comp.background : "";
+  const clamp = (v) => Math.max(0, Math.min(1e3, Math.round(Number(v) || 0)));
+  const rawElements = Array.isArray(comp.elements) ? comp.elements : [];
+  const elements = rawElements.map((el) => {
+    const type = el?.type === "text" ? "text" : "obj";
+    const bbox = Array.isArray(el?.bbox) && el.bbox.length === 4 ? el.bbox.map(clamp) : null;
+    const e = newElement(type, bbox);
+    e.desc = typeof el?.desc === "string" ? el.desc : "";
+    e.text = typeof el?.text === "string" ? el.text : "";
+    if (Array.isArray(el?.color_palette)) e.color_palette = el.color_palette.map(String);
+    return e;
+  });
+  return { high_level_description: hld, style, background, elements };
+}
 const KEY = Symbol("ideogram-studio");
 function createStudioStore() {
-  const store = reactive({
+  const store = /* @__PURE__ */ reactive({
     state: emptyState(),
     selectedId: null,
     // history (snapshots of JSON state)
@@ -6623,11 +6897,11 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
   setup(__props) {
     const store = useStudioStore();
     const HANDLES = ["nw", "n", "ne", "e", "se", "s", "sw", "w"];
-    const newType = ref("obj");
-    const showLabels = ref(true);
-    const stage = ref(null);
-    const draft = ref(null);
-    const hint = ref("drag on empty space to add a box · drag a box to move · drag a handle to resize");
+    const newType = /* @__PURE__ */ ref("obj");
+    const showLabels = /* @__PURE__ */ ref(true);
+    const stage = /* @__PURE__ */ ref(null);
+    const draft = /* @__PURE__ */ ref(null);
+    const hint = /* @__PURE__ */ ref("drag on empty space to add a box · drag a box to move · drag a handle to resize");
     const boxed = computed(() => store.state.elements.filter((e) => e.bbox));
     const stageStyle = computed(() => ({ aspectRatio: `${store.state.width} / ${store.state.height}` }));
     function hexToRgba(hex, a) {
@@ -6856,7 +7130,7 @@ const _sfc_main$5 = /* @__PURE__ */ defineComponent({
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("div", _hoisted_1$5, [
         createBaseVNode("div", _hoisted_2$5, [
-          (openBlock(true), createElementBlock(Fragment, null, renderList(_ctx.modelValue, (c, i) => {
+          (openBlock(true), createElementBlock(Fragment, null, renderList(__props.modelValue, (c, i) => {
             return openBlock(), createElementBlock("div", {
               key: i,
               class: "swatch-wrap"
@@ -6879,14 +7153,14 @@ const _sfc_main$5 = /* @__PURE__ */ defineComponent({
               }, "×", 8, _hoisted_5$5)
             ]);
           }), 128)),
-          _ctx.modelValue.length < _ctx.max ? (openBlock(), createElementBlock("button", {
+          __props.modelValue.length < __props.max ? (openBlock(), createElementBlock("button", {
             key: 0,
             class: "add",
             title: "Add color",
             onClick: add
           }, "+")) : createCommentVNode("", true)
         ]),
-        createBaseVNode("div", _hoisted_6$5, toDisplayString(_ctx.modelValue.length) + "/" + toDisplayString(_ctx.max) + " " + toDisplayString(_ctx.label), 1)
+        createBaseVNode("div", _hoisted_6$5, toDisplayString(__props.modelValue.length) + "/" + toDisplayString(__props.max) + " " + toDisplayString(__props.label), 1)
       ]);
     };
   }
@@ -6901,11 +7175,11 @@ const _hoisted_4$4 = {
 };
 const _hoisted_5$4 = { class: "field" };
 const _hoisted_6$4 = { class: "field" };
-const _hoisted_7$3 = {
+const _hoisted_7$4 = {
   key: 0,
   class: "field"
 };
-const _hoisted_8$3 = { class: "field" };
+const _hoisted_8$4 = { class: "field" };
 const _hoisted_9$3 = ["placeholder"];
 const _hoisted_10$3 = {
   key: 1,
@@ -6926,7 +7200,7 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
             }, null, 512), [
               [vModelCheckbox, unref(store).state.style.enabled]
             ]),
-            _cache[9] || (_cache[9] = createTextVNode(" style_description"))
+            _cache[9] || (_cache[9] = createTextVNode(" style_description", -1))
           ]),
           unref(store).state.style.enabled ? (openBlock(), createElementBlock("div", _hoisted_4$4, [
             createBaseVNode("button", {
@@ -6958,7 +7232,7 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
               [vModelText, unref(store).state.style.lighting]
             ])
           ]),
-          unref(store).state.style.mode === "photo" ? (openBlock(), createElementBlock("label", _hoisted_7$3, [
+          unref(store).state.style.mode === "photo" ? (openBlock(), createElementBlock("label", _hoisted_7$4, [
             _cache[12] || (_cache[12] = createBaseVNode("span", null, "photo (camera/lens)", -1)),
             withDirectives(createBaseVNode("input", {
               "onUpdate:modelValue": _cache[5] || (_cache[5] = ($event) => unref(store).state.style.photo = $event),
@@ -6967,7 +7241,7 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
               [vModelText, unref(store).state.style.photo]
             ])
           ])) : createCommentVNode("", true),
-          createBaseVNode("label", _hoisted_8$3, [
+          createBaseVNode("label", _hoisted_8$4, [
             _cache[13] || (_cache[13] = createBaseVNode("span", null, "medium", -1)),
             withDirectives(createBaseVNode("input", {
               "onUpdate:modelValue": _cache[6] || (_cache[6] = ($event) => unref(store).state.style.medium = $event),
@@ -7014,8 +7288,8 @@ const _hoisted_3$3 = { class: "adds" };
 const _hoisted_4$3 = ["onClick"];
 const _hoisted_5$3 = ["title", "onClick"];
 const _hoisted_6$3 = { class: "idx" };
-const _hoisted_7$2 = ["title"];
-const _hoisted_8$2 = { class: "snip" };
+const _hoisted_7$3 = ["title"];
+const _hoisted_8$3 = { class: "snip" };
 const _hoisted_9$2 = ["title"];
 const _hoisted_10$2 = { class: "ops" };
 const _hoisted_11$2 = ["onClick"];
@@ -7069,8 +7343,8 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
                 key: 0,
                 class: "link",
                 title: "Linked ×" + unref(store).linkGroupSize(el.id)
-              }, "🔗", 8, _hoisted_7$2)) : createCommentVNode("", true),
-              createBaseVNode("span", _hoisted_8$2, toDisplayString(el.type === "text" ? "“" + (el.text || "…") + "”" : el.desc || "object…"), 1),
+              }, "🔗", 8, _hoisted_7$3)) : createCommentVNode("", true),
+              createBaseVNode("span", _hoisted_8$3, toDisplayString(el.type === "text" ? "“" + (el.text || "…") + "”" : el.desc || "object…"), 1),
               createBaseVNode("span", {
                 class: "bb",
                 title: el.bbox ? "has bbox" : "no bbox (model auto-places)"
@@ -7105,7 +7379,7 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const ElementList = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["__scopeId", "data-v-e924e066"]]);
+const ElementList = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["__scopeId", "data-v-5e6fcb49"]]);
 const _hoisted_1$2 = {
   key: 0,
   class: "editor"
@@ -7115,8 +7389,8 @@ const _hoisted_3$2 = ["title"];
 const _hoisted_4$2 = ["value"];
 const _hoisted_5$2 = { class: "lbl" };
 const _hoisted_6$2 = { class: "seg" };
-const _hoisted_7$1 = ["title"];
-const _hoisted_8$1 = ["title"];
+const _hoisted_7$2 = ["title"];
+const _hoisted_8$2 = ["title"];
 const _hoisted_9$1 = ["checked"];
 const _hoisted_10$1 = { class: "row link-row" };
 const _hoisted_11$1 = {
@@ -7195,7 +7469,7 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
             class: normalizeClass(["mute", { off: el.value.enabled === false }]),
             title: el.value.enabled === false ? "Muted — excluded from output. Click to enable." : "Mute (keep but exclude from output)",
             onClick: _cache[3] || (_cache[3] = ($event) => unref(store).toggleEnabled(el.value.id))
-          }, toDisplayString(el.value.enabled === false ? "🚫 muted" : "👁 active"), 11, _hoisted_7$1),
+          }, toDisplayString(el.value.enabled === false ? "🚫 muted" : "👁 active"), 11, _hoisted_7$2),
           createBaseVNode("label", {
             class: "bbtoggle",
             title: el.value.bbox ? "Remove bbox (let model auto-place)" : "Add a default bbox"
@@ -7205,8 +7479,8 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
               checked: !!el.value.bbox,
               onChange: toggleBbox
             }, null, 40, _hoisted_9$1),
-            _cache[9] || (_cache[9] = createTextVNode(" bbox "))
-          ], 8, _hoisted_8$1)
+            _cache[9] || (_cache[9] = createTextVNode(" bbox ", -1))
+          ], 8, _hoisted_8$2)
         ]),
         createBaseVNode("div", _hoisted_10$1, [
           linked.value ? (openBlock(), createElementBlock("span", {
@@ -7277,23 +7551,39 @@ const _hoisted_1$1 = { class: "preview" };
 const _hoisted_2$1 = { class: "head" };
 const _hoisted_3$1 = { class: "actions" };
 const _hoisted_4$1 = ["title"];
-const _hoisted_5$1 = {
-  key: 0,
-  class: "json"
-};
+const _hoisted_5$1 = ["disabled"];
 const _hoisted_6$1 = {
   key: 1,
+  class: "json"
+};
+const _hoisted_7$1 = {
+  key: 2,
+  class: "parseerr"
+};
+const _hoisted_8$1 = {
+  key: 3,
   class: "warnlist"
 };
 const _sfc_main$1 = /* @__PURE__ */ defineComponent({
   __name: "JsonPreview",
   setup(__props) {
     const store = useStudioStore();
-    const open = ref(true);
-    const copied = ref(false);
+    const open = /* @__PURE__ */ ref(true);
+    const copied = /* @__PURE__ */ ref(false);
+    const editing = /* @__PURE__ */ ref(false);
+    const draft = /* @__PURE__ */ ref("");
     const result = computed(() => serialize(store.state));
     const pretty = computed(() => result.value.pretty);
     const warnings = computed(() => result.value.warnings);
+    const parseError = computed(() => {
+      if (!editing.value || !draft.value.trim()) return "";
+      try {
+        JSON.parse(draft.value);
+        return "";
+      } catch (e) {
+        return String(e?.message || e);
+      }
+    });
     async function copy() {
       try {
         await navigator.clipboard.writeText(result.value.json);
@@ -7302,23 +7592,84 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
       } catch {
       }
     }
+    function startEdit() {
+      draft.value = result.value.pretty;
+      editing.value = true;
+    }
+    function cancel() {
+      editing.value = false;
+    }
+    function tidy() {
+      try {
+        draft.value = JSON.stringify(JSON.parse(draft.value), null, 2);
+      } catch {
+      }
+    }
+    function apply2() {
+      let obj;
+      try {
+        obj = JSON.parse(draft.value);
+      } catch {
+        return;
+      }
+      const parts = captionToState(obj);
+      store.state.high_level_description = parts.high_level_description;
+      store.state.style = parts.style;
+      store.state.background = parts.background;
+      store.state.elements = parts.elements;
+      store.select(null);
+      store.snapshot();
+      editing.value = false;
+    }
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("div", _hoisted_1$1, [
         createBaseVNode("div", _hoisted_2$1, [
-          _cache[1] || (_cache[1] = createBaseVNode("span", null, "JSON caption", -1)),
+          _cache[2] || (_cache[2] = createBaseVNode("span", null, "JSON caption", -1)),
           createBaseVNode("div", _hoisted_3$1, [
-            createBaseVNode("span", {
+            !editing.value ? (openBlock(), createElementBlock("span", {
+              key: 0,
               class: normalizeClass(["warns", { ok: !warnings.value.length }]),
               title: warnings.value.join("\n")
-            }, toDisplayString(warnings.value.length ? `⚠ ${warnings.value.length}` : "✓ valid"), 11, _hoisted_4$1),
-            createBaseVNode("button", { onClick: copy }, toDisplayString(copied.value ? "copied ✓" : "copy"), 1),
-            createBaseVNode("button", {
+            }, toDisplayString(warnings.value.length ? `⚠ ${warnings.value.length}` : "✓ valid"), 11, _hoisted_4$1)) : (openBlock(), createElementBlock("span", {
+              key: 1,
+              class: normalizeClass(["warns", { ok: !parseError.value }])
+            }, toDisplayString(parseError.value ? "✗ invalid JSON" : "✓ parses"), 3)),
+            !editing.value ? (openBlock(), createElementBlock("button", {
+              key: 2,
+              onClick: copy
+            }, toDisplayString(copied.value ? "copied ✓" : "copy"), 1)) : createCommentVNode("", true),
+            !editing.value ? (openBlock(), createElementBlock("button", {
+              key: 3,
+              onClick: startEdit
+            }, "edit / paste")) : (openBlock(), createElementBlock(Fragment, { key: 4 }, [
+              createBaseVNode("button", {
+                onClick: tidy,
+                title: "Re-indent the JSON"
+              }, "tidy"),
+              createBaseVNode("button", {
+                class: "apply",
+                disabled: !!parseError.value,
+                onClick: apply2
+              }, "apply →", 8, _hoisted_5$1),
+              createBaseVNode("button", { onClick: cancel }, "cancel")
+            ], 64)),
+            !editing.value ? (openBlock(), createElementBlock("button", {
+              key: 5,
               onClick: _cache[0] || (_cache[0] = ($event) => open.value = !open.value)
-            }, toDisplayString(open.value ? "hide" : "show"), 1)
+            }, toDisplayString(open.value ? "hide" : "show"), 1)) : createCommentVNode("", true)
           ])
         ]),
-        open.value ? (openBlock(), createElementBlock("pre", _hoisted_5$1, toDisplayString(pretty.value), 1)) : createCommentVNode("", true),
-        open.value && warnings.value.length ? (openBlock(), createElementBlock("ul", _hoisted_6$1, [
+        editing.value ? withDirectives((openBlock(), createElementBlock("textarea", {
+          key: 0,
+          "onUpdate:modelValue": _cache[1] || (_cache[1] = ($event) => draft.value = $event),
+          class: "json edit",
+          spellcheck: "false",
+          placeholder: "Paste an Ideogram JSON caption here, then Apply to load it into the studio."
+        }, null, 512)), [
+          [vModelText, draft.value]
+        ]) : open.value ? (openBlock(), createElementBlock("pre", _hoisted_6$1, toDisplayString(pretty.value), 1)) : createCommentVNode("", true),
+        editing.value && parseError.value ? (openBlock(), createElementBlock("div", _hoisted_7$1, toDisplayString(parseError.value), 1)) : createCommentVNode("", true),
+        !editing.value && open.value && warnings.value.length ? (openBlock(), createElementBlock("ul", _hoisted_8$1, [
           (openBlock(true), createElementBlock(Fragment, null, renderList(warnings.value, (w, i) => {
             return openBlock(), createElementBlock("li", { key: i }, toDisplayString(w), 1);
           }), 128))
@@ -7327,7 +7678,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const JsonPreview = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-d02f898f"]]);
+const JsonPreview = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-2df22a32"]]);
 const _hoisted_1 = { class: "studio" };
 const _hoisted_2 = { class: "topbar" };
 const _hoisted_3 = { class: "tools" };
@@ -7360,7 +7711,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     const props = __props;
     const store = createStudioStore();
     provideStudioStore(store);
-    const showAdvanced = ref(false);
+    const showAdvanced = /* @__PURE__ */ ref(false);
     const formatValue = computed(() => {
       const f = FORMATS.find((f2) => f2.w === store.state.width && f2.h === store.state.height);
       return f ? f.label : "custom";
@@ -7450,7 +7801,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
         ]),
         showAdvanced.value ? (openBlock(), createElementBlock("div", _hoisted_9, [
           createBaseVNode("label", null, [
-            _cache[14] || (_cache[14] = createTextVNode("W ")),
+            _cache[14] || (_cache[14] = createTextVNode("W ", -1)),
             withDirectives(createBaseVNode("input", {
               type: "number",
               min: "16",
@@ -7467,7 +7818,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
             ])
           ]),
           createBaseVNode("label", null, [
-            _cache[15] || (_cache[15] = createTextVNode("H ")),
+            _cache[15] || (_cache[15] = createTextVNode("H ", -1)),
             withDirectives(createBaseVNode("input", {
               type: "number",
               min: "16",
@@ -7484,7 +7835,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
             ])
           ]),
           createBaseVNode("label", null, [
-            _cache[16] || (_cache[16] = createTextVNode("line ")),
+            _cache[16] || (_cache[16] = createTextVNode("line ", -1)),
             withDirectives(createBaseVNode("input", {
               type: "number",
               min: "1",
@@ -7500,7 +7851,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
             ])
           ]),
           createBaseVNode("label", null, [
-            _cache[17] || (_cache[17] = createTextVNode("fill ")),
+            _cache[17] || (_cache[17] = createTextVNode("fill ", -1)),
             withDirectives(createBaseVNode("input", {
               type: "range",
               min: "0",
@@ -7517,7 +7868,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
             ])
           ]),
           createBaseVNode("label", null, [
-            _cache[18] || (_cache[18] = createTextVNode("label ")),
+            _cache[18] || (_cache[18] = createTextVNode("label ", -1)),
             withDirectives(createBaseVNode("input", {
               type: "number",
               min: "6",
@@ -7539,7 +7890,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
             }, null, 512), [
               [vModelCheckbox, unref(store).state.overlay.showIndex]
             ]),
-            _cache[19] || (_cache[19] = createTextVNode(" idx"))
+            _cache[19] || (_cache[19] = createTextVNode(" idx", -1))
           ]),
           createBaseVNode("label", _hoisted_11, [
             withDirectives(createBaseVNode("input", {
@@ -7548,7 +7899,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
             }, null, 512), [
               [vModelCheckbox, unref(store).state.overlay.showText]
             ]),
-            _cache[20] || (_cache[20] = createTextVNode(" text"))
+            _cache[20] || (_cache[20] = createTextVNode(" text", -1))
           ])
         ])) : createCommentVNode("", true),
         createBaseVNode("label", _hoisted_12, [
@@ -7587,7 +7938,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const IdeogramStudio = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-10629887"]]);
+const IdeogramStudio = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-d5988e1a"]]);
 const SEL = "[data-ideogram]";
 function inWidget(e) {
   const t = e.target;
