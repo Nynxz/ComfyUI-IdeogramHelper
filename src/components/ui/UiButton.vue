@@ -24,6 +24,7 @@ withDefaults(defineProps<{ variant?: 'default' | 'primary'; active?: boolean; ic
   white-space: nowrap; transition: border-color .1s, background .1s;
 }
 .ui-btn.icon { min-width: 26px; padding: 0 6px; font-size: 12px; }
+.ui-btn :deep(.mdi) { font-size: 15px; line-height: 1; }
 .ui-btn:hover { border-color: var(--st-accent); }
 .ui-btn:disabled { opacity: .4; cursor: default; }
 .ui-btn:disabled:hover { border-color: var(--st-border); }

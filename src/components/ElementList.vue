@@ -2,8 +2,8 @@
   <UiCard :title="`Elements (${store.state.elements.length})`" style="flex: 1 1 auto; min-height: 0;">
     <template #header>
       <div class="adds">
-        <UiButton title="Add an object box" @click="store.addElement('obj')">＋ obj</UiButton>
-        <UiButton title="Add a text box" @click="store.addElement('text')">＋ text</UiButton>
+        <UiButton title="Add an object box" @click="store.addElement('obj')"><i class="mdi mdi-plus"></i> obj</UiButton>
+        <UiButton title="Add a text box" @click="store.addElement('text')"><i class="mdi mdi-plus"></i> text</UiButton>
       </div>
     </template>
 
@@ -15,23 +15,23 @@
         @click="rowClick($event, el.id)"
       >
         <button class="eye" :title="el.enabled === false ? 'Muted — click to enable' : 'Mute (keep, exclude from output)'" @click.stop="store.toggleEnabled(el.id)">
-          {{ el.enabled === false ? '🚫' : '👁' }}
+          <i class="mdi" :class="el.enabled === false ? 'mdi-eye-off-outline' : 'mdi-eye-outline'"></i>
         </button>
         <span class="dot" :style="{ background: el.boxColor }"></span>
         <span class="idx">{{ i + 1 }}</span>
-        <span v-if="el.linkId" class="link" :title="'Linked ×' + store.linkGroupSize(el.id)">🔗</span>
+        <i v-if="el.linkId" class="mdi mdi-link-variant link" :title="'Linked ×' + store.linkGroupSize(el.id)"></i>
         <span class="snip">{{ el.type === 'text' ? '“' + (el.text || '…') + '”' : (el.desc || 'object…') }}</span>
-        <span class="bb" :title="el.bbox ? 'has bbox' : 'no bbox (model auto-places)'">{{ el.bbox ? '▣' : '◌' }}</span>
+        <i class="mdi typ" :class="el.type === 'text' ? 'mdi-format-text' : 'mdi-shape-outline'" :title="el.type === 'text' ? 'text element' : 'object element'"></i>
         <span class="ops">
-          <button title="Move up" @click.stop="store.moveElement(el.id, -1)">↑</button>
-          <button title="Move down" @click.stop="store.moveElement(el.id, 1)">↓</button>
-          <button title="Linked copy (shares prompt, own position)" @click.stop="store.duplicateLinked(el.id)">🔗</button>
-          <button title="Duplicate" @click.stop="store.duplicateElement(el.id)">⧉</button>
-          <button class="del" title="Delete" @click.stop="store.removeElement(el.id)">🗑</button>
+          <button title="Move up" @click.stop="store.moveElement(el.id, -1)"><i class="mdi mdi-chevron-up"></i></button>
+          <button title="Move down" @click.stop="store.moveElement(el.id, 1)"><i class="mdi mdi-chevron-down"></i></button>
+          <button title="Linked copy (shares prompt, own position)" @click.stop="store.duplicateLinked(el.id)"><i class="mdi mdi-link-variant-plus"></i></button>
+          <button title="Duplicate" @click.stop="store.duplicateElement(el.id)"><i class="mdi mdi-content-copy"></i></button>
+          <button class="del" title="Delete" @click.stop="store.removeElement(el.id)"><i class="mdi mdi-delete-outline"></i></button>
         </span>
       </li>
     </ul>
-    <p v-else class="empty">No elements yet — draw a box on the canvas, or use ＋ obj / ＋ text.</p>
+    <p v-else class="empty">No elements yet — draw a box on the canvas, or use + obj / + text.</p>
   </UiCard>
 </template>
 
@@ -62,15 +62,17 @@ li {
 li:hover { border-color: var(--st-border); }
 li.sel { border-color: var(--st-accent); }
 li.muted .snip { opacity: .45; text-decoration: line-through; }
-.eye { background: none; border: none; cursor: pointer; padding: 0; font-size: 11px; flex: none; line-height: 1; filter: grayscale(.3); }
+.eye { background: none; border: none; cursor: pointer; padding: 0; color: var(--st-muted); flex: none; line-height: 1; display: inline-flex; }
+.eye .mdi { font-size: 15px; }
 .dot { width: 9px; height: 9px; border-radius: 2px; flex: none; }
 .idx { color: var(--st-muted); width: 14px; flex: none; }
-.link { flex: none; font-size: 10px; }
+.link { flex: none; font-size: 13px; color: var(--st-muted); }
 .snip { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.bb { color: var(--st-muted); flex: none; }
+.typ { color: var(--st-muted); flex: none; font-size: 14px; }
 .ops { display: flex; gap: 1px; opacity: 0; transition: opacity .12s; }
 li:hover .ops, li.sel .ops { opacity: 1; }
-.ops button { background: var(--st-btn); border: 1px solid var(--st-border); color: var(--st-muted); border-radius: 3px; width: 18px; height: 18px; font-size: 11px; cursor: pointer; padding: 0; }
+.ops button { display: inline-flex; align-items: center; justify-content: center; background: var(--st-btn); border: 1px solid var(--st-border); color: var(--st-muted); border-radius: 3px; width: 18px; height: 18px; font-size: 11px; cursor: pointer; padding: 0; }
+.ops button .mdi { font-size: 13px; }
 .ops button:hover { color: var(--st-text); border-color: var(--st-accent); }
 .ops button.del:hover { color: #fff; background: #b91c1c; border-color: #b91c1c; }
 .empty { font-size: 11px; color: var(--st-muted); margin: 2px 0; }

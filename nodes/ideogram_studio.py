@@ -22,22 +22,30 @@ from .overrides import apply_override
 
 
 def _draw_items(studio_state, caption_data):
-    """Build colored draw-items. Prefer the studio state (carries per-box color
-    + link info); fall back to the canonical caption elements."""
+    """Build colored draw-items. Geometry + per-box color come from the studio
+    state; text/desc/palette come from the (possibly overridden) caption so the
+    overlay reflects any Override nodes. The caption holds enabled elements in
+    output order, so we walk the studio's enabled boxes in lock-step with it."""
+    comp = (caption_data or {}).get("compositional_deconstruction", {}) or {}
+    cap_els = comp.get("elements") or []
+
     if isinstance(studio_state, dict) and isinstance(studio_state.get("elements"), list):
         items = []
+        ci = 0  # index into the override-applied caption elements
         for el in studio_state["elements"]:
             if el.get("enabled", True) is False:
                 continue  # muted — kept in the editor, excluded from the overlay
-            etype = el.get("type", "obj")
+            cap = cap_els[ci] if ci < len(cap_els) else {}
+            ci += 1
+            etype = cap.get("type") or el.get("type", "obj")
             default = TEXT_COLOR if etype == "text" else OBJ_COLOR
             items.append({
-                "bbox": el.get("bbox"),
+                "bbox": el.get("bbox"),  # overrides don't move boxes
                 "type": etype,
-                "text": el.get("text", ""),
-                "desc": el.get("desc", ""),
+                "text": cap.get("text", el.get("text", "")),
+                "desc": cap.get("desc", el.get("desc", "")),
                 "color": hex_to_rgb(el.get("boxColor"), default),
-                "palette": el.get("color_palette") or [],
+                "palette": cap.get("color_palette") or el.get("color_palette") or [],
             })
         return items
     comp = (caption_data or {}).get("compositional_deconstruction", {}) or {}

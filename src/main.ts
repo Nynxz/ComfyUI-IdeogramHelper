@@ -3,6 +3,7 @@ import { app } from '@comfy/app'
 import { mountWidget } from '@/lib/mountWidget'
 import IdeogramStudio from '@/components/IdeogramStudio.vue'
 import '@/extensions/scrollFix'
+import '@/extensions/overrideList'
 
 console.log('[IdeogramStudio] main.js loaded — registering extension')
 

@@ -6,16 +6,16 @@
           <span class="chip" :style="{ background: el.boxColor }"></span>
           <input type="color" :value="el.boxColor" @input="setShared('boxColor', ($event.target as HTMLInputElement).value)" />
         </label>
-        <span class="lbl">#{{ index + 1 }}</span>
+        <span class="lbl">{{ index + 1 }}</span>
         <div class="seg">
-          <UiButton :active="el.type === 'obj'" @click="setShared('type', 'obj')">object</UiButton>
-          <UiButton :active="el.type === 'text'" @click="setShared('type', 'text')">text</UiButton>
+          <UiButton icon :active="el.type === 'obj'" title="Object" @click="setShared('type', 'obj')"><i class="mdi mdi-shape-outline"></i></UiButton>
+          <UiButton icon :active="el.type === 'text'" title="Text" @click="setShared('type', 'text')"><i class="mdi mdi-format-text"></i></UiButton>
         </div>
         <span class="grow"></span>
-        <UiButton icon title="Linked copy — shares prompt, keeps its own position" @click="store.duplicateLinked(el.id)">🔗</UiButton>
-        <UiButton v-if="linked" title="Unlink from group" @click="store.unlink(el.id)">unlink ×{{ groupSize }}</UiButton>
+        <UiButton icon title="Linked copy — shares prompt, keeps its own position" @click="store.duplicateLinked(el.id)"><i class="mdi mdi-link-variant-plus"></i></UiButton>
+        <UiButton v-if="linked" title="Unlink from group" @click="store.unlink(el.id)"><i class="mdi mdi-link-variant-off"></i> ×{{ groupSize }}</UiButton>
         <button class="mute" :class="{ off: el.enabled === false }" :title="el.enabled === false ? 'Muted — excluded from output. Click to enable.' : 'Mute (keep but exclude from output)'" @click="store.toggleEnabled(el.id)">
-          {{ el.enabled === false ? '🚫' : '👁' }}
+          <i class="mdi" :class="el.enabled === false ? 'mdi-eye-off-outline' : 'mdi-eye-outline'"></i>
         </button>
       </div>
     </template>
@@ -92,6 +92,7 @@ function setBbox(i: number, raw: string) {
 }
 .mute:hover { border-color: var(--st-accent); }
 .mute.off { color: #f87171; }
+.mute .mdi { font-size: 15px; line-height: 1; }
 
 .erow { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
 .bbtoggle { font-size: 11px; color: var(--st-muted); display: flex; gap: 4px; align-items: center; }

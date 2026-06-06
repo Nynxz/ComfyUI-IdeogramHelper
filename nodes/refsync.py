@@ -62,5 +62,53 @@ class IdeogramRefSync:
         return {"ui": {"images": ui_images}, "result": (image,)}
 
 
-NODE_CLASS_MAPPINGS = {"IdeogramRefSync": IdeogramRefSync}
-NODE_DISPLAY_NAME_MAPPINGS = {"IdeogramRefSync": "Ideogram Studio Ref Sync"}
+class IdeogramJsonSync:
+    """Push a JSON caption to any Ideogram Studio that has 'json sync' on — the
+    studio imports it live into the editor. The string is passed through so the
+    node can sit inline (e.g. between a caption source and your sampler)."""
+
+    @classmethod
+    def INPUT_TYPES(cls):
+        return {
+            "required": {
+                "json": ("STRING", {"multiline": True, "default": "", "tooltip": "An Ideogram JSON caption (paste, or wire one in)"}),
+                "enable": ("BOOLEAN", {"default": True}),
+            },
+        }
+
+    RETURN_TYPES = ("STRING",)
+    RETURN_NAMES = ("json",)
+    OUTPUT_NODE = True
+    FUNCTION = "run"
+    CATEGORY = "Ideogram"
+    DESCRIPTION = "Sync a JSON caption to Ideogram Studios with 'json sync' on. Passes the string through."
+
+    @classmethod
+    def IS_CHANGED(cls, **kwargs):
+        return float("nan")  # always re-broadcast (see IdeogramRefSync)
+
+    def run(self, json="", enable=True, **kwargs):
+        if enable and isinstance(json, str) and json.strip():
+            import json as _json
+            try:
+                _json.loads(json)  # validate before broadcasting
+            except _json.JSONDecodeError as e:
+                # Raise so ComfyUI flags the node (red outline + message) instead
+                # of failing silently — the user wants to know it's broken.
+                raise ValueError(f"Ideogram Studio JSON Sync: input is not valid JSON — {e}") from e
+            try:
+                from server import PromptServer
+                PromptServer.instance.send_sync("ideogram-studio.json-sync", {"json": json})
+            except Exception as e:
+                print(f"[IdeogramJsonSync] sync failed: {e}")
+        return {"ui": {}, "result": (json,)}
+
+
+NODE_CLASS_MAPPINGS = {
+    "IdeogramRefSync": IdeogramRefSync,
+    "IdeogramJsonSync": IdeogramJsonSync,
+}
+NODE_DISPLAY_NAME_MAPPINGS = {
+    "IdeogramRefSync": "Ideogram Studio Ref Sync",
+    "IdeogramJsonSync": "Ideogram Studio JSON Sync",
+}

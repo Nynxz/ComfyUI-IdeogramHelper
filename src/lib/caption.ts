@@ -57,6 +57,10 @@ export interface UiPrefs {
   showLabels: boolean
   backdropOpacity: number
   newType: ElementType
+  jsonOpen: boolean
+  promptOpen: boolean
+  showPresets: boolean
+  jsonSync: boolean
 }
 
 export interface CaptionState {
@@ -71,7 +75,7 @@ export interface CaptionState {
 }
 
 export function emptyUi(): UiPrefs {
-  return { sync: false, showLabels: true, backdropOpacity: 0.5, newType: 'obj' }
+  return { sync: true, showLabels: true, backdropOpacity: 0.5, newType: 'obj', jsonOpen: false, promptOpen: true, showPresets: false, jsonSync: false }
 }
 
 // Common Ideogram output formats (aspect · pixels).

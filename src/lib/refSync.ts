@@ -7,6 +7,9 @@ import { api } from '@comfy/api'
 import { ref } from 'vue'
 
 export const refSyncImage = ref<string | null>(null)
+// Incoming caption JSON from an "Ideogram Studio JSON Sync" node. Bumped each
+// broadcast (counter forces watchers even if the text is identical).
+export const jsonSyncCaption = ref<{ json: string; n: number }>({ json: '', n: 0 })
 
 let inited = false
 export function initRefSync() {
@@ -24,7 +27,12 @@ export function initRefSync() {
       // cache-bust so the same filename still triggers watchers + reloads
       refSyncImage.value = `/view?${p.toString()}&r=${Date.now()}`
     })
+    ;(api as any).addEventListener('ideogram-studio.json-sync', (e: any) => {
+      const d = (e && e.detail) || {}
+      if (typeof d.json !== 'string') return
+      jsonSyncCaption.value = { json: d.json, n: jsonSyncCaption.value.n + 1 }
+    })
   } catch (err) {
-    console.warn('[IdeogramStudio] ref-sync listener failed to register', err)
+    console.warn('[IdeogramStudio] sync listener failed to register', err)
   }
 }

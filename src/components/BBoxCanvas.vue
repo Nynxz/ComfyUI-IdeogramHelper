@@ -1,40 +1,64 @@
 <template>
   <div class="canvas-wrap">
     <div class="toolbar" @pointerdown.stop>
+      <slot name="lead" />
+      <span v-if="$slots.lead" class="divider"></span>
       <div class="seg" title="What new boxes become when you draw">
-        <UiButton :active="newType === 'obj'" @click="newType = 'obj'">obj</UiButton>
-        <UiButton :active="newType === 'text'" @click="newType = 'text'">text</UiButton>
+        <UiButton icon :active="newType === 'obj'" title="New boxes are objects" @click="newType = 'obj'"><i class="mdi mdi-shape-outline"></i></UiButton>
+        <UiButton icon :active="newType === 'text'" title="New boxes are text" @click="newType = 'text'"><i class="mdi mdi-format-text"></i></UiButton>
       </div>
 
       <span class="divider"></span>
 
-      <div class="cluster">
-        <button class="ic" title="Load a reference image to trace over (or drop one on the canvas)" @click="pickImage">🖼</button>
-        <button class="ic sync" :class="{ on: syncRef }" title="Sync: an Ideogram Studio Ref Sync node updates this reference live" @click="toggleSync">{{ syncRef ? '◉ sync' : '○ sync' }}</button>
-        <input v-if="backdropUrl" class="op" type="range" min="0" max="1" step="0.05" v-model.number="backdropOpacity" title="Reference opacity" />
-        <button v-if="backdropUrl" class="ic" title="Remove reference image" @click="backdropUrl = null">✕</button>
-      </div>
+      <UiPopover align="left">
+        <template #trigger><UiButton icon :active="!!backdropUrl || syncRef" title="Reference / trace image"><i class="mdi mdi-image-outline"></i></UiButton></template>
+        <div class="cmenu">
+          <button class="citem" @click="pickImage"><i class="mdi mdi-folder-image"></i> load image…</button>
+          <button class="citem" :class="{ on: syncRef }" title="Update from an Ideogram Studio Ref Sync node" @click="toggleSync"><i class="mdi" :class="syncRef ? 'mdi-sync' : 'mdi-sync-off'"></i> live sync</button>
+          <label class="crow">opacity <input type="range" min="0" max="1" step="0.05" v-model.number="backdropOpacity" /></label>
+          <button v-if="backdropUrl" class="citem" @click="backdropUrl = null"><i class="mdi mdi-close"></i> remove reference</button>
+        </div>
+      </UiPopover>
 
       <span class="divider"></span>
 
-      <button class="ic" :class="{ on: showLabels }" title="Toggle labels" @click="showLabels = !showLabels">⌗</button>
-      <button class="ic" title="Mirror the whole scene horizontally" @click="store.flipAll('h')">⇄</button>
-      <button class="ic" title="Mirror the whole scene vertically" @click="store.flipAll('v')">⇅</button>
+      <UiPopover align="left">
+        <template #trigger><UiButton icon title="View &amp; overlay settings"><i class="mdi mdi-tune-variant"></i></UiButton></template>
+        <div class="cmenu">
+          <label class="crow"><input type="checkbox" v-model="showLabels" /> show box labels</label>
+          <div class="crow">mirror scene
+            <button class="cic" title="Mirror horizontally" @click="store.flipAll('h')"><i class="mdi mdi-flip-horizontal"></i></button>
+            <button class="cic" title="Mirror vertically" @click="store.flipAll('v')"><i class="mdi mdi-flip-vertical"></i></button>
+          </div>
+          <div class="cdiv"></div>
+          <div class="cgroup">overlay output</div>
+          <label class="crow">line <input type="number" min="1" max="40" v-model.number="store.state.overlay.lineWidth" /></label>
+          <label class="crow">fill <input type="range" min="0" max="1" step="0.02" v-model.number="store.state.overlay.fillAlpha" /></label>
+          <label class="crow">label size <input type="number" min="6" max="96" v-model.number="store.state.overlay.labelSize" /></label>
+          <div class="crow ckrow">
+            <label><input type="checkbox" v-model="store.state.overlay.showIndex" /> index</label>
+            <label><input type="checkbox" v-model="store.state.overlay.showText" /> text</label>
+          </div>
+          <p class="chint">styles the overlay output (Extras node), not the reference</p>
+        </div>
+      </UiPopover>
 
       <span class="spacer"></span>
-      <span class="dims">{{ store.state.width }}×{{ store.state.height }}</span>
+      <slot name="trail" />
       <input ref="fileInput" type="file" accept="image/*" hidden @change="onFile" />
     </div>
 
     <div
       ref="stage"
       class="stage"
+      tabindex="0"
       :class="{ dragging: !!drag }"
       @pointerdown="onPointerDown"
       @pointermove="onPointerMove"
       @pointerup="onPointerUp"
       @pointercancel="onPointerUp"
       @lostpointercapture="onPointerUp"
+      @keydown="onKeyDown"
       @dragover.prevent
       @drop="onDrop"
       :style="stageStyle"
@@ -51,7 +75,8 @@
         :data-box="el.id"
       >
         <span v-if="showLabels" class="tag" :style="tagStyle(el)">
-          {{ el.linkId ? '🔗' : (el.type === 'text' ? 'T' : '▣') }} {{ i + 1 }} · {{ el.type === 'text' ? (el.text || 'text') : (el.desc || 'obj') }}
+          <i class="mdi" :class="el.linkId ? 'mdi-link-variant' : (el.type === 'text' ? 'mdi-format-text' : 'mdi-vector-square')"></i>
+          {{ i + 1 }} · {{ el.type === 'text' ? (el.text || 'text') : (el.desc || 'obj') }}
         </span>
         <template v-if="el.id === store.selectedId">
           <i v-for="hdl in HANDLES" :key="hdl" :class="['h', 'h-' + hdl]" :data-handle="hdl"></i>
@@ -68,6 +93,7 @@ import { computed, onMounted, ref, watch } from 'vue'
 import { useStudioStore } from '@/lib/store'
 import { refSyncImage, initRefSync } from '@/lib/refSync'
 import UiButton from './ui/UiButton.vue'
+import UiPopover from './ui/UiPopover.vue'
 import type { CaptionElement } from '@/lib/caption'
 
 const store = useStudioStore()
@@ -164,8 +190,17 @@ interface DragSession {
   moved: boolean
   moveTargets?: { el: CaptionElement; start: Bbox }[] // for move (1 = single, >1 = group)
   clickedId?: string
+  wasPrimary?: boolean // the clicked box was already the sole selection (→ cycle on click)
 }
 let drag: DragSession | null = null
+
+// ids of every enabled box whose bbox contains the point, in paint order — used
+// to cycle through stacked boxes on repeated clicks.
+function boxesUnder(p: { x: number; y: number }) {
+  return store.state.elements
+    .filter((el) => el.bbox && el.enabled !== false && p.x >= el.bbox[1] && p.x <= el.bbox[3] && p.y >= el.bbox[0] && p.y <= el.bbox[2])
+    .map((el) => el.id)
+}
 
 function onPointerDown(ev: PointerEvent) {
   // Keep LiteGraph from also dragging the node / panning the canvas.
@@ -176,6 +211,7 @@ function onPointerDown(ev: PointerEvent) {
   } catch {
     /* best effort */
   }
+  stage.value?.focus({ preventScroll: true }) // so keyboard (Delete) works after a click
 
   const target = ev.target as HTMLElement
   const handle = target.dataset.handle as Handle | undefined
@@ -195,13 +231,14 @@ function onPointerDown(ev: PointerEvent) {
       store.select(boxId, true) // toggle in/out of the selection — no drag
       return
     }
+    const wasPrimary = store.selectedIds.length === 1 && store.selectedId === boxId
     if (!store.isSelected(boxId)) store.select(boxId) // fresh single-select
     // move every selected box together (a single box if only one is selected)
     const moveTargets = store.selectedIds
       .map((id) => store.getElement(id))
       .filter((e): e is CaptionElement => !!e?.bbox)
       .map((e) => ({ el: e, start: [...e.bbox!] as Bbox }))
-    drag = { kind: 'move', start, moved: false, moveTargets, clickedId: boxId }
+    drag = { kind: 'move', start, moved: false, moveTargets, clickedId: boxId, wasPrimary }
     return
   }
   // empty space → start drawing a new box
@@ -262,11 +299,32 @@ function onPointerUp(ev: PointerEvent) {
     } else if (!drag.moved) {
       store.select(null) // a plain click on empty canvas deselects
     }
-  } else if (drag.kind === 'move' && !drag.moved && drag.clickedId && store.selectedIds.length > 1) {
-    store.select(drag.clickedId) // plain click on a box in a group → collapse to it
+  } else if (drag.kind === 'move' && !drag.moved && drag.clickedId) {
+    if (store.selectedIds.length > 1) {
+      store.select(drag.clickedId) // plain click on a box in a group → collapse to it
+    } else if (drag.wasPrimary) {
+      // clicking the already-selected box steps to the next box under the cursor,
+      // so stacked/overlapping boxes are reachable (cycles, wrapping around).
+      const ids = boxesUnder(drag.start)
+      if (ids.length > 1) {
+        const ci = ids.indexOf(drag.clickedId)
+        store.select(ids[ci === -1 ? 0 : (ci + 1) % ids.length])
+      }
+    }
   }
   drag = null
   hint.value = '' // clear the live readout once the drag ends
+}
+
+// Delete/Backspace removes the selected box(es). Scoped to the focused canvas
+// and stopped from bubbling so LiteGraph doesn't delete the whole node.
+function onKeyDown(ev: KeyboardEvent) {
+  if (ev.key !== 'Delete' && ev.key !== 'Backspace') return
+  if (!store.selectedIds.length) return
+  ev.preventDefault()
+  ev.stopPropagation()
+  for (const id of [...store.selectedIds]) store.removeElement(id)
+  store.snapshot()
 }
 
 function bboxLabel(b: Bbox) {
@@ -277,6 +335,8 @@ function bboxLabel(b: Bbox) {
 <style scoped>
 .canvas-wrap { display: flex; flex-direction: column; gap: 6px; }
 .toolbar { display: flex; flex-wrap: wrap; gap: 5px; align-items: center; }
+.mdi { font-size: 15px; line-height: 1; }
+.tag .mdi { font-size: 1em; }
 .seg { display: flex; gap: 2px; }
 /* uniform square-ish icon buttons */
 .ic {
@@ -287,11 +347,22 @@ function bboxLabel(b: Bbox) {
 }
 .ic:hover { border-color: var(--st-accent); }
 .ic.on { background: var(--st-accent); border-color: var(--st-accent); color: var(--st-on-accent, #fff); }
-.cluster { display: flex; gap: 4px; align-items: center; }
 .divider { width: 1px; height: 18px; background: var(--st-border); margin: 0 2px; }
 .spacer { flex: 1 1 auto; }
-.dims { font-size: 11px; color: var(--st-muted); font-family: monospace; }
-.op { width: 64px; accent-color: var(--st-accent); }
+/* compact ref / view dropdown menus */
+.cmenu { display: flex; flex-direction: column; gap: 5px; min-width: 170px; }
+.citem { display: flex; align-items: center; gap: 6px; text-align: left; background: var(--st-btn); border: 1px solid var(--st-border); color: var(--st-text); border-radius: 5px; padding: 5px 8px; font-size: 11px; cursor: pointer; }
+.citem:hover { border-color: var(--st-accent); }
+.citem.on { background: var(--st-accent); border-color: var(--st-accent); color: var(--st-on-accent, #fff); }
+.crow { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--st-muted); }
+.crow input[type='range'] { flex: 1; accent-color: var(--st-accent); }
+.crow input[type='number'] { width: 54px; background: var(--st-input); border: 1px solid var(--st-border); color: var(--st-text); border-radius: 4px; padding: 3px; font-size: 11px; }
+.ckrow { gap: 12px; }
+.cdiv { border-top: 1px solid var(--st-border); margin: 3px 0; }
+.cgroup { font-size: 9px; text-transform: uppercase; letter-spacing: .5px; color: var(--st-muted); }
+.chint { margin: 2px 0 0; font-size: 10px; line-height: 1.4; color: var(--st-muted); }
+.cic { display: inline-flex; align-items: center; justify-content: center; background: var(--st-btn); border: 1px solid var(--st-border); color: var(--st-text); border-radius: 4px; width: 26px; height: 24px; cursor: pointer; }
+.cic:hover { border-color: var(--st-accent); }
 
 .stage {
   position: relative; width: 100%; background: var(--st-input);
@@ -299,6 +370,7 @@ function bboxLabel(b: Bbox) {
   touch-action: none; user-select: none; cursor: crosshair;
 }
 .stage.dragging { cursor: grabbing; }
+.stage:focus { outline: none; }
 .backdrop { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; pointer-events: none; }
 .grid {
   position: absolute; inset: 0; pointer-events: none;

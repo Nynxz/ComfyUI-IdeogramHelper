@@ -15,18 +15,22 @@ withDefaults(defineProps<{ align?: 'left' | 'right'; up?: boolean }>(), { align:
 const open = ref(false)
 const root = ref<HTMLElement | null>(null)
 
-function onDoc(e: MouseEvent) {
+function onDoc(e: Event) {
   if (root.value && !root.value.contains(e.target as Node)) close()
 }
 function onKey(e: KeyboardEvent) {
   if (e.key === 'Escape') close()
 }
 function bind() {
-  document.addEventListener('mousedown', onDoc, true)
+  // pointerdown (not mousedown): the canvas calls preventDefault() on pointerdown
+  // which suppresses the compat mousedown, so a mousedown listener never fires for
+  // canvas clicks and the popover would stay open. Capture phase beats the
+  // canvas's own handler.
+  document.addEventListener('pointerdown', onDoc, true)
   document.addEventListener('keydown', onKey)
 }
 function unbind() {
-  document.removeEventListener('mousedown', onDoc, true)
+  document.removeEventListener('pointerdown', onDoc, true)
   document.removeEventListener('keydown', onKey)
 }
 function close() {

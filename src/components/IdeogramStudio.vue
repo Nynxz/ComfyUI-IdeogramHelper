@@ -1,8 +1,72 @@
 <template>
-  <div class="studio">
+  <div class="studio" ref="rootEl">
     <div class="main">
       <div class="left">
-        <BBoxCanvas />
+        <BBoxCanvas>
+          <template #lead>
+            <UiButton icon :disabled="!store.canUndo" title="Undo (Ctrl+Z)" @click="store.undo()"><i class="mdi mdi-undo"></i></UiButton>
+            <UiButton icon :disabled="!store.canRedo" title="Redo (Ctrl+Shift+Z)" @click="store.redo()"><i class="mdi mdi-redo"></i></UiButton>
+            <span class="divider"></span>
+            <UiPopover align="left">
+              <template #trigger><UiButton title="Resolution — aspect ratio × megapixels">{{ store.state.width }}×{{ store.state.height }} ▾</UiButton></template>
+              <div class="resmenu">
+                <label class="rrow"><span>aspect ratio</span>
+                  <select v-model="aspect" @change="applyRes">
+                    <option v-for="a in CORE_ASPECTS" :key="a.label" :value="a.label">{{ a.label }} · {{ a.name }}</option>
+                  </select>
+                </label>
+                <label class="rrow"><span>megapixels</span>
+                  <input type="number" min="0.1" max="16" step="0.1" v-model.number="mp" @input="applyRes" />
+                </label>
+                <div class="rdiv"></div>
+                <label class="rrow"><span>width</span>
+                  <input type="number" min="16" max="8192" step="16" v-model.number="store.state.width" @change="store.state.width = snapRes(store.state.width)" />
+                </label>
+                <label class="rrow"><span>height</span>
+                  <input type="number" min="16" max="8192" step="16" v-model.number="store.state.height" @change="store.state.height = snapRes(store.state.height)" />
+                </label>
+              </div>
+            </UiPopover>
+          </template>
+
+          <template #trail>
+            <UiPopover align="right">
+              <template #trigger><UiButton icon title="Help"><i class="mdi mdi-help-circle-outline"></i></UiButton></template>
+              <div class="help">
+                <p class="h">Canvas</p>
+                <dl>
+                  <dt>drag empty space</dt><dd>add a box</dd>
+                  <dt>drag a box</dt><dd>move it</dd>
+                  <dt>drag a handle</dt><dd>resize</dd>
+                  <dt>Delete / Backspace</dt><dd>remove the selected box(es)</dd>
+                </dl>
+                <p class="h">Boxes</p>
+                <dl>
+                  <dt><i class="mdi mdi-eye-outline"></i> mute</dt><dd>keep a box but exclude it from the output</dd>
+                  <dt><i class="mdi mdi-link-variant-plus"></i> linked copy</dt><dd>shares the prompt across copies; each keeps its own position</dd>
+                  <dt>ctrl / shift click</dt><dd>multi-select; drag to move them together</dd>
+                  <dt>click again</dt><dd>cycle through stacked/overlapping boxes</dd>
+                </dl>
+                <p class="h">Reference</p>
+                <dl>
+                  <dt><i class="mdi mdi-image-outline"></i> image</dt><dd>load an image to trace over (or drop one on the canvas)</dd>
+                  <dt><i class="mdi mdi-sync"></i> sync</dt><dd>auto-update the reference from an <b>Ideogram Studio Ref Sync</b> node</dd>
+                </dl>
+                <p class="h">Outputs</p>
+                <dl>
+                  <dt>caption</dt><dd>JSON prompt → your Ideogram sampler</dd>
+                  <dt>extras</dt><dd>→ <b>Studio Extras</b> node for overlay / alpha / width / height</dd>
+                </dl>
+                <p class="tip">Tip: open the JSON card and paste a caption to import it.</p>
+                <p class="credit">
+                  made by <b>nynxz</b> · ideas &amp; inspiration from the community<br />
+                  <a href="https://github.com/nynxz/ComfyUI-IdeogramHelper/issues" target="_blank" rel="noopener noreferrer">report a bug / suggest a feature ↗</a>
+                </p>
+              </div>
+            </UiPopover>
+            <UiButton title="Clear everything" @click="resetAll">reset</UiButton>
+          </template>
+        </BBoxCanvas>
       </div>
       <div class="right">
         <UiCard>
@@ -23,101 +87,27 @@
         </UiCard>
         <StylePanel />
         <ElementList />
+        <JsonControls />
       </div>
     </div>
 
     <ElementEditor />
 
-    <!-- Bottom bar: JSON caption + all global controls, merged into one row. -->
-    <JsonPreview>
-      <template #controls>
-        <UiButton icon :disabled="!store.canUndo" title="Undo" @click="store.undo()">↶</UiButton>
-        <UiButton icon :disabled="!store.canRedo" title="Redo" @click="store.redo()">↷</UiButton>
-
-        <UiPopover align="left" up>
-          <template #trigger><UiButton title="Resolution — aspect ratio × megapixels">{{ store.state.width }}×{{ store.state.height }} ▾</UiButton></template>
-          <div class="resmenu">
-            <label class="rrow"><span>aspect ratio</span>
-              <select v-model="aspect" @change="applyRes">
-                <option v-for="a in CORE_ASPECTS" :key="a.label" :value="a.label">{{ a.label }} · {{ a.name }}</option>
-              </select>
-            </label>
-            <label class="rrow"><span>megapixels</span>
-              <input type="number" min="0.1" max="16" step="0.1" v-model.number="mp" @input="applyRes" />
-            </label>
-            <div class="rdiv"></div>
-            <label class="rrow"><span>width</span>
-              <input type="number" min="16" max="8192" step="16" v-model.number="store.state.width" @change="store.state.width = snapRes(store.state.width)" />
-            </label>
-            <label class="rrow"><span>height</span>
-              <input type="number" min="16" max="8192" step="16" v-model.number="store.state.height" @change="store.state.height = snapRes(store.state.height)" />
-            </label>
-          </div>
-        </UiPopover>
-
-        <UiPopover align="left" up>
-          <template #trigger><UiButton icon title="Overlay settings">⚙</UiButton></template>
-          <div class="adv">
-            <span class="gh">overlay</span>
-            <label class="orow">line <input type="number" min="1" max="40" v-model.number="store.state.overlay.lineWidth" /></label>
-            <label class="orow">fill <input type="range" min="0" max="1" step="0.02" v-model.number="store.state.overlay.fillAlpha" /></label>
-            <label class="orow">label <input type="number" min="6" max="96" v-model.number="store.state.overlay.labelSize" /></label>
-            <div class="ochecks">
-              <label class="ck"><input type="checkbox" v-model="store.state.overlay.showIndex" /> index</label>
-              <label class="ck"><input type="checkbox" v-model="store.state.overlay.showText" /> text</label>
-            </div>
-          </div>
-        </UiPopover>
-
-        <UiPopover align="left" up>
-          <template #trigger><UiButton icon title="Help">?</UiButton></template>
-          <div class="help">
-            <p class="h">Canvas</p>
-            <dl>
-              <dt>drag empty space</dt><dd>add a box</dd>
-              <dt>drag a box</dt><dd>move it</dd>
-              <dt>drag a handle</dt><dd>resize</dd>
-              <dt>obj / text</dt><dd>what new boxes become (text boxes carry literal text)</dd>
-            </dl>
-            <p class="h">Boxes</p>
-            <dl>
-              <dt>👁 / 🚫</dt><dd>mute — keep a box but exclude it from the output</dd>
-              <dt>🔗 linked copy</dt><dd>shares the prompt across copies; each keeps its own position</dd>
-              <dt>color chip</dt><dd>recolor a box (editor only — not in the caption)</dd>
-            </dl>
-            <p class="h">Reference</p>
-            <dl>
-              <dt>🖼</dt><dd>load an image to trace over (or drop one on the canvas)</dd>
-              <dt>⟳ sync</dt><dd>auto-update the reference from an <b>Ideogram Studio Ref Sync</b> node</dd>
-            </dl>
-            <p class="h">Outputs</p>
-            <dl>
-              <dt>caption</dt><dd>JSON prompt → your Ideogram sampler</dd>
-              <dt>extras</dt><dd>→ <b>Studio Extras</b> node for overlay / alpha / width / height</dd>
-            </dl>
-            <p class="tip">Tip: paste JSON in the preview to import an existing caption.</p>
-            <p class="credit">
-              made by <b>nynxz</b> · ideas &amp; inspiration from the community<br />
-              <a href="https://github.com/nynxz/ComfyUI-IdeogramHelper/issues" target="_blank" rel="noopener noreferrer">report a bug / suggest a feature ↗</a>
-            </p>
-          </div>
-        </UiPopover>
-
-        <UiButton title="Clear everything" @click="resetAll">reset</UiButton>
-      </template>
-    </JsonPreview>
+    <JsonPreview />
   </div>
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted, ref, watch } from 'vue'
+import { computed, onMounted, onBeforeUnmount, ref, watch } from 'vue'
 import { createStudioStore, provideStudioStore } from '@/lib/store'
 import { buildCaption, emptyState, type CaptionState } from '@/lib/caption'
+import { jsonSyncCaption } from '@/lib/refSync'
 import UiButton from './ui/UiButton.vue'
 import UiPopover from './ui/UiPopover.vue'
 import BBoxCanvas from './BBoxCanvas.vue'
 import StylePanel from './StylePanel.vue'
 import ElementList from './ElementList.vue'
+import JsonControls from './JsonControls.vue'
 import ElementEditor from './ElementEditor.vue'
 import JsonPreview from './JsonPreview.vue'
 
@@ -126,7 +116,46 @@ const props = defineProps<{ widget: any; node?: any }>()
 const store = createStudioStore()
 provideStudioStore(store)
 
-const promptOpen = ref(true)
+const rootEl = ref<HTMLElement | null>(null)
+
+// Capture Ctrl/Cmd+Z (undo) / +Shift+Z / +Y (redo) when the interaction is
+// inside THIS studio, before it reaches the ComfyUI graph. Capture phase +
+// stopImmediatePropagation so the graph's own undo doesn't also fire. Text
+// fields keep their native undo.
+function onUndoKey(e: KeyboardEvent) {
+  if (!(e.ctrlKey || e.metaKey)) return
+  const k = e.key.toLowerCase()
+  if (k !== 'z' && k !== 'y') return
+  const root = rootEl.value
+  const ae = document.activeElement
+  if (!root || !ae || !root.contains(ae)) return // only when this studio is focused
+  const tag = (ae as HTMLElement).tagName
+  if (tag === 'INPUT' || tag === 'TEXTAREA' || (ae as HTMLElement).isContentEditable) return
+  const redo = k === 'y' || (k === 'z' && e.shiftKey)
+  if (redo) store.redo()
+  else store.undo()
+  e.preventDefault()
+  e.stopImmediatePropagation()
+}
+onMounted(() => document.addEventListener('keydown', onUndoKey, true))
+onBeforeUnmount(() => document.removeEventListener('keydown', onUndoKey, true))
+
+// Live JSON-caption sync: when an "Ideogram Studio JSON Sync" node broadcasts a
+// caption and this studio has json-sync on, import it into the editor.
+watch(
+  () => jsonSyncCaption.value.n,
+  () => {
+    if (!store.state.ui.jsonSync) return
+    const res = store.importCaptionJson(jsonSyncCaption.value.json)
+    store.json.syncError = res.ok ? '' : `JSON sync: ${res.error || 'invalid JSON'}`
+  },
+)
+
+// persisted in the studio state so it survives a reload
+const promptOpen = computed({
+  get: () => store.state.ui.promptOpen,
+  set: (v) => (store.state.ui.promptOpen = v),
+})
 
 // Resolution: aspect ratio × megapixels, matching ComfyUI core's
 // ResolutionSelector exactly (total = MP × 1024², exact-ratio scale, /8 round).
@@ -230,10 +259,13 @@ onMounted(() => {
      background resize grip) gets clipped. */
   width: 100%; height: 100%; overflow-y: auto;
 }
+/* divider used inside the canvas-toolbar lead slot (IdeogramStudio scope) */
+.divider { width: 1px; height: 18px; background: var(--st-border); margin: 0 2px; }
 .help .h { margin: 8px 0 3px; font-size: 10px; text-transform: uppercase; letter-spacing: .5px; color: var(--st-accent); font-weight: 700; }
 .help .h:first-child { margin-top: 0; }
 .help dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 2px 8px; }
 .help dt { color: var(--st-text); font-weight: 600; white-space: nowrap; }
+.help dt .mdi { font-size: 13px; color: var(--st-muted); }
 .help dd { margin: 0; color: var(--st-muted); }
 .help .tip { margin: 9px 0 0; color: var(--st-muted); border-top: 1px solid var(--st-border); padding-top: 7px; }
 .help .credit { margin: 9px 0 0; font-size: 10px; color: var(--st-muted); line-height: 1.6; }
@@ -246,7 +278,8 @@ onMounted(() => {
 .resmenu input { width: 64px; }
 .resmenu .rdiv { border-top: 1px solid var(--st-border); margin: 1px 0; }
 /* overlay settings (⚙) */
-.adv { display: flex; flex-direction: column; gap: 7px; font-size: 11px; color: var(--st-muted); width: 200px; }
+.adv { display: flex; flex-direction: column; gap: 7px; font-size: 11px; color: var(--st-muted); width: 220px; }
+.adv .ahint { margin: 0; font-size: 10px; line-height: 1.45; color: var(--st-muted); }
 .adv .gh { font-size: 10px; text-transform: uppercase; letter-spacing: .4px; color: var(--st-muted); }
 .adv .orow { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
 .adv .ochecks { display: flex; gap: 12px; }
@@ -264,7 +297,9 @@ onMounted(() => {
 }
 /* grow to fill a tall node, but never shrink below content (shrink:0) — on a
    small node the studio scrolls rather than squeezing/clipping the canvas. */
-.main { display: grid; grid-template-columns: minmax(280px, 1.4fr) minmax(220px, 1fr); gap: 12px; align-items: stretch; flex: 1 0 auto; }
+/* sidebar is capped so the canvas column soaks up the rest — much better for
+   wide/landscape canvases (and you can drag the node wider to grow it more). */
+.main { display: grid; grid-template-columns: minmax(0, 1fr) minmax(220px, 300px); gap: 12px; align-items: stretch; flex: 1 0 auto; }
 /* center the canvas vertically so spare height splits above/below it instead
    of pooling under it when the elements list makes the right column taller */
 .left { display: flex; flex-direction: column; gap: 8px; min-width: 0; align-self: center; }

@@ -1,5 +1,5 @@
 import { reactive, inject, provide, type InjectionKey } from 'vue'
-import { emptyState, newElement, newId, type CaptionElement, type CaptionState, type ElementType } from './caption'
+import { emptyState, emptyUi, newElement, newId, serialize, captionToState, type CaptionElement, type CaptionState, type ElementType } from './caption'
 
 // Fields that linked elements share. `bbox` is deliberately excluded so each
 // linked copy keeps its own position.
@@ -38,6 +38,13 @@ export interface StudioStore {
   moveElement(id: string, dir: -1 | 1): void
   getElement(id: string | null): CaptionElement | undefined
   load(s: Partial<CaptionState>): void
+  // JSON editor scratch (transient); open/collapsed state lives in state.ui.jsonOpen
+  json: { editing: boolean; draft: string; syncError: string }
+  jsonStartEdit(): void
+  jsonCancel(): void
+  jsonTidy(): void
+  jsonApply(): void
+  importCaptionJson(text: string): { ok: boolean; error?: string }
   // history
   _hist: string[]
   _hi: number
@@ -211,6 +218,44 @@ export function createStudioStore(): StudioStore {
     },
     load(s: Partial<CaptionState>) {
       Object.assign(store.state, emptyState(), s)
+      // deep-merge ui so older saves (missing newer keys) get sane defaults
+      store.state.ui = { ...emptyUi(), ...(s.ui || {}) }
+    },
+
+    json: { editing: false, draft: '', syncError: '' },
+    jsonStartEdit() {
+      store.json.draft = serialize(store.state).pretty
+      store.json.editing = true
+      store.state.ui.jsonOpen = true
+    },
+    jsonCancel() {
+      store.json.editing = false
+    },
+    jsonTidy() {
+      try {
+        store.json.draft = JSON.stringify(JSON.parse(store.json.draft), null, 2)
+      } catch {
+        /* leave as-is if it doesn't parse */
+      }
+    },
+    jsonApply() {
+      if (store.importCaptionJson(store.json.draft).ok) store.json.editing = false
+    },
+    importCaptionJson(text: string) {
+      let obj: any
+      try {
+        obj = JSON.parse(text)
+      } catch (e: any) {
+        return { ok: false, error: String(e?.message || e) }
+      }
+      const parts = captionToState(obj)
+      store.state.high_level_description = parts.high_level_description
+      store.state.style = parts.style
+      store.state.background = parts.background
+      store.state.elements = parts.elements
+      store.select(null)
+      store.snapshot()
+      return { ok: true }
     },
   }) as StudioStore
   return store

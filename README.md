@@ -98,6 +98,35 @@ forces art-mode.
 | `photo`, `art_style` | in *(optional)* | `STRING` | Sets photo- / art-mode style text. |
 | `overrides` | out | `IDEOGRAM_OVERRIDE` | Wire into the studio's `overrides` input. |
 
+### Ideogram Studio Element Override — overwrite one element by index *(optional)*
+
+Programmatically replace a single element's description / text / colours by its
+number — e.g. if **element 1** is your character, drive its `desc` from the graph.
+`id` is the element number shown in the studio (starts at 1); blank fields are
+ignored and `text` only applies to text elements. To patch several at once, feed
+multiple of these into an **Override List** (below).
+
+| Port | Dir | Type | Notes |
+| :--- | :-- | :--- | :--- |
+| `id` | in | `INT` | Which element to overwrite (the number shown in the list, from 1). |
+| `desc` | in *(optional)* | `STRING` | New description for that element. |
+| `text` | in *(optional)* | `STRING` | New literal text (text elements only). |
+| `colors` | in *(optional)* | `STRING` | Comma-separated hex (e.g. `#FF0000, #0a0, FFAA00`), max 5. |
+| `overrides` | out | `IDEOGRAM_OVERRIDE` | Wire to an Override List or the studio. |
+
+### Ideogram Studio Override List — combine many overrides *(optional)*
+
+Merges several override bundles into one, with **autogrowing inputs** — plug an
+Override / Element Override into a slot and a fresh empty slot appears, so you can
+build a list of per-element overrides without chaining. Wire the single output
+into the studio's `overrides` input. (Scalar fields take the last value; `style`
+and per-index element patches are merged.)
+
+| Port | Dir | Type | Notes |
+| :--- | :-- | :--- | :--- |
+| `overrides_1`, `overrides_2`, … | in *(optional)* | `IDEOGRAM_OVERRIDE` | Grow automatically as you connect. |
+| `overrides` | out | `IDEOGRAM_OVERRIDE` | The merged bundle → studio. |
+
 ### Ideogram Studio Ref Sync — trace over a generation *(optional)*
 
 An **output** node for the iterate loop: route a generation into it and, with a
@@ -111,6 +140,18 @@ re-broadcasts every run (so a page refresh re-syncs on the next queue) and reach
 | `image` | in | `IMAGE` | The generation (or any image) to trace. |
 | `enable` | in | `BOOLEAN` | Off = pass through without syncing. |
 | `image` | out | `IMAGE` | Passthrough, so the node sits inline. |
+
+### Ideogram Studio JSON Sync — push a caption into the studio *(optional)*
+
+The text-side counterpart to Ref Sync: feed it a JSON caption and any studio with
+**json sync** on (the ⟳ toggle in the JSON bar) imports it live into the editor —
+handy for loading captions from another node, an LLM, or a saved file.
+
+| Port | Dir | Type | Notes |
+| :--- | :-- | :--- | :--- |
+| `json` | in | `STRING` | An Ideogram JSON caption (paste, or wire one in). Invalid JSON errors the node. |
+| `enable` | in | `BOOLEAN` | Off = pass through without syncing. |
+| `json` | out | `STRING` | Passthrough, so the node sits inline. |
 
 ## Features
 
