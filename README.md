@@ -43,22 +43,22 @@ The frontend ships pre-built in `js/`. Restart ComfyUI, then add
 >
 > <img src=".github/assets/app_example.jpg" alt="Ideogram Studio running in ComfyUI App Mode" width="520">
 
+## Example workflow
+
+Want a ready-made graph? **Drag
+[`workflow_example.png`](.github/assets/workflow_example.png) onto the ComfyUI
+canvas** — the full example (studio → sampler → overlay compare) is embedded in
+the image and loads instantly. Prefer the raw file? Grab
+[`id4studio_workflow.json`](.github/assets/id4studio_workflow.json) and load it
+via **Workflow → Open**.
+
 ## Nodes
 
 Four nodes, all under the **Ideogram** category. Only **Ideogram Studio** is
-required — the other three are optional helpers that snap onto its ports.
-
-```text
-  (optional)             ┌─────────────────┐  caption ─▶ Ideogram sampler prompt
-  ┌──────────┐  over-    │                 │
-  │ Override │──rides───▶│ Ideogram Studio │  extras ─▶ ┌────────┐─▶ overlay (IMAGE)
-  └──────────┘           │    (editor)     │───────────▶│ Extras │─▶ alpha   (MASK)
-                         └─────────────────┘            └────────┘─▶ width/height (INT)
-
-  iterate:  [ generation ] ─▶ ┌──────────┐ ──(websocket)─▶ Studio trace backdrop
-                              │ Ref Sync │ ─▶ image (passthrough)
-                              └──────────┘
-```
+required — the other three are optional helpers that snap onto its ports. In
+short: an optional **Override** feeds the **Studio**; the Studio's `caption` goes
+to your sampler and `extras` to an **Extras** node for the overlay; and a **Ref
+Sync** node placed after a generation pushes it back as a trace backdrop.
 
 ### Ideogram Studio — the editor *(required)*
 
