@@ -38,6 +38,11 @@ The frontend ships pre-built in `js/`. Restart ComfyUI, then add
    the model placed things where your boxes were — the right-hand side of the
    screenshot above.
 
+> 💡 **App Mode:** the studio also works as a standalone panel in ComfyUI's App
+> Mode — a focused, full-screen prompt builder with the graph out of the way.
+>
+> <img src=".github/assets/app_example.jpg" alt="Ideogram Studio running in ComfyUI App Mode" width="520">
+
 ## Nodes
 
 Four nodes, all under the **Ideogram** category. Only **Ideogram Studio** is
