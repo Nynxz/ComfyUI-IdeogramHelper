@@ -2,6 +2,7 @@ import { app } from '@comfy/app'
 
 import { mountWidget } from '@/lib/mountWidget'
 import IdeogramStudio from '@/components/IdeogramStudio.vue'
+import PaletteNode from '@/components/PaletteNode.vue'
 import '@/extensions/scrollFix'
 import '@/extensions/overrideList'
 
@@ -20,6 +21,15 @@ app.registerExtension({
           defaultValue: null,
         })
       },
+      IDEOGRAM_PALETTE(node: unknown) {
+        return mountWidget(node as Parameters<typeof mountWidget>[0], {
+          widgetName: 'palette',
+          widgetType: 'IDEOGRAM_PALETTE',
+          component: PaletteNode,
+          minHeight: 44,
+          defaultValue: [],
+        })
+      },
     } as never
   },
   nodeCreated(node: unknown) {
@@ -28,8 +38,8 @@ app.registerExtension({
       size: [number, number]
       setSize: (s: [number, number]) => void
     }
-    if (lg.constructor?.comfyClass !== 'IdeogramStudio') return
-    const [w, h] = lg.size
-    lg.setSize([Math.max(w, 560), Math.max(h, 760)])
+    const cls = lg.constructor?.comfyClass
+    if (cls === 'IdeogramStudio') lg.setSize([Math.max(lg.size[0], 560), Math.max(lg.size[1], 760)])
+    else if (cls === 'IdeogramPalette') lg.setSize([Math.max(lg.size[0], 220), Math.max(lg.size[1], 90)])
   },
 })

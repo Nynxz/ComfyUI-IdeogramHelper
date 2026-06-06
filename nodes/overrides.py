@@ -20,8 +20,8 @@ import re
 _HEX = re.compile(r"^#[0-9A-F]{6}$")
 
 
-def _parse_colors(s: str) -> list[str]:
-    """Comma-separated hex → list of normalized #RRGGBB (max 5). Invalid dropped."""
+def _parse_colors(s: str, limit: int = 16) -> list[str]:
+    """Comma-separated hex → list of normalized #RRGGBB. Invalid dropped, capped at limit."""
     out: list[str] = []
     for raw in (s or "").split(","):
         h = raw.strip().upper()
@@ -33,7 +33,7 @@ def _parse_colors(s: str) -> list[str]:
             h = "#" + "".join(c * 2 for c in h[1:])
         if _HEX.match(h):
             out.append(h)
-    return out[:5]
+    return out[:limit]
 
 
 def apply_override(data: dict, ov: dict | None) -> dict:
@@ -139,6 +139,7 @@ class IdeogramOverride:
                 "medium": (MEDIA, {"default": "(keep)"}),
                 "photo": S(tooltip="camera/lens — sets photo mode"),
                 "art_style": S(tooltip="art style — sets art mode"),
+                "colors": S(tooltip="Comma-separated hex for the image palette (raw, or from an Ideogram Studio Palette node). Max 16"),
             }
         }
 
@@ -149,7 +150,7 @@ class IdeogramOverride:
     DESCRIPTION = "Override Ideogram Studio fields natively (only non-empty fields override). Wire into the studio's 'overrides' input."
 
     def run(self, high_level_description="", background="", aesthetics="",
-            lighting="", medium="(keep)", photo="", art_style="", **kwargs):
+            lighting="", medium="(keep)", photo="", art_style="", colors="", **kwargs):
         style = {}
         for k, v in (("aesthetics", aesthetics), ("lighting", lighting),
                      ("photo", photo), ("art_style", art_style)):
@@ -157,6 +158,9 @@ class IdeogramOverride:
                 style[k] = v.strip()
         if medium and medium != "(keep)":
             style["medium"] = medium
+        pal = _parse_colors(colors, 16)
+        if pal:
+            style["color_palette"] = pal
 
         bundle = {}
         if high_level_description.strip():
@@ -201,7 +205,7 @@ class IdeogramElementOverride:
             patch["desc"] = desc.strip()
         if text.strip():
             patch["text"] = text.strip()
-        pal = _parse_colors(colors)
+        pal = _parse_colors(colors, 5)  # per-element palette is capped at 5
         if pal:
             patch["color_palette"] = pal
 
@@ -235,6 +239,27 @@ class IdeogramOverrideList:
         return (merge_overrides([v for _, v in items]),)
 
 
+class IdeogramPalette:
+    """Visually build a colour palette (add/remove swatches, like the studio) and
+    output comma-separated hex — wire into an Override's 'colors' input so you can
+    pick colours instead of typing raw hex."""
+
+    @classmethod
+    def INPUT_TYPES(cls):
+        return {"required": {"palette": ("IDEOGRAM_PALETTE", {})}}
+
+    RETURN_TYPES = ("STRING",)
+    RETURN_NAMES = ("colors",)
+    FUNCTION = "run"
+    CATEGORY = "Ideogram"
+    DESCRIPTION = "Pick a colour palette visually; outputs comma-separated hex for an Override's 'colors' input."
+
+    def run(self, palette=None, **kwargs):
+        cols = palette if isinstance(palette, list) else []
+        cleaned = _parse_colors(",".join(str(c) for c in cols), 16)
+        return (",".join(cleaned),)
+
+
 class IdeogramExtras:
     """Output breakout: take the studio's 'extras' bundle and expose its parts —
     the box/text overlay, its alpha mask, and the chosen width/height."""
@@ -258,11 +283,13 @@ NODE_CLASS_MAPPINGS = {
     "IdeogramOverride": IdeogramOverride,
     "IdeogramElementOverride": IdeogramElementOverride,
     "IdeogramOverrideList": IdeogramOverrideList,
+    "IdeogramPalette": IdeogramPalette,
     "IdeogramExtras": IdeogramExtras,
 }
 NODE_DISPLAY_NAME_MAPPINGS = {
     "IdeogramOverride": "Ideogram Studio Override",
     "IdeogramElementOverride": "Ideogram Studio Element Override",
     "IdeogramOverrideList": "Ideogram Studio Override List",
+    "IdeogramPalette": "Ideogram Studio Palette",
     "IdeogramExtras": "Ideogram Studio Extras",
 }
