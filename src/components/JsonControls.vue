@@ -9,9 +9,9 @@
     <span class="grow"></span>
     <template v-if="!j.editing">
       <UiButton icon :active="store.state.ui.jsonSync" title="Live-import captions from an Ideogram Studio JSON Sync node" @click="toggleSync"><i class="mdi mdi-sync"></i></UiButton>
-      <UiButton @click="copy">{{ copied ? 'copied ✓' : 'copy' }}</UiButton>
+      <UiButton icon :title="copied ? 'Copied' : 'Copy JSON'" @click="copy"><i class="mdi" :class="copied ? 'mdi-check' : 'mdi-content-copy'"></i></UiButton>
       <UiButton @click="store.jsonStartEdit()">edit / paste</UiButton>
-      <UiButton :active="store.state.ui.jsonOpen" @click="store.state.ui.jsonOpen = !store.state.ui.jsonOpen">{{ store.state.ui.jsonOpen ? 'hide' : 'show' }}</UiButton>
+      <UiButton icon :title="store.state.ui.jsonOpen ? 'Hide JSON' : 'Show JSON'" @click="store.state.ui.jsonOpen = !store.state.ui.jsonOpen"><i class="mdi" :class="store.state.ui.jsonOpen ? 'mdi-chevron-up' : 'mdi-chevron-down'"></i></UiButton>
     </template>
     <template v-else>
       <UiButton title="Re-indent the JSON" @click="store.jsonTidy()">tidy</UiButton>
