@@ -8374,7 +8374,7 @@ const UiPopover = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["__scopeId", "data-
 const previewSyncImage = /* @__PURE__ */ ref(null);
 let watched = /* @__PURE__ */ new Set();
 let lastUrl = null;
-let currentNode = null;
+let currentIds = [];
 function clearPreview() {
   if (lastUrl) {
     URL.revokeObjectURL(lastUrl);
@@ -8391,6 +8391,15 @@ function getLink(graph, id) {
   if (!links) return null;
   return typeof links.get === "function" ? links.get(id) : links[id];
 }
+function subgraphOf(node) {
+  return node?.subgraph ?? null;
+}
+function addNodeAndInner(node, out) {
+  if (node?.id == null) return;
+  out.add(String(node.id));
+  const sg = subgraphOf(node);
+  if (sg) for (const inner of getNodes(sg)) addNodeAndInner(inner, out);
+}
 function collectAncestors(graph, start, out) {
   const stack2 = [start];
   const visited = /* @__PURE__ */ new Set();
@@ -8403,22 +8412,29 @@ function collectAncestors(graph, start, out) {
       const link = getLink(graph, inp.link);
       const srcId = link?.origin_id ?? link?.[1];
       if (srcId == null) continue;
-      out.add(String(srcId));
       const src = graph.getNodeById?.(srcId);
+      addNodeAndInner(src ?? { id: srcId }, out);
       if (src && !visited.has(src.id)) stack2.push(src);
     }
   }
 }
+function isRefSync(n) {
+  const cls = n?.type ?? n?.comfyClass ?? n?.constructor?.comfyClass;
+  return cls === "IdeogramRefSync";
+}
+function rebuildWatchedIn(graph, out) {
+  for (const n of getNodes(graph)) {
+    if (isRefSync(n)) {
+      const en = n.widgets?.find((w) => w?.name === "enable");
+      if (!(en && en.value === false)) collectAncestors(graph, n, out);
+    }
+    const sg = subgraphOf(n);
+    if (sg) rebuildWatchedIn(sg, out);
+  }
+}
 function rebuildWatched() {
   const set = /* @__PURE__ */ new Set();
-  const graph = app?.graph;
-  for (const n of getNodes(graph)) {
-    const cls = n?.type ?? n?.comfyClass ?? n?.constructor?.comfyClass;
-    if (cls !== "IdeogramRefSync") continue;
-    const en = n.widgets?.find((w) => w?.name === "enable");
-    if (en && en.value === false) continue;
-    collectAncestors(graph, n, set);
-  }
+  rebuildWatchedIn(app?.graph, set);
   watched = set;
 }
 let inited = false;
@@ -8430,13 +8446,14 @@ function initPreviewSync() {
     A.addEventListener("execution_start", rebuildWatched);
     A.addEventListener("executing", (e) => {
       const d = e?.detail;
-      currentNode = d == null ? null : typeof d === "string" ? d : d.display_node ?? d.node ?? null;
+      currentIds = d == null ? [] : typeof d === "string" ? [d] : [d.node, d.display_node].filter(Boolean).map(String);
     });
     A.addEventListener("b_preview", (e) => {
       const blob = e?.detail;
       if (!(blob instanceof Blob)) return;
       if (!watched.size) rebuildWatched();
-      if (currentNode == null || !watched.has(String(currentNode))) return;
+      const hit = currentIds.some((id) => watched.has(id) || id.split(":").some((s) => watched.has(s)));
+      if (!hit) return;
       const url = URL.createObjectURL(blob);
       if (lastUrl) URL.revokeObjectURL(lastUrl);
       lastUrl = url;
