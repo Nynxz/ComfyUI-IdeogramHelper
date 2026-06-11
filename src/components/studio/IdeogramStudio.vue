@@ -46,17 +46,25 @@
               <div class="help">
                 <p class="h">Canvas</p>
                 <dl>
-                  <dt>drag empty space</dt><dd>add a box</dd>
+                  <dt>drag empty space</dt><dd>box-select (marquee); hold shift to add</dd>
+                  <dt>ctrl / ⌘ + drag</dt><dd>draw a new box</dd>
                   <dt>drag a box</dt><dd>move it</dd>
                   <dt>drag a handle</dt><dd>resize</dd>
+                  <dt>click</dt><dd>select; ctrl / shift click to multi-select</dd>
+                  <dt>click again</dt><dd>cycle through stacked / overlapping boxes</dd>
+                </dl>
+                <p class="h">Keyboard</p>
+                <dl>
+                  <dt>ctrl / ⌘ + C / V</dt><dd>copy / paste the selection (pastes at the cursor)</dd>
+                  <dt>ctrl / ⌘ + G</dt><dd>group the selected boxes · + shift to ungroup</dd>
+                  <dt>ctrl / ⌘ + Z</dt><dd>undo · + shift to redo</dd>
                   <dt>Delete / Backspace</dt><dd>remove the selected box(es)</dd>
                 </dl>
                 <p class="h">Boxes</p>
                 <dl>
                   <dt><i class="mdi mdi-eye-outline"></i> mute</dt><dd>keep a box but exclude it from the output</dd>
                   <dt><i class="mdi mdi-link-variant-plus"></i> linked copy</dt><dd>shares the prompt across copies; each keeps its own position</dd>
-                  <dt>ctrl / shift click</dt><dd>multi-select; drag to move them together</dd>
-                  <dt>click again</dt><dd>cycle through stacked/overlapping boxes</dd>
+                  <dt><i class="mdi mdi-group"></i> grouped</dt><dd>members select, move &amp; resize together</dd>
                 </dl>
                 <p class="h">Reference</p>
                 <dl>
